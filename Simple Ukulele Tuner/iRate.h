@@ -54,6 +54,11 @@
 #define IRATE_EXTERN APPKIT_EXTERN
 #endif
 
+//! Project version number for iRate.
+FOUNDATION_EXPORT double iRateVersionNumber;
+
+//! Project version string for iRate.
+FOUNDATION_EXPORT const unsigned char iRateVersionString[];
 
 IRATE_EXTERN NSUInteger const iRateAppStoreGameGenreID;
 IRATE_EXTERN NSString *const iRateErrorDomain;
@@ -164,6 +169,5 @@ typedef NS_ENUM(NSUInteger, iRateErrorCode)
 - (void)logEvent:(BOOL)deferPrompt;
 
 @end
-
 
 #pragma clang diagnostic pop

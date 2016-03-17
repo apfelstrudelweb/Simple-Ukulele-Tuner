@@ -1,0 +1,18 @@
+﻿
+/* info label for current octave */
+"lbl_octave: %d" = "八度: %d";
+
+/* info label with current volume in dB */
+"lbl_volume: %.1f dB" = "音量: %.1f 分贝";
+
+/* unit Hz */
+"lbl_hertz" = "赫兹";
+
+/* Button for Autocorrelation */
+"tab_autocorrelation" = "自相关函数";
+
+/* Button for FFT */
+"tab_fft" = "快速傅里叶变换";
+
+/* tone scale */
+"tone_scale" = "C,C♯,D,E♭,E,F,F♯,G,A♭,A,B♭,B";

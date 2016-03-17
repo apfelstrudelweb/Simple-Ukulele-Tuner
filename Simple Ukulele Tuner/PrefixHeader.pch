@@ -1,0 +1,203 @@
+//
+//  PrefixHeader.pch
+//  Diapason
+//
+//  Created by imac on 13.03.15.
+//  Copyright (c) 2015 Vormbrock. All rights reserved.
+//
+
+#ifndef Diapason_PrefixHeader_pch
+#define Diapason_PrefixHeader_pch
+
+#import <Availability.h>
+#import <UIKit/UIKit.h>
+
+// Review reminder
+#import "iRate.h"
+
+// Sound
+#import "SoundProcessor.h"
+#import "SoundFile.h"
+// Singletons
+#import "SessionManager.h"
+#import "SoundHelper.h"
+#import "VersionManager.h"
+
+// Model
+#import "Spectrum.h"
+// Categories
+#import "UILabel+uvo.h"
+#import "UIView+uvo.h"
+
+#import "HitImageView.h"
+
+/*
+ * Views
+ */
+#import "PopupView.h"
+
+#import "SettingsHeaderView.h"
+#import "SettingsMenuView.h"
+#import "SettingsView.h"
+#import "UpgradeHeaderView.h"
+#import "UpgradeMenuView.h"
+#import "UpgradeView.h"
+// Partial views of the subviews
+#import "CalibrationPicker.h"
+#import "BasicGaugeView.h"
+#import "LedView.h"
+#import "StringButtonView.h"
+#import "HorizontalPicker.h"
+// Subviews
+#import "CircleView.h"
+#import "HeaderView.h"
+#import "GraphView.h"
+#import "TabView.h"
+#import "BridgeView.h"
+#import "UkeTypeView.h"
+#import "MeterView.h"
+#import "DeviationView.h"
+#import "GaugeView.h"
+#import "ButtonView.h"
+#import "MainView.h"
+#import "BackgroundView.h"
+
+
+#define UPGRADE_TYPE @"upgradeType" //NSUserDefaults after in-app purchase
+
+// number of seconds the splashscreen should be displayed
+#define TIME_SPLASHSCREEN 5.0
+
+#define CONTENT_WIDTH 0.88 // 88% of entire width, centered
+
+#define BACKGROUND_IMAGE @"backgroundTransparent.png"
+
+#define TEXT_COLOR_HEADER [UIColor whiteColor]
+
+// attention: sum must be 100 -> proportions of subviews in percent
+// order of the subviews:
+// 1. HeaderView
+// 2. GraphView
+// 3. TabView
+// 4. BridgeView
+// 5. UkeTypeView
+// 6. MeterView
+// 7. DeviationView
+// 8. GaugeView
+// 9. ButtonView
+#define SUBVIEW_PROPORTIONS @[@11.86, @24.08, @6.4, @24.22, @4.6, @3.6, @4.50, @7.84, @12.9]
+
+
+#define HTML_PAGES [[NSMutableArray alloc] initWithObjects:@"manual1", @"manual2", @"manual3", @"manual4",@"manual5", nil];
+
+//it deals with an ukulele
+#define NUMBER_OF_STRINGS 4
+
+
+
+#define IS_IPAD             UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad
+
+#define FONT                @"Helvetica"
+#define FONT_BOLD           @"Helvetica-Bold"
+
+
+// graph (FFT and autocorrelation)
+#define GRAPH_HEIGHT            0.85 // relative height of graph compared to subview
+#define NUMBER_VERTICAL_LINES   13 //IS_IPAD ? 13 : 13
+#define NUMBER_HORIZONTAL_LINES IS_IPAD ? 8 : 6
+#define MARGIN_GRAPH            10
+#define AXIS_BODER_WIDTH        IS_IPAD ? 3 : 1
+#define GRID_BODER_WIDTH        IS_IPAD ? 1.6 : 0.8
+
+#define SCIENTIFIC_COLOR [UIColor colorWithRed:0.88 green:0.96 blue:0.93 alpha:1.0] // x-/y-axis and frequency in HZ
+
+#define FONT_COLOR [UIColor colorWithRed:0.24 green:0.47 blue:0.85 alpha:1.0] // for horizontal picker
+#define TAB_FONT_COLOR [UIColor whiteColor] // for horizontal picker
+
+
+#define PREFERRED_SAMPLING_RATE 44100.0 / 2.0
+
+#define PRECISION 0.2  // precision requested for a tone in % (in order to get green color)
+#define TONE_DIST 1.0595
+#define REF_FREQUENCY             440.0
+
+#define NUM_SEC_PLAYTONE          1.5 * NSEC_PER_SEC
+
+// basic tones ("Grundtöne")
+#define BASIC_FREQUENCIES @[@16.35, @17.32, @18.35, @19.45, @20.60, @21.83, @23.12, @24.50, @25.96, @27.50, @29.14, @30.87]
+
+// English notation
+#define NOTATION_EN @[@"C", @"C♯", @"D", @"E♭", @"E", @"F", @"F♯", @"G", @"A♭", @"A", @"B♭", @"B"]
+
+
+// Singletons
+#define SHARED_MANAGER          [SessionManager sharedManager]
+#define SHARED_SOUND_HELPER     [SoundHelper sharedSoundHelper]
+#define SHARED_VERSION_MANAGER  [VersionManager sharedManager]
+
+#define NOTIFICATION_AFTER_MINUTES    10
+#define NOTIFICATION_AFTER_NUM_SOUNDS 20
+
+// User Defaults
+#define KEY_CALIBRATED_FREQUENCY @"calibratedFrequency"
+#define KEY_UKE_TYPE             @"ukuleleType"
+#define UKU_TYPE_01              @"Sopranino (D5 - G4 - B4 - E5)"
+#define UKU_TYPE_02              @"Sopranino (C5 - F4 - A4 - D5)"
+#define UKU_TYPE_03              @"Soprano (A4 - D4 - F#4 - B4)"
+#define UKU_TYPE_04              @"Soprano (G4 - C4 - E4 - A4)"
+#define UKU_TYPE_05              @"Concert (A4 - D4 - F#4 - B4)"
+#define UKU_TYPE_06              @"Concert (G4 - C4 - E4 - A4)"
+#define UKU_TYPE_07              @"Tenor (A4 - D4 - F#4 - B4)"
+#define UKU_TYPE_08              @"Tenor (G4 - C4 - E4 - A4)"
+#define UKU_TYPE_09              @"Tenor (G3 - C4 - E4 - A4)"
+#define UKU_TYPE_10              @"Tenor (D4 - G3 - B3 - E4)"
+#define UKU_TYPE_11              @"Barritone (D3 - G3 - B3 - E4)"
+#define UKU_TYPE_12              @"Bass (E1 - A1 - D2 - G2)"
+
+
+#define KEY_GUITAR_COLOR        @"guitarColor"
+#define GUITAR_COLOR_DEFAULT    @"default" // gray
+#define GUITAR_COLOR_WHITE      @"white"
+#define GUITAR_COLOR_ORANGE     @"orange"
+#define GUITAR_COLOR_RED        @"red"
+#define GUITAR_COLOR_GREEN      @"green"
+#define GUITAR_COLOR_BLUE       @"blue"
+#define GUITAR_COLOR_PINK       @"pink"
+#define GUITAR_COLOR_GAY        @"gay" // rainbow colors
+
+
+// colors see also https://color.adobe.com/de/create/color-wheel/?base=2&rule=Analogous&selected=2&name=Mein%20Color-Thema&mode=rgb&rgbvalues=0.9596925280634413,0.6814629037190456,1,0.91,0.00600494830748649,0.5266609032981439,1,0.07863596308553111,0.05659884429394124,0.91,0.20009618075221056,0.00600494830748649,1,0.4099679015502027,0.006598844293941197&swatchOrder=0,1,2,3,4
+
+#define BACKGROUND_COLOR_01 [UIColor colorWithRed:38.0/255.0 green:43.0/255.0 blue:49.0/255.0 alpha:1.0]  // default
+#define BACKGROUND_COLOR_02 [UIColor whiteColor] // white
+#define BACKGROUND_COLOR_03 [UIColor colorWithRed:0.98 green:0.89 blue:0.63 alpha:1.0] // yellow
+#define BACKGROUND_COLOR_04 [UIColor colorWithRed:1.00 green:0.31 blue:0.31 alpha:1.0] // red
+#define BACKGROUND_COLOR_05 [UIColor colorWithRed:0.54 green:0.98 blue:0.54 alpha:1.0] // green
+#define BACKGROUND_COLOR_06 [UIColor colorWithRed:0.298 green:0.502 blue:1 alpha:1]  // blue
+#define BACKGROUND_COLOR_07 [UIColor colorWithRed:0.98 green:0.62 blue:0.98 alpha:1.0] // pink
+
+#define HEADER_BACKGROUND_COLOR_01 [UIColor colorWithRed:0.69 green:0.263 blue:0.235 alpha:1.0] // for default
+#define HEADER_BACKGROUND_COLOR_02 [UIColor colorWithRed:95.0/255.0 green:97.0/255.0 blue:102.0/255.0 alpha:1.0] // for white
+#define HEADER_BACKGROUND_COLOR_03 [UIColor colorWithRed:1.00 green:0.85 blue:0.40 alpha:1.0] // for orange
+#define HEADER_BACKGROUND_COLOR_04 [UIColor colorWithRed:0.98 green:0.24 blue:0.24 alpha:1.0] // for red
+#define HEADER_BACKGROUND_COLOR_05 [UIColor colorWithRed:0.51 green:0.82 blue:0.51 alpha:1.0] // for green
+#define HEADER_BACKGROUND_COLOR_06 [UIColor colorWithRed:0.271 green:0.624 blue:0.91 alpha:1] // for blue
+#define HEADER_BACKGROUND_COLOR_07 [UIColor colorWithRed:0.71 green:0.49 blue:0.71 alpha:1.0] // for pink
+#define HEADER_BACKGROUND_COLOR_08 [UIColor colorWithRed:0.40 green:0.31 blue:0.65 alpha:1.0] // for gay
+
+// background color of settings popup window
+#define SETTINGS_BG_COLOR [UIColor colorWithRed:42.0/255.0 green:45.0/255.0 blue:52.0/255.0 alpha:1.0]
+
+// Version
+#define version_lite        @"lite"
+#define version_uke         @"uke"
+#define version_signal      @"signal"
+#define version_premium     @"premium"
+
+#define inAppPurchaseUke        @"ch.vormbrock.simpleukuleletunerpro.alluke"
+#define inAppPurchaseSignal     @"ch.vormbrock.simpleukuleletunerpro.signalplus"
+#define inAppPurchasePremium    @"ch.vormbrock.simpleukuleletunerpro.premium"
+
+#define INAPP_PURCHASE_ARRAY  @[inAppPurchasePremium, inAppPurchaseUke, inAppPurchaseSignal]
+
+#endif

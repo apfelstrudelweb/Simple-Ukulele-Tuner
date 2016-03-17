@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="de-DE">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Benutzer-Handbuch</title>
+        <link rel="stylesheet" href="style.css">
+            </head>
+    <body onload="draw()" style="margin:0; padding:0; font-size:100%;background-color:#454851">
+        <div id="page" style="max-width:960px; margin:0 auto;">
+            <div id="header" style="padding:0 3.125%;">
+                <h1>Benutzer-Handbuch</h1>
+                <h2>4. Autokorrelation </h2>
+            </div><!-- #header -->
+            <div id="content1" style="clear:both;  padding:0 3.125%;">
+                <p>Hier wird das Eingangssignal mit der zeitversetzten Variante desselben Signals multipliziert und auf der Zeitachse dargestellt. </p>
+            </div><!-- #content -->
+            <div id="screencast_01" style="clear:both;  padding:0 3.125%;">
+                <p><center><img src="screencast_01.gif" alt="Screenshot Pro Version" class="img" /></center></p>
+            </div>
+            <!-- #sidebar -->
+            <div id="content2" style="clear:both;  padding:0 3.125%;">
+                <p>Das klingt zunächst etwas kompliziert - daher zunächst die Frage, was man von Autokorrelation überhaupt hat:<br />
+                <br /><strong><i>Mithilfe von Autokorrelation lassen sich Periodizitäten eines Signals - und somit Frequenzen - ermitteln.</i></strong>				</p>
+                <p>Bei einer Ukulele-Saite hat man neben der Grundfrequenz (z.B. 440 Hz für die A-Saite) auch noch weitere Obertöne. Diese lassen sich besonders gut durch FFT (siehe nächstes Kapitel) darstellen. Gerade die Obertöne machen den typischen Klang einer Ukulele aus - eine reine Sinus-Schwingung mit der Grundton-Frequenz würde sehr steril und künstlich klingen!</p>
+                <p>Schauen wir uns einmal die Aufnahme (Amplitude) einer tiefen E-Saite (einer Gitarre) auf der Zeit-Achse an:</p>
+            </div>
+            <div id="screenshot04" style="clear:both;  padding:0 3.125%;">
+                <p><center><img src="screenshot_04.png" alt="Screenshot Pro Version" class="img" /></center></p>
+            </div>
+            <div id="content3" style="clear:both;  padding:0 3.125%;">
+                <p>Hier erkennt man ganz deutlich Nulldurchgänge in <i>verschiedenen</i> Abständen - d.h. eine Frequenzbestimmung des Grundtons erweist sich als eher schwierig bis unmöglich. </p>
+                <p>Und nun dasselbe Eingangssignal mit sich selbst korrelliert:</p>
+            </div>
+            <div id="screenshot05" style="clear:both;  padding:0 3.125%;">
+                <p><center><img src="screenshot_05.png" alt="Screenshot Pro Version" class="img" /></center></p>
+            </div>
+            <div id="content3" style="clear:both;  padding:0 3.125%;">
+                <p>Jetzt erkennt man einen deutlichen Peak, welcher für den Grundton steht. Die beiden kleineren Peaks links davon repräsentieren Oberschwingungen. Generell gilt: je höher die Frequenz, desto weiter wandert ein Peak nach <strong>links</strong> - dies kann man übrigens beim Stimmen der Gitarre selber ausprobieren.</p>
+                <p>Abschließend noch eine reine Sinus-Schwingung (440 Hz, Kammerton) mit sich selbst korreliert:</p>
+            </div>
+            <div id="screenshot06" style="clear:both;  padding:0 3.125%;">
+                <p><center><img src="screenshot_06.png" alt="Screenshot Pro Version" class="img" /></center></p>
+            </div>
+            <div id="content4" style="clear:both;  padding:0 3.125%;">
+                <p>Im Gegensatz zu einer Gitarren- oder Ukulele-Saite entsteht hier ein sehr harmonisches Muster mit einer gleichmäßig abfallenden Hüllkurve. Das heißt, es gibt keine Oberschwingungen - dem ersten absoluten Maximum (siehe Spot) sind keine weiteren kleineren Peaks vorgelagert.</p>
+            </div>
+            <div id="footer" style="clear:both; padding:0 3.125%;">
+                <center><span class="copyright">Copyright 2015 - ApfelstrudelWeb - Alle Rechte vorbehalten<br/><br/><br/></span></center>
+            </div><!-- #footer -->
+        </div><!-- #page -->
+    </body>
+</html>

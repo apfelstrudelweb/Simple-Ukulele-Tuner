@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PreferenceSpecifiers</key>
+	<array>
+		<dict>
+			<key>Type</key>
+			<string>Calibrated Frequency</string>
+			<key>Title</key>
+			<string>calibratedFrequency</string>
+			<key>Key</key>
+			<string>440.0</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>UkuleleColor</string>
+			<key>Key</key>
+			<string>guitarColor</string>
+			<key>DefaultValue</key>
+			<string>default</string>
+			<key>Values</key>
+			<array>
+				<string>pink</string>
+				<string>gay</string>
+				<string>default</string>
+				<string>white</string>
+				<string>orange</string>
+				<string>red</string>
+				<string>green</string>
+				<string>blue</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSMultiValueSpecifier</string>
+			<key>Title</key>
+			<string>UkuleleType</string>
+			<key>Key</key>
+			<string>ukuleleType</string>
+			<key>DefaultValue</key>
+			<string>Soprano G4</string>
+			<key>Values</key>
+			<array>
+				<string>Sopranino (D5-G4-B4-E5)</string>
+				<string>Sopranino (C5-F4-A4-D5)</string>
+				<string>Soprano (A4-D4-F#4-B4)</string>
+				<string>Soprano (G4-C4-E4-A4)</string>
+				<string>Concert (A4-D4-F#4-B4)</string>
+				<string>Concert (G4-C4-E4-A4)</string>
+				<string>Tenor (A4-D4-F#4-B4)</string>
+				<string>Tenor (G4-C4-E4-A4)</string>
+				<string>Tenor (G3-C4-E4-A4)</string>
+				<string>Tenor (D4-G3-B3-E4)</string>
+				<string>Barritone (D3-G3-B3-E4)</string>
+				<string>Bass (E1-A1-D2-G2)</string>
+			</array>
+		</dict>
+	</array>
+	<key>StringsTable</key>
+	<string>Root</string>
+</dict>
+</plist>

@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="de-DE">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Benutzer-Handbuch</title>
+        <link rel="stylesheet" href="style.css">
+            </head>
+    <body onload="draw()" style="margin:0; padding:0; font-size:100%;background-color:#454851">
+        <div id="page" style="max-width:960px; margin:0 auto;">
+            <div id="header" style="padding:0 3.125%;">
+                <h1>User Manual</h1>
+                <h2>4. Autocorrelation </h2>
+            </div><!-- #header -->
+            <div id="content1" style="clear:both;  padding:0 3.125%;">
+                <p>Here, the input signal is multiplied by the time shifted version of the same signal, and then displayed on the time axis.</p>
+            </div><!-- #content -->
+            <div id="screencast_01" style="clear:both;  padding:0 3.125%;">
+                <p><center><img src="screencast_01.gif" alt="Screenshot Pro Version" class="img" /></center></p>
+            </div>
+            <!-- #sidebar -->
+            <div id="content2" style="clear:both;  padding:0 3.125%;">
+                <p>It might sound a bit complicated in the beginning- hence first the question, what do you actually get out of autocorrelation:<br />
+                <br /><strong><i>Thanks to autocorrelation, periodicities of a signal - and thus frequencies - can be calculated.</i></strong>				</p>
+                <p>An ukulele string has even more overtones in addition to the fundamental frequency (e.g. 440 Hz for the A string). These can be displayed particularly easily through FFT (see next section). Overtones actually compose the typical sound of a string instrument, such as ukulele, guitar, bass, etc. - a pure sine wave with the fundamental frequency would sound very sterile and artificial!</p>
+                <p>Let's look at the recording (amplitude) of a guitar string on the time axis:</p>
+            </div>
+            <div id="screenshot04" style="clear:both;  padding:0 3.125%;">
+                <p><center><img src="screenshot_04.png" alt="Screenshot Pro Version" class="img" /></center></p>
+            </div>
+            <div id="content3" style="clear:both;  padding:0 3.125%;">
+                <p>Here you can clearly recognize zero crossings in <i>different</i> distances- i.e., a determination of the fundamental frequency will be rather difficult or even impossible. </p>
+                <p>And now the same input signal is correlated with itself:</p>
+            </div>
+            <div id="screenshot05" style="clear:both;  padding:0 3.125%;">
+                <p><center><img src="screenshot_05.png" alt="Screenshot Pro Version" class="img" /></center></p>
+            </div>
+            <div id="content3" style="clear:both;  padding:0 3.125%;">
+                <p>Now you can recognize a distinct peak, which stands for the root. The two smaller peaks on the left side represent harmonics. As a general rule, however, the higher the measured frequency, the further the appropriate maximum will move to the <strong>left</strong>. You can try this out by yourself when tuning a string instrument.</p>
+                <p>Finally, a pure sine wave (440 Hz, concert pitch) correlated with itself:</p>
+            </div>
+            <div id="screenshot06" style="clear:both;  padding:0 3.125%;">
+                <p><center><img src="screenshot_06.png" alt="Screenshot Pro Version" class="img" /></center></p>
+            </div>
+            <div id="content4" style="clear:both;  padding:0 3.125%;">
+                <p>Unlike guitar or ukulele strings, here you will see a very harmonious pattern with a uniformly sloping envelope curve. This means that there are no harmonics.</p>
+            </div>
+            <div id="footer" style="clear:both; padding:0 3.125%;">
+                <center><span class="copyright">Copyright 2015 - ApfelstrudelWeb - All Rights Reserved<br/><br/><br/></span></center>
+            </div><!-- #footer -->
+        </div><!-- #page -->
+    </body>
+</html>

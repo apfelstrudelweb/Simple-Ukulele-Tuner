@@ -87,8 +87,8 @@
         free(yinBuffer);
     } else {
         CGFloat betterTau;
-        int x0;
-        int x2;
+        NSInteger x0;
+        NSInteger x2;
         
         if (tau < 1) {
             x0 = tau;

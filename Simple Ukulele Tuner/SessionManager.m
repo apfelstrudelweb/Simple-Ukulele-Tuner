@@ -104,7 +104,7 @@
     return self.toneFrequency;
 }
 
--(void) setActualNumberOfUkeType:(int)number {
+-(void) setActualNumberOfUkeType:(NSInteger)number {
     self.numberOfUkeType = number;
     
     // now get min and max frequency

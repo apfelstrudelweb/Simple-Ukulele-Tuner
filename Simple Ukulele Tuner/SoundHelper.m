@@ -112,7 +112,7 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     sf.frequency = frequenciesArray[number];
     CGFloat frequency = [frequenciesArray[number] floatValue];
     sf.octave = [self getOctave:frequency];
-    sf.toneNumber = [NSNumber numberWithInt:number];
+    sf.toneNumber = [NSNumber numberWithInteger:number];
     
     [SHARED_MANAGER setStringToneFrequency:[frequenciesArray[number] floatValue]];
     [self playSineWave];
@@ -235,7 +235,7 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
             // now calculate ranges in function of played frequency and precision requested
             CGFloat greenAreaLimit = 0.01 * PRECISION * stringFreq;
             
-            octave = [[NSNumber numberWithInt:j] intValue];
+            octave = [[NSNumber numberWithInteger:j] intValue];
             
             if (fabs(frequency - stringFreq) < greenAreaLimit) {
                 breakOuterLoop = YES;
@@ -245,7 +245,7 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
         }
         if (breakOuterLoop == YES) break;
     }
-    return [NSNumber numberWithInt:octave];
+    return [NSNumber numberWithInteger:octave];
 }
 
 

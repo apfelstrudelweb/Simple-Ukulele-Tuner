@@ -15,6 +15,7 @@
 #import "FFT.h"
 #import "Bandpass.h"
 
+
 #define IS_MICROPHONE YES
 
 #define NUM_CAPTURES_HOP 2
@@ -38,6 +39,7 @@
     NSInteger numOfErroneousFreqDetections;
     NSInteger numOfNoFrequencyDetecion;
 }
+
 @end
 
 @implementation SoundProcessor
@@ -51,7 +53,7 @@
     previousFrequencyArray = [NSMutableArray new];
     numOfErroneousFreqDetections = 0;
     numOfNoFrequencyDetecion = 0;
-    
+
     return self;
 }
 
@@ -120,7 +122,7 @@
              if (![SHARED_MANAGER isFFT]) {
                  result = [correlation performAutocorrelation:data withFrames:numFrames];
              } else {
-                 result = [fft performFFT:data withFrames:numFrames];
+                 result = [fft performFFT:data withFrames:2*numFrames];
              }
              
              
@@ -157,7 +159,7 @@
              if (previousFrequencyArray.count > 1) {
                  CGFloat avrgFreq = [self getAverageValue];
                  
-                 if (fabsf(avrgFreq - pitchInHertz) > 0.1*avrgFreq) {
+                 if (std::abs(avrgFreq - pitchInHertz) > 0.1*avrgFreq) {
                      // silence the sound in order to disable sound feedback
                      [self silence: data andSize:(int) numChannels*numFrames];
                      return;
@@ -220,7 +222,7 @@
     if (previousFrequencyArray.count > 5) {
         CGFloat capturedFrequency = [number floatValue];
         CGFloat averageFrequency = [self getAverageValue];
-        CGFloat diff = fabsf(capturedFrequency - averageFrequency);
+        CGFloat diff = std::abs(capturedFrequency - averageFrequency);
         if (diff / averageFrequency > 0.01) {
             //NSLog(@"capturedFrequency: %f - avrg:%f", capturedFrequency, averageFrequency);
             return;

@@ -96,10 +96,7 @@
             CGRect bounds = CGRectMake(0.0, 0.0, newX, height);
             self.gradient.bounds = bounds;
             self.gradient.endPoint = CGPointMake(fact, 0.0);
-            
-            printf("newX: %f\n", newX);
-            
-            
+
             if (rightBorder) {
                 [rightBorder removeFromSuperlayer];
             }

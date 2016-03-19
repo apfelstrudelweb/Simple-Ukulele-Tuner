@@ -264,7 +264,7 @@
 
 
 // if tone is precise enough, make the display green
-- (void)setBackground:(int)deviation {
+- (void)setBackground:(NSInteger)deviation {
     self.scrollView.layer.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:GAUGE_BG]].CGColor;
 }
 

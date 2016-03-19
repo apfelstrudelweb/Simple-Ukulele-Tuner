@@ -96,65 +96,47 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             spect = ((Spectrum*)[notification object]);
             data = spect.data;
-            bin = spect.bin;
-            isFFT = [SHARED_MANAGER isFFT];
+            //            bin = spect.bin;
+            //            isFFT = [SHARED_MANAGER isFFT];
+            //
+            //            if (isFFT == YES){
+            //                // FFT
+            //                binArray = [NSMutableArray new];
+            //
+            //                for (NSInteger i=START_BIN; i<END_BIN+1; i++) {
+            //                    CGFloat logBin = log10f((CGFloat)i);
+            //                    [binArray addObject:[NSNumber numberWithFloat:logBin]];
+            //
+            //                    if (i==START_BIN) {
+            //                        minLogBin = logBin;
+            //                    }
+            //
+            //                    if (i==END_BIN) {
+            //                        maxLogBin = logBin;
+            //                    }
+            //                }
+            //
+            //                /**
+            //                 * Special procedure: get the exact frequency from YIN algorithm
+            //                 * and calculate the idela bin. Then correct the bins from FFT,
+            //                 * shifting the graph horizontally in order to get the correct
+            //                 * mapping "peak" against "bin" or "frequency"
+            //                 */
+            //
+            //                // now extract position of absolute maxmimum
+            //                CGFloat maxValue = -MAXFLOAT;
+            //                NSInteger realMaxBin = 0;
+            //
+            //                for (NSInteger i=0; i<data.count; i++) {
+            //                    if ([data[i] floatValue] < maxValue) {
+            //                        maxValue = [data[i] floatValue];
+            //                        realMaxBin = i;
+            //                        break;
+            //                    }
+            //                }
+            //            }
             
-            if (isFFT == YES){
-                // FFT
-                binArray = [NSMutableArray new];
-                
-                for (NSInteger i=START_BIN; i<END_BIN+1; i++) {
-                    CGFloat logBin = log10f((CGFloat)i);
-                    [binArray addObject:[NSNumber numberWithFloat:logBin]];
-                    
-                    if (i==START_BIN) {
-                        minLogBin = logBin;
-                    }
-                    
-                    if (i==END_BIN) {
-                        maxLogBin = logBin;
-                    }
-                }
-                
-                /**
-                 * Special procedure: get the exact frequency from YIN algorithm
-                 * and calculate the idela bin. Then correct the bins from FFT,
-                 * shifting the graph horizontally in order to get the correct
-                 * mapping "peak" against "bin" or "frequency"
-                 */
-                
-                // now extract position of absolute maxmimum
-                CGFloat maxValue = -100.0;
-                NSInteger realMaxBin = 0;
-                
-                for (NSInteger i=0; i<data.count; i++) {
-                    if ([data[i] floatValue] > maxValue) {
-                        maxValue = [data[i] floatValue];
-                        realMaxBin = i;
-                    }
-                }
-                
-                //NSLog(@"realMaxBin = %d", realMaxBin);
-                
-                CGFloat frequency = [spect.frequency floatValue];
-                
-                NSInteger idealMaxBin = (int)((186.0/2000.0) * frequency);
-                
-                NSInteger binDifference = realMaxBin - idealMaxBin;
-                
-                CGFloat volume = [spect.volume floatValue];
-                //NSLog(@"volume = %f", volume);
-                
-                // now shift the values horizontally dependent on deviation
-                if (binDifference != 0 && volume > 0.1 && frequency != 0.0) {
-                    graphData = shiftArray(data, binDifference);
-                } else {
-                    graphData = data;
-                }
-            } else {
-                // AUTOCORRELATION
-                graphData = data;
-            }
+            graphData = data;
             
             [self setNeedsDisplay];
         });
@@ -166,7 +148,8 @@
 
 - (void) drawFFTCurve {
     
-    CGFloat maxValue = 0;
+    
+    CGFloat maxValue = -MAXFLOAT;
     CGFloat minValue = MAXFLOAT;
     
     for (NSInteger i=0;i<data.count;i++) {
@@ -185,54 +168,49 @@
     CGFloat xSize = self.bounds.size.width;
     CGFloat ySize = self.bounds.size.height;
     
-    CGFloat volume = [spect.volume floatValue];
+    CGFloat volume = [spect.volume floatValue] / 20.0;
     
     // make the range dependent on volume
     // nota bene: in order to make volume convergent towards a constant,
     // use tanh function, so the graph won't exceed the upper border on high volume
     CGFloat yRange = 1.2*maxValue * 1/tanhf(0.35*volume);
     
-    CGFloat xUnit = xSize / (maxLogBin-minLogBin);
+    CGFloat xUnit = xSize / log10f(189);
     CGFloat yUnit = ySize / yRange;
     
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     CGFloat components[] = CURVE_COLOR;
+    if (!graphData) return;
     
-    NSMutableArray* points = [NSMutableArray new];
-    
-    if (graphData.count > binArray.count-1) {
-        for (NSInteger i=0; i<binArray.count; i++) {
-            
-            NSNumber *key = binArray[i];
-            NSNumber *value = graphData[i];
-            CGFloat logFrequency = [key floatValue] * xUnit;
-            CGFloat amplitude = ySize - [value floatValue] * yUnit - 1;
-            
-            if (isnan(amplitude)) {
-                amplitude = 0.0;
-            }
-            
-            if (i==0) {
-                amplitude = ySize;
-            }
-            
-            CGPoint point = CGPointMake(logFrequency, amplitude);
-            [points addObject:[NSValue valueWithCGPoint:point]];
+    for (NSInteger i=0; i<graphData.count; i++) {
+        
+        NSNumber *key = @(log10f((CGFloat)(i+1)));//binArray[i];
+        NSNumber *value = graphData[i];
+        CGFloat logFrequency = [key floatValue] * xUnit;
+        CGFloat amplitude = ySize - [value floatValue] * yUnit - 1;
+        
+        if (isnan(amplitude)) {
+            amplitude = 0.0;
         }
         
-        CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
-        CGColorRef color = CGColorCreate(colorspace, components);
-        CGContextSetStrokeColorWithColor(context, color);
+        if (i==0) {
+            amplitude = ySize;
+            CGContextMoveToPoint(context, logFrequency, amplitude);
+        } else {
+            CGContextAddLineToPoint(context, logFrequency, amplitude);
+        }
         
-        UIBezierPath* bezierPath = [self quadCurvedPathWithPoints:points];
-        bezierPath.lineWidth = CURVE_WIDTH;
-        [bezierPath stroke];
-        
-        CGContextStrokePath(context);
-        CGColorSpaceRelease(colorspace);
-        CGColorRelease(color);
     }
+    
+    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+    CGContextSetLineWidth(context, CURVE_WIDTH);
+    CGColorRef color = CGColorCreate(colorspace, components);
+    CGContextSetStrokeColorWithColor(context, color);
+    
+    CGContextStrokePath(context);
+    CGColorSpaceRelease(colorspace);
+    CGColorRelease(color);
 }
 
 - (void) drawAutocorrelationCurve {
@@ -295,33 +273,12 @@
     CGColorRelease(color);
 }
 
-// Helper method: performs an element shift of an array to both directions
-static NSArray *shiftArray(NSArray *array, NSInteger bit) {
-    NSInteger length = [array count];
-    NSArray *left;
-    NSArray *right;
-    
-    BOOL forward = bit < 0;
-    bit = abs(bit);
-    
-    if (length - bit < 0) return array;
-    
-    if (forward == YES) {
-        //code for right shift
-        right = [array subarrayWithRange:(NSRange){ .location = length - bit, .length = bit }];
-        left = [array subarrayWithRange:(NSRange){ .location = 0, .length = length - bit}];
-        return [right arrayByAddingObjectsFromArray:left];
-    }else{
-        //code for left shift
-        left = [array subarrayWithRange:(NSRange){ .location =0, .length = bit }];
-        right= [array subarrayWithRange:(NSRange){ .location = bit, .length = length - bit}];
-        return [right arrayByAddingObjectsFromArray:left];
-    }
-}
 
 
 -(UIBezierPath *)quadCurvedPathWithPoints:(NSArray *)points
 {
+    if (!points || points.count == 0) return nil;
+    
     UIBezierPath *path = [UIBezierPath bezierPath];
     
     NSValue *value = points[0];

@@ -9,26 +9,15 @@
 #include <stdio.h>
 #import "FFT.h"
 
-//static const int kProcessingBlockSize = 1024;
-//static const int kMagnitudeThreshold = 50;
-//static const int kFrequencyCutoff = 8000;
-
 @interface FFT() {
 
+    size_t windowSize;
+    float *window;
+    
     FFTSetup fftSetup;
-    size_t              fftSize,
-    fftSizeOver2,
-    log2n,
-    log2nOver2,
-    windowSize,
-    i;
-    
-    float               *in_real,
-    *out_real,
-    *window;
-    
-    float               scale;
-    COMPLEX_SPLIT       split_data;
+    COMPLEX_SPLIT complexA;
+    Float32 *outFFTData;
+    Float32 *invertedCheckData;
     NSMutableArray* result;
 }
 @end
@@ -40,55 +29,54 @@
     
     result = [NSMutableArray new];
     
-    NSInteger size = numSamples;
-    NSInteger window_size = numSamples * 7;
+//    windowSize = numSamples * 2;
+//
+//    window = (float *) malloc(sizeof(float) * windowSize);
+//    memset(window, 0, sizeof(float) * windowSize);
+//    vDSP_hamm_window(window, windowSize, vDSP_HANN_DENORM);
     
-    fftSize = size;                 // sample size
-    fftSizeOver2 = fftSize/2;
-    log2n = log2f(fftSize);         // bins
-    log2nOver2 = log2n/2;
     
-    in_real = (float *) malloc(fftSize * sizeof(float));
-    out_real = (float *) malloc(fftSize * sizeof(float));
-    split_data.realp = (float *) malloc(fftSizeOver2 * sizeof(float));
-    split_data.imagp = (float *) malloc(fftSizeOver2 * sizeof(float));
-    
-    windowSize = window_size;
-    window = (float *) malloc(sizeof(float) * windowSize);
-    memset(window, 0, sizeof(float) * windowSize);
-    vDSP_hamm_window(window, window_size, vDSP_HANN_DENORM);
-    
-    scale = 1.0f/(float)(4.0f*fftSize);
-    
-    // allocate the fft object once
+    vDSP_Length log2n = log2f(numSamples);
     fftSetup = vDSP_create_fftsetup(log2n, FFT_RADIX2);
-    if (fftSetup == NULL) {
-        printf("\nFFT_Setup failed to allocate enough memory.\n");
-    }
+    NSInteger nOver2 = numSamples/2;
+    complexA.realp = (Float32*) malloc(nOver2*sizeof(Float32) );
+    complexA.imagp = (Float32*) malloc(nOver2*sizeof(Float32) );
+    
+    outFFTData = (Float32 *) malloc(nOver2*sizeof(Float32) );
+    memset(outFFTData, 0, nOver2*sizeof(Float32) );
+    
+    invertedCheckData = (Float32*) malloc(numSamples*sizeof(Float32) );
+    
+    Float32 mFFTNormFactor = 1.0/(2*numSamples);
+    
+    //Convert float array of reals samples to COMPLEX_SPLIT array A
+    vDSP_ctoz((COMPLEX*)data, 2, &(complexA), 1, numSamples/2);
     
     
-    //multiply by window
-    vDSP_vmul(data, 1, window, 1, in_real, 1, fftSize);
+    //Perform FFT using fftSetup and A
+    //Results are returned in A
+    vDSP_fft_zrip(fftSetup, &(complexA), 1, log2n, FFT_FORWARD);
     
-    //convert to split complex format with evens in real and odds in imag
-    vDSP_ctoz((COMPLEX *) in_real, 2, &split_data, 1, fftSizeOver2);
+    //vDSP_vmul(data, 1, window, 1, data, 1, numSamples);
     
-    //calc fft
-    vDSP_fft_zrip(fftSetup, &split_data, 1, log2n, FFT_FORWARD);
+    //scale fft
+    vDSP_vsmul(complexA.realp, 1, &mFFTNormFactor, complexA.realp, 1, numSamples/2);
+    vDSP_vsmul(complexA.imagp, 1, &mFFTNormFactor, complexA.imagp, 1, numSamples/2);
     
-    split_data.imagp[0] = 0.0;
+    vDSP_zvmags(&(complexA), 1, outFFTData, 1, numSamples/2);
     
-    for (i = 0; i < fftSizeOver2; i++)
-    {
-        //compute power
-        CGFloat power = (i<2) ? 0.0 : split_data.realp[i]*split_data.realp[i] +
-        split_data.imagp[i]*split_data.imagp[i];
-        
-        //compute magnitude and phase
-        result[i] = [NSNumber numberWithFloat:sqrtf(power)];
-        //phase[i] = atan2f(split_data.imagp[i], split_data.realp[i]);
-    }
+    //to check everything (checking by reversing to time-domain data) =============================
+    vDSP_fft_zrip(fftSetup, &(complexA), 1, log2n, FFT_INVERSE);
+    vDSP_ztoc( &(complexA), 1, (COMPLEX *) invertedCheckData , 2, numSamples/2);
 
+    for (int i = 0; i < 200; i++) {
+        if (i<11) {
+            result[i] = [NSNumber numberWithFloat:20.0*outFFTData[i]];
+        } else {
+           result[i] = [NSNumber numberWithFloat:outFFTData[i]];
+        }
+        
+    }
 
     [self clearMemory];
     
@@ -98,14 +86,11 @@
 
 - (void) clearMemory {
 
-    free(in_real);
-    free(out_real);
-    free(split_data.realp);
-    free(split_data.imagp);
-    free(window);
-    
+    free(complexA.realp);
+    free(complexA.imagp);
+    free(outFFTData);
+    free(invertedCheckData);
     vDSP_destroy_fftsetup(fftSetup);
-
 }
 
 @end

@@ -18,7 +18,7 @@
     
     CGFloat sum;
     // minimal frequency 21.83 Hz (F0)
-    int upperLimit = numberOfFrames/3;
+    NSInteger upperLimit = numberOfFrames/3;
 
     
     for (NSInteger i=0; i<=upperLimit; i++) {

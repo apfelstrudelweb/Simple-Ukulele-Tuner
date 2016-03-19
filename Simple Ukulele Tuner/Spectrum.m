@@ -75,8 +75,8 @@
             }
             
             self.toneName = [NSString stringWithFormat:@"%@", NOTATION_EN[k]];
-            self.octave = [NSNumber numberWithInt:j];
-            self.toneNumber = [NSNumber numberWithInt:((int)BASIC_FREQUENCIES.count-k)];
+            self.octave = [NSNumber numberWithInteger:j];
+            self.toneNumber = [NSNumber numberWithInteger:((int)BASIC_FREQUENCIES.count-k)];
             
 //            // special case: high E (329.6 Hz)
 //            if ([@"E" isEqualToString:self.toneName] && [self.octave intValue] == 4) {

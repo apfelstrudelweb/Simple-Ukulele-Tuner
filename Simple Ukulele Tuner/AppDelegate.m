@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <StartApp/StartApp.h>
 
 @interface AppDelegate () {
     int numberOfAwakenings;
@@ -54,9 +55,7 @@
     [defaults registerDefaults:colorDefaults];
     [defaults registerDefaults:calFreqDefaults];
     [defaults synchronize];
-    
-    [NSThread sleepForTimeInterval:TIME_SPLASHSCREEN];
-    
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
@@ -64,6 +63,29 @@
     self.window.rootViewController = rootViewController;
     
     [self.window makeKeyAndVisible];
+    
+    NSString* currentVersion = [SHARED_VERSION_MANAGER getVersion];
+    
+    if ([version_lite isEqualToString:currentVersion]) {
+        
+        // initialize the SDK with your appID and devID
+        STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
+        sdk.appID = @"202104443";
+        sdk.devID = @"expert@vormbrock.ch";
+        //sdk.preferences = [STASDKPreferences prefrencesWithAge:22 andGender:STAGender_Male];
+ 
+        STASplashPreferences *splashPreferences = [[STASplashPreferences alloc] init];
+        splashPreferences.splashMode = STASplashModeTemplate;
+        splashPreferences.splashTemplateTheme = STASplashTemplateThemeDeepBlue;
+        splashPreferences.splashLoadingIndicatorType = STASplashLoadingIndicatorTypeIOS;
+        //    splashPreferences.splashTemplateIconImageName = @"StartAppIcon";
+        splashPreferences.splashTemplateAppName = @"Simple Ukulele Tuner";
+
+        [sdk showSplashAdWithPreferences:splashPreferences];
+        
+    } else {
+        [NSThread sleepForTimeInterval:TIME_SPLASHSCREEN];
+    }
     
     return YES;
 }

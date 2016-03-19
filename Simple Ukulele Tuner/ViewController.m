@@ -7,16 +7,10 @@
 //
 
 #import "ViewController.h"
-#import <iAd/iAd.h>
+
 
 @interface ViewController () {
-    BOOL isBannerVisible;
-    ADBannerView *_adBanner;
-    NSInteger bannerWidth;
-    NSInteger bannerHeight;
-    CGFloat bannerOffset;
-    
-    BOOL isBannerAdRemoved;
+    STABannerView* bannerView;
 }
 
 @property (nonatomic, strong) UIWebView *webView;
@@ -25,19 +19,45 @@
 
 @implementation ViewController
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view, typically from a nib.
+    
+    startAppNativeAd = [[STAStartAppNativeAd alloc] init];
+    [startAppNativeAd loadAd];
+    
+    
+}
+
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    NSString* currentVersion = [SHARED_VERSION_MANAGER getVersion];
+    
+    if ([version_lite isEqualToString:currentVersion]) {
+        CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
+        CGFloat headerHeight = [SUBVIEW_PROPORTIONS[0] floatValue] + 0.05;
+        CGFloat bannerOffset = screenHeight * headerHeight / 100.0;
+        
+        if (bannerView == nil) {
+            
+            bannerView = [[STABannerView alloc] initWithSize:STA_AutoAdSize
+                                                      origin:CGPointMake(0, bannerOffset)
+                                                    withView:self.view
+                                                withDelegate:nil];
+            [self.view addSubview:bannerView];
+        }
+    }
+}
+
 - (void)loadView {
     
     [super loadView];
-    [self checkVersion];
     
     [SHARED_MANAGER setFFT:YES];
     
     self.view = [BackgroundView new];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(loadBanner:)
-                                                 name:@"ApplicationDidFinishLoading"
-                                               object:nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(updateVersion:)
@@ -47,73 +67,26 @@
 }
 
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)checkVersion {
-    NSString* currentVersion = [SHARED_VERSION_MANAGER getVersion];
-    
-    if ([version_signal isEqualToString:currentVersion] || [version_uke isEqualToString:currentVersion] || [version_premium isEqualToString:currentVersion]) {
-        isBannerAdRemoved = YES;
-    }
-}
-
 #pragma mark - Notification
 - (void) updateVersion:(NSNotification *) notification {
     
-    [self checkVersion];
+    NSString* currentVersion = [SHARED_VERSION_MANAGER getVersion];
     
-    if (isBannerAdRemoved==YES) {
-        _adBanner.delegate = nil;
-        [_adBanner removeFromSuperview];
-        _adBanner = nil;
-        
-        [[NSNotificationCenter defaultCenter] removeObserver:self];
+    if (![version_lite isEqualToString:currentVersion]) {
+        [bannerView removeFromSuperview];
     }
-}
-
-- (void)loadBanner:(NSNotification *) notification {
     
-    if (isBannerAdRemoved==NO) {
-        CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
-        CGFloat headerHeight = [SUBVIEW_PROPORTIONS[0] floatValue] + 0.05;
-        
-        bannerOffset = screenHeight * headerHeight / 100.0;
-        
-        _adBanner = [[ADBannerView alloc] initWithFrame:CGRectMake(0, bannerOffset, bannerWidth, bannerHeight)];
-        _adBanner.delegate = self;
-    }
 }
 
-- (void)bannerViewDidLoadAd:(ADBannerView *)banner {
-    
-    if (isBannerVisible==NO) {
-        // If banner isn't part of view hierarchy, add it
-        if (_adBanner.superview == nil) {
-            [self.view addSubview:_adBanner];
-        }
-        
-        [UIView beginAnimations:@"animateAdBannerOn" context:NULL];
-        
-        // Assumes the banner view is just at the top of the screen.
-        banner.frame = CGRectOffset(banner.frame, 0, 0);
-        
-        [UIView commitAnimations];
-        
-        isBannerVisible = YES;
-    }
+
+// Delegate method to know when the ad finished loading
+- (void)didLoadAd:(STAAbstractAd *)ad {
+    //NSLog(@"didLoadAd");
 }
 
-- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
-    NSLog(@"Failed to retrieve ad");
+- (void)failedLoadAd:(STAAbstractAd *)ad withError:(NSError *)error {
+    // Failed loading the ad, do something else.
 }
-
-- (void)bannerViewWillLoadAd:(ADBannerView *)banner {
-    NSLog(@"bannerViewWillLoadAd");
-}
-
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
@@ -147,6 +120,10 @@
 // sets the font color of the top bar to white
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
+}
+
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

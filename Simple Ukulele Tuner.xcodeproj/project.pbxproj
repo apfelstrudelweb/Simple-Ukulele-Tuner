@@ -127,6 +127,17 @@
 		1BC0427C1C99FE11005103EC /* VersionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0427A1C99FE11005103EC /* VersionManager.m */; };
 		1BC0427F1C9A0198005103EC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0427D1C9A0198005103EC /* Localizable.strings */; };
 		1BC0428D1C9A082D005103EC /* Root.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0428C1C9A082D005103EC /* Root.plist */; };
+		1BE7948E1C9B3CA6001A5E72 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1BE7948C1C9B3CA6001A5E72 /* StartApp.bundle */; };
+		1BE7948F1C9B3CA6001A5E72 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE7948D1C9B3CA6001A5E72 /* StartApp.framework */; };
+		1BE794911C9B3CC4001A5E72 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE794901C9B3CC4001A5E72 /* CoreMedia.framework */; };
+		1BE794931C9B3CDD001A5E72 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE794921C9B3CDD001A5E72 /* AVFoundation.framework */; };
+		1BE794951C9B3CF0001A5E72 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE794941C9B3CF0001A5E72 /* AdSupport.framework */; };
+		1BE794971C9B3D01001A5E72 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE794961C9B3D01001A5E72 /* SystemConfiguration.framework */; };
+		1BE794991C9B3D0E001A5E72 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE794981C9B3D0E001A5E72 /* CoreTelephony.framework */; };
+		1BE7949B1C9B3D1B001A5E72 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE7949A1C9B3D1B001A5E72 /* UIKit.framework */; };
+		1BE7949D1C9B3D25001A5E72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE7949C1C9B3D25001A5E72 /* Foundation.framework */; };
+		1BEBF3CD1C9D469500F2ED4D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEBF3CC1C9D469500F2ED4D /* CoreGraphics.framework */; };
+		1BEBF3CF1C9D477500F2ED4D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEBF3CE1C9D477500F2ED4D /* libz.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -314,6 +325,17 @@
 		1BC0428A1C9A0508005103EC /* pt */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pt; path = "Simple Ukulele Tuner/pt.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1BC0428B1C9A0520005103EC /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = "Simple Ukulele Tuner/ru.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1BC0428C1C9A082D005103EC /* Root.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Root.plist; sourceTree = "<group>"; };
+		1BE7948C1C9B3CA6001A5E72 /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
+		1BE7948D1C9B3CA6001A5E72 /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
+		1BE794901C9B3CC4001A5E72 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		1BE794921C9B3CDD001A5E72 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		1BE794941C9B3CF0001A5E72 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		1BE794961C9B3D01001A5E72 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		1BE794981C9B3D0E001A5E72 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		1BE7949A1C9B3D1B001A5E72 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1BE7949C1C9B3D25001A5E72 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1BEBF3CC1C9D469500F2ED4D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1BEBF3CE1C9D477500F2ED4D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,9 +343,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BEBF3CF1C9D477500F2ED4D /* libz.tbd in Frameworks */,
+				1BE794991C9B3D0E001A5E72 /* CoreTelephony.framework in Frameworks */,
+				1BEBF3CD1C9D469500F2ED4D /* CoreGraphics.framework in Frameworks */,
+				1BE7949D1C9B3D25001A5E72 /* Foundation.framework in Frameworks */,
+				1BE794971C9B3D01001A5E72 /* SystemConfiguration.framework in Frameworks */,
+				1BE794951C9B3CF0001A5E72 /* AdSupport.framework in Frameworks */,
+				1BE7949B1C9B3D1B001A5E72 /* UIKit.framework in Frameworks */,
+				1BE794931C9B3CDD001A5E72 /* AVFoundation.framework in Frameworks */,
+				1BE794911C9B3CC4001A5E72 /* CoreMedia.framework in Frameworks */,
 				1BC0415D1C99FA19005103EC /* AudioToolbox.framework in Frameworks */,
 				1BC0415F1C99FA1F005103EC /* CoreAudio.framework in Frameworks */,
 				1BC041611C99FA24005103EC /* Accelerate.framework in Frameworks */,
+				1BE7948F1C9B3CA6001A5E72 /* StartApp.framework in Frameworks */,
 				1BC041631C99FA2F005103EC /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,12 +366,10 @@
 		1BC041301C99F8C6005103EC = {
 			isa = PBXGroup;
 			children = (
+				1BE7949E1C9B3D35001A5E72 /* Frameworks */,
+				1BE7948B1C9B3C95001A5E72 /* StartApp SDK */,
 				1BC0428C1C9A082D005103EC /* Root.plist */,
 				1BC0427D1C9A0198005103EC /* Localizable.strings */,
-				1BC041621C99FA2F005103EC /* StoreKit.framework */,
-				1BC041601C99FA24005103EC /* Accelerate.framework */,
-				1BC0415E1C99FA1F005103EC /* CoreAudio.framework */,
-				1BC0415C1C99FA19005103EC /* AudioToolbox.framework */,
 				1BC0413B1C99F8C6005103EC /* Simple Ukulele Tuner */,
 				1BC0413A1C99F8C6005103EC /* Products */,
 			);
@@ -663,6 +693,35 @@
 			name = Categories;
 			sourceTree = "<group>";
 		};
+		1BE7948B1C9B3C95001A5E72 /* StartApp SDK */ = {
+			isa = PBXGroup;
+			children = (
+				1BE7948C1C9B3CA6001A5E72 /* StartApp.bundle */,
+				1BE7948D1C9B3CA6001A5E72 /* StartApp.framework */,
+			);
+			name = "StartApp SDK";
+			sourceTree = "<group>";
+		};
+		1BE7949E1C9B3D35001A5E72 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1BEBF3CE1C9D477500F2ED4D /* libz.tbd */,
+				1BEBF3CC1C9D469500F2ED4D /* CoreGraphics.framework */,
+				1BC041621C99FA2F005103EC /* StoreKit.framework */,
+				1BC041601C99FA24005103EC /* Accelerate.framework */,
+				1BC0415E1C99FA1F005103EC /* CoreAudio.framework */,
+				1BC0415C1C99FA19005103EC /* AudioToolbox.framework */,
+				1BE7949C1C9B3D25001A5E72 /* Foundation.framework */,
+				1BE7949A1C9B3D1B001A5E72 /* UIKit.framework */,
+				1BE794981C9B3D0E001A5E72 /* CoreTelephony.framework */,
+				1BE794961C9B3D01001A5E72 /* SystemConfiguration.framework */,
+				1BE794941C9B3CF0001A5E72 /* AdSupport.framework */,
+				1BE794921C9B3CDD001A5E72 /* AVFoundation.framework */,
+				1BE794901C9B3CC4001A5E72 /* CoreMedia.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -749,6 +808,7 @@
 				1BC0423F1C99FD3D005103EC /* screenshot_09.png in Resources */,
 				1BC0417F1C99FBEB005103EC /* de_manual3.html in Resources */,
 				1BC042411C99FD3D005103EC /* screenshot_11.png in Resources */,
+				1BE7948E1C9B3CA6001A5E72 /* StartApp.bundle in Resources */,
 				1BC0420F1C99FD23005103EC /* linePattern.png in Resources */,
 				1BC042381C99FD3D005103EC /* screenshot_02.png in Resources */,
 				1BC041781C99FBEB005103EC /* en_manual1.html in Resources */,
@@ -972,10 +1032,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				INFOPLIST_FILE = "Simple Ukulele Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.vormbrock.simpleukuleletuner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -989,10 +1053,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				INFOPLIST_FILE = "Simple Ukulele Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.vormbrock.simpleukuleletuner;
 				PRODUCT_NAME = "$(TARGET_NAME)";

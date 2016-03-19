@@ -58,12 +58,10 @@
 
 - (void) captureSound {
     
-    __block CGFloat magnitude = 0.0;
-    __block NSMutableArray* frequencyArray = [NSMutableArray new];
+   // __block NSMutableArray* frequencyArray = [NSMutableArray new];
     __block CGFloat dbVal = 0.0;
     
     __block NSInteger numCaptures = 0;
-    __block CGFloat captureVolume = 0.0;
     __block Spectrum *spect = [Spectrum new];
     __block AutoCorrelation* correlation = [AutoCorrelation new];
     __block FFT* fft = [FFT new];
@@ -73,55 +71,44 @@
     Bandpass *bandpass = [[Bandpass alloc] initWithSamplingRate:PREFERRED_SAMPLING_RATE];
     [bandpass setCenterFrequency:520.0 andBandwidth:500.0];
     
+    
     if (IS_MICROPHONE==YES) {
-
-        [audioManager setInputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels) {
+        
+        [[Novocaine audioManager] setInputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels) {
+            ringBuffer->AddNewInterleavedFloatData(data, numFrames, numChannels);
             
-            // frequency analysis
-            vDSP_rmsqv(data, 1, &magnitude, numFrames*numChannels);
-            self->ringBuffer->AddNewInterleavedFloatData(data, numFrames, numChannels);
-            
-            // DB values
-            vDSP_vsq(data, 1, data, 1, numFrames*numChannels);
-            CGFloat meanVal = 0.0;
-            vDSP_meanv(data, 1, &meanVal, numFrames*numChannels);
-            
-            CGFloat one = 1.0;
-            vDSP_vdbcon(&meanVal, 1, &one, &meanVal, 1, 1, 0);
-            
-            // check crucial for IOS 8.0, otherwise we get -INF as value
-            if (meanVal > -INFINITY) {
-                dbVal = dbVal + 0.2*(meanVal - dbVal);
-                //printf("Decibel level: %f\n", dbVal);
+            if (isnan(dbVal)) {
+                dbVal = 0.0;
             }
             
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateVolumeNotification" object:[NSNumber numberWithFloat:dbVal]];
+            vDSP_vsq(data, 1, data, 1, numFrames*numChannels);
+            float meanVal = 0.0;
+            vDSP_meanv(data, 1, &meanVal, numFrames*numChannels);
+
+            float one = 1.0;
+            vDSP_vdbcon(&meanVal, 1, &one, &meanVal, 1, 1, 0);
+            dbVal = dbVal + 0.2*(meanVal - dbVal);
             
+            if (dbVal > -80) {
+                [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateVolumeNotification" object:[NSNumber numberWithFloat:dbVal]];
+            }
+
         }];
     }
     
     
-    [audioManager setOutputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels)
-     {
-         
-         if (IS_MICROPHONE==YES) {
-             self->ringBuffer->FetchInterleavedData(data, numFrames, numChannels);
-         } 
-         
-
+    [[Novocaine audioManager] setOutputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels) {
+        ringBuffer->FetchInterleavedData(data, numFrames, numChannels);
+ 
         [bandpass filterData:data numFrames:numFrames numChannels:numChannels];
-         
-         CGFloat volume = IS_MICROPHONE==YES ? 1000.0*magnitude : 10.0;
-         spect.volume = [NSNumber numberWithFloat:volume];
-         
-         if (volume > 1) {
-             frequencyArray = [NSMutableArray new];
-             captureVolume = volume;
-         }
+
+        CGFloat volume = 100 + dbVal;
+        spect.volume = [NSNumber numberWithFloat:volume];
+        
 
          // performance issue: wait until the nth loop until new processing restarts
-         if (numCaptures % NUM_CAPTURES_HOP == 0 && volume > 0.01) {
-                 
+         if (numCaptures % NUM_CAPTURES_HOP == 0 && volume > 20.0) {
+     
              // mostly for iPad: join the two channels to one
              if (numChannels==2) {
                  for(int i = 0; i < numFrames; i++) {

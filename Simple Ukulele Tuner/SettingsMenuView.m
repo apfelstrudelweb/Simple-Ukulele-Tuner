@@ -400,6 +400,12 @@ typedef NSUInteger SECTION_DESCR;
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+  
+//    // TEST ONLY!!!
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        [SHARED_VERSION_MANAGER setCurrentVersion:version_premium];
+//        [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateVersionNotification" object:nil];
+//    });
     
     [tableView deselectRowAtIndexPath:indexPath animated:NO];
     

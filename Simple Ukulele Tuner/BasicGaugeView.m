@@ -81,11 +81,11 @@
 -(void) updateGauge:(NSNotification *) notification {
     if ([notification.object isKindOfClass:[NSNumber class]]) {
         
+        
         dispatch_async(dispatch_get_main_queue(), ^{
-            //[animation adjustFrequency:freq];
             
             CGFloat dbVal = [(NSNumber*)[notification object] floatValue];
-            
+      
             CGFloat width = self.bounds.size.width;
             CGFloat height = self.bounds.size.height - bottomBorderWidth;
             
@@ -96,6 +96,8 @@
             CGRect bounds = CGRectMake(0.0, 0.0, newX, height);
             self.gradient.bounds = bounds;
             self.gradient.endPoint = CGPointMake(fact, 0.0);
+            
+            printf("newX: %f\n", newX);
             
             
             if (rightBorder) {

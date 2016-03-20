@@ -20,7 +20,7 @@
 
 + (void)initialize {
     
-    [iRate sharedInstance].appStoreID = 1022749854; // Simple Ukulele Tuner Pro on the App Store
+    [iRate sharedInstance].appStoreID = [APPSTORE_ID integerValue]; // Simple Ukulele Tuner on the App Store
     
     [iRate sharedInstance].daysUntilPrompt = 5;
     [iRate sharedInstance].usesUntilPrompt = 10;
@@ -70,7 +70,7 @@
         
         // initialize the SDK with your appID and devID
         STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
-        sdk.appID = @"202104443";
+        sdk.appID = APPSTORE_ID;
         sdk.devID = @"expert@vormbrock.ch";
         //sdk.preferences = [STASDKPreferences prefrencesWithAge:22 andGender:STAGender_Male];
  

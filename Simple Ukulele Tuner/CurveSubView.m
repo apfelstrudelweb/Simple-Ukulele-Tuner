@@ -16,7 +16,7 @@
 
 @interface CurveSubView() {
     NSArray *data;
-    NSArray *graphData;
+    NSMutableArray *graphData;
     NSNumber* bin;
     BOOL isFFT;
     
@@ -53,7 +53,7 @@
         
         [self checkVersion];
         
-        graphData = [NSMutableArray new];
+        //graphData = [NSMutableArray new];
         
         
         [self setNeedsDisplay];
@@ -96,47 +96,26 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             spect = ((Spectrum*)[notification object]);
             data = spect.data;
-            //            bin = spect.bin;
-            //            isFFT = [SHARED_MANAGER isFFT];
-            //
-            //            if (isFFT == YES){
-            //                // FFT
-            //                binArray = [NSMutableArray new];
-            //
-            //                for (NSInteger i=START_BIN; i<END_BIN+1; i++) {
-            //                    CGFloat logBin = log10f((CGFloat)i);
-            //                    [binArray addObject:[NSNumber numberWithFloat:logBin]];
-            //
-            //                    if (i==START_BIN) {
-            //                        minLogBin = logBin;
-            //                    }
-            //
-            //                    if (i==END_BIN) {
-            //                        maxLogBin = logBin;
-            //                    }
-            //                }
-            //
-            //                /**
-            //                 * Special procedure: get the exact frequency from YIN algorithm
-            //                 * and calculate the idela bin. Then correct the bins from FFT,
-            //                 * shifting the graph horizontally in order to get the correct
-            //                 * mapping "peak" against "bin" or "frequency"
-            //                 */
-            //
-            //                // now extract position of absolute maxmimum
-            //                CGFloat maxValue = -MAXFLOAT;
-            //                NSInteger realMaxBin = 0;
-            //
-            //                for (NSInteger i=0; i<data.count; i++) {
-            //                    if ([data[i] floatValue] < maxValue) {
-            //                        maxValue = [data[i] floatValue];
-            //                        realMaxBin = i;
-            //                        break;
-            //                    }
-            //                }
-            //            }
+            graphData = [data mutableCopy];
             
-            graphData = data;
+            if ([SHARED_MANAGER isFFT] == YES){
+                
+                CGFloat frequency = [spect.frequency floatValue];
+                
+                if (frequency > 0.0 && frequency < 100.0) {
+                    NSInteger maxBin = (NSInteger) (frequency / 11.0);
+                    
+                    CGFloat maxVal = -MAXFLOAT;
+                    for (NSInteger i=0; i<graphData.count; i++) {
+                        if ([graphData[i] floatValue] > maxVal) {
+                            maxVal = 1.1*[graphData[i] floatValue];
+                        }
+                    }
+
+                    graphData[maxBin] = [NSNumber numberWithFloat:maxVal];
+                }
+                
+            }
             
             [self setNeedsDisplay];
         });
@@ -168,7 +147,7 @@
     CGFloat xSize = self.bounds.size.width;
     CGFloat ySize = self.bounds.size.height;
     
-    CGFloat volume = [spect.volume floatValue] / 20.0;
+    CGFloat volume = [spect.volume floatValue] / 10.0;
     
     // make the range dependent on volume
     // nota bene: in order to make volume convergent towards a constant,

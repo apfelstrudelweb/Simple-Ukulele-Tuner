@@ -14,6 +14,8 @@
     CGFloat distanceBetweenItems;
     CGFloat textLayerWidth;
     CGFloat borderWidth;
+    
+    NSInteger dataCount;
 }
 
 @property (nonatomic, retain) UIScrollView *scrollView;
@@ -49,7 +51,7 @@
                                                    object:nil];
         
         
-        
+        dataCount = 0;
     }
     return self;
 }
@@ -269,6 +271,12 @@
 }
 
 - (void)setValue:(CGFloat)newValue inOctave:(NSInteger) octave {
+    
+    if (++dataCount % 10 != 0) {
+        return;
+    }
+    
+    dataCount = 0;
     
     if (newValue==0.0) {
         newValue = 10.0;//16.35; // set to the first tone "C" of the scale

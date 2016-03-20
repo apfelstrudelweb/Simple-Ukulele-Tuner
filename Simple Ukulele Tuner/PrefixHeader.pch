@@ -63,6 +63,8 @@
 #import "BackgroundView.h"
 
 
+#define APPSTORE_ID @"1095159631"
+
 #define UPGRADE_TYPE @"upgradeType" //NSUserDefaults after in-app purchase
 
 // number of seconds the splashscreen should be displayed
@@ -115,7 +117,7 @@
 #define TAB_FONT_COLOR [UIColor whiteColor] // for horizontal picker
 
 
-#define PREFERRED_SAMPLING_RATE 44100.0 / 2.0
+#define PREFERRED_SAMPLING_RATE 44100.0 / 4.0
 
 #define PRECISION 0.2  // precision requested for a tone in % (in order to get green color)
 #define TONE_DIST 1.0595

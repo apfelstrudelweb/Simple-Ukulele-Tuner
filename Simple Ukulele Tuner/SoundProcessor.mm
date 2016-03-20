@@ -109,7 +109,7 @@
         
 
          // performance issue: wait until the nth loop until new processing restarts
-         if (numCaptures % NUM_CAPTURES_HOP == 0 && volume > 20.0) {
+         if (numCaptures % NUM_CAPTURES_HOP == 0 && volume > 10.0) {
      
              // mostly for iPad: join the two channels to one
              if (numChannels==2) {
@@ -122,7 +122,7 @@
              if (![SHARED_MANAGER isFFT]) {
                  result = [correlation performAutocorrelation:data withFrames:numFrames];
              } else {
-                 result = [fft performFFT:data withFrames:2*numFrames];
+                 result = [fft performFFT:data withFrames:numFrames];
              }
              
              
@@ -159,7 +159,7 @@
              if (previousFrequencyArray.count > 1) {
                  CGFloat avrgFreq = [self getAverageValue];
                  
-                 if (std::abs(avrgFreq - pitchInHertz) > 0.1*avrgFreq) {
+                 if (std::abs(avrgFreq - pitchInHertz) > 0.05*avrgFreq) {
                      // silence the sound in order to disable sound feedback
                      [self silence: data andSize:(int) numChannels*numFrames];
                      return;

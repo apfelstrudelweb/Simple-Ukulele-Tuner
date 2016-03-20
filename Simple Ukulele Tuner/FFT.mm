@@ -10,7 +10,7 @@
 #import "FFT.h"
 
 @interface FFT() {
-
+    
     size_t windowSize;
     float *window;
     
@@ -29,13 +29,12 @@
     
     result = [NSMutableArray new];
     
-//    windowSize = numSamples * 2;
-//
+//    windowSize = 10*numSamples ;
 //    window = (float *) malloc(sizeof(float) * windowSize);
 //    memset(window, 0, sizeof(float) * windowSize);
-//    vDSP_hamm_window(window, windowSize, vDSP_HANN_DENORM);
-    
-    
+//    vDSP_hann_window(window, windowSize, vDSP_HANN_NORM);
+//    vDSP_vmul(data, 1, window, 1, data, 1, numSamples);
+
     vDSP_Length log2n = log2f(numSamples);
     fftSetup = vDSP_create_fftsetup(log2n, FFT_RADIX2);
     NSInteger nOver2 = numSamples/2;
@@ -52,12 +51,12 @@
     //Convert float array of reals samples to COMPLEX_SPLIT array A
     vDSP_ctoz((COMPLEX*)data, 2, &(complexA), 1, numSamples/2);
     
+    //vDSP_vmul(data, 1, window, 1, data, 1, numSamples);
     
     //Perform FFT using fftSetup and A
     //Results are returned in A
     vDSP_fft_zrip(fftSetup, &(complexA), 1, log2n, FFT_FORWARD);
-    
-    //vDSP_vmul(data, 1, window, 1, data, 1, numSamples);
+
     
     //scale fft
     vDSP_vsmul(complexA.realp, 1, &mFFTNormFactor, complexA.realp, 1, numSamples/2);
@@ -68,16 +67,17 @@
     //to check everything (checking by reversing to time-domain data) =============================
     vDSP_fft_zrip(fftSetup, &(complexA), 1, log2n, FFT_INVERSE);
     vDSP_ztoc( &(complexA), 1, (COMPLEX *) invertedCheckData , 2, numSamples/2);
-
+    
     for (int i = 0; i < 200; i++) {
-        if (i<11) {
-            result[i] = [NSNumber numberWithFloat:20.0*outFFTData[i]];
-        } else {
-           result[i] = [NSNumber numberWithFloat:outFFTData[i]];
-        }
-        
+//        if (i<10) {
+//            CGFloat fact = (CGFloat)(10-i);
+//            result[i] = [NSNumber numberWithFloat:fact*outFFTData[i]];
+//        } else {
+//            result[i] = [NSNumber numberWithFloat:outFFTData[i]];
+//        }
+        result[i] = [NSNumber numberWithFloat:outFFTData[i]];
     }
-
+    
     [self clearMemory];
     
     return result;
@@ -85,7 +85,7 @@
 
 
 - (void) clearMemory {
-
+    
     free(complexA.realp);
     free(complexA.imagp);
     free(outFFTData);

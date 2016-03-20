@@ -97,7 +97,7 @@
     
     dispatch_async(dispatch_get_main_queue(), ^{
         
-        self.timerUp = [NSTimer scheduledTimerWithTimeInterval:0.1
+        self.timerUp = [NSTimer scheduledTimerWithTimeInterval:1.5
                                                         target:self
                                                       selector:@selector(toggleAlphaArrowUp:)
                                                       userInfo:nil
@@ -116,7 +116,7 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         
         self.isWarningDown = YES;
-        self.timerDown = [NSTimer scheduledTimerWithTimeInterval:0.1
+        self.timerDown = [NSTimer scheduledTimerWithTimeInterval:1.5
                                                           target:self
                                                         selector:@selector(toggleAlphaArrowDown:)
                                                         userInfo:nil

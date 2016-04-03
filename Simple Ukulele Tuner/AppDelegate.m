@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <StartApp/StartApp.h>
+#import <HockeySDK/HockeySDK.h>
 
 @interface AppDelegate () {
     int numberOfAwakenings;
@@ -86,6 +87,10 @@
     } else {
         [NSThread sleepForTimeInterval:TIME_SPLASHSCREEN];
     }
+    
+    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
+    [[BITHockeyManager sharedHockeyManager] startManager];
+    [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
     
     return YES;
 }

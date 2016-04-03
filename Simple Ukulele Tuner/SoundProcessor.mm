@@ -180,8 +180,8 @@
              spect.frequency = frequency;
              
              if ([SHARED_MANAGER isFFT]) {
-                 int bin = pitchInHertz;
-                 spect.bin = [NSNumber numberWithInt:bin];
+                 NSInteger bin = pitchInHertz;
+                 spect.bin = [NSNumber numberWithInteger:bin];
              } else {
                  spect.bin = [NSNumber numberWithInt:PREFERRED_SAMPLING_RATE / pitchInHertz];
              }

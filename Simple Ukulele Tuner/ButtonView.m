@@ -82,6 +82,21 @@
 
 - (void) toggleMicrophone:(NSNotification *) notification {
     
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    
+    // AZ DEBUG @@ iOS 7+
+    AVAudioSessionRecordPermission sessionRecordPermission = [session recordPermission];
+    
+    if (sessionRecordPermission == AVAudioSessionRecordPermissionDenied) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Microphone disabled"
+                                                        message:@"You must first enable the microphone for this app. Go to Settings -> Simple Ukulele Tuner and turn the microphone switch on."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil];
+        [alert show];
+        return;
+    }
+    
     microphoneIsActive = !microphoneIsActive;
     
     NSString* imageName = microphoneIsActive ? @"microphoneOff.png" : @"microphoneOn.png";
@@ -90,6 +105,7 @@
     
     // start/stop audio processing
     if (microphoneIsActive==YES) {
+ 
         [SHARED_MANAGER setSoundCapturing:YES];
         [processor captureSound];
     } else {

@@ -69,12 +69,6 @@
     vDSP_ztoc( &(complexA), 1, (COMPLEX *) invertedCheckData , 2, numSamples/2);
     
     for (int i = 0; i < 200; i++) {
-//        if (i<10) {
-//            CGFloat fact = (CGFloat)(10-i);
-//            result[i] = [NSNumber numberWithFloat:fact*outFFTData[i]];
-//        } else {
-//            result[i] = [NSNumber numberWithFloat:outFFTData[i]];
-//        }
         result[i] = [NSNumber numberWithFloat:outFFTData[i]];
     }
     

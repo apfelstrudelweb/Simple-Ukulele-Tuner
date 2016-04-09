@@ -196,9 +196,9 @@
 #define version_signal      @"signal"
 #define version_premium     @"premium"
 
-#define inAppPurchaseUke        @"ch.vormbrock.simpleukuleletunerpro.alluke"
-#define inAppPurchaseSignal     @"ch.vormbrock.simpleukuleletunerpro.signalplus"
-#define inAppPurchasePremium    @"ch.vormbrock.simpleukuleletunerpro.premium"
+#define inAppPurchaseUke        @"ch.vormbrock.simpleukuleletuner.alluke"
+#define inAppPurchaseSignal     @"ch.vormbrock.simpleukuleletuner.signalplus"
+#define inAppPurchasePremium    @"ch.vormbrock.simpleukuleletuner.premium"
 
 #define INAPP_PURCHASE_ARRAY  @[inAppPurchasePremium, inAppPurchaseUke, inAppPurchaseSignal]
 

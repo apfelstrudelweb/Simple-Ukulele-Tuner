@@ -3,36 +3,48 @@
     <head>
         <meta charset="UTF-8" />
         <title>Benutzer-Handbuch</title>
-        <link rel="stylesheet" href="style.css">    </head>
+        <link rel="stylesheet" href="style.css">
+            </head>
     <body onload="draw()" style="margin:0; padding:0; font-size:100%;background-color:#454851">
         <div id="page" style="max-width:960px; margin:0 auto;">
             <div id="header" style="padding:0 3.125%;">
                 <h1>Benutzer-Handbuch</h1>
-				<h2>6. FFT (Fast Fourier Transform) </h2>
+                <h3>In-App-Kauf "Signal Plus" oder "All In One"</h3>
+                <h2>5. Autokorrelation </h2>
             </div><!-- #header -->
             <div id="content1" style="clear:both;  padding:0 3.125%;">
-              <p>Im Gegensatz zur Autokorrelation wird bei FFT das Eingangssignal im Frequenzbereich analysiert - Stichwort: Spektrum.</p>
+                <p>Hier wird das Eingangssignal mit der zeitversetzten Variante desselben Signals multipliziert und auf der Zeitachse dargestellt. </p>
             </div><!-- #content -->
-            <div id="screencast_02" style="clear:both;  padding:0 3.125%;">
-                <p><center><img src="screencast_02.gif" alt="Screenshot Pro Version" class="img" /></center></p>
+            <div id="screencast_01" style="clear:both;  padding:0 3.125%;">
+                <p><center><img src="screencast_01.gif" alt="Screenshot Pro Version" class="img" /></center></p>
             </div>
             <!-- #sidebar -->
-			<div id="content2" style="clear:both;  padding:0 3.125%;">
-                <p>Im Frequenzbereich sieht man sehr schön alle Frequenzen, die an der Bildung eines Tons (vom Instrument) beteiligt sind. Wie bereits im letzten Kapitel erwähnt, gibt es bei den Ukulele-Saiten neben dem eigentlichen Grundton noch weitere Obertöne, welche überhaupt den typischen Klang eines Instruments ausmachen. Der Einfachheit halber nehmen wir wieder die tiefe E-Saite (82.4 Hz) einer Gitarre - hier die Spektral-Sicht davon: </p>
+            <div id="content2" style="clear:both;  padding:0 3.125%;">
+                <p>Das klingt zunächst etwas kompliziert - daher zunächst die Frage, was man von Autokorrelation überhaupt hat:<br />
+                <br /><strong><i>Mithilfe von Autokorrelation lassen sich Periodizitäten eines Signals - und somit Frequenzen - ermitteln.</i></strong>				</p>
+                <p>Bei einer Ukulele-Saite hat man neben der Grundfrequenz (z.B. 440 Hz für die A-Saite) auch noch weitere Obertöne. Diese lassen sich besonders gut durch FFT (siehe nächstes Kapitel) darstellen. Gerade die Obertöne machen den typischen Klang einer Ukulele aus - eine reine Sinus-Schwingung mit der Grundton-Frequenz würde sehr steril und künstlich klingen!</p>
+                <p>Schauen wir uns einmal die Aufnahme (Amplitude) einer tiefen E-Saite (einer Gitarre) auf der Zeit-Achse an:</p>
             </div>
-            <div id="screenshot07" style="clear:both;  padding:0 3.125%;">
-                <p><center><img src="screenshot_07.png" alt="Screenshot Pro Version" class="img" /></center></p>
-            </div>
-            <div id="content3" style="clear:both;  padding:0 3.125%;">
-				<p>Der relevante Peak (82.4 Hz) ist der erste und recht breite, gefolgt von einem weiteren Peak, welcher den ersten Oberton repräsentiert.</p>
-				<p>Abschließend auch wieder die Spektral-Sicht eine reinen Sinus-Schwingung (440 Hz, Kammerton):</p>
-            </div>
-            <div id="screenshot08" style="clear:both;  padding:0 3.125%;">
-                <p><center><img src="screenshot_08.png" alt="Screenshot Pro Version" class="img" /></center></p>
+            <div id="screenshot04" style="clear:both;  padding:0 3.125%;">
+                <p><center><img src="screenshot_04.png" alt="Screenshot Pro Version" class="img" /></center></p>
             </div>
             <div id="content3" style="clear:both;  padding:0 3.125%;">
-				<p>Im Gegensatz zu einer Gitarren-Saite haben wir bei der FFT-Sicht ein eindeutiges Maximum - hier lässt sich auf der x-Achse die Frequenz eindeutig abgreifen.<br/>Als Faustregel gilt: je höher die gemessene Frequenz, desto weiter wandert das entsprechende Maximum nach rechts. </p>
-			</div>
+                <p>Hier erkennt man ganz deutlich Nulldurchgänge in <i>verschiedenen</i> Abständen - d.h. eine Frequenzbestimmung des Grundtons erweist sich als eher schwierig bis unmöglich. </p>
+                <p>Und nun dasselbe Eingangssignal mit sich selbst korrelliert:</p>
+            </div>
+            <div id="screenshot05" style="clear:both;  padding:0 3.125%;">
+                <p><center><img src="screenshot_05.png" alt="Screenshot Pro Version" class="img" /></center></p>
+            </div>
+            <div id="content3" style="clear:both;  padding:0 3.125%;">
+                <p>Jetzt erkennt man einen deutlichen Peak, welcher für den Grundton steht. Die beiden kleineren Peaks links davon repräsentieren Oberschwingungen. Generell gilt: je höher die Frequenz, desto weiter wandert ein Peak nach <strong>links</strong> - dies kann man übrigens beim Stimmen der Gitarre selber ausprobieren.</p>
+                <p>Abschließend noch eine reine Sinus-Schwingung (440 Hz, Kammerton) mit sich selbst korreliert:</p>
+            </div>
+            <div id="screenshot06" style="clear:both;  padding:0 3.125%;">
+                <p><center><img src="screenshot_06.png" alt="Screenshot Pro Version" class="img" /></center></p>
+            </div>
+            <div id="content4" style="clear:both;  padding:0 3.125%;">
+                <p>Im Gegensatz zu einer Gitarren- oder Ukulele-Saite entsteht hier ein sehr harmonisches Muster mit einer gleichmäßig abfallenden Hüllkurve. Das heißt, es gibt keine Oberschwingungen - dem ersten absoluten Maximum (siehe Spot) sind keine weiteren kleineren Peaks vorgelagert.</p>
+            </div>
             <div id="footer" style="clear:both; padding:0 3.125%;">
                 <center><span class="copyright">Copyright 2016 - Ullrich Vormbrock - Alle Rechte vorbehalten<br/><br/><br/></span></center>
             </div><!-- #footer -->

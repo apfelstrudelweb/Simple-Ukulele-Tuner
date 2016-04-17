@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B0721501CC3DE7300102B13 /* screenshot_18.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B07214F1CC3DE7300102B13 /* screenshot_18.png */; };
+		1B0721521CC3DF2000102B13 /* en_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B0721511CC3DF2000102B13 /* en_manual7.html */; };
+		1B0721541CC3E64100102B13 /* de_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B0721531CC3E64100102B13 /* de_manual7.html */; };
 		1BC0413E1C99F8C6005103EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0413D1C99F8C6005103EC /* main.m */; };
 		1BC041411C99F8C6005103EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041401C99F8C6005103EC /* AppDelegate.m */; };
 		1BC041441C99F8C6005103EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041431C99F8C6005103EC /* ViewController.m */; };
@@ -145,6 +148,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B07214F1CC3DE7300102B13 /* screenshot_18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_18.png; sourceTree = "<group>"; };
+		1B0721511CC3DF2000102B13 /* en_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = en_manual7.html; sourceTree = "<group>"; };
+		1B0721531CC3E64100102B13 /* de_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = de_manual7.html; sourceTree = "<group>"; };
 		1BC041391C99F8C6005103EC /* Simple Ukulele Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Ukulele Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC0413D1C99F8C6005103EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BC0413F1C99F8C6005103EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -460,12 +466,14 @@
 				1BF634EF1CB1A0FB0060ECEE /* en_manual4.html */,
 				1BC041701C99FBEB005103EC /* en_manual5.html */,
 				1BC041711C99FBEB005103EC /* en_manual6.html */,
+				1B0721511CC3DF2000102B13 /* en_manual7.html */,
 				1BC041721C99FBEB005103EC /* de_manual1.html */,
 				1BC041731C99FBEB005103EC /* de_manual2.html */,
 				1BC041741C99FBEB005103EC /* de_manual3.html */,
 				1BF634F71CB1AA750060ECEE /* de_manual4.html */,
 				1BC041751C99FBEB005103EC /* de_manual5.html */,
 				1BC041761C99FBEB005103EC /* de_manual6.html */,
+				1B0721531CC3E64100102B13 /* de_manual7.html */,
 			);
 			name = HTML;
 			sourceTree = "<group>";
@@ -646,6 +654,7 @@
 				1BF634F11CB1A2D10060ECEE /* screenshot_16.png */,
 				1BF634F31CB1A2DE0060ECEE /* screenshot_16b.png */,
 				1BF634F51CB1A9C70060ECEE /* screenshot_17.png */,
+				1B07214F1CC3DE7300102B13 /* screenshot_18.png */,
 			);
 			name = Popup;
 			sourceTree = "<group>";
@@ -825,6 +834,7 @@
 				1BC041F21C99FD0A005103EC /* arrowDown.png in Resources */,
 				1BF634F41CB1A2DE0060ECEE /* screenshot_16b.png in Resources */,
 				1BC0423C1C99FD3D005103EC /* screenshot_06.png in Resources */,
+				1B0721501CC3DE7300102B13 /* screenshot_18.png in Resources */,
 				1BC0423F1C99FD3D005103EC /* screenshot_09.png in Resources */,
 				1BC0417F1C99FBEB005103EC /* de_manual3.html in Resources */,
 				1BC042411C99FD3D005103EC /* screenshot_11.png in Resources */,
@@ -861,8 +871,10 @@
 				1BC042011C99FD0A005103EC /* tabPassive.png in Resources */,
 				1BC042421C99FD3D005103EC /* screenshot_12.png in Resources */,
 				1BC0417D1C99FBEB005103EC /* de_manual1.html in Resources */,
+				1B0721541CC3E64100102B13 /* de_manual7.html in Resources */,
 				1BC042191C99FD23005103EC /* restoreButton.png in Resources */,
 				1BC042371C99FD3D005103EC /* screenshot_01.png in Resources */,
+				1B0721521CC3DF2000102B13 /* en_manual7.html in Resources */,
 				1BC042161C99FD23005103EC /* onButton.png in Resources */,
 				1BC041791C99FBEB005103EC /* en_manual2.html in Resources */,
 				1BC042331C99FD3D005103EC /* arrowLeft.png in Resources */,

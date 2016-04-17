@@ -24,6 +24,10 @@ h2 {
     font-size: 5vw;font-family:Helvetica;
 }
 
+h3 {
+    font-size: 4vw;font-family:Helvetica;color:#00FF00;text-align:right;
+}
+
 p {
     font-size: 5vw;font-family:Helvetica;
 }

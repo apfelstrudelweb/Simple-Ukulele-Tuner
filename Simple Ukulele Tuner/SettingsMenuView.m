@@ -20,9 +20,10 @@
 
 enum {
     INSTRUMENT_TYPE = 0,
-    CALIBRATION = 1,
-    THEME = 2,
-    RESTORE_BTN = 3
+    SIGNAL = 1,
+    CALIBRATION = 2,
+    THEME = 3,
+    RESTORE_BTN = 4
 };
 typedef NSUInteger SECTION_DESCR;
 
@@ -42,7 +43,7 @@ typedef NSUInteger SECTION_DESCR;
     NSString* version;
     BOOL enableUkeTypes;
     BOOL enableThemes;
-    BOOL enableCalibration;
+    BOOL enableSignal;
     
     BOOL blockUserInteraction;
     
@@ -144,10 +145,10 @@ typedef NSUInteger SECTION_DESCR;
     
     if ([version_premium isEqualToString:version] || [version_uke isEqualToString:version]) {
         enableUkeTypes = YES;
+        enableThemes = YES;
     }
     if ([version_premium isEqualToString:version] || [version_signal isEqualToString:version]) {
-        enableThemes = YES;
-        enableCalibration = YES;
+        enableSignal = YES;
     }
 }
 
@@ -163,6 +164,7 @@ typedef NSUInteger SECTION_DESCR;
     
     switch (section) {
         case INSTRUMENT_TYPE: return ukeTypesArray.count; // for ukulele types
+        case SIGNAL: return 1;
         case CALIBRATION: return 1;                       // for calibration
         case THEME: return colorsDict.count;    // for background colors
         default: return 1;                       // for restore button
@@ -209,7 +211,7 @@ typedef NSUInteger SECTION_DESCR;
     CGFloat fact = IS_IPAD ? 0.58 : 0.55;
     UIImageView *imvPick;
     
-    if (enableCalibration==NO) {
+    if (enableSignal==NO) {
         imvPick = [[UIImageView alloc] initWithFrame:imv.frame];
     } else {
         imvPick = [[UIImageView alloc] initWithFrame:CGRectMake(fact*self.tableView.bounds.size.width,y, 2.0*iconHeight*ratio, iconHeight)];
@@ -238,6 +240,17 @@ typedef NSUInteger SECTION_DESCR;
         
         cell.textLabel.font = font;
         cell.detailTextLabel.font = font;
+        
+    } else if (section == SIGNAL) {
+        cell.textLabel.text = @"All about the Input Signal:";
+        cell.detailTextLabel.text = @"- Frequency (in Hz) and deviation\n- String Protection (\"stay in range\")\n- Spectrum, FFT";
+        
+        UIFont* font1 = [UIFont fontWithName:FONT_BOLD size:[UILabel getFontSizeForSubHeadline]];
+        UIFont* font2 = [UIFont fontWithName:FONT_BOLD size:[UILabel getFontSizeForPicker]];
+        
+        cell.textLabel.font = font1;
+        cell.detailTextLabel.font = font2;
+        cell.detailTextLabel.numberOfLines = 3;
         
     } else if (section == CALIBRATION) {
         // calibration (440 Hz)
@@ -301,6 +314,9 @@ typedef NSUInteger SECTION_DESCR;
             imv.image = SWITCH_OFF;
         }
     }
+    if (section == SIGNAL) {
+        imv.image = SWITCH_ON;
+    }
     // background color
     if (section == THEME) {
         NSString* rowColor = [colorsArray objectAtIndex:row];
@@ -318,7 +334,13 @@ typedef NSUInteger SECTION_DESCR;
             imv.alpha = 0.2;
         }
     }
-    if (enableCalibration==NO && section == CALIBRATION) {
+    if (enableSignal==NO && section == SIGNAL) {
+        imv.image = PURCHASE;
+        if (blockUserInteraction==YES) {
+            imvPick.alpha = 0.2;
+        }
+    }
+    if (enableSignal==NO && section == CALIBRATION) {
         imvPick.image = PURCHASE;
         if (blockUserInteraction==YES) {
             imvPick.alpha = 0.2;
@@ -376,6 +398,7 @@ typedef NSUInteger SECTION_DESCR;
     
     switch (section) {
         case INSTRUMENT_TYPE:  labelText = @"Ukulele Type"; break;     // for ukulele types
+        case SIGNAL: labelText = @"Signal Info"; break;
         case CALIBRATION:  labelText = @"Calibration"; break;    // for calibration
         case THEME:  labelText = @"Ukulele Color"; break;    // for background colors
         default: labelText = @"Purchase already done?";  // for restore button
@@ -395,6 +418,10 @@ typedef NSUInteger SECTION_DESCR;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if ([indexPath section] == SIGNAL) {
+        return 1.8*cellHeight;
+    }
     return cellHeight;
 }
 
@@ -453,7 +480,11 @@ typedef NSUInteger SECTION_DESCR;
     } else if (enableUkeTypes==NO && touchedSection == INSTRUMENT_TYPE && touchedRow == 3) {
         return;
     }
-    if (enableCalibration==NO && touchedSection == CALIBRATION) {
+    if (enableSignal==NO && touchedSection == SIGNAL) {
+        [self showUpgrades];
+        return;
+    }
+    if (enableSignal==NO && touchedSection == CALIBRATION) {
         [self showUpgrades];
         return;
     }

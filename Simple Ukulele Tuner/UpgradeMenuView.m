@@ -34,7 +34,7 @@
     if (self) {
 
         headerHeight = IS_IPAD ? 90 : 50;
-        cellHeight = IS_IPAD ? 150 : 110;
+        cellHeight = IS_IPAD ? 180 : 150;
         
         // get all available updates from the App Store by Singleton
         availableProducts = [SHARED_VERSION_MANAGER getAvailableProducts];

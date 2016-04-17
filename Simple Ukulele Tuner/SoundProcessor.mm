@@ -109,7 +109,7 @@
         
 
          // performance issue: wait until the nth loop until new processing restarts
-         if (numCaptures % NUM_CAPTURES_HOP == 0 && volume > 10.0) {
+         if (numCaptures % NUM_CAPTURES_HOP == 0 && volume > 5.0) {
      
              // mostly for iPad: join the two channels to one
              if (numChannels==2) {

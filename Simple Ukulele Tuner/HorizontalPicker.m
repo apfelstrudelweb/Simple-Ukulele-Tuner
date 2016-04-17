@@ -148,7 +148,7 @@
     
     [self.layer addSublayer:gradientLayer];
     
-    [self setValue:0.0 inOctave:0];
+    [self setValue:0.0 inOctave:0 fromSoundfile:YES];
     
 }
 
@@ -270,9 +270,9 @@
     self.scrollView.layer.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:GAUGE_BG]].CGColor;
 }
 
-- (void)setValue:(CGFloat)newValue inOctave:(NSInteger) octave {
+- (void)setValue:(CGFloat)newValue inOctave:(NSInteger) octave fromSoundfile:(BOOL)sf {
     
-    if (++dataCount % 10 != 0) {
+    if (!sf && ++dataCount % 10 != 0) {
         return;
     }
     
@@ -308,7 +308,7 @@
             CGFloat frequency = [spect.frequency floatValue];
             NSInteger octave = [spect.octave intValue];
             
-            [self setValue:frequency inOctave:octave];
+            [self setValue:frequency inOctave:octave fromSoundfile:NO];
             
         });
     } else if ([notification.object isKindOfClass:[SoundFile class]]) {
@@ -319,18 +319,10 @@
             NSNumber *freq = sf.frequency;
             NSNumber *oct = sf.octave;
             
-            
             CGFloat frequency = [freq floatValue];
             NSInteger octave = [oct intValue];
-            
-            // set background to green as it deals with a fixed frequency
-            if (frequency > 0.0) {
-                [self setBackground:0];
-            } else {
-                [self setBackground:-1];
-            }
 
-            [self setValue:frequency inOctave:octave];
+            [self setValue:frequency inOctave:octave fromSoundfile:YES];
             
         });
     } else {

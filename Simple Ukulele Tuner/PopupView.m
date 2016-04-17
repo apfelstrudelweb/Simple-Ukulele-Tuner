@@ -95,7 +95,7 @@
     UIImage *imageCloseBtn = [[UIImage imageNamed:@"close.png"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
     UIImage *imageStopBtn = [[UIImage imageNamed:@"arrowRight.png"] imageWithRenderingMode:UIImageRenderingModeAutomatic];
     
-    if (!IS_IPAD) {
+    if (!(IS_IPAD)) {
         imageBackBtn =  [self resizeImage:imageBackBtn toScale:0.5];
         imageCloseBtn = [self resizeImage:imageCloseBtn toScale:0.5];
         imageStopBtn =  [self resizeImage:imageStopBtn toScale:0.5];

@@ -68,7 +68,7 @@
 #define UPGRADE_TYPE @"upgradeType" //NSUserDefaults after in-app purchase
 
 // number of seconds the splashscreen should be displayed
-#define TIME_SPLASHSCREEN 5.0
+#define TIME_SPLASHSCREEN 4.0
 
 #define CONTENT_WIDTH 0.88 // 88% of entire width, centered
 

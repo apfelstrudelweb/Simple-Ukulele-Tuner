@@ -76,7 +76,6 @@
 		1BC042001C99FD0A005103EC /* tabActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041F01C99FD0A005103EC /* tabActive.png */; };
 		1BC042011C99FD0A005103EC /* tabPassive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041F11C99FD0A005103EC /* tabPassive.png */; };
 		1BC0420F1C99FD23005103EC /* linePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042031C99FD23005103EC /* linePattern.png */; };
-		1BC042101C99FD23005103EC /* settingsPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042041C99FD23005103EC /* settingsPattern.png */; };
 		1BC042111C99FD23005103EC /* settingsPatternDark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042051C99FD23005103EC /* settingsPatternDark.png */; };
 		1BC042121C99FD23005103EC /* settingsMiddle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042061C99FD23005103EC /* settingsMiddle.png */; };
 		1BC042131C99FD23005103EC /* settingsPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042071C99FD23005103EC /* settingsPattern.png */; };
@@ -87,7 +86,6 @@
 		1BC042181C99FD23005103EC /* shoppingCart.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0420C1C99FD23005103EC /* shoppingCart.png */; };
 		1BC042191C99FD23005103EC /* restoreButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0420D1C99FD23005103EC /* restoreButton.png */; };
 		1BC0421A1C99FD23005103EC /* calibrationButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0420E1C99FD23005103EC /* calibrationButton.png */; };
-		1BC042311C99FD3D005103EC /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0421C1C99FD3D005103EC /* close.png */; };
 		1BC042321C99FD3D005103EC /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0421D1C99FD3D005103EC /* close.png */; };
 		1BC042331C99FD3D005103EC /* arrowLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0421E1C99FD3D005103EC /* arrowLeft.png */; };
 		1BC042341C99FD3D005103EC /* arrowRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0421F1C99FD3D005103EC /* arrowRight.png */; };
@@ -767,7 +765,7 @@
 		1BC041311C99F8C6005103EC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Ulrich Vormbrock";
 				TargetAttributes = {
 					1BC041381C99F8C6005103EC = {
@@ -837,7 +835,6 @@
 				1BF634F01CB1A0FB0060ECEE /* en_manual4.html in Resources */,
 				1BC042181C99FD23005103EC /* shoppingCart.png in Resources */,
 				1BC041F41C99FD0A005103EC /* backgroundTransparent.png in Resources */,
-				1BC042101C99FD23005103EC /* settingsPattern.png in Resources */,
 				1BC0423A1C99FD3D005103EC /* screenshot_04.png in Resources */,
 				1BC041581C99F9DA005103EC /* iRate.bundle in Resources */,
 				1BC042441C99FD3D005103EC /* screenshot_14.png in Resources */,
@@ -868,7 +865,6 @@
 				1BC042371C99FD3D005103EC /* screenshot_01.png in Resources */,
 				1BC042161C99FD23005103EC /* onButton.png in Resources */,
 				1BC041791C99FBEB005103EC /* en_manual2.html in Resources */,
-				1BC042311C99FD3D005103EC /* close.png in Resources */,
 				1BC042331C99FD3D005103EC /* arrowLeft.png in Resources */,
 				1BC0423D1C99FD3D005103EC /* screenshot_07.png in Resources */,
 				1BF634F81CB1AA750060ECEE /* de_manual4.html in Resources */,

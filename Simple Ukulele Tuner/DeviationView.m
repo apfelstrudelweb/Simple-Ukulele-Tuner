@@ -131,8 +131,13 @@
             NSInteger deviation = [spect.deviation integerValue];
             BOOL isNegativeDeviation = spect.isNegativeDeviation;
             CGFloat frequency = [spect.frequency floatValue];
+
             
             [self resetDisplays];
+            
+            if (spect.isOutOfRange == YES) {
+                return;
+            }
 
             if (deviation > 3) return;
             

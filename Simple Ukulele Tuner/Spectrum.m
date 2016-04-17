@@ -32,6 +32,8 @@
 
 - (void) calculateDeviation {
     
+    self.isOutOfRange = NO;
+    
     CGFloat frequency = [self.frequency floatValue] - frequencyOffset;
     self.toneName = @"";
     self.deviation = [NSNumber numberWithInt:-1];
@@ -40,15 +42,21 @@
     
     NSArray *edgeFrequencyArray = [[SessionManager sharedManager] getEdgeFrequencyArray];
     
-    CGFloat minFreq = 0.9*([edgeFrequencyArray[0] floatValue] - frequencyOffset);
-    CGFloat maxFreq = 1.05*([edgeFrequencyArray[1] floatValue] - frequencyOffset);
+    CGFloat minFreq = 0.9*([edgeFrequencyArray[0] floatValue]);
+    CGFloat maxFreq = 1.05*([edgeFrequencyArray[1] floatValue]);
     
     if (frequency > maxFreq) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"TuneDownNotification" object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"TuneDownNotification" object:nil userInfo:@{@"blink": @(YES)}];
+        self.isOutOfRange = YES;
+    } else {
+         [[NSNotificationCenter defaultCenter] postNotificationName:@"TuneDownNotification" object:nil userInfo:@{@"blink": @(NO)}];
     }
     
-    if (frequency > 0.0 && frequency < minFreq) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"TuneUpNotification" object:nil];
+    if (frequency < minFreq) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"TuneUpNotification" object:nil userInfo:@{@"blink": @(YES)}];
+        self.isOutOfRange = YES;
+    } else {
+         [[NSNotificationCenter defaultCenter] postNotificationName:@"TuneUpNotification" object:nil userInfo:@{@"blink": @(NO)}];
     }
     
     /**

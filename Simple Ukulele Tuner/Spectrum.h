@@ -23,6 +23,8 @@
 @property (strong, retain) NSNumber* bin;
 @property BOOL isNegativeDeviation;
 
+@property BOOL isOutOfRange;
+
 @property (strong, retain) NSNumber* volume;
 
 - (void) calculateDeviation;

@@ -29,7 +29,7 @@
 
 
 - (CGFloat)value;
-- (void)setValue:(CGFloat)newValue inOctave:(NSInteger) octave;
+- (void)setValue:(CGFloat)newValue inOctave:(NSInteger) octave fromSoundfile:(BOOL)sf;
 
 - (void)setBackground:(NSInteger)deviation;
 

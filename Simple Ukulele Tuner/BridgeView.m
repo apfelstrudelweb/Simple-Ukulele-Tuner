@@ -61,22 +61,22 @@
         self.isWarningUp = NO;
         self.isWarningDown = NO;
         
-        self.numWarningUp = 0;
-        self.numWarningDown = 0;
-        
         self.areArrowsEnabled = NO;
         
         [self checkVersion];
         
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(toggleArrowUp:)
-                                                     name:@"TuneUpNotification"
-                                                   object:nil];
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(toggleArrowDown:)
-                                                     name:@"TuneDownNotification"
-                                                   object:nil];
+        if (self.areArrowsEnabled == YES) {
+            [[NSNotificationCenter defaultCenter] addObserver:self
+                                                     selector:@selector(blinkArrowUp:)
+                                                         name:@"TuneUpNotification"
+                                                       object:nil];
+            
+            [[NSNotificationCenter defaultCenter] addObserver:self
+                                                     selector:@selector(blinkArrowDown:)
+                                                         name:@"TuneDownNotification"
+                                                       object:nil];
+        }
+
     }
     return self;
 }
@@ -89,77 +89,74 @@
     }
 }
 
-- (void) toggleArrowUp: (NSNotification *) notification {
+- (void) blinkArrowUp: (NSNotification *) notification {
     
-    if (self.areArrowsEnabled == NO) return;
-    
-    if (self.isWarningUp == YES) return;
+    NSDictionary* userInfo = notification.userInfo;
+    BOOL blink = ((NSNumber*)userInfo[@"blink"]).boolValue;
     
     dispatch_async(dispatch_get_main_queue(), ^{
         
-        self.timerUp = [NSTimer scheduledTimerWithTimeInterval:1.5
-                                                        target:self
-                                                      selector:@selector(toggleAlphaArrowUp:)
-                                                      userInfo:nil
-                                                       repeats:YES];
+        if (blink == NO) {
+            self.arrowUpView.alpha = 0.0;
+            self.isWarningUp = NO;
+            return;
+        }
         
+        if (self.isWarningUp == YES) return;
+        self.isWarningUp = YES;
+
+        __weak typeof(self) weakSelf = self;
+        
+        [UIView animateWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
+            
+            [UIView setAnimationRepeatCount:20];
+            
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            if (strongSelf) {
+                strongSelf.arrowUpView.alpha = 1.0;
+            }
+        } completion:^(BOOL finished){
+            weakSelf.arrowUpView.alpha = 0.0;
+            weakSelf.isWarningUp = NO;
+        }];
         
     });
+    
 }
 
-- (void) toggleArrowDown: (NSNotification *) notification {
+- (void) blinkArrowDown: (NSNotification *) notification {
     
-    if (self.areArrowsEnabled == NO) return;
-    
-    if (self.isWarningDown == YES) return;
+    NSDictionary* userInfo = notification.userInfo;
+    BOOL blink = ((NSNumber*)userInfo[@"blink"]).boolValue;
     
     dispatch_async(dispatch_get_main_queue(), ^{
         
+        if (blink == NO) {
+            self.arrowDownView.alpha = 0.0;
+            self.isWarningDown = NO;
+            return;
+        }
+        
+        if (self.isWarningDown == YES) return;
         self.isWarningDown = YES;
-        self.timerDown = [NSTimer scheduledTimerWithTimeInterval:1.5
-                                                          target:self
-                                                        selector:@selector(toggleAlphaArrowDown:)
-                                                        userInfo:nil
-                                                         repeats:YES];
+        
+        __weak typeof(self) weakSelf = self;
+        
+        [UIView animateWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
+            
+            [UIView setAnimationRepeatCount:20];
+            
+            __strong typeof(weakSelf) strongSelf = weakSelf;
+            if (strongSelf) {
+                strongSelf.arrowDownView.alpha = 1.0;
+            }
+        } completion:^(BOOL finished){
+            weakSelf.arrowDownView.alpha = 0.0;
+            weakSelf.isWarningDown = NO;
+        }];
         
     });
-}
 
-- (void) toggleAlphaArrowDown:(NSTimer *)sender {
-    
-    if (self.arrowDownView.alpha == 0.0) {
-        self.arrowDownView.alpha = 1.0;
-    } else {
-        self.arrowDownView.alpha = 0.0;
-    }
-    
-    
-    if (++self.numWarningDown > 3) {
-        self.numWarningDown = 0;
-        
-        [sender invalidate];
-        
-        self.isWarningDown = NO;
-        self.arrowDownView.alpha = 0.0;
-    }
-}
-
-- (void) toggleAlphaArrowUp:(NSTimer *)sender {
-    
-    if (self.arrowUpView.alpha == 0.0) {
-        self.arrowUpView.alpha = 1.0;
-    } else {
-        self.arrowUpView.alpha = 0.0;
-    }
-    
-    if (++self.numWarningUp > 3) {
-        self.numWarningUp = 0;
-        
-        [sender invalidate];
-        
-        self.isWarningUp = NO;
-        self.arrowUpView.alpha = 0.0;
-    }
 }
 
 
@@ -259,7 +256,7 @@
     
     NSMutableArray *layoutConstraints = [NSMutableArray new];
     
-    CGFloat height = [UIScreen mainScreen].applicationFrame.size.width / 8.0;
+    CGFloat height = [UIScreen mainScreen].applicationFrame.size.width / 5.5;
     
     
     // Center vertically
@@ -286,7 +283,7 @@
                                                                  toItem:self
                                                               attribute:NSLayoutAttributeWidth
                                                              multiplier:0
-                                                               constant:0.5*height]];
+                                                               constant:0.7*height]];
     
     [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.arrowUpView
                                                               attribute:NSLayoutAttributeHeight
@@ -321,7 +318,7 @@
                                                                  toItem:self
                                                               attribute:NSLayoutAttributeWidth
                                                              multiplier:0
-                                                               constant:0.5*height]];
+                                                               constant:0.7*height]];
     
     [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.arrowDownView
                                                               attribute:NSLayoutAttributeHeight

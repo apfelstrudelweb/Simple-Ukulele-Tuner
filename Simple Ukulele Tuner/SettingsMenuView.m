@@ -172,7 +172,7 @@ typedef NSUInteger SECTION_DESCR;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 4;
+    return 5;
 }
 
 

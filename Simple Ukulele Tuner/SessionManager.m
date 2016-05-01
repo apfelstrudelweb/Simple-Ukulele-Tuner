@@ -10,6 +10,9 @@
 
 @implementation SessionManager
 
+@synthesize  currentSamplingRate;
+
+
 #pragma mark Singleton Methods
 
 + (id)sharedManager {
@@ -239,6 +242,13 @@
 
 -(NSArray *) getEdgeFrequencyArray {
     return self.edgeFrequencyArray;
+}
+
+-(NSInteger)getCurrentSamplingRate {
+    if (!self.currentSamplingRate) {
+        self.currentSamplingRate = PREFERRED_SAMPLING_RATE;
+    }
+    return self.currentSamplingRate;
 }
 
 

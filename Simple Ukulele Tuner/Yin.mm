@@ -8,8 +8,8 @@
 
 #import "Yin.h"
 
-#define DEFAULT_THRESHOLD 0.2
-#define MINIMAL_PROBABILITY 0.92
+#define DEFAULT_THRESHOLD 0.15
+#define MINIMAL_PROBABILITY 0.85
 
 
 @implementation Yin

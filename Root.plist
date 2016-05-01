@@ -6,6 +6,14 @@
 	<array>
 		<dict>
 			<key>Type</key>
+			<string>Sensitivity</string>
+			<key>Title</key>
+			<string>sensitivity</string>
+			<key>Key</key>
+			<string>5</string>
+		</dict>
+		<dict>
+			<key>Type</key>
 			<string>Calibrated Frequency</string>
 			<key>Title</key>
 			<string>calibratedFrequency</string>

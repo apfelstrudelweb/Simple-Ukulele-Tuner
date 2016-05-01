@@ -23,6 +23,8 @@
 @property NSInteger numberOfUkeType;
 @property (strong, nonatomic) NSArray *edgeFrequencyArray;
 
+@property NSInteger currentSamplingRate;
+
 + (id)sharedManager;
 
 -(void) setFFT: (BOOL) flag;
@@ -60,6 +62,9 @@
 
 -(void) setEdgeFrequencyArray:(NSArray *)edgeFrequencyArray;
 -(NSArray *) getEdgeFrequencyArray;
+
+-(void) setCurrentSamplingRate:(NSInteger)currentSamplingRate;
+-(NSInteger)getCurrentSamplingRate;
 
 
 -(NSArray*) getUkuleleTypesArray;

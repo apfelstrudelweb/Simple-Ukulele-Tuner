@@ -272,11 +272,16 @@
 
 - (void)setValue:(CGFloat)newValue inOctave:(NSInteger) octave fromSoundfile:(BOOL)sf {
     
-    if (!sf && ++dataCount % 10 != 0) {
-        return;
-    }
-    
-    dataCount = 0;
+//    // Smooth the display
+//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+//    NSInteger sensitivity = [[defaults stringForKey:KEY_SENSITIVITY] integerValue];
+//    NSInteger numberOfAvrgValues = 50 + (5 - sensitivity) * 9;
+//    
+//    if (!sf && ++dataCount % numberOfAvrgValues != 0) {
+//        return;
+//    }
+//    
+//    dataCount = 0;
     
     if (newValue==0.0) {
         newValue = 10.0;//16.35; // set to the first tone "C" of the scale
@@ -293,7 +298,9 @@
     
     CGFloat xValue = (newValue - minimumValue) / ((maximumValue-minimumValue) / 8) * distanceBetweenItems + textLayerWidth / 2;
     
-    [self.scrollView setContentOffset:CGPointMake(xValue, 0.0f) animated:NO];
+    if (!isnan(xValue)) {
+        [self.scrollView setContentOffset:CGPointMake(xValue, 0.0f) animated:NO];
+    }
 }
 
 #pragma mark - Notification

@@ -135,6 +135,7 @@
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"ChangeGraphModeNotification" object:nil];
     
+    [self showUpgrades];
 }
 
 - (void)fftButtonTouchedUpInside:(UIButton*)button {
@@ -146,6 +147,24 @@
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"ChangeGraphModeNotification" object:nil];
     
+    [self showUpgrades];
+}
+
+- (void) showUpgrades {
+    
+    NSString* currentVersion = [SHARED_VERSION_MANAGER getVersion];
+    
+    if ([version_lite isEqualToString:currentVersion] || [version_uke isEqualToString:currentVersion]) {
+        
+        CGRect screenRect = [[UIScreen mainScreen] bounds];
+        CGFloat screenWidth = screenRect.size.width;
+        CGFloat screenHeight = screenRect.size.height;
+        
+        UIView *upgradeView = [[UpgradeView alloc] initWithFrame: CGRectMake ( 0, 0, screenWidth, screenHeight)];
+        UIWindow* window = [UIApplication sharedApplication].keyWindow;
+        [window addSubview:upgradeView];
+        
+    }
 }
 
 #pragma mark -constraints

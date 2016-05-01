@@ -35,8 +35,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //    // TODO: REMOVE LATER, it's only for testing!
-    //PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
-    //[bindings setObject:version_premium forKey:UPGRADE_TYPE];
+    PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
+    [bindings setObject:version_premium forKey:UPGRADE_TYPE];
     //[bindings setObject:version_uke forKey:UPGRADE_TYPE];
     //[bindings setObject:version_signal forKey:UPGRADE_TYPE];
     //[bindings removeObjectForKey:UPGRADE_TYPE];
@@ -52,9 +52,13 @@
     NSDictionary *calFreqDefaults = [NSDictionary dictionaryWithObject:@"440.0"
                                                                 forKey:KEY_CALIBRATED_FREQUENCY];
     
+    NSDictionary *sensitivityDefaults = [NSDictionary dictionaryWithObject:@"3"
+                                                                forKey:KEY_SENSITIVITY];
+    
     [defaults registerDefaults:ukeDefaults];
     [defaults registerDefaults:colorDefaults];
     [defaults registerDefaults:calFreqDefaults];
+    [defaults registerDefaults:sensitivityDefaults];
     [defaults synchronize];
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
@@ -71,15 +75,14 @@
         
         // initialize the SDK with your appID and devID
         STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
-        sdk.appID = APPSTORE_ID;
-        sdk.devID = @"ulrich.vormbrock@web.de";
+        sdk.appID = @"203844333";
+        //sdk.devID = @"ulrich.vormbrock@gmail.com";
         //sdk.preferences = [STASDKPreferences prefrencesWithAge:22 andGender:STAGender_Male];
  
         STASplashPreferences *splashPreferences = [[STASplashPreferences alloc] init];
         splashPreferences.splashMode = STASplashModeTemplate;
         splashPreferences.splashTemplateTheme = STASplashTemplateThemeDeepBlue;
         splashPreferences.splashLoadingIndicatorType = STASplashLoadingIndicatorTypeIOS;
-        //    splashPreferences.splashTemplateIconImageName = @"StartAppIcon";
         splashPreferences.splashTemplateAppName = @"Simple Ukulele Tuner";
 
         [sdk showSplashAdWithPreferences:splashPreferences];
@@ -91,6 +94,8 @@
     [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
     [[BITHockeyManager sharedHockeyManager] startManager];
     [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
+    
+    [SHARED_MANAGER setCurrentSamplingRate:PREFERRED_SAMPLING_RATE];
     
     return YES;
 }

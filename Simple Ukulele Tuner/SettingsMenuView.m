@@ -18,12 +18,17 @@
 #define PURCHASE    [UIImage imageNamed:@"shoppingCart.png"]
 #define RESTORE     [UIImage imageNamed:@"restoreButton.png"]
 
+#define SENSITIVITY_TEXT  @[@"very low", @"low", @"medium", @"high", @"very high"]
+
+// Sections of table view
 enum {
     INSTRUMENT_TYPE = 0,
     SIGNAL = 1,
     CALIBRATION = 2,
-    THEME = 3,
-    RESTORE_BTN = 4
+    SENSITIVITY = 3,
+    THEME = 4,
+    RESTORE_BTN = 5,
+    NumberOfOptions // for number of sections in table view
 };
 typedef NSUInteger SECTION_DESCR;
 
@@ -50,6 +55,8 @@ typedef NSUInteger SECTION_DESCR;
     CalibrationPicker *picker;
     CGFloat calibratedFrequency;
     CGFloat yPicker;
+    
+    UISlider *slider;
 }
 
 @end
@@ -165,14 +172,16 @@ typedef NSUInteger SECTION_DESCR;
     switch (section) {
         case INSTRUMENT_TYPE: return ukeTypesArray.count; // for ukulele types
         case SIGNAL: return 1;
-        case CALIBRATION: return 1;                       // for calibration
+        case CALIBRATION: return 1;
+        case SENSITIVITY: return 1;    // for calibration
         case THEME: return colorsDict.count;    // for background colors
         default: return 1;                       // for restore button
     }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 5;
+    //return 5;
+    return NumberOfOptions;
 }
 
 
@@ -242,8 +251,8 @@ typedef NSUInteger SECTION_DESCR;
         cell.detailTextLabel.font = font;
         
     } else if (section == SIGNAL) {
-        cell.textLabel.text = @"All about the Input Signal:";
-        cell.detailTextLabel.text = @"- Frequency (in Hz) and deviation\n- String Protection (\"stay in range\")\n- Spectrum, FFT";
+        cell.textLabel.text = @"All about the Input Signal";
+        cell.detailTextLabel.text = @"- Frequency (in Hz) and deviation\n- String Protection (\"stay in range\")\n- Spectrum, Autocorrelation";
         
         UIFont* font1 = [UIFont fontWithName:FONT_BOLD size:[UILabel getFontSizeForSubHeadline]];
         UIFont* font2 = [UIFont fontWithName:FONT_BOLD size:[UILabel getFontSizeForPicker]];
@@ -257,6 +266,23 @@ typedef NSUInteger SECTION_DESCR;
         UIFont* font = [UIFont fontWithName:FONT_BOLD size:[UILabel getFontSizeForSubHeadline]];
         cell.textLabel.font = font;
         cell.textLabel.text = [NSString stringWithFormat:@"%.1f Hz", calibratedFrequency];
+    } else if (section == SENSITIVITY) {
+        // slider for sensitivity
+        CGRect frame = CGRectMake(0.05*cell.bounds.size.width, y, 3.0*iconHeight*ratio, iconHeight);
+        slider = [[UISlider alloc] initWithFrame:frame];
+        [slider addTarget:self action:@selector(setSensitivityAction:) forControlEvents:UIControlEventValueChanged];
+        [slider setBackgroundColor:[UIColor clearColor]];
+        UIImage *knob = [UIImage imageNamed:@"knob.png"];
+        float fact = IS_IPAD ? 1.5 : 3.0;
+        knob = [UIImage imageWithCGImage:[knob CGImage] scale:fact orientation:UIImageOrientationUp];
+        [slider setThumbImage:knob forState:UIControlStateNormal];
+        slider.minimumValue = 1.0;
+        slider.maximumValue = 5.0;
+        slider.continuous = NO;
+        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        NSInteger sensitivity = [[defaults stringForKey:KEY_SENSITIVITY] integerValue];
+        slider.value = sensitivity;
+        [cell addSubview:slider];
     } else if (section == THEME) {
         // images for color issues
         UIView* colorPrevView = [[UIView alloc] initWithFrame:CGRectMake(0.05*cell.bounds.size.width, y, 2.0*iconHeight*ratio, iconHeight)];
@@ -314,6 +340,9 @@ typedef NSUInteger SECTION_DESCR;
             imv.image = SWITCH_OFF;
         }
     }
+    if (section == SENSITIVITY) {
+        imv.image = SWITCH_ON;
+    }
     if (section == SIGNAL) {
         imv.image = SWITCH_ON;
     }
@@ -342,6 +371,15 @@ typedef NSUInteger SECTION_DESCR;
     }
     if (enableSignal==NO && section == CALIBRATION) {
         imvPick.image = PURCHASE;
+        if (blockUserInteraction==YES) {
+            imvPick.alpha = 0.2;
+        }
+    }
+    if (enableSignal==NO && section == SENSITIVITY) {
+        imv.image = PURCHASE;
+        // block slider
+        slider.enabled = enableSignal;
+        slider.alpha = enableSignal ? 1.0 : 0.2;
         if (blockUserInteraction==YES) {
             imvPick.alpha = 0.2;
         }
@@ -396,10 +434,15 @@ typedef NSUInteger SECTION_DESCR;
     
     NSString* labelText = @"";
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSInteger sensitivity = [[defaults stringForKey:KEY_SENSITIVITY] integerValue];
+    NSString *sensitivityText = SENSITIVITY_TEXT[sensitivity-1];
+    
     switch (section) {
         case INSTRUMENT_TYPE:  labelText = @"Ukulele Type"; break;     // for ukulele types
-        case SIGNAL: labelText = @"Signal Info"; break;
+        case SIGNAL: labelText = @"Signal Info"; break;          // for FFT and autocorrelation
         case CALIBRATION:  labelText = @"Calibration"; break;    // for calibration
+        case SENSITIVITY:  labelText = [NSString stringWithFormat:@"Sensitivity: %ld (%@)", (long)sensitivity, sensitivityText]; break;    // for sensitivity
         case THEME:  labelText = @"Ukulele Color"; break;    // for background colors
         default: labelText = @"Purchase already done?";  // for restore button
     }
@@ -485,6 +528,10 @@ typedef NSUInteger SECTION_DESCR;
         return;
     }
     if (enableSignal==NO && touchedSection == CALIBRATION) {
+        [self showUpgrades];
+        return;
+    }
+    if (enableSignal==NO && touchedSection == SENSITIVITY) {
         [self showUpgrades];
         return;
     }
@@ -811,6 +858,18 @@ typedef NSUInteger SECTION_DESCR;
     gradient.cornerRadius = colorPrevCornerRadius;
     
     [view.layer insertSublayer:gradient atIndex:0];
+}
+
+- (void) setSensitivityAction:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:@(slider.value) forKey:KEY_SENSITIVITY];
+    [defaults synchronize];
+    
+    [self.tableView beginUpdates];
+    UITableViewHeaderFooterView *headerView = [self.tableView headerViewForSection:SENSITIVITY];
+    [headerView.textLabel setText:[NSString stringWithFormat:@"Sensitivity: %ld", (long)slider.value]];
+    [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:SENSITIVITY] withRowAnimation: UITableViewRowAnimationNone];
+    [self.tableView endUpdates];
 }
 
 -(void)dealloc {

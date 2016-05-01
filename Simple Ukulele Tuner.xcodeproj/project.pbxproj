@@ -10,6 +10,7 @@
 		1B0721501CC3DE7300102B13 /* screenshot_18.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B07214F1CC3DE7300102B13 /* screenshot_18.png */; };
 		1B0721521CC3DF2000102B13 /* en_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B0721511CC3DF2000102B13 /* en_manual7.html */; };
 		1B0721541CC3E64100102B13 /* de_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B0721531CC3E64100102B13 /* de_manual7.html */; };
+		1B6C14411CCC026400C82B9B /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6C14401CCC026400C82B9B /* knob.png */; };
 		1BC0413E1C99F8C6005103EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0413D1C99F8C6005103EC /* main.m */; };
 		1BC041411C99F8C6005103EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041401C99F8C6005103EC /* AppDelegate.m */; };
 		1BC041441C99F8C6005103EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041431C99F8C6005103EC /* ViewController.m */; };
@@ -151,6 +152,7 @@
 		1B07214F1CC3DE7300102B13 /* screenshot_18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = screenshot_18.png; sourceTree = "<group>"; };
 		1B0721511CC3DF2000102B13 /* en_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = en_manual7.html; sourceTree = "<group>"; };
 		1B0721531CC3E64100102B13 /* de_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = de_manual7.html; sourceTree = "<group>"; };
+		1B6C14401CCC026400C82B9B /* knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knob.png; sourceTree = "<group>"; };
 		1BC041391C99F8C6005103EC /* Simple Ukulele Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Ukulele Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC0413D1C99F8C6005103EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BC0413F1C99F8C6005103EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -618,6 +620,7 @@
 				1BC042071C99FD23005103EC /* settingsPattern.png */,
 				1BC042081C99FD23005103EC /* settingsTop.png */,
 				1BC042091C99FD23005103EC /* closeButton.png */,
+				1B6C14401CCC026400C82B9B /* knob.png */,
 				1BC0420A1C99FD23005103EC /* onButton.png */,
 				1BC0420B1C99FD23005103EC /* offButton.png */,
 				1BC0420C1C99FD23005103EC /* shoppingCart.png */,
@@ -845,6 +848,7 @@
 				1BF634F01CB1A0FB0060ECEE /* en_manual4.html in Resources */,
 				1BC042181C99FD23005103EC /* shoppingCart.png in Resources */,
 				1BC041F41C99FD0A005103EC /* backgroundTransparent.png in Resources */,
+				1B6C14411CCC026400C82B9B /* knob.png in Resources */,
 				1BC0423A1C99FD3D005103EC /* screenshot_04.png in Resources */,
 				1BC041581C99F9DA005103EC /* iRate.bundle in Resources */,
 				1BC042441C99FD3D005103EC /* screenshot_14.png in Resources */,

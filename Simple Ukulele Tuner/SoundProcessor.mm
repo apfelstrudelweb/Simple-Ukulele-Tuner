@@ -18,7 +18,7 @@
 
 #define IS_MICROPHONE YES
 
-#define NUM_CAPTURES_HOP 2
+//#define NUM_CAPTURES_HOP 4
 #define NUM_AVRG_VALUES 20
 
 
@@ -38,6 +38,9 @@
     
     NSInteger numOfErroneousFreqDetections;
     NSInteger numOfNoFrequencyDetecion;
+    
+    NSUserDefaults *defaults;
+    NSInteger sensitivity;
 }
 
 @end
@@ -53,6 +56,8 @@
     previousFrequencyArray = [NSMutableArray new];
     numOfErroneousFreqDetections = 0;
     numOfNoFrequencyDetecion = 0;
+    
+    defaults = [NSUserDefaults standardUserDefaults];
 
     return self;
 }
@@ -72,6 +77,9 @@
     
     Bandpass *bandpass = [[Bandpass alloc] initWithSamplingRate:PREFERRED_SAMPLING_RATE];
     [bandpass setCenterFrequency:520.0 andBandwidth:500.0];
+    
+    
+    sensitivity = [[defaults stringForKey:KEY_SENSITIVITY] integerValue];
     
     
     if (IS_MICROPHONE==YES) {
@@ -102,14 +110,23 @@
     [[Novocaine audioManager] setOutputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels) {
         ringBuffer->FetchInterleavedData(data, numFrames, numChannels);
  
-        [bandpass filterData:data numFrames:numFrames numChannels:numChannels];
+        //[LPF filterData:data numFrames:numFrames numChannels:numChannels];
 
         CGFloat volume = 100 + dbVal;
         spect.volume = [NSNumber numberWithFloat:volume];
         
+        NSInteger numHops = 20;
+        
+        switch(sensitivity) {
+            case 1: numHops = 50; break;
+            case 2: numHops = 30; break;
+            case 3: numHops = 15; break;
+            case 4: numHops = 5; break;
+            case 5: numHops = 1; break;
+        }
 
          // performance issue: wait until the nth loop until new processing restarts
-         if (numCaptures % NUM_CAPTURES_HOP == 0 && volume > 5.0) {
+         if (numCaptures % numHops == 0 && volume > 5.0) {
      
              // mostly for iPad: join the two channels to one
              if (numChannels==2) {

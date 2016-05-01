@@ -158,8 +158,9 @@
     CGFloat yUnit = ySize / yRange;
     
     CGContextRef context = UIGraphicsGetCurrentContext();
-    
     CGFloat components[] = CURVE_COLOR;
+    NSMutableArray* points = [NSMutableArray new];
+    
     if (!graphData) return;
     
     for (NSInteger i=0; i<graphData.count; i++) {
@@ -167,6 +168,7 @@
         NSNumber *key = @(log10f((CGFloat)(i+1)));//binArray[i];
         NSNumber *value = graphData[i];
         CGFloat logFrequency = [key floatValue] * xUnit;
+
         CGFloat amplitude = ySize - [value floatValue] * yUnit - 1;
         
         if (isnan(amplitude)) {
@@ -175,21 +177,37 @@
         
         if (i==0) {
             amplitude = ySize;
-            CGContextMoveToPoint(context, logFrequency, amplitude);
+            //CGContextMoveToPoint(context, logFrequency, amplitude);
         } else {
-            CGContextAddLineToPoint(context, logFrequency, amplitude);
+            //CGContextAddLineToPoint(context, logFrequency, amplitude);
         }
+        
+        CGPoint point = CGPointMake(logFrequency, amplitude);
+        [points addObject:[NSValue valueWithCGPoint:point]];
         
     }
     
-    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
     CGContextSetLineWidth(context, CURVE_WIDTH);
+    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
     CGColorRef color = CGColorCreate(colorspace, components);
     CGContextSetStrokeColorWithColor(context, color);
+    
+    UIBezierPath* bezierPath = [self quadCurvedPathWithPoints:points];
+    bezierPath.lineWidth = CURVE_WIDTH;
+    [bezierPath stroke];
     
     CGContextStrokePath(context);
     CGColorSpaceRelease(colorspace);
     CGColorRelease(color);
+    
+//    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
+//    CGContextSetLineWidth(context, CURVE_WIDTH);
+//    CGColorRef color = CGColorCreate(colorspace, components);
+//    CGContextSetStrokeColorWithColor(context, color);
+//    
+//    CGContextStrokePath(context);
+//    CGColorSpaceRelease(colorspace);
+//    CGColorRelease(color);
 }
 
 - (void) drawAutocorrelationCurve {

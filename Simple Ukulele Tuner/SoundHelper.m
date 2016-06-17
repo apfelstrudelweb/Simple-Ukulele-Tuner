@@ -95,13 +95,13 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
         if(setCategoryError){
             NSLog(@"%@", [setCategoryError description]);
         }
-        
-        [session overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:&setOverrideError];
     }
     return self;
 }
 
 - (void) playTone: (NSInteger) number {
+    
+    [session overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:&setOverrideError];
     
     // Get user preference
     NSArray* frequenciesArray = [SHARED_MANAGER getUkuleleFrequencies];
@@ -213,6 +213,8 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     
     [SHARED_MANAGER setSoundPlaying:NO];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"PlayToneNotification" object:sf];
+    
+    [session overrideOutputAudioPort:AVAudioSessionPortOverrideNone error:nil];
 }
 
 // Helper method
@@ -247,7 +249,4 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     }
     return [NSNumber numberWithInteger:octave];
 }
-
-
-
 @end

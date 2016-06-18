@@ -113,6 +113,7 @@
         ringBuffer->FetchInterleavedData(data, numFrames, numChannels);
  
         //[LPF filterData:data numFrames:numFrames numChannels:numChannels];
+    
 
         CGFloat volume = 100 + dbVal;
         spect.volume = [NSNumber numberWithFloat:volume];
@@ -126,6 +127,18 @@
             case 4: numHops = 5; break;
             case 5: numHops = 1; break;
         }
+        
+        
+        int windowSize = numFrames;
+        float* transferBuffer = (float*)malloc(sizeof(float)*windowSize);
+        float* window = (float*)malloc(sizeof(float)*windowSize);
+        memset(window, 0, sizeof(float)*windowSize);
+        //vDSP_hann_window(window, windowSize, vDSP_HANN_NORM);
+        vDSP_hamm_window(window, windowSize, vDSP_HANN_NORM);
+        vDSP_vmul(data, 1, window, 1, transferBuffer, 1, windowSize);
+        
+        free(transferBuffer);
+        
 
          // performance issue: wait until the nth loop until new processing restarts
          if (numCaptures % numHops == 0 && volume > 5.0) {

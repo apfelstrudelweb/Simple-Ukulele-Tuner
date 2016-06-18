@@ -81,7 +81,7 @@
      * frequencies more precisely. See http://fizyka.umk.pl/nrbook/c10-2.pdf
      */
     // if no pitch found, tau => -1
-    if (tau == bufferSize || yinBuffer[tau] >= floatingThreshold) {
+    if (tau == bufferSize || ( tau < bufferSize && yinBuffer[tau] >= floatingThreshold)) {
 //        tau = -1;
 //        probability = 0.0;
         free(yinBuffer);
@@ -107,7 +107,7 @@
                 betterTau = x2;
             }
         } else if (x2 == tau) {
-            if (yinBuffer[tau] <= yinBuffer[x0]) {
+            if (tau < bufferSize && yinBuffer[tau] <= yinBuffer[x0]) {
                 betterTau = tau;
             } else {
                 betterTau = x0;

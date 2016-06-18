@@ -51,7 +51,7 @@ extern "C" {
     {
         if (error == noErr) return;
         
-        char str[20];
+        char str[20] = {};
         // see if it appears to be a 4-char-code
         *(UInt32 *)(str + 1) = CFSwapInt32HostToBig(error);
         if (isprint(str[1]) && isprint(str[2]) && isprint(str[3]) && isprint(str[4])) {

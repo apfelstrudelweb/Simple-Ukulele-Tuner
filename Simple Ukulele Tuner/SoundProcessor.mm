@@ -65,6 +65,8 @@
 
 - (void) captureSound {
     
+    sensitivity = [[defaults stringForKey:KEY_SENSITIVITY] integerValue];
+    
    // __block NSMutableArray* frequencyArray = [NSMutableArray new];
     __block CGFloat dbVal = 0.0;
     
@@ -75,11 +77,11 @@
     __block Yin* yin = [Yin new];
     __block NSMutableArray* result;
     
-    Bandpass *bandpass = [[Bandpass alloc] initWithSamplingRate:PREFERRED_SAMPLING_RATE];
-    [bandpass setCenterFrequency:520.0 andBandwidth:500.0];
+//    Bandpass *bandpass = [[Bandpass alloc] initWithSamplingRate:PREFERRED_SAMPLING_RATE];
+//    [bandpass setCenterFrequency:520.0 andBandwidth:500.0];
     
     
-    sensitivity = [[defaults stringForKey:KEY_SENSITIVITY] integerValue];
+    
     
     
     if (IS_MICROPHONE==YES) {

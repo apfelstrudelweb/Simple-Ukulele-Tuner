@@ -213,35 +213,35 @@
     
 }
 
-- (void)configureReaderCallback
-{
-    if (!self.callbackTimer) {
-        self.callbackTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
-        UInt32 numSamplesPerCallback = (UInt32)( self.latency * self.samplingRate );
-        dispatch_source_set_timer(self.callbackTimer, dispatch_walltime(NULL, 0), self.latency*NSEC_PER_SEC, 0);
-        dispatch_source_set_event_handler(self.callbackTimer, ^{
-            
-            if (self.playing) {
-            
-                if (self.readerBlock) {
-                    // Suck some audio down from our ring buffer
-                    [self retrieveFreshAudio:self.holdingBuffer numFrames:numSamplesPerCallback numChannels:self.numChannels];
-                
-                    // Call out with the audio that we've got.
-                    self.readerBlock(self.holdingBuffer, numSamplesPerCallback, self.numChannels);
-                }
-                
-                // Asynchronously fill up the buffer (if it needs filling)
-                dispatch_async(dispatch_get_main_queue(), ^{
-                    [self bufferNewAudio];
-                });
-                
-            }
-            
-         });
-        dispatch_resume(self.callbackTimer);
-    }
-}
+//- (void)configureReaderCallback
+//{
+//    if (!self.callbackTimer) {
+//        self.callbackTimer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0, dispatch_get_main_queue());
+//        UInt32 numSamplesPerCallback = (UInt32)( self.latency * self.samplingRate );
+//        dispatch_source_set_timer(self.callbackTimer, dispatch_walltime(NULL, 0), self.latency*NSEC_PER_SEC, 0);
+//        dispatch_source_set_event_handler(self.callbackTimer, ^{
+//            
+//            if (self.playing) {
+//            
+//                if (self.readerBlock) {
+//                    // Suck some audio down from our ring buffer
+//                    [self retrieveFreshAudio:self.holdingBuffer numFrames:numSamplesPerCallback numChannels:self.numChannels];
+//                
+//                    // Call out with the audio that we've got.
+//                    self.readerBlock(self.holdingBuffer, numSamplesPerCallback, self.numChannels);
+//                }
+//                
+//                // Asynchronously fill up the buffer (if it needs filling)
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [self bufferNewAudio];
+//                });
+//                
+//            }
+//            
+//         });
+//        dispatch_resume(self.callbackTimer);
+//    }
+//}
 
 
 - (void)retrieveFreshAudio:(float *)buffer numFrames:(UInt32)thisNumFrames numChannels:(UInt32)thisNumChannels
@@ -255,7 +255,7 @@
 
     // Configure (or if necessary, create and start) the timer for retrieving audio
     if (!self.playing) {
-        [self configureReaderCallback];
+        //[self configureReaderCallback];
         self.playing = YES;
     }
 
@@ -272,7 +272,7 @@
     // Release the dispatch timer because it holds a reference to this class instance
     [self pause];
     if (self.callbackTimer) {
-        dispatch_release(self.callbackTimer);
+        //dispatch_release(self.callbackTimer);
         self.callbackTimer = nil;
     }
 }

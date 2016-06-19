@@ -16,7 +16,6 @@
 
 @interface CurveSubView() {
     NSArray *data;
-    NSMutableArray *graphData;
     NSNumber* bin;
     BOOL isFFT;
     
@@ -42,9 +41,6 @@
     
 }
 
-- (id)init {
-    return [self initWithFrame:CGRectZero];
-}
 
 - (id)initWithFrame:(CGRect)frame {
     
@@ -96,26 +92,6 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             spect = ((Spectrum*)[notification object]);
             data = spect.data;
-            graphData = [data mutableCopy];
-            
-            if ([SHARED_MANAGER isFFT] == YES){
-                
-                CGFloat frequency = [spect.frequency floatValue];
-                
-                if (frequency > 0.0 && frequency < 100.0) {
-                    NSInteger maxBin = (NSInteger) (frequency / 11.0);
-                    
-                    CGFloat maxVal = -MAXFLOAT;
-                    for (NSInteger i=0; i<graphData.count; i++) {
-                        if ([graphData[i] floatValue] > maxVal) {
-                            maxVal = 1.1*[graphData[i] floatValue];
-                        }
-                    }
-
-                    graphData[maxBin] = [NSNumber numberWithFloat:maxVal];
-                }
-                
-            }
             
             [self setNeedsDisplay];
         });
@@ -161,12 +137,11 @@
     CGFloat components[] = CURVE_COLOR;
     NSMutableArray* points = [NSMutableArray new];
     
-    if (!graphData) return;
     
-    for (NSInteger i=0; i<graphData.count; i++) {
+    for (NSInteger i=0; i<data.count; i++) {
         
         NSNumber *key = @(log10f((CGFloat)(i+1)));//binArray[i];
-        NSNumber *value = graphData[i];
+        NSNumber *value = data[i];
         CGFloat logFrequency = [key floatValue] * xUnit;
 
         CGFloat amplitude = ySize - [value floatValue] * yUnit - 1;
@@ -177,9 +152,6 @@
         
         if (i==0) {
             amplitude = ySize;
-            //CGContextMoveToPoint(context, logFrequency, amplitude);
-        } else {
-            //CGContextAddLineToPoint(context, logFrequency, amplitude);
         }
         
         CGPoint point = CGPointMake(logFrequency, amplitude);
@@ -200,14 +172,6 @@
     CGColorSpaceRelease(colorspace);
     CGColorRelease(color);
     
-//    CGColorSpaceRef colorspace = CGColorSpaceCreateDeviceRGB();
-//    CGContextSetLineWidth(context, CURVE_WIDTH);
-//    CGColorRef color = CGColorCreate(colorspace, components);
-//    CGContextSetStrokeColorWithColor(context, color);
-//    
-//    CGContextStrokePath(context);
-//    CGColorSpaceRelease(colorspace);
-//    CGColorRelease(color);
 }
 
 - (void) drawAutocorrelationCurve {
@@ -215,9 +179,9 @@
     CGFloat maxValue = 0;
     CGFloat minValue = MAXFLOAT;
     
-    for (NSInteger i=0;i<graphData.count;i++) {
+    for (NSInteger i=0;i<data.count;i++) {
         
-        CGFloat result = [graphData[i] floatValue];
+        CGFloat result = [data[i] floatValue];
         
         if (maxValue < result) {
             maxValue = result;
@@ -234,7 +198,7 @@
     CGFloat xSize = self.bounds.size.width;
     CGFloat ySize = self.bounds.size.height;
     
-    NSInteger numberOfValues = (int)graphData.count;
+    NSInteger numberOfValues = (int)data.count;
     
     CGFloat xRange = (float)numberOfValues;
     CGFloat yRange = 2.5*maxValue;
@@ -254,9 +218,9 @@
     CGColorRef color = CGColorCreate(colorspace, components);
     CGContextSetStrokeColorWithColor(context, color);
     
-    for (NSInteger i=0; i<graphData.count; i++) {
+    for (NSInteger i=0; i<data.count; i++) {
         
-        CGFloat value = -[graphData[i] floatValue] + zeroValue;
+        CGFloat value = -[data[i] floatValue] + zeroValue;
         
         if (i==0) {
             CGContextMoveToPoint(context, i*xUnit, value*yUnit);

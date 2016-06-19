@@ -15,9 +15,6 @@
 
 @implementation InfoIconView
 
-- (id)init {
-    return [self initWithFrame:CGRectZero];
-}
 
 - (id)initWithFrame:(CGRect)frame {
     

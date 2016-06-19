@@ -3,20 +3,20 @@
 #import <QuartzCore/QuartzCore.h>
 
 
-@class HorizontalPicker;
+//@class HorizontalPicker;
 
 
 @interface HorizontalPicker : UIView {
-    CGFloat value;
-    
-    NSInteger steps;
-    CGFloat minimumValue;
-    CGFloat maximumValue;
-    
-    CGFloat fontSize;
-    
-    @private
-    CGFloat scale; 
+//    CGFloat value;
+//    
+//    NSInteger steps;
+//    CGFloat minimumValue;
+//    CGFloat maximumValue;
+//    
+//    CGFloat fontSize;
+//    
+//    @private
+//    CGFloat scale; 
 }
 
 - (void)snapToMarkerAnimated:(BOOL)animated;

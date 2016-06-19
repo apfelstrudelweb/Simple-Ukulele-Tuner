@@ -29,12 +29,6 @@
     
     result = [NSMutableArray new];
     
-//    windowSize = 10*numSamples ;
-//    window = (float *) malloc(sizeof(float) * windowSize);
-//    memset(window, 0, sizeof(float) * windowSize);
-//    vDSP_hann_window(window, windowSize, vDSP_HANN_NORM);
-//    vDSP_vmul(data, 1, window, 1, data, 1, numSamples);
-
     vDSP_Length log2n = log2f(numSamples);
     fftSetup = vDSP_create_fftsetup(log2n, FFT_RADIX2);
     NSInteger nOver2 = numSamples/2;
@@ -50,8 +44,6 @@
     
     //Convert float array of reals samples to COMPLEX_SPLIT array A
     vDSP_ctoz((COMPLEX*)data, 2, &(complexA), 1, numSamples/2);
-    
-    //vDSP_vmul(data, 1, window, 1, data, 1, numSamples);
     
     //Perform FFT using fftSetup and A
     //Results are returned in A

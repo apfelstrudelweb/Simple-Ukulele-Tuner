@@ -9,18 +9,27 @@
 #define GAUGE_BG        @"gaugePattern.png"
 #define GAUGE_BG_BINGO  @"gaugePatternGreen.png"
 
+#define AVRG_OCT_CAP 5
 
-@interface HorizontalPicker () {
-    CGFloat distanceBetweenItems;
-    CGFloat textLayerWidth;
-    CGFloat borderWidth;
-    
-    NSInteger dataCount;
-}
 
-@property (nonatomic, retain) UIScrollView *scrollView;
-@property (nonatomic, retain) UIView *scrollViewMarkerContainerView;
-@property (nonatomic, retain) NSMutableArray *scrollViewMarkerLayerArray;
+@interface HorizontalPicker ()
+
+@property (nonatomic) UIScrollView *scrollView;
+@property (nonatomic) UIView *scrollViewMarkerContainerView;
+@property (nonatomic) NSMutableArray *scrollViewMarkerLayerArray;
+@property (nonatomic) NSMutableArray *avrgOctavesArray;
+
+@property (nonatomic) CGFloat value;
+@property (nonatomic) NSInteger steps;
+@property (nonatomic) CGFloat minimumValue;
+@property (nonatomic) CGFloat maximumValue;
+@property (nonatomic) CGFloat fontSize;
+@property (nonatomic) CGFloat scale;
+
+@property (nonatomic) CGFloat distanceBetweenItems;
+@property (nonatomic) CGFloat textLayerWidth;
+@property (nonatomic) CGFloat borderWidth;
+@property (nonatomic) NSInteger dataCount;
 
 @end;
 
@@ -44,37 +53,32 @@
                                                  selector:@selector(updateGauge:)
                                                      name:@"PlayToneNotification"
                                                    object:nil];
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(resetGauge:)
-                                                     name:@"StopCaptureNotification"
-                                                   object:nil];
-        
-        
-        dataCount = 0;
+
+        self.dataCount = 0;
+        self.avrgOctavesArray = [[NSMutableArray alloc] initWithCapacity:AVRG_OCT_CAP];
     }
     return self;
 }
 
 - (void)layoutSubviews {
     
-    distanceBetweenItems = IS_IPAD ? 140.0 : 70.0;
-    textLayerWidth = IS_IPAD ? 140.0 : 70.0;
+    self.distanceBetweenItems = IS_IPAD ? 140.0 : 70.0;
+    self.textLayerWidth = IS_IPAD ? 140.0 : 70.0;
     
-    steps = 3*BASIC_FREQUENCIES.count;
+    self.steps = 3*BASIC_FREQUENCIES.count;
     
-    borderWidth = self.frame.size.height/8;
+    self.borderWidth = self.frame.size.height/8;
     
-    CGFloat contentWidth = steps * distanceBetweenItems + textLayerWidth / 2;
+    CGFloat contentWidth = self.steps * self.distanceBetweenItems + self.textLayerWidth / 2;
     
-    scale = [[UIScreen mainScreen] scale];
+    self.scale = [[UIScreen mainScreen] scale];
     
     CGRect frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     
     self.scrollView = [[UIScrollView alloc] initWithFrame:frame];
     self.scrollView.contentSize = CGSizeMake(contentWidth, self.frame.size.height);
     self.scrollView.layer.cornerRadius = self.frame.size.height/2.01;
-    self.scrollView.layer.borderWidth = borderWidth;
+    self.scrollView.layer.borderWidth = self.borderWidth;
     self.scrollView.layer.borderColor = BORDER_COLOR.CGColor;
     //self.scrollView.backgroundColor = [UIColor whiteColor];
     self.scrollView.layer.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:GAUGE_BG]].CGColor;
@@ -84,9 +88,9 @@
     self.scrollView.userInteractionEnabled = NO;
     
     self.scrollViewMarkerContainerView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, contentWidth, self.frame.size.height)];
-    self.scrollViewMarkerLayerArray = [NSMutableArray arrayWithCapacity:steps];
+    self.scrollViewMarkerLayerArray = [NSMutableArray arrayWithCapacity:self.steps];
     
-    fontSize = [UILabel getFontSizeForPicker];
+    self.fontSize = [UILabel getFontSizeForPicker];
     
     [self.scrollView addSubview:self.scrollViewMarkerContainerView];
     [self addSubview:self.scrollView];
@@ -100,7 +104,7 @@
     
     // black dirty layer above
     CAGradientLayer *gradientLayer = [CAGradientLayer layer];
-    gradientLayer.contentsScale = scale;
+    gradientLayer.contentsScale = self.scale;
     gradientLayer.cornerRadius = self.frame.size.height/2;
     gradientLayer.startPoint = CGPointMake(0.0f, 0.0f);
     gradientLayer.endPoint = CGPointMake(1.0f, 0.0f);
@@ -137,8 +141,8 @@
     
     CGFloat offsetY = 1.0;
     
-    [linePath moveToPoint: CGPointMake(gradientLayer.frame.size.width/2.0, borderWidth-offsetY)];
-    [linePath addLineToPoint:CGPointMake(gradientLayer.frame.size.width/2.0, self.frame.size.height-borderWidth-offsetY)];
+    [linePath moveToPoint: CGPointMake(gradientLayer.frame.size.width/2.0, self.borderWidth-offsetY)];
+    [linePath addLineToPoint:CGPointMake(gradientLayer.frame.size.width/2.0, self.frame.size.height-self.borderWidth-offsetY)];
     line.path=linePath.CGPath;
     line.fillColor = nil;
     line.opacity = 0.5;
@@ -158,10 +162,10 @@
     
     if (position < self.scrollViewMarkerContainerView.frame.size.width - self.frame.size.width / 2) {
         CGFloat newPosition = 0.0f;
-        CGFloat offSet = position / distanceBetweenItems;
+        CGFloat offSet = position / self.distanceBetweenItems;
         NSUInteger target = (NSUInteger)(offSet + 0.35f);
-        target = target > steps ? steps - 1 : target;
-        newPosition = target * distanceBetweenItems + textLayerWidth / 2;
+        target = target > self.steps ? self.steps - 1 : target;
+        newPosition = target * self.distanceBetweenItems + self.textLayerWidth / 2;
         [self.scrollView setContentOffset:CGPointMake(newPosition, 0.0f) animated:animated];
     }
 }
@@ -179,25 +183,25 @@
     // Calculate the new size of the content
     CGFloat leftPadding = self.frame.size.width / 2;
     CGFloat rightPadding = leftPadding;
-    CGFloat contentWidth = leftPadding + (steps * distanceBetweenItems) + rightPadding + textLayerWidth / 2;
+    CGFloat contentWidth = leftPadding + (self.steps * self.distanceBetweenItems) + rightPadding + self.textLayerWidth / 2;
     self.scrollView.contentSize = CGSizeMake(contentWidth, self.frame.size.height);
     
     // Set the size of the marker container view
     [self.scrollViewMarkerContainerView setFrame:CGRectMake(0.0f, 0.0f, contentWidth, self.frame.size.height)];
     
     // Configure the new markers
-    self.scrollViewMarkerLayerArray = [NSMutableArray arrayWithCapacity:steps];
+    self.scrollViewMarkerLayerArray = [NSMutableArray arrayWithCapacity:self.steps];
     
-    for (NSInteger i = 0; i < steps; i++) {
+    for (NSInteger i = 0; i < self.steps; i++) {
         
         CATextLayer *textLayer = [CATextLayer layer];
-        textLayer.contentsScale = scale;
-        textLayer.frame = CGRectIntegral(CGRectMake(leftPadding + i*distanceBetweenItems, self.frame.size.height / 1.75 - fontSize / 2 + 1, textLayerWidth, 40));
+        textLayer.contentsScale = self.scale;
+        textLayer.frame = CGRectIntegral(CGRectMake(leftPadding + i*self.distanceBetweenItems, self.frame.size.height / 1.75 - self.fontSize / 2 + 1, self.textLayerWidth, 40));
         textLayer.foregroundColor = LINE_COLOR;
         textLayer.alignmentMode = kCAAlignmentCenter;
-        textLayer.fontSize = fontSize;
+        textLayer.fontSize = self.fontSize;
         
-        textLayer.font = (__bridge CFTypeRef)([UIFont fontWithName:FONT_BOLD size:fontSize]);
+        textLayer.font = (__bridge CFTypeRef)([UIFont fontWithName:FONT_BOLD size:self.fontSize]);
         
         NSInteger j = i % BASIC_FREQUENCIES.count;
         
@@ -241,27 +245,15 @@
     }
 }
 
-- (CGFloat)minimumValue {
-    return minimumValue;
-}
 
 - (void)setMinimumValue:(CGFloat)newMin {
-    minimumValue = newMin;
+    _minimumValue = newMin;
     [self setupMarkers];
-}
-
-- (CGFloat)maximumValue {
-    return maximumValue;
 }
 
 - (void)setMaximumValue:(CGFloat)newMax {
-    maximumValue = newMax;
+    _maximumValue = newMax;
     [self setupMarkers];
-}
-
-
-- (CGFloat)value {
-    return value;
 }
 
 
@@ -271,18 +263,7 @@
 }
 
 - (void)setValue:(CGFloat)newValue inOctave:(NSInteger) octave fromSoundfile:(BOOL)sf {
-    
-//    // Smooth the display
-//    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-//    NSInteger sensitivity = [[defaults stringForKey:KEY_SENSITIVITY] integerValue];
-//    NSInteger numberOfAvrgValues = 50 + (5 - sensitivity) * 9;
-//    
-//    if (!sf && ++dataCount % numberOfAvrgValues != 0) {
-//        return;
-//    }
-//    
-//    dataCount = 0;
-    
+   
     if (newValue==0.0) {
         newValue = 10.0;//16.35; // set to the first tone "C" of the scale
         //self.scrollView.backgroundColor = BG_COLOR;
@@ -293,10 +274,34 @@
     // now project values (16.35 - 987.8) to range 0 - 0.276
     newValue = log10f(newValue/16.35) * 1.375;
     
-    value = newValue > maximumValue ? maximumValue : newValue; // 0.276 max
-    value = newValue < minimumValue ? minimumValue : newValue; // 0.0 min
     
-    CGFloat xValue = (newValue - minimumValue) / ((maximumValue-minimumValue) / 8) * distanceBetweenItems + textLayerWidth / 2;
+    
+    //__weak __typeof(self)weakSelf = self;
+    
+//    value = newValue > maximumValue ? maximumValue : newValue; // 0.276 max
+//    value = newValue < minimumValue ? minimumValue : newValue; // 0.0 min
+    
+    CGFloat xValue = (newValue - self.minimumValue) / ((self.maximumValue-self.minimumValue) / 8) * self.distanceBetweenItems + self.textLayerWidth / 2;
+    
+
+//    if (self.avrgOctavesArray.count == AVRG_OCT_CAP) {
+//        NSLog(@"octave: %ld", (long)octave);
+//        [self.avrgOctavesArray removeLastObject];
+//    }
+//    [self.avrgOctavesArray insertObject:[NSNumber numberWithInteger:octave] atIndex:0];
+//    
+//    
+//    
+//    if (self.avrgOctavesArray.count == AVRG_OCT_CAP) {
+//        NSInteger refOctave = [[self.avrgOctavesArray lastObject] integerValue];
+//        if (octave != refOctave) {
+//            return;
+//        }
+//    }
+    
+//    if (xValue > 1000.0) {
+//        NSLog(@"xValue: %f", xValue);
+//    }
     
     if (!isnan(xValue)) {
         [self.scrollView setContentOffset:CGPointMake(xValue, 0.0f) animated:NO];
@@ -315,7 +320,19 @@
             CGFloat frequency = [spect.frequency floatValue];
             NSInteger octave = [spect.octave intValue];
             
-            [self setValue:frequency inOctave:octave fromSoundfile:NO];
+//            if (fabsf(frequency-lastFrequency) > 50.0) {
+//                //NSLog(@"HIGH FREQUENCY DEVIATION");
+//                lastFrequency = frequency;
+//                [self setValue:lastFrequency inOctave:octave fromSoundfile:NO];
+//                return;
+//            }
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self setValue:frequency inOctave:octave fromSoundfile:NO];
+            });
+            
+            
+//            lastFrequency = frequency;
             
         });
     } else if ([notification.object isKindOfClass:[SoundFile class]]) {
@@ -337,12 +354,6 @@
     }
 }
 
--(void) resetGauge:(NSNotification *) notification {
-//    if (![SHARED_SOUND_HELPER isSoundPlaying]) {
-//        [self setValue:0.0 inOctave:0];
-//        [self setBackground:-1];
-//    }
-}
 
 -(void)dealloc {
     //NSLog(@"%s", __PRETTY_FUNCTION__);

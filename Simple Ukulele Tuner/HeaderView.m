@@ -24,12 +24,6 @@
 @implementation HeaderView
 
 
-
-- (id)init {
-    return [self initWithFrame:CGRectZero];
-}
-
-
 - (id)initWithFrame:(CGRect)frame {
     
     self = [super initWithFrame:frame];

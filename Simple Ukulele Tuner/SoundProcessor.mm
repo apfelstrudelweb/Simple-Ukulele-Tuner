@@ -48,17 +48,18 @@
 @implementation SoundProcessor
 
 
-- (id)init {
-    
-    audioManager = [Novocaine audioManager];
-    
-    ringBuffer = new RingBuffer(32768, 2);
-    previousFrequencyArray = [NSMutableArray new];
-    numOfErroneousFreqDetections = 0;
-    numOfNoFrequencyDetecion = 0;
-    
-    defaults = [NSUserDefaults standardUserDefaults];
-
+- (id)init{
+    self = [super init];
+    if(self){
+        audioManager = [Novocaine audioManager];
+        
+        ringBuffer = new RingBuffer(32768, 2);
+        previousFrequencyArray = [NSMutableArray new];
+        numOfErroneousFreqDetections = 0;
+        numOfNoFrequencyDetecion = 0;
+        
+        defaults = [NSUserDefaults standardUserDefaults];
+    }
     return self;
 }
 
@@ -67,7 +68,6 @@
     
     sensitivity = [[defaults stringForKey:KEY_SENSITIVITY] integerValue];
     
-   // __block NSMutableArray* frequencyArray = [NSMutableArray new];
     __block CGFloat dbVal = 0.0;
     
     __block NSInteger numCaptures = 0;
@@ -77,13 +77,7 @@
     __block Yin* yin = [Yin new];
     __block NSMutableArray* result;
     
-//    Bandpass *bandpass = [[Bandpass alloc] initWithSamplingRate:PREFERRED_SAMPLING_RATE];
-//    [bandpass setCenterFrequency:520.0 andBandwidth:500.0];
-    
-    
-    
-    
-    
+
     if (IS_MICROPHONE==YES) {
         
         [[Novocaine audioManager] setInputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels) {
@@ -111,9 +105,6 @@
     
     [[Novocaine audioManager] setOutputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels) {
         ringBuffer->FetchInterleavedData(data, numFrames, numChannels);
- 
-        //[LPF filterData:data numFrames:numFrames numChannels:numChannels];
-    
 
         CGFloat volume = 100 + dbVal;
         spect.volume = [NSNumber numberWithFloat:volume];
@@ -160,16 +151,13 @@
              
              spect.data = result;
 
-             [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateDataNotification" object:spect];
-             
-             
              // now perform "YIN, a fundamental frequency estimator for speech and music"
              CGFloat pitchInHertz = [yin getPitchInHertz:data withFrames:numFrames];
              // if no frequency has been found, resume loop
              if (pitchInHertz == -1) {
                  // silence the sound in order to disable sound feedback
                  [self silence: data andSize:(int) numChannels*numFrames];
-                 
+  
                  numOfErroneousFreqDetections++;
                  
                  if (numOfErroneousFreqDetections > 10) {
@@ -186,6 +174,8 @@
                      
                  }
                  return;
+             } else {
+                 [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateDataNotification" object:spect];
              }
              
              if (previousFrequencyArray.count > 1) {
@@ -210,7 +200,7 @@
              
              NSNumber *frequency = [NSNumber numberWithDouble:pitchInHertz];
              spect.frequency = frequency;
-             
+
              if ([SHARED_MANAGER isFFT]) {
                  NSInteger bin = pitchInHertz;
                  spect.bin = [NSNumber numberWithInteger:bin];

@@ -120,149 +120,6 @@
             betterTau = tau + (s2 - s0) / (2 * (2 * s1 - s2 - s0));
         }
         
-//        // use only for testing and calibrating
-//        if (false ) {
-//            float f0 = 932.3;
-//            float corrTau = betterTau - PREFERRED_SAMPLING_RATE/f0;
-//            [corFrequencies addObject:[NSNumber numberWithFloat:corrTau]];
-//            NSNumber *averageValue = [corFrequencies valueForKeyPath:@"@avg.self"];
-//            NSLog(@"betterTau: %f, corrTau: %f", betterTau, [averageValue floatValue]);
-//        }
-        
-        
-        
-        /*
-         * Pitch correction 4th octave
-         */
-        
-        // workaround for 'C4' -> 261.6 Hz (middle C)
-        if (betterTau > 41.7 && betterTau < 42.4) {
-            betterTau += 0.021;
-        }
-        
-        //        // workaround for 'Cis4' -> 277.2 Hz
-        //        if (betterTau > 39.7 && betterTau < 39.8) {
-        //            // no correction necessary
-        //        }
-        //
-        //        // workaround for 'D4' -> 293.7 Hz
-        //        if (betterTau > 37.5 && betterTau < 37.6) {
-        //            // no correction necessary
-        //        }
-        
-        // workaround for 'Es4' -> 311.1 Hz
-        if (betterTau >= 35.0 && betterTau < 35.5) {
-            betterTau += 0.015;
-        }
-        
-        // workaround for 'E4' -> 329.6 Hz
-        if (betterTau >= 33.0 && betterTau < 35.0) {
-            betterTau += 0.012;
-        }
-        
-        // workaround for 'F4' -> 349.2 Hz
-        if (betterTau >= 30.0 && betterTau < 33.0) {
-            betterTau += 0.0014;
-        }
-        
-        // workaround for 'Fis4' -> 370.0 Hz
-        if (betterTau >= 29.0 && betterTau < 30.0) {
-            betterTau += 0.012;
-        }
-        
-        // workaround for 'G4' -> 392.0 Hz
-        if (betterTau >= 28.0 && betterTau < 29.0) {
-            betterTau += 0.023;
-        }
-        
-        // workaround for 'Gis4' -> 415.3 Hz
-        if (betterTau >= 25.5 && betterTau < 28.0) {
-            betterTau += 0.0018;
-        }
-        
-        // workaround for 'A4' -> 440 Hz (chamber tone)
-        if (betterTau >= 24.5 && betterTau < 25.5) {
-            betterTau += 0.022;
-        }
-        
-        // workaround for 'Bflat4' -> 466.2 Hz
-        if (betterTau >= 23.0 && betterTau < 24.5) {
-            betterTau += 0.006;
-        }
-        
-        // workaround for 'B4' -> 493.9 Hz
-        if (betterTau >= 21.5 && betterTau < 23.0) {
-            betterTau += 0.018;
-        }
-        
-        
-        /*
-         * Pitch correction 5th octave
-         */
-        // workaround for 'C5' -> 523.3 Hz
-        if (betterTau >= 21.0 && betterTau < 21.5) {
-            betterTau += 0.0268;
-        }
-        
-        // workaround for 'Cis5' -> 554.4 Hz
-        if (betterTau >= 19.0 && betterTau < 21.0) {
-            betterTau += 0.0207;
-        }
-        
-        // workaround for 'D5' -> 587.3 Hz
-        if (betterTau >= 18.0 && betterTau < 19.0) {
-            betterTau += 0.007061;
-        }
-        
-        // workaround for 'Es5' -> 622.3 Hz
-        if (betterTau >= 17.5 && betterTau < 18.0) {
-            betterTau += 0.0128;
-        }
-        
-        // workaround for 'E5' -> 659.3 Hz
-        if (betterTau >= 16.5 && betterTau < 17.5) {
-            betterTau += 0.01;
-        }
-        
-        // workaround for 'F5' -> 698.5 Hz
-        if (betterTau >= 15.5 && betterTau < 16.5) {
-            betterTau += 0.008;
-        }
-        
-        // workaround for 'Fis5' -> 740.0 Hz
-        if (betterTau >= 14.5 && betterTau < 15.5) {
-            betterTau += 0.0255;
-        }
-        
-        // workaround for 'G5' -> 784.0 Hz
-        if (betterTau >= 13.5 && betterTau < 14.5) {
-            betterTau += 0.036;
-        }
-        
-        // workaround for 'Gis5' -> 830.6 Hz
-        if (betterTau >= 13.0 && betterTau < 13.5) {
-            betterTau += 0.03485;
-        }
-        
-        // workaround for 'A5' -> 880.0 Hz
-        if (betterTau >= 12.5 && betterTau < 13.0) {
-            betterTau += 0.01;
-        }
-        
-        // workaround for 'Bflat5' -> 932.3 Hz
-        if (betterTau >= 11.5 && betterTau < 12.5) {
-            betterTau += 0.0297;
-        }
-        
-        // workaround for 'B5' -> 987.8 Hz
-        if (betterTau <= 11.5) {
-            betterTau += 0.045;
-        }
-        
-        // for exactly 2000 Hz
-        if (betterTau < 11.031) {
-            betterTau -= 0.02;
-        }
         
         free(yinBuffer);
         
@@ -274,11 +131,74 @@
         
         CGFloat pitchInHertz = PREFERRED_SAMPLING_RATE / betterTau;
         
-        //floatingThreshold = 0.00159*pitchInHertz - 0.07727;
-//        if (pitchInHertz > 100) floatingThreshold = 0.15;
-//        if (pitchInHertz > 150) floatingThreshold = 0.1;
-//        if (pitchInHertz > 300) floatingThreshold = 0.02;
-        
+//        //workaround for 'Es4' -> 311.1 Hz
+//        if (fabsf(pitchInHertz) - 311.1 < 10.0) {
+//            pitchInHertz -= 0.9;
+//            //NSLog(@"diff=%f", diff);
+//        }
+//        
+//        // Crucial Uke Frequencies
+//        if (fabsf(pitchInHertz) - 98.0 < 10.0) {
+//            pitchInHertz += 0.8;
+//        }
+//        
+//        if (fabsf(pitchInHertz) - 146.83 < 10.0) {
+//            pitchInHertz += 0.9;
+//        }
+//        
+//        if (fabsf(pitchInHertz) - 196.0 < 10.0) {
+//            pitchInHertz += 0.75;
+//        }
+//        
+//        if (fabsf(pitchInHertz) - 246.94 < 10.0) {
+//            pitchInHertz += 0.4;
+//        }
+//        
+//        if (fabsf(pitchInHertz) - 261.63 < 10.0) {
+//            pitchInHertz += 0.8;
+//        }
+//        
+//        if (fabsf(pitchInHertz) - 293.66 < 10.0) {
+//            pitchInHertz += 0.8;
+//        }
+//        
+//        if (fabsf(pitchInHertz) - 329.63 < 10.0) {
+//            pitchInHertz -= 1.0;
+//        }
+//        
+//        if (fabsf(pitchInHertz) - 349.23 < 10.0) {
+//            pitchInHertz += 1.25;
+//        }
+//        
+//        if (fabsf(pitchInHertz) - 370.0 < 10.0) {
+//            pitchInHertz -= 0.8;
+//        }
+//        
+//        if (fabsf(pitchInHertz) - 392.0 < 10.0) {
+//            pitchInHertz -= 0.5;
+//        }
+//        
+//        if (fabsf(pitchInHertz) - 440.0 < 10.0) {
+//            pitchInHertz -= 0.4;
+//        }
+//        
+//        if (fabsf(pitchInHertz) - 493.88 < 10.0) {
+//            pitchInHertz -= 1.5;
+//        }
+//        
+//        if (fabsf(pitchInHertz) - 523.25 < 10.0) {
+//            pitchInHertz -= 0.6;
+//        }
+//        
+//        if (fabsf(pitchInHertz) - 587.33 < 10.0) {
+//            pitchInHertz -= 2.3;
+//        }
+//        
+//        if (fabsf(pitchInHertz) - 659.26 < 10.0) {
+//            pitchInHertz -= 4.0;
+//        }
+//        
+
         return pitchInHertz;
     }
     

@@ -4,15 +4,70 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Simple Balalaika Tuner.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
+		<key>Simple Banjo Tuner.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Simple Guitar Tuner.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>Simple Mandolin Tuner.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Simple Ukulele Tuner.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Simple Violin Tuner.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1B2E11FE1D1FDD5100BD31C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1B2E12921D1FDDA600BD31C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1B2E13261D1FDDD100BD31C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1B2E13BA1D1FDE1300BD31C4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1BC041381C99F8C6005103EC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1BCCC17D1D1FD5E800AD17D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1BCCC1951D1FD6A200AD17D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

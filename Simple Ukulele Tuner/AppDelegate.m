@@ -28,22 +28,20 @@
     
     [iRate sharedInstance].promptForNewVersionIfUserRated = YES;
     
-    //    //enable preview mode
-    //    [iRate sharedInstance].previewMode = YES;
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //    // TODO: REMOVE LATER, it's only for testing!
-//    PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
-//    [bindings setObject:version_premium forKey:UPGRADE_TYPE];
+    PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
+    [bindings setObject:version_premium forKey:UPGRADE_TYPE];
     //[bindings setObject:version_uke forKey:UPGRADE_TYPE];
     //[bindings setObject:version_signal forKey:UPGRADE_TYPE];
-    //[bindings removeObjectForKey:UPGRADE_TYPE];
+    // [bindings removeObjectForKey:UPGRADE_TYPE];
     
     // Set the application defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSDictionary *ukeDefaults = [NSDictionary dictionaryWithObject:@"Soprano (G4-C4-E4-A4)"
+    NSDictionary *instrumentDefaults = [NSDictionary dictionaryWithObject:@"Soprano (G4-C4-E4-A4)"
                                                             forKey:@"ukuleleType"];
     
     NSDictionary *colorDefaults = [NSDictionary dictionaryWithObject:@"default"
@@ -55,7 +53,7 @@
     NSDictionary *sensitivityDefaults = [NSDictionary dictionaryWithObject:@"3"
                                                                 forKey:KEY_SENSITIVITY];
     
-    [defaults registerDefaults:ukeDefaults];
+    [defaults registerDefaults:instrumentDefaults];
     [defaults registerDefaults:colorDefaults];
     [defaults registerDefaults:calFreqDefaults];
     [defaults registerDefaults:sensitivityDefaults];
@@ -75,23 +73,42 @@
         
         // initialize the SDK with your appID and devID
         STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
-        sdk.appID = @"203844333";
-        //sdk.devID = @"ulrich.vormbrock@gmail.com";
-        //sdk.preferences = [STASDKPreferences prefrencesWithAge:22 andGender:STAGender_Male];
- 
         STASplashPreferences *splashPreferences = [[STASplashPreferences alloc] init];
         splashPreferences.splashMode = STASplashModeTemplate;
         splashPreferences.splashTemplateTheme = STASplashTemplateThemeDeepBlue;
         splashPreferences.splashLoadingIndicatorType = STASplashLoadingIndicatorTypeIOS;
+     
+#if defined(TARGET_UKULELE)
+        sdk.appID = @"203844333";
         splashPreferences.splashTemplateAppName = @"Simple Ukulele Tuner";
-
+        [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
+#elif defined(TARGET_GUITAR)
+        sdk.appID = @"????";
+        splashPreferences.splashTemplateAppName = @"Simple Guitar Tuner";
+        //[[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
+#elif defined(TARGET_MANDOLIN)
+        sdk.appID = @"????";
+        splashPreferences.splashTemplateAppName = @"Simple Mandolin Tuner";
+        //[[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
+#elif defined(TARGET_BANJO)
+        sdk.appID = @"????";
+        splashPreferences.splashTemplateAppName = @"Simple Banjo Tuner";
+        //[[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
+#elif defined(TARGET_VIOLIN)
+        sdk.appID = @"????";
+        splashPreferences.splashTemplateAppName = @"Simple Violin Tuner";
+        //[[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
+#elif defined(TARGET_BALALAIKA)
+        sdk.appID = @"????";
+        splashPreferences.splashTemplateAppName = @"Simple Balalaika Tuner";
+        //[[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
+#endif
         [sdk showSplashAdWithPreferences:splashPreferences];
         
     } else {
         [NSThread sleepForTimeInterval:TIME_SPLASHSCREEN];
     }
     
-    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
     [[BITHockeyManager sharedHockeyManager] startManager];
     [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
     

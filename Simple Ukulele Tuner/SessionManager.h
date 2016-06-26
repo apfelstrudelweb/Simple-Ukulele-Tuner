@@ -20,7 +20,7 @@
 @property BOOL isSoundPlayingEnabled;
 @property BOOL isSoundCapturingEnabled;
 @property CGFloat toneFrequency;
-@property NSInteger numberOfUkeType;
+@property NSInteger numberOfInstrumentType;
 @property (strong, nonatomic) NSArray *edgeFrequencyArray;
 
 @property NSInteger currentSamplingRate;
@@ -57,8 +57,8 @@
 -(void) setStringToneFrequency:(CGFloat) freq;
 -(CGFloat) getStringToneFrequency;
 
--(void) setActualNumberOfUkeType:(NSInteger)number;
--(NSInteger) getNumberOfUkeType;
+-(void) setActualNumberOfInstrumentType:(NSInteger)number;
+-(NSInteger) getNumberOfInstrumentType;
 
 -(void) setEdgeFrequencyArray:(NSArray *)edgeFrequencyArray;
 -(NSArray *) getEdgeFrequencyArray;
@@ -67,9 +67,9 @@
 -(NSInteger)getCurrentSamplingRate;
 
 
--(NSArray*) getUkuleleTypesArray;
--(NSArray*) getUkuleleNotesArray;
--(NSArray*) getUkuleleFrequencies;
+-(NSArray*) getInstrumentTypesArray;
+-(NSArray*) getInstrumentNotesArray;
+-(NSArray*) getInstrumentFrequencies;
 -(NSDictionary*) getColorsDict;
 -(NSArray*) getColorsArray;
 -(UIColor*) getHeaderColor: (NSString*) mainColor;

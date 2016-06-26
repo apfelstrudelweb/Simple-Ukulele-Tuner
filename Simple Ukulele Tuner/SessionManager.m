@@ -107,11 +107,11 @@
     return self.toneFrequency;
 }
 
--(void) setActualNumberOfUkeType:(NSInteger)number {
-    self.numberOfUkeType = number;
+-(void) setActualNumberOfInstrumentType:(NSInteger)number {
+    self.numberOfInstrumentType = number;
     
     // now get min and max frequency
-    NSArray *frequencyArray = [self getUkuleleFrequencies];
+    NSArray *frequencyArray = [self getInstrumentFrequencies];
     
     NSNumber* min = [frequencyArray valueForKeyPath:@"@min.self"];
     NSNumber* max = [frequencyArray valueForKeyPath:@"@max.self"];
@@ -119,14 +119,14 @@
     [self setEdgeFrequencyArray:@[min, max]];
 }
 
--(NSInteger) getNumberOfUkeType {
-    return self.numberOfUkeType;
+-(NSInteger) getNumberOfInstrumentType {
+    return self.numberOfInstrumentType;
 }
 
 
 // Sound types issues
--(NSArray*) getUkuleleTypesArray {
-    NSArray *ukeTypesArray = @[
+-(NSArray*) getInstrumentTypesArray {
+    NSArray *instrumentTypesArray = @[
                                 UKU_TYPE_01,
                                 UKU_TYPE_02,
                                 UKU_TYPE_03,
@@ -140,11 +140,11 @@
                                 UKU_TYPE_11,
                                 UKU_TYPE_12
                              ];
-    return ukeTypesArray;
+    return instrumentTypesArray;
 }
 
--(NSArray*) getUkuleleNotesArray {
-    NSArray *ukeNotesArray = @[
+-(NSArray*) getInstrumentNotesArray {
+    NSArray *instrNotesArray = @[
                                @[@"D",@"G",@"B",@"E"], // D5 - G4 - B4 - E5
                                @[@"C",@"F",@"A",@"D"], // C5 - F4 - A4 - D5
                                @[@"A",@"D",@"F♯",@"B"], // A4 - D4 - F#4 - B4
@@ -158,12 +158,12 @@
                                @[@"D",@"G",@"B",@"E"], // D3 - G3 - B3 - E4
                                @[@"E",@"A",@"D",@"G"]  // E1 - A1 - D2 - G2
                                ];
-    return ukeNotesArray[self.numberOfUkeType];
+    return instrNotesArray[self.numberOfInstrumentType];
 }
 
-// ukulele frequencies
--(NSArray*) getUkuleleFrequencies {
-    NSArray *ukeFrequenciesArray = @[
+// instrument string frequencies
+-(NSArray*) getInstrumentFrequencies {
+    NSArray *instrFrequenciesArray = @[
                                @[@587.3,@392.0,@493.88,@659.26], // D5 - G4 - B4 - E5
                                @[@523.25,@349.23,@440.0,@587.33], // C5 - F4 - A4 - D5
                                @[@440.0,@293.66,@370.0,@493.88], // A4 - D4 - F#4 - B4
@@ -177,7 +177,7 @@
                                @[@146.83,@196.0,@246.94,@329.63], // D3 - G3 - B3 - E4
                                @[@41.2,@55.0,@73.42,@98.0]  // E1 - A1 - D2 - G2
                                ];
-    return ukeFrequenciesArray[self.numberOfUkeType];
+    return instrFrequenciesArray[self.numberOfInstrumentType];
 }
 
 

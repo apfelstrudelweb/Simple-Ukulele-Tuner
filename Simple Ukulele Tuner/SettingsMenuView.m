@@ -90,7 +90,7 @@ typedef NSUInteger SECTION_DESCR;
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         calibratedFrequency = [[defaults stringForKey:KEY_CALIBRATED_FREQUENCY] floatValue];
         
-        ukeTypesArray = [SHARED_MANAGER getUkuleleTypesArray];
+        ukeTypesArray = [SHARED_MANAGER getInstrumentTypesArray];
         colorsArray = [SHARED_MANAGER getColorsArray];
         colorsDict = [SHARED_MANAGER getColorsDict];
         

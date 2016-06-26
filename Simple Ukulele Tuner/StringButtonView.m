@@ -100,7 +100,7 @@
     }
     
     //now set index of uke for sound processing later
-    NSArray* ukeTypesArray = [SHARED_MANAGER getUkuleleTypesArray];
+    NSArray* ukeTypesArray = [SHARED_MANAGER getInstrumentTypesArray];
     NSInteger index = 0;
     
     for (NSString* type in ukeTypesArray) {
@@ -108,7 +108,7 @@
         NSString* trimmedDefaultUkeType = [defaultUkeType stringByReplacingOccurrencesOfString:@" " withString:@""];
         
         if ([trimmedUkeType isEqualToString:trimmedDefaultUkeType]) {
-            [SHARED_MANAGER setActualNumberOfUkeType:index];
+            [SHARED_MANAGER setActualNumberOfInstrumentType:index];
         }
         index++;
     }
@@ -215,7 +215,7 @@
             CGFloat alpha = [spectrum.alpha floatValue];
             CGFloat capturedFrequency = [spectrum.frequency floatValue] - frequencyOffset;
             
-            NSArray* frequenciesArray = [SHARED_MANAGER getUkuleleFrequencies];
+            NSArray* frequenciesArray = [SHARED_MANAGER getInstrumentFrequencies];
             
             for (NSInteger i=0; i<frequenciesArray.count; i++) {
                 CGFloat nominalFrequency = [frequenciesArray[i] floatValue];

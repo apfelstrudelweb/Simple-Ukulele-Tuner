@@ -104,7 +104,7 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     [session overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:&setOverrideError];
     
     // Get user preference
-    NSArray* frequenciesArray = [SHARED_MANAGER getUkuleleFrequencies];
+    NSArray* frequenciesArray = [SHARED_MANAGER getInstrumentFrequencies];
     
     // use "autorelease" due to the flag "-fno-objc-arc" !!!
     SoundFile* sf = [[[SoundFile alloc] init] autorelease];

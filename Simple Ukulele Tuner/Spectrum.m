@@ -53,8 +53,8 @@
     self.octave = [NSNumber numberWithInteger:octave];
     
 
-    NSArray *nominalFrequencies = [[SessionManager sharedManager] getUkuleleFrequencies];
-    NSArray *nominalToneNames = [[SessionManager sharedManager] getUkuleleNotesArray];
+    NSArray *nominalFrequencies = [[SessionManager sharedManager] getInstrumentFrequencies];
+    NSArray *nominalToneNames = [[SessionManager sharedManager] getInstrumentNotesArray];
     
     
     CGFloat minDeviation = 1000.0;

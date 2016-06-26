@@ -15,6 +15,7 @@
     NSMutableArray *imageViewsArray;
     UIImage *ledBg;
     UIImage *led;
+    NSInteger numberOfStrings;
     
     NSInteger activeTag;
     
@@ -39,8 +40,7 @@
         ledBg = [UIImage imageNamed:@"ledPassive.png"];
         led = [UIImage imageNamed:@"ledActive.png"];
         //self.backgroundColor = [UIColor redColor];
-        [self createImage];
-        [self setupLedConstraints];
+
         
         // input from microphone
         [[NSNotificationCenter defaultCenter] addObserver:self
@@ -58,9 +58,37 @@
                                                  selector:@selector(updateCalFreq:)
                                                      name:@"UpdateDefaultsNotification"
                                                    object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(updateLedGroup:)
+                                                     name:@"UpdateDefaultsNotification"
+                                                   object:nil];
+        
+        
+        NSString* defaultSubtype;
+#if defined(TARGET_UKULELE)
+        defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
+#elif defined(TARGET_GUITAR)
+        defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
+#elif defined(TARGET_MANDOLIN)
+        
+#elif defined(TARGET_BANJO)
+        
+#elif defined(TARGET_VIOLIN)
+        
+#elif defined(TARGET_BALALAIKA)
+        
+#endif
+        NSArray* frequenciesArray = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultSubtype][2];
+        numberOfStrings = frequenciesArray.count;
+        
+        [self createImage];
+        [self setupLedConstraints];
     }
     return self;
 }
+
+
 
 #pragma mark - gesture recognizer
 // event handler for playing tones in a loop
@@ -80,14 +108,14 @@
     
     // clear all green LEDs
     for (UIImageView *view in imageViewsArray) {
-        if (view.tag > NUMBER_OF_STRINGS-1) {
+        if (view.tag > numberOfStrings-1) {
             view.alpha = ALPHA_OFF;
         }
     }
     
     // Attention: this piece of code only works in conjunction with enlarged hit area!!!
     NSInteger actualTag = (NSInteger) view.tag;
-    NSInteger toneNumber = actualTag - NUMBER_OF_STRINGS;
+    NSInteger toneNumber = actualTag - numberOfStrings;
     
     if ([SHARED_MANAGER isSoundPlaying]) {
         selectedView = imageViewsArray[view.tag];
@@ -112,7 +140,7 @@
         activeTag = -1;
     }
     
-    if ([version_lite isEqualToString:[SHARED_VERSION_MANAGER getVersion]] || [version_uke isEqualToString:[SHARED_VERSION_MANAGER getVersion]]) {
+    if ([version_lite isEqualToString:[SHARED_VERSION_MANAGER getVersion]] || [version_instrument isEqualToString:[SHARED_VERSION_MANAGER getVersion]]) {
         // LITE version: tone is played only once (3s) - after that time elapsed, clear LED and enable microphone again
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, NUM_SEC_PLAYTONE);
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
@@ -127,6 +155,28 @@
 
 
 #pragma mark - Notification
+-(void) updateLedGroup:(NSNotification *) notification {
+    NSString* defaultSubtype;
+#if defined(TARGET_UKULELE)
+    defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
+#elif defined(TARGET_GUITAR)
+    defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
+#elif defined(TARGET_MANDOLIN)
+    
+#elif defined(TARGET_BANJO)
+    
+#elif defined(TARGET_VIOLIN)
+    
+#elif defined(TARGET_BALALAIKA)
+    
+#endif
+    NSArray* frequenciesArray = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultSubtype][2];
+    numberOfStrings = frequenciesArray.count;
+    
+    [self createImage];
+    [self setupLedConstraints];
+}
+
 -(void) updateCalFreq:(NSNotification *) notification {
     
     frequencyOffset = [[defaults stringForKey:KEY_CALIBRATED_FREQUENCY] floatValue] - REF_FREQUENCY;
@@ -138,15 +188,15 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             
             // clear LEDs
-            for (NSInteger i=0; i<NUMBER_OF_STRINGS; i++) {
-                ((UIView*)imageViewsArray[i+NUMBER_OF_STRINGS]).alpha = ALPHA_OFF;
+            for (NSInteger i=0; i<numberOfStrings; i++) {
+                ((UIView*)imageViewsArray[i+numberOfStrings]).alpha = ALPHA_OFF;
             }
             
             SoundFile* sf = (SoundFile*)[notification object];
             NSInteger toneNumber = [sf.toneNumber intValue];
             
             if (sf.isActive) {
-                ((UIView*)imageViewsArray[toneNumber+NUMBER_OF_STRINGS]).alpha = 1.0;
+                ((UIView*)imageViewsArray[toneNumber+numberOfStrings]).alpha = 1.0;
             }
             
         });
@@ -154,8 +204,8 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             
             // clear LEDs
-            for (NSInteger i=0; i<NUMBER_OF_STRINGS; i++) {
-                ((UIView*)imageViewsArray[i+NUMBER_OF_STRINGS]).alpha = ALPHA_OFF;
+            for (NSInteger i=0; i<numberOfStrings; i++) {
+                ((UIView*)imageViewsArray[i+numberOfStrings]).alpha = ALPHA_OFF;
             }
             
             Spectrum* spectrum = (Spectrum*)[notification object];
@@ -185,9 +235,9 @@
                 CGFloat lowerLimit = 0.49 * nominalFrequency * (TONE_DIST - 1.0) / TONE_DIST;
                 
                 if (fabs(capturedFrequency - nominalFrequency) < upperLimit ||  fabs(nominalFrequency - capturedFrequency) < lowerLimit) {
-                    NSInteger num = i+NUMBER_OF_STRINGS;
+                    NSInteger num = i+numberOfStrings;
                     if (num >= imageViewsArray.count) return;
-                    ((UIView*)imageViewsArray[i+NUMBER_OF_STRINGS]).alpha = alpha;
+                    ((UIView*)imageViewsArray[i+numberOfStrings]).alpha = alpha;
                 }
                 
             }
@@ -204,7 +254,11 @@
 #pragma mark -creation of images
 - (void) createImage {
     
-    imageViewsArray = [NSMutableArray new];
+    for (UIView *view in imageViewsArray) {
+        [view removeFromSuperview];
+    }
+    
+    imageViewsArray = [[NSMutableArray alloc] initWithCapacity:numberOfStrings];
     
     // Backgrounds
     UIImage* _ledBg = [UIImage imageWithCGImage:ledBg.CGImage]; // trick for @2x.png
@@ -228,6 +282,20 @@
     [self.imageViewBg_4 setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self addSubview:self.imageViewBg_4];
     [imageViewsArray addObject:self.imageViewBg_4];
+    
+    if (numberOfStrings > 4) {
+        self.imageViewBg_5 = [[HitImageView alloc] initWithImage:_ledBg];
+        [self.imageViewBg_5 setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [self addSubview:self.imageViewBg_5];
+        [imageViewsArray addObject:self.imageViewBg_5];
+    }
+    
+    if (numberOfStrings > 5) {
+        self.imageViewBg_6 = [[HitImageView alloc] initWithImage:_ledBg];
+        [self.imageViewBg_6 setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [self addSubview:self.imageViewBg_6];
+        [imageViewsArray addObject:self.imageViewBg_6];
+    }
     
     
     // LEDs
@@ -253,6 +321,20 @@
     [self addSubview:self.imageView_4];
     [imageViewsArray addObject:self.imageView_4];
     
+    if (numberOfStrings > 4) {
+        self.imageView_5 = [[HitImageView alloc] initWithImage:_led];
+        [self.imageView_5 setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [self addSubview:self.imageView_5];
+        [imageViewsArray addObject:self.imageView_5];
+    }
+    
+    if (numberOfStrings > 5) {
+        self.imageView_5 = [[HitImageView alloc] initWithImage:_led];
+        [self.imageView_5 setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [self addSubview:self.imageView_5];
+        [imageViewsArray addObject:self.imageView_5];
+    }
+    
     
     // gesture recognizer
     NSInteger index = 0;
@@ -268,16 +350,30 @@
 
 
 - (void) setupLedConstraints {
+    
+    [self removeConstraints:[self constraints]];
+    
     NSMutableArray *layoutConstraints = [NSMutableArray new];
     
     NSInteger i=1;
     
     for (UIView* view in imageViewsArray) {
         
-        view.alpha = i > NUMBER_OF_STRINGS ? ALPHA_OFF : 0.9;
-        NSInteger num = i > NUMBER_OF_STRINGS ? i-NUMBER_OF_STRINGS : i;
+        view.alpha = i > numberOfStrings ? ALPHA_OFF : 0.9;
+        NSInteger num = i > numberOfStrings ? i-numberOfStrings : i;
         CGFloat len = 9.3;
-        CGFloat fact = 2.5*(num+1.25)/len;
+        
+        CGFloat offset;
+        
+        if (numberOfStrings == 4) {
+            offset = 1.25;
+        } else if (numberOfStrings == 5) {
+            offset = 0.7;
+        } else {
+            offset = 0.25;
+        }
+        
+        CGFloat fact = 2.5*(num + offset)/len;
         
         CGFloat width = [UIScreen mainScreen].applicationFrame.size.width / 15.0;
         

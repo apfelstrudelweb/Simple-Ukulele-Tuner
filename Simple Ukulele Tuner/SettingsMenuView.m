@@ -46,7 +46,7 @@ typedef NSUInteger SECTION_DESCR;
     
     
     NSString* version;
-    BOOL enableUkeTypes;
+    BOOL enableSubtypes;
     BOOL enableThemes;
     BOOL enableSignal;
     
@@ -151,8 +151,8 @@ typedef NSUInteger SECTION_DESCR;
 - (void)getCurrentVersion {
     version = [SHARED_VERSION_MANAGER getVersion];
     
-    if ([version_premium isEqualToString:version] || [version_uke isEqualToString:version]) {
-        enableUkeTypes = YES;
+    if ([version_premium isEqualToString:version] || [version_instrument isEqualToString:version]) {
+        enableSubtypes = YES;
         enableThemes = YES;
     }
     if ([version_premium isEqualToString:version] || [version_signal isEqualToString:version]) {
@@ -181,7 +181,6 @@ typedef NSUInteger SECTION_DESCR;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    //return 5;
     return NumberOfOptions;
 }
 
@@ -197,7 +196,7 @@ typedef NSUInteger SECTION_DESCR;
     NSInteger section = indexPath.section;
     
     // Highlight the default instrument type
-    UIColor* textColor = (section == INSTRUMENT_TYPE && row == STANDARD_SUBTYPE) ? HIGHLIGHT_TEXT_COLOR: TEXT_COLOR;
+    UIColor* textColor = (section == INSTRUMENT_TYPE && [STANDARD_SUBTYPE containsObject:@(row)]) ? HIGHLIGHT_TEXT_COLOR: TEXT_COLOR;
     
     cell.textLabel.textColor = textColor;
     cell.detailTextLabel.textColor = textColor;
@@ -374,7 +373,7 @@ typedef NSUInteger SECTION_DESCR;
         }
     }
     // if not upgraded, block the options
-    if (enableUkeTypes==NO && (section == INSTRUMENT_TYPE && row != 3)) {
+    if (enableSubtypes==NO && (section == INSTRUMENT_TYPE && row != [STANDARD_SUBTYPE[0] integerValue])) {
         imv.image = PURCHASE;
         if (blockUserInteraction==YES) {
             imv.alpha = 0.2;
@@ -455,8 +454,24 @@ typedef NSUInteger SECTION_DESCR;
     NSInteger sensitivity = [[defaults stringForKey:KEY_SENSITIVITY] integerValue];
     NSString *sensitivityText = SENSITIVITY_TEXT[sensitivity-1];
     
+    NSString* subtype;
+#if defined(TARGET_UKULELE)
+    subtype = @"Ukulele Type";
+#elif defined(TARGET_GUITAR)
+    subtype = @"Guitar Type";
+#elif defined(TARGET_MANDOLIN)
+    
+#elif defined(TARGET_BANJO)
+    
+#elif defined(TARGET_VIOLIN)
+    
+#elif defined(TARGET_BALALAIKA)
+    
+#endif
+    
+    
     switch (section) {
-        case INSTRUMENT_TYPE:  labelText = @"Instrument Type"; break;     // for ukulele types
+        case INSTRUMENT_TYPE:  labelText = subtype; break;       // for instrument  subtypes
         case SIGNAL: labelText = @"Signal Info"; break;          // for FFT and autocorrelation
         case CALIBRATION:  labelText = @"Calibration"; break;    // for calibration
         case SENSITIVITY:  labelText = [NSString stringWithFormat:@"Sensitivity: %ld (%@)", (long)sensitivity, sensitivityText]; break;    // for sensitivity
@@ -534,10 +549,10 @@ typedef NSUInteger SECTION_DESCR;
     }
     
     // if options are blocked, only show upgrade menu, but don't change the button's state!
-    if (enableUkeTypes==NO && touchedSection == INSTRUMENT_TYPE && touchedRow != 3) {
+    if (enableSubtypes==NO && touchedSection == INSTRUMENT_TYPE && touchedRow != [STANDARD_SUBTYPE[0] integerValue]) {
         [self showUpgrades];
         return;
-    } else if (enableUkeTypes==NO && touchedSection == INSTRUMENT_TYPE && touchedRow == 3) {
+    } else if (enableSubtypes==NO && touchedSection == INSTRUMENT_TYPE && touchedRow == [STANDARD_SUBTYPE[0] integerValue]) {
         return;
     }
     if (enableSignal==NO && touchedSection == SIGNAL) {
@@ -729,16 +744,38 @@ typedef NSUInteger SECTION_DESCR;
         return;
     }
     
+    NSString *upgradeOptionPremium;
+    NSString *upgradeOptionInstrument;
+    NSString *upgradeOptionSignal;
+    
+#if defined(TARGET_UKULELE)
+    upgradeOptionPremium = uke_inAppPurchasePremium;
+    upgradeOptionInstrument = uke_inAppPurchaseUke;
+    upgradeOptionSignal = uke_inAppPurchaseSignal;
+#elif defined(TARGET_GUITAR)
+    upgradeOptionPremium = guitar_inAppPurchasePremium;
+    upgradeOptionInstrument = guitar_inAppPurchaseGuitar;
+    upgradeOptionSignal = guitar_inAppPurchaseSignal;
+#elif defined(TARGET_MANDOLIN)
+    
+#elif defined(TARGET_BANJO)
+    
+#elif defined(TARGET_VIOLIN)
+    
+#elif defined(TARGET_BALALAIKA)
+    
+#endif
+    
     for (SKPaymentTransaction *transaction in queue.transactions) {
         NSString *productID = transaction.payment.productIdentifier;
         //[purchasedItemIDs addObject:productID];
-        if ([productID isEqualToString:inAppPurchasePremium]) {
+        if ([productID isEqualToString:upgradeOptionPremium]) {
             [SHARED_VERSION_MANAGER setCurrentVersion:version_premium];
             // if premium version, no other updates are required!
             break;
-        } else if ([productID isEqualToString:inAppPurchaseUke]) {
-            [SHARED_VERSION_MANAGER setCurrentVersion:version_uke];
-        } else if ([productID isEqualToString:inAppPurchaseSignal]) {
+        } else if ([productID isEqualToString:upgradeOptionInstrument]) {
+            [SHARED_VERSION_MANAGER setCurrentVersion:version_instrument];
+        } else if ([productID isEqualToString:upgradeOptionSignal]) {
             [SHARED_VERSION_MANAGER setCurrentVersion:version_signal];
         }
     }
@@ -802,6 +839,7 @@ typedef NSUInteger SECTION_DESCR;
 #pragma mark - layout constraints
 - (void)setupConstraints {
     
+    [self removeConstraints:[self constraints]];
     
     NSMutableArray *layoutConstraints = [NSMutableArray new];
     

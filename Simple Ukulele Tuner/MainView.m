@@ -88,6 +88,8 @@
     NSString* colorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
     [self.headerBackgroundView setBackgroundColor:[SHARED_MANAGER getHeaderColor:colorString]];
     
+    [self setBackgroundImage];
+    
     [self setNeedsDisplay];
 }
 
@@ -213,8 +215,40 @@
 
 - (void) setBackgroundImage {
     
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString* defaultSubtype;
+#if defined(TARGET_UKULELE)
+    defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
+#elif defined(TARGET_GUITAR)
+    defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
+#elif defined(TARGET_MANDOLIN)
+    
+#elif defined(TARGET_BANJO)
+    
+#elif defined(TARGET_VIOLIN)
+    
+#elif defined(TARGET_BALALAIKA)
+    
+#endif
+    
+    NSDictionary *instrDict = [SHARED_MANAGER getInstrumentSubtypesDictionary];
+    NSArray* frequenciesArray = [instrDict objectForKey:defaultSubtype][2];
+    NSInteger numberOfStrings = frequenciesArray.count;
+    
+    NSString *backgrImgName;
+    
+    if (numberOfStrings == 4) {
+        backgrImgName = @"background4";
+    } else if (numberOfStrings == 5) {
+        backgrImgName = @"background5";
+    } else {
+        backgrImgName = @"background6";
+    }
+
+    
     UIGraphicsBeginImageContext(self.frame.size);
-    [[UIImage imageNamed:BACKGROUND_IMAGE] drawInRect:self.bounds];
+    [[UIImage imageNamed:backgrImgName] drawInRect:self.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     self.backgroundColor = [UIColor colorWithPatternImage:image];

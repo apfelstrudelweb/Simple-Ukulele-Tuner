@@ -67,7 +67,7 @@
 #if defined(TARGET_UKULELE)
     defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
 #elif defined(TARGET_GUITAR)
-    defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
+    defaultSubtype = [[defaults stringForKey:KEY_GUITAR_TYPE] substringFromIndex:4];
 #elif defined(TARGET_MANDOLIN)
     
 #elif defined(TARGET_BANJO)
@@ -92,6 +92,8 @@
 
 #pragma mark - layout constraints
 - (void)setupLabelConstraints {
+    
+    [self removeConstraints:[self constraints]];
     
     NSMutableArray *layoutConstraints = [NSMutableArray new];
     

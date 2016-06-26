@@ -145,6 +145,8 @@
     
     CGFloat iconSize = IS_IPAD ? 120.0 : 60.0;
     
+    [self removeConstraints:[self constraints]];
+    
     NSMutableArray *layoutConstraints = [NSMutableArray new];
     
     // Microphone

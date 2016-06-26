@@ -266,6 +266,8 @@
 
 - (void) setupCurveViewConstraints {
     
+    [self removeConstraints:[self constraints]];
+    
     NSMutableArray *layoutConstraints = [NSMutableArray new];
     
     // Center vertically

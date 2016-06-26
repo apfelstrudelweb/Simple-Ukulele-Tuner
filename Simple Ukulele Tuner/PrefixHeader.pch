@@ -72,7 +72,7 @@
 
 #define CONTENT_WIDTH 0.88 // 88% of entire width, centered
 
-#define BACKGROUND_IMAGE @"backgroundTransparent.png"
+//#define BACKGROUND_IMAGE @"backgroundTransparent.png"
 
 #define TEXT_COLOR_HEADER [UIColor whiteColor]
 
@@ -91,9 +91,6 @@
 
 
 #define HTML_PAGES [[NSMutableArray alloc] initWithObjects:@"manual1", @"manual2", @"manual3", @"manual4",@"manual5",@"manual6", @"manual7", nil];
-
-//it deals with an ukulele
-#define NUMBER_OF_STRINGS 4
 
 
 
@@ -196,40 +193,48 @@
 #define UKE_TYPE_11              @"Barritone (D3 - G3 - B3 - E4)"
 #define UKE_TYPE_12              @"Bass (E1 - A1 - D2 - G2)"
 
-
-
 // Version
 #define version_lite            @"lite"
-#define version_uke             @"uke"
+#define version_instrument      @"instrument"
 #define version_signal          @"signal"
 #define version_premium         @"premium"
 
-#define inAppPurchaseUke        @"ch.vormbrock.simpleukuleletuner.alluke"
-#define inAppPurchaseSignal     @"ch.vormbrock.simpleukuleletuner.signalplus"
-#define inAppPurchasePremium    @"ch.vormbrock.simpleukuleletuner.premium"
-#define INAPP_PURCHASE_ARRAY    @[inAppPurchasePremium, inAppPurchaseUke, inAppPurchaseSignal]
+#define uke_inAppPurchaseUke        @"ch.vormbrock.simpleukuleletuner.alluke"
+#define uke_inAppPurchaseSignal     @"ch.vormbrock.simpleukuleletuner.signalplus"
+#define uke_inAppPurchasePremium    @"ch.vormbrock.simpleukuleletuner.premium"
+#define UKE_INAPP_PURCHASE_ARRAY    @[uke_inAppPurchasePremium, uke_inAppPurchaseUke, uke_inAppPurchaseSignal]
 
 // GUITAR
 #define KEY_GUITAR_TYPE          @"guitarType"
-#define GUITAR_TYPE_01           @"Standard (E - A - D - G - B - E)"
-// 4 String Bass
-#define GUITAR_TYPE_02           @"Standard Bass(E - A - D - G)"
-#define GUITAR_TYPE_03           @"Drop D (D - A - D - G)"
-#define GUITAR_TYPE_04           @"Half Step Down (D# - G# - C# - A#)"
-#define GUITAR_TYPE_05           @"Full Step Down (D - G - C - A)"
-#define GUITAR_TYPE_06           @"Low B (B - E - A - D)"
-#define GUITAR_TYPE_07           @"Drop C (C - A - D - G)"
+#define GUITAR_TYPE_01           @"6 - Classical / Acoustic (E - A - D - G - B - E)"
 // 5 String Bass
-#define GUITAR_TYPE_08           @"Standard (B - E - A - D - G)"
-#define GUITAR_TYPE_09           @"High C (E - A - D - G - C)"
-#define GUITAR_TYPE_10           @"Half Step Down (A# - D# - G# - F - F#)"
-#define GUITAR_TYPE_11           @"Full Step Down (A - D - G - C - F)"
+#define GUITAR_TYPE_02           @"5 - Bass Standard (B - E - A - D - G)"
+#define GUITAR_TYPE_03           @"5 - Bass High C (E - A - D - G - C)"
+#define GUITAR_TYPE_04           @"5 - Bass Half Step Down (A# - D# - G# - F - F#)"
+#define GUITAR_TYPE_05           @"5 - Bass Full Step Down (A - D - G - C - F)"
+// 4 String Bass
+#define GUITAR_TYPE_06           @"4 - Bass Standard (E - A - D - G)"
+#define GUITAR_TYPE_07           @"4 - Bass Drop D (D - A - D - G)"
+#define GUITAR_TYPE_08           @"4 - Bass Half Step Down (D# - G# - C# - A#)"
+#define GUITAR_TYPE_09           @"4 - Bass Full Step Down (D - G - C - A)"
+#define GUITAR_TYPE_10           @"4 - Bass Low B (B - E - A - D)"
+#define GUITAR_TYPE_11           @"4 - Bass Drop C (C - A - D - G)"
+
+
+
+#define guitar_inAppPurchaseGuitar     @"ch.vormbrock.simpleguitartuner.allguitar"
+#define guitar_inAppPurchaseSignal     @"ch.vormbrock.simpleguitartuner.signalplus"
+#define guitar_inAppPurchasePremium    @"ch.vormbrock.simpleguitartuner.premium"
+#define GUITAR_INAPP_PURCHASE_ARRAY    @[guitar_inAppPurchasePremium, guitar_inAppPurchaseGuitar, guitar_inAppPurchaseSignal]
+
+
+
 
 
 #if defined(TARGET_UKULELE)
-    #define STANDARD_SUBTYPE             3 // Soprano (G4 - C4 - E4 - A4)
+    #define STANDARD_SUBTYPE             @[@3] // Soprano (G4 - C4 - E4 - A4)
 #elif defined(TARGET_GUITAR)
-    #define STANDARD_SUBTYPE             0 // Standard (E - A - D - G - B - E)
+    #define STANDARD_SUBTYPE             @[@0, @5] // Acoustic Standard (E - A - D - G - B - E) and Bass Standadrd (E - A - D -G)
 #elif defined(TARGET_MANDOLIN)
     #define STANDARD_SUBTYPE             0
 #elif defined(TARGET_BANJO)

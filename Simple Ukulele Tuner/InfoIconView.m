@@ -64,6 +64,8 @@
     
     CGFloat iconSize = IS_IPAD ? 64.0 : 32.0;
     
+    [self removeConstraints:[self constraints]];
+    
     NSMutableArray *layoutConstraints = [NSMutableArray new];
     
     // Center vertically

@@ -34,7 +34,22 @@
         self.version = version ? version : version_lite;
         
         // 2. get available versions from the App Store
-        NSArray* inAppPurchaseArray = INAPP_PURCHASE_ARRAY;
+        NSArray* inAppPurchaseArray;
+        
+#if defined(TARGET_UKULELE)
+        inAppPurchaseArray = UKE_INAPP_PURCHASE_ARRAY;
+#elif defined(TARGET_GUITAR)
+        inAppPurchaseArray = GUITAR_INAPP_PURCHASE_ARRAY;
+#elif defined(TARGET_MANDOLIN)
+        
+#elif defined(TARGET_BANJO)
+        
+#elif defined(TARGET_VIOLIN)
+        
+#elif defined(TARGET_BALALAIKA)
+        
+#endif
+        
         self.availableProducts = [NSMutableArray new];
         
         for (NSString* productId in inAppPurchaseArray) {
@@ -70,7 +85,7 @@
 
 - (void) setCurrentVersion:(NSString*)version {
     
-    if ([version_uke isEqualToString:self.version]) {
+    if ([version_instrument isEqualToString:self.version]) {
         self.version = version_premium;
     } else if ([version_signal isEqualToString:self.version]) {
         self.version = version_premium;
@@ -103,12 +118,35 @@
     
     SKProduct *product1, *product2, *product3;
     
+    
+    NSString *upgradeOptionPremium;
+    NSString *upgradeOptionInstrument;
+    NSString *upgradeOptionSignal;
+    
+#if defined(TARGET_UKULELE)
+    upgradeOptionPremium = uke_inAppPurchasePremium;
+    upgradeOptionInstrument = uke_inAppPurchaseUke;
+    upgradeOptionSignal = uke_inAppPurchaseSignal;
+#elif defined(TARGET_GUITAR)
+    upgradeOptionPremium = guitar_inAppPurchasePremium;
+    upgradeOptionInstrument = guitar_inAppPurchaseGuitar;
+    upgradeOptionSignal = guitar_inAppPurchaseSignal;
+#elif defined(TARGET_MANDOLIN)
+    
+#elif defined(TARGET_BANJO)
+    
+#elif defined(TARGET_VIOLIN)
+    
+#elif defined(TARGET_BALALAIKA)
+    
+#endif
+    
     for (SKProduct* product in self.availableProducts) {
-        if ([product.productIdentifier isEqualToString:inAppPurchasePremium]) {
+        if ([product.productIdentifier isEqualToString:upgradeOptionPremium]) {
             product1 = product;
-        } else if ([product.productIdentifier isEqualToString:inAppPurchaseUke]) {
+        } else if ([product.productIdentifier isEqualToString:upgradeOptionInstrument]) {
             product2 = product;
-        } else if ([product.productIdentifier isEqualToString:inAppPurchaseSignal]) {
+        } else if ([product.productIdentifier isEqualToString:upgradeOptionSignal]) {
             product3 = product;
         }
     }
@@ -118,7 +156,7 @@
         [orderedProducts insertObject:product1 atIndex:0];
         [orderedProducts insertObject:product2 atIndex:1];
         [orderedProducts insertObject:product3 atIndex:2];
-    } else if ([version_uke isEqualToString:self.version] && product3) {
+    } else if ([version_instrument isEqualToString:self.version] && product3) {
         //[orderedProducts insertObject:product1 atIndex:0];
         [orderedProducts insertObject:product3 atIndex:0];
     } else if ([version_signal isEqualToString:self.version] && product2) {

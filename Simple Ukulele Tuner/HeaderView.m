@@ -211,6 +211,7 @@
 
 - (void)setupLabelConstraints {
     
+    [self removeConstraints:[self constraints]];
     
     NSMutableArray *layoutConstraints = [NSMutableArray new];
     // 1. DIFFERENCE LABEL

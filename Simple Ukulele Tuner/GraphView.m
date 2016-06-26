@@ -54,6 +54,9 @@
 #pragma mark -constraints
 
 - (void) setupViewConstraints {
+    
+    [self removeConstraints:[self constraints]];
+    
     NSMutableArray *layoutConstraints = [NSMutableArray new];
     
     

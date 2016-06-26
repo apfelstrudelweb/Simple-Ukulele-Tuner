@@ -154,7 +154,7 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     
     [[NSNotificationCenter defaultCenter] postNotificationName:@"PlayToneNotification" object:sf];
 
-    if ([version_lite isEqualToString:[SHARED_VERSION_MANAGER getVersion]] || [version_uke isEqualToString:[SHARED_VERSION_MANAGER getVersion]]) {
+    if ([version_lite isEqualToString:[SHARED_VERSION_MANAGER getVersion]] || [version_instrument isEqualToString:[SHARED_VERSION_MANAGER getVersion]]) {
         // stop the tone for the lite version (after 3 sec)
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, NUM_SEC_PLAYTONE);
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){

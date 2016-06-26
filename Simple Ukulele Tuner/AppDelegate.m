@@ -35,9 +35,9 @@
     //    // TODO: REMOVE LATER, it's only for testing!
     PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
     [bindings setObject:version_premium forKey:UPGRADE_TYPE];
-    //[bindings setObject:version_uke forKey:UPGRADE_TYPE];
+    //[bindings setObject:version_instrument forKey:UPGRADE_TYPE];
     //[bindings setObject:version_signal forKey:UPGRADE_TYPE];
-    // [bindings removeObjectForKey:UPGRADE_TYPE];
+    //[bindings removeObjectForKey:UPGRADE_TYPE];
     
     // Set the application defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -45,10 +45,10 @@
     
     
 #if defined(TARGET_UKULELE)
-    instrumentDefaults = [NSDictionary dictionaryWithObject:@"Soprano (G4-C4-E4-A4)"
+    instrumentDefaults = [NSDictionary dictionaryWithObject:@"Soprano (G4 - C4 - E4 - A4)"
                                                       forKey:@"ukuleleType"];
 #elif defined(TARGET_GUITAR)
-    instrumentDefaults = [NSDictionary dictionaryWithObject:@"Standard (E - A - D - G - B - E)"
+    instrumentDefaults = [NSDictionary dictionaryWithObject:@"6 - Classical / Acoustic (E - A - D - G - B - E)"
                                                      forKey:@"guitarType"];
 #elif defined(TARGET_MANDOLIN)
     

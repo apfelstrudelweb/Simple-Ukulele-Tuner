@@ -154,7 +154,7 @@
     
     NSString* currentVersion = [SHARED_VERSION_MANAGER getVersion];
     
-    if ([version_lite isEqualToString:currentVersion] || [version_uke isEqualToString:currentVersion]) {
+    if ([version_lite isEqualToString:currentVersion] || [version_instrument isEqualToString:currentVersion]) {
         
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         CGFloat screenWidth = screenRect.size.width;
@@ -169,6 +169,9 @@
 
 #pragma mark -constraints
 - (void) setupButtonConstraints {
+    
+    [self removeConstraints:[self constraints]];
+    
     NSMutableArray *layoutConstraints = [NSMutableArray new];
 
     

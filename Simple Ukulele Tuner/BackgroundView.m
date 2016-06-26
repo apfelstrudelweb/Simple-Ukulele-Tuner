@@ -155,6 +155,7 @@
 
 - (void)setupLayoutConstraints {
     
+    [self removeConstraints:[self constraints]];
     
     NSMutableArray *layoutConstraints = [NSMutableArray new];
     

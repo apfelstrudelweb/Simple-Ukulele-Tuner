@@ -217,6 +217,8 @@
 #pragma mark - layout constraints
 - (void)setupConstraints {
     
+    [self removeConstraints:[self constraints]];
+    
     NSMutableArray *layoutConstraints = [NSMutableArray new];
     
     [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.toneLabel

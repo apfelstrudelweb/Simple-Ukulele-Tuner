@@ -8,6 +8,12 @@
 
 #import "MeterView.h"
 
+@interface MeterView() {
+    CGFloat meterWidth;
+}
+
+@end
+
 @implementation MeterView
 
 - (id)initWithFrame:(CGRect)frame {
@@ -16,7 +22,13 @@
     if (self) {
         
         [self addSubview:self.gauge];
-        [self setupConstraints];
+        [self updateWidth:nil];
+        //[self setupConstraints];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(updateWidth:)
+                                                     name:@"UpdateDefaultsNotification"
+                                                   object:nil];
         
     }
     return self;
@@ -31,8 +43,39 @@
     return _gauge;
 }
 
+#pragma mark - Notification
+-(void) updateWidth:(NSNotification *) notification {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString* defaultSubtype;
+#if defined(TARGET_UKULELE)
+    defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
+#elif defined(TARGET_GUITAR)
+    defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
+#elif defined(TARGET_MANDOLIN)
+    
+#elif defined(TARGET_BANJO)
+    
+#elif defined(TARGET_VIOLIN)
+    
+#elif defined(TARGET_BALALAIKA)
+    
+#endif
+    NSArray* frequenciesArray = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultSubtype][2];
+    NSInteger numberOfStrings = frequenciesArray.count;
+    
+    if (numberOfStrings < 6) {
+        meterWidth = 0.495;
+    } else {
+        meterWidth = 0.66;
+    }
+    
+    [self setupConstraints];
+}
+
 #pragma mark -layout constraints
 - (void)setupConstraints {
+    
+    [self removeConstraints:[self constraints]];
     
     
     NSMutableArray *layoutConstraints = [NSMutableArray new];
@@ -60,7 +103,7 @@
                                                               relatedBy:NSLayoutRelationEqual
                                                                  toItem:self
                                                               attribute:NSLayoutAttributeWidth
-                                                             multiplier:0.495
+                                                             multiplier:meterWidth
                                                                constant:0.0]];
     
     // Height

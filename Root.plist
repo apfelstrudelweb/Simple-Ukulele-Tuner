@@ -49,21 +49,21 @@
 			<key>Key</key>
 			<string>ukuleleType</string>
 			<key>DefaultValue</key>
-			<string>Soprano G4</string>
+			<string>Soprano (G4 - C4 - E4 - A4)</string>
 			<key>Values</key>
 			<array>
-				<string>Sopranino (D5-G4-B4-E5)</string>
-				<string>Sopranino (C5-F4-A4-D5)</string>
-				<string>Soprano (A4-D4-F#4-B4)</string>
-				<string>Soprano (G4-C4-E4-A4)</string>
-				<string>Concert (A4-D4-F#4-B4)</string>
-				<string>Concert (G4-C4-E4-A4)</string>
-				<string>Tenor (A4-D4-F#4-B4)</string>
-				<string>Tenor (G4-C4-E4-A4)</string>
-				<string>Tenor (G3-C4-E4-A4)</string>
-				<string>Tenor (D4-G3-B3-E4)</string>
-				<string>Barritone (D3-G3-B3-E4)</string>
-				<string>Bass (E1-A1-D2-G2)</string>
+				<string>Sopranino (D5 - G4 - B4 - E5)</string>
+				<string>Sopranino (C5 - F4 - A4 - D5)</string>
+				<string>Soprano (A4 - D4 - F#4 - B4)</string>
+				<string>Soprano (G4 - C4 - E4 - A4)</string>
+				<string>Concert (A4 - D4 - F#4 - B4)</string>
+				<string>Concert (G4 - C4 - E4 - A4)</string>
+				<string>Tenor (A4 - D4 - F#4 - B4)</string>
+				<string>Tenor (G4 - C4 - E4 - A4)</string>
+				<string>Tenor (G3 - C4 - E4 - A4)</string>
+				<string>Tenor (D4 - G3 - B3 - E4)</string>
+				<string>Barritone (D3 - G3 - B3 - E4)</string>
+				<string>Bass (E1 - A1 - D2 - G2)</string>
 			</array>
 		</dict>
         <dict>
@@ -74,20 +74,20 @@
             <key>Key</key>
             <string>guitarType</string>
             <key>DefaultValue</key>
-            <string>Standard Standard (E - A - D - G - B -E)</string>
+            <string>6 - Classical / Acoustic (E - A - D - G - B - E)</string>
             <key>Values</key>
             <array>
-                <string>Standard (E - A - D - G - B -E)</string>
-                <string>Standard Bass (E - A - D - G)</string>
-                <string>Drop D (D - A - D - G)</string>
-                <string>Half Step Down (D# - G# - C# - A#)</string>
-                <string>Full Step Down (D - G - C - A)</string>
-                <string>Low B (B - E - A - D)</string>
-                <string>Drop C (C - A - D - G)</string>
-                <string>Standard (B - E - A - D - G)</string>
-                <string>High C (E - A - D - G - C)</string>
-                <string>Half Step Down (A# - D# - G# - F - F#)</string>
-                <string>Full Step Down (A - D - G - C - F)</string>
+                <string>6 - Classical / Acoustic (E - A - D - G - B - E)</string>
+                <string>5 - Bass Standard (B - E - A - D - G)</string>
+                <string>5 - Bass High C (E - A - D - G - C)</string>
+                <string>5 - Bass Half Step Down (A# - D# - G# - F - F#)</string>
+                <string>5 - Bass Full Step Down (A - D - G - C - F)</string>
+                <string>4 - Bass Standard (E - A - D - G)</string>
+                <string>4 - Bass Drop D (D - A - D - G)</string>
+                <string>4 - Bass Half Step Down (D# - G# - C# - A#)</string>
+                <string>4 - Bass Full Step Down (D - G - C - A)</string>
+                <string>4 - Bass Low B (B - E - A - D)</string>
+                <string>4 - Bass Drop C (C - A - D - G)</string>
             </array>
         </dict>
 	</array>

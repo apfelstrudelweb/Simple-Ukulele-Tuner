@@ -203,14 +203,34 @@
 }
 
 - (void) performUpgrade:(NSString*) productID {
-
-    if ([productID isEqualToString:inAppPurchasePremium]) {
+    
+#if defined(TARGET_UKULELE)
+    if ([productID isEqualToString:uke_inAppPurchasePremium]) {
         [SHARED_VERSION_MANAGER setCurrentVersion:version_premium];
-    } else if ([productID isEqualToString:inAppPurchaseUke]) {
-        [SHARED_VERSION_MANAGER setCurrentVersion:version_uke];
-    } else if ([productID isEqualToString:inAppPurchaseSignal]) {
+    } else if ([productID isEqualToString:uke_inAppPurchaseUke]) {
+        [SHARED_VERSION_MANAGER setCurrentVersion:version_instrument];
+    } else if ([productID isEqualToString:uke_inAppPurchaseSignal]) {
         [SHARED_VERSION_MANAGER setCurrentVersion:version_signal];
     }
+#elif defined(TARGET_GUITAR)
+    if ([productID isEqualToString:guitar_inAppPurchasePremium]) {
+        [SHARED_VERSION_MANAGER setCurrentVersion:version_premium];
+    } else if ([productID isEqualToString:guitar_inAppPurchaseGuitar]) {
+        [SHARED_VERSION_MANAGER setCurrentVersion:version_instrument];
+    } else if ([productID isEqualToString:guitar_inAppPurchaseSignal]) {
+        [SHARED_VERSION_MANAGER setCurrentVersion:version_signal];
+    }
+#elif defined(TARGET_MANDOLIN)
+    
+#elif defined(TARGET_BANJO)
+    
+#elif defined(TARGET_VIOLIN)
+    
+#elif defined(TARGET_BALALAIKA)
+    
+#endif
+
+   
     
     dispatch_async(dispatch_get_main_queue(), ^{
         [self.tableView reloadData];
@@ -298,6 +318,7 @@
 #pragma mark - layout constraints
 - (void)setupConstraints {
     
+    [self removeConstraints:[self constraints]];
     
     NSMutableArray *layoutConstraints = [NSMutableArray new];
     

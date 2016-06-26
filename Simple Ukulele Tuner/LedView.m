@@ -162,8 +162,21 @@
             CGFloat alpha = [spectrum.alpha floatValue];
             CGFloat capturedFrequency = [spectrum.frequency floatValue] - frequencyOffset;
             
-            NSString* defaultUkeType = [defaults stringForKey:KEY_UKE_TYPE];
-            NSArray* frequenciesArray = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultUkeType][2];
+            NSString* defaultSubtype;
+#if defined(TARGET_UKULELE)
+            defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
+#elif defined(TARGET_GUITAR)
+            defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
+#elif defined(TARGET_MANDOLIN)
+            
+#elif defined(TARGET_BANJO)
+            
+#elif defined(TARGET_VIOLIN)
+            
+#elif defined(TARGET_BALALAIKA)
+            
+#endif
+            NSArray* frequenciesArray = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultSubtype][2];
             
             for (NSInteger i=0; i<frequenciesArray.count; i++) {
                 CGFloat nominalFrequency = [frequenciesArray[i] floatValue];
@@ -172,6 +185,8 @@
                 CGFloat lowerLimit = 0.49 * nominalFrequency * (TONE_DIST - 1.0) / TONE_DIST;
                 
                 if (fabs(capturedFrequency - nominalFrequency) < upperLimit ||  fabs(nominalFrequency - capturedFrequency) < lowerLimit) {
+                    NSInteger num = i+NUMBER_OF_STRINGS;
+                    if (num >= imageViewsArray.count) return;
                     ((UIView*)imageViewsArray[i+NUMBER_OF_STRINGS]).alpha = alpha;
                 }
                 

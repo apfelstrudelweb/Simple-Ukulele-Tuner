@@ -181,6 +181,7 @@
  * Instrument specific issues
  *
  **/
+// UKULELE
 #define KEY_UKE_TYPE             @"ukuleleType"
 #define UKE_TYPE_01              @"Sopranino (D5 - G4 - B4 - E5)"
 #define UKE_TYPE_02              @"Sopranino (C5 - F4 - A4 - D5)"
@@ -195,19 +196,48 @@
 #define UKE_TYPE_11              @"Barritone (D3 - G3 - B3 - E4)"
 #define UKE_TYPE_12              @"Bass (E1 - A1 - D2 - G2)"
 
-#define STANDARD_UKE            3 //Soprano (G4 - C4 - E4 - A4)
 
 
 // Version
-#define version_lite        @"lite"
-#define version_uke         @"uke"
-#define version_signal      @"signal"
-#define version_premium     @"premium"
+#define version_lite            @"lite"
+#define version_uke             @"uke"
+#define version_signal          @"signal"
+#define version_premium         @"premium"
 
 #define inAppPurchaseUke        @"ch.vormbrock.simpleukuleletuner.alluke"
 #define inAppPurchaseSignal     @"ch.vormbrock.simpleukuleletuner.signalplus"
 #define inAppPurchasePremium    @"ch.vormbrock.simpleukuleletuner.premium"
+#define INAPP_PURCHASE_ARRAY    @[inAppPurchasePremium, inAppPurchaseUke, inAppPurchaseSignal]
 
-#define INAPP_PURCHASE_ARRAY  @[inAppPurchasePremium, inAppPurchaseUke, inAppPurchaseSignal]
+// GUITAR
+#define KEY_GUITAR_TYPE          @"guitarType"
+#define GUITAR_TYPE_01           @"Standard (E - A - D - G - B - E)"
+// 4 String Bass
+#define GUITAR_TYPE_02           @"Standard Bass(E - A - D - G)"
+#define GUITAR_TYPE_03           @"Drop D (D - A - D - G)"
+#define GUITAR_TYPE_04           @"Half Step Down (D# - G# - C# - A#)"
+#define GUITAR_TYPE_05           @"Full Step Down (D - G - C - A)"
+#define GUITAR_TYPE_06           @"Low B (B - E - A - D)"
+#define GUITAR_TYPE_07           @"Drop C (C - A - D - G)"
+// 5 String Bass
+#define GUITAR_TYPE_08           @"Standard (B - E - A - D - G)"
+#define GUITAR_TYPE_09           @"High C (E - A - D - G - C)"
+#define GUITAR_TYPE_10           @"Half Step Down (A# - D# - G# - F - F#)"
+#define GUITAR_TYPE_11           @"Full Step Down (A - D - G - C - F)"
+
+
+#if defined(TARGET_UKULELE)
+    #define STANDARD_SUBTYPE             3 // Soprano (G4 - C4 - E4 - A4)
+#elif defined(TARGET_GUITAR)
+    #define STANDARD_SUBTYPE             0 // Standard (E - A - D - G - B - E)
+#elif defined(TARGET_MANDOLIN)
+    #define STANDARD_SUBTYPE             0
+#elif defined(TARGET_BANJO)
+    #define STANDARD_SUBTYPE             0
+#elif defined(TARGET_VIOLIN)
+    #define STANDARD_SUBTYPE             0
+#elif defined(TARGET_BALALAIKA)
+    #define STANDARD_SUBTYPE             0
+#endif
 
 #endif

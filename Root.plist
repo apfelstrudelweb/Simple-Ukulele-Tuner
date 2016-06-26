@@ -66,6 +66,30 @@
 				<string>Bass (E1-A1-D2-G2)</string>
 			</array>
 		</dict>
+        <dict>
+            <key>Type</key>
+            <string>PSMultiValueSpecifier</string>
+            <key>Title</key>
+            <string>GuitarType</string>
+            <key>Key</key>
+            <string>guitarType</string>
+            <key>DefaultValue</key>
+            <string>Standard Standard (E - A - D - G - B -E)</string>
+            <key>Values</key>
+            <array>
+                <string>Standard (E - A - D - G - B -E)</string>
+                <string>Standard Bass (E - A - D - G)</string>
+                <string>Drop D (D - A - D - G)</string>
+                <string>Half Step Down (D# - G# - C# - A#)</string>
+                <string>Full Step Down (D - G - C - A)</string>
+                <string>Low B (B - E - A - D)</string>
+                <string>Drop C (C - A - D - G)</string>
+                <string>Standard (B - E - A - D - G)</string>
+                <string>High C (E - A - D - G - C)</string>
+                <string>Half Step Down (A# - D# - G# - F - F#)</string>
+                <string>Full Step Down (A - D - G - C - F)</string>
+            </array>
+        </dict>
 	</array>
 	<key>StringsTable</key>
 	<string>Root</string>

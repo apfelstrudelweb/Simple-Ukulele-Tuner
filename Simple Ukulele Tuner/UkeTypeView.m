@@ -63,8 +63,21 @@
 -(void)setUkeType {
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString* defaultUkeType = [defaults stringForKey:KEY_UKE_TYPE];
-    NSArray *stringSplitArray = [defaultUkeType componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"("]];
+    NSString* defaultSubtype;
+#if defined(TARGET_UKULELE)
+    defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
+#elif defined(TARGET_GUITAR)
+    defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
+#elif defined(TARGET_MANDOLIN)
+    
+#elif defined(TARGET_BANJO)
+    
+#elif defined(TARGET_VIOLIN)
+    
+#elif defined(TARGET_BALALAIKA)
+    
+#endif
+    NSArray *stringSplitArray = [defaultSubtype componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"("]];
     ukeType = stringSplitArray[0];
    
 }

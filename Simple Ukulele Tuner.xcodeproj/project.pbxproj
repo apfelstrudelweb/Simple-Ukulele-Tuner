@@ -849,11 +849,8 @@
 		1B0721531CC3E64100102B13 /* de_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = de_manual7.html; sourceTree = "<group>"; };
 		1B2E12901D1FDD5100BD31C4 /* Simple Mandolin Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Mandolin Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2E13241D1FDDA600BD31C4 /* Simple Banjo Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Banjo Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B2E13251D1FDDA600BD31C4 /* Simple Guitar Tuner copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Simple Guitar Tuner copy2-Info.plist"; path = "/Users/ulrich/Simple Ukulele Tuner/Simple Guitar Tuner copy2-Info.plist"; sourceTree = "<absolute>"; };
 		1B2E13B81D1FDDD100BD31C4 /* Simple Violin Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Violin Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B2E13B91D1FDDD100BD31C4 /* Simple Guitar Tuner copy3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Simple Guitar Tuner copy3-Info.plist"; path = "/Users/ulrich/Simple Ukulele Tuner/Simple Guitar Tuner copy3-Info.plist"; sourceTree = "<absolute>"; };
 		1B2E144C1D1FDE1300BD31C4 /* Simple Balalaika Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Balalaika Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B2E144D1D1FDE1300BD31C4 /* Simple Guitar Tuner copy4-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Simple Guitar Tuner copy4-Info.plist"; path = "/Users/ulrich/Simple Ukulele Tuner/Simple Guitar Tuner copy4-Info.plist"; sourceTree = "<absolute>"; };
 		1B2E14521D1FE2C000BD31C4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Simple Mandolin Tuner/Info.plist"; sourceTree = "<group>"; };
 		1B2E14561D1FE3FA00BD31C4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Simple Banjo Tuner/Info.plist"; sourceTree = "<group>"; };
 		1B2E145A1D1FE44B00BD31C4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Simple Violin Tuner/Info.plist"; sourceTree = "<group>"; };
@@ -1279,9 +1276,6 @@
 				1BCCC17F1D1FD5E800AD17D0 /* Simple Guitar Tuner */,
 				1BC0413B1C99F8C6005103EC /* Simple Ukulele Tuner */,
 				1BC0413A1C99F8C6005103EC /* Products */,
-				1B2E13251D1FDDA600BD31C4 /* Simple Guitar Tuner copy2-Info.plist */,
-				1B2E13B91D1FDDD100BD31C4 /* Simple Guitar Tuner copy3-Info.plist */,
-				1B2E144D1D1FDE1300BD31C4 /* Simple Guitar Tuner copy4-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};

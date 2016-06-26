@@ -37,7 +37,7 @@ typedef NSUInteger SECTION_DESCR;
     CGFloat cellHeight;
     
     NSMutableDictionary* switchDict;
-    NSArray* ukeTypesArray;
+    NSArray* subtypesArray;
     NSArray* colorsArray;
     NSDictionary* colorsDict;
     CAGradientLayer *gradient;
@@ -91,7 +91,7 @@ typedef NSUInteger SECTION_DESCR;
         calibratedFrequency = [[defaults stringForKey:KEY_CALIBRATED_FREQUENCY] floatValue];
         
 
-        ukeTypesArray = [SHARED_MANAGER getOrderedSubtypesArray];
+        subtypesArray = [SHARED_MANAGER getOrderedSubtypesArray];
         colorsArray = [SHARED_MANAGER getColorsArray];
         colorsDict = [SHARED_MANAGER getColorsDict];
         
@@ -171,7 +171,7 @@ typedef NSUInteger SECTION_DESCR;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     switch (section) {
-        case INSTRUMENT_TYPE: return ukeTypesArray.count; // for ukulele types
+        case INSTRUMENT_TYPE: return subtypesArray.count; // for ukulele types
         case SIGNAL: return 1;
         case CALIBRATION: return 1;
         case SENSITIVITY: return 1;    // for calibration
@@ -197,7 +197,7 @@ typedef NSUInteger SECTION_DESCR;
     NSInteger section = indexPath.section;
     
     // Highlight the default instrument type
-    UIColor* textColor = (section == INSTRUMENT_TYPE && row == STANDARD_UKE) ? HIGHLIGHT_TEXT_COLOR: TEXT_COLOR;
+    UIColor* textColor = (section == INSTRUMENT_TYPE && row == STANDARD_SUBTYPE) ? HIGHLIGHT_TEXT_COLOR: TEXT_COLOR;
     
     cell.textLabel.textColor = textColor;
     cell.detailTextLabel.textColor = textColor;
@@ -231,7 +231,7 @@ typedef NSUInteger SECTION_DESCR;
     
     if (section == INSTRUMENT_TYPE) {
         // Label only for sound types
-        NSString* ukeType = ukeTypesArray[row];
+        NSString* ukeType = subtypesArray[row];
         NSArray *stringSplitArray = [ukeType componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"("]];
         NSString* ukeTypeName = stringSplitArray[0];
         NSString* fullString = stringSplitArray[1];
@@ -324,18 +324,34 @@ typedef NSUInteger SECTION_DESCR;
     // get the data from user config!
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    NSString* defaultUkeType = [defaults stringForKey:KEY_UKE_TYPE];
+    NSString* defaultSubtype;
+    
+#if defined(TARGET_UKULELE)
+    defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
+#elif defined(TARGET_GUITAR)
+    defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
+#elif defined(TARGET_MANDOLIN)
+    
+#elif defined(TARGET_BANJO)
+    
+#elif defined(TARGET_VIOLIN)
+    
+#elif defined(TARGET_BALALAIKA)
+    
+#endif
+    
+    
     NSString* defaultColorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
     
-    NSString* trimmedDefaultUkeType = [defaultUkeType stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSString* trimmedDefaultSubtype = [defaultSubtype stringByReplacingOccurrencesOfString:@" " withString:@""];
     
     // show switches or purchase button dependent on the current version
     // uke type
     if (section == INSTRUMENT_TYPE) {
-        NSString* ukeType = [ukeTypesArray objectAtIndex:row];
-        NSString* trimmedUkeType = [ukeType stringByReplacingOccurrencesOfString:@" " withString:@""];
+        NSString* subtype = [subtypesArray objectAtIndex:row];
+        NSString* trimmedSubtype = [subtype stringByReplacingOccurrencesOfString:@" " withString:@""];
         
-        if ([trimmedUkeType isEqualToString:trimmedDefaultUkeType]) {
+        if ([trimmedSubtype isEqualToString:trimmedDefaultSubtype]) {
             imv.image = SWITCH_ON;
         } else {
             imv.image = SWITCH_OFF;
@@ -440,7 +456,7 @@ typedef NSUInteger SECTION_DESCR;
     NSString *sensitivityText = SENSITIVITY_TEXT[sensitivity-1];
     
     switch (section) {
-        case INSTRUMENT_TYPE:  labelText = @"Ukulele Type"; break;     // for ukulele types
+        case INSTRUMENT_TYPE:  labelText = @"Instrument Type"; break;     // for ukulele types
         case SIGNAL: labelText = @"Signal Info"; break;          // for FFT and autocorrelation
         case CALIBRATION:  labelText = @"Calibration"; break;    // for calibration
         case SENSITIVITY:  labelText = [NSString stringWithFormat:@"Sensitivity: %ld (%@)", (long)sensitivity, sensitivityText]; break;    // for sensitivity
@@ -622,10 +638,24 @@ typedef NSUInteger SECTION_DESCR;
     // now evaluate
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    // Ukulele Type
+    // Instrument Type
     if (touchedSection == INSTRUMENT_TYPE) {
-        NSString* ukeType = [ukeTypesArray objectAtIndex:touchedRow];
-        [defaults setObject:ukeType forKey:KEY_UKE_TYPE];
+        NSString* subtype = [subtypesArray objectAtIndex:touchedRow];
+        
+#if defined(TARGET_UKULELE)
+        [defaults setObject:subtype forKey:KEY_UKE_TYPE];
+#elif defined(TARGET_GUITAR)
+        [defaults setObject:subtype forKey:KEY_GUITAR_TYPE];
+#elif defined(TARGET_MANDOLIN)
+        
+#elif defined(TARGET_BANJO)
+        
+#elif defined(TARGET_VIOLIN)
+        
+#elif defined(TARGET_BALALAIKA)
+        
+#endif
+        
     }
 
     

@@ -41,8 +41,25 @@
     
     // Set the application defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSDictionary *instrumentDefaults = [NSDictionary dictionaryWithObject:@"Soprano (G4-C4-E4-A4)"
-                                                            forKey:@"ukuleleType"];
+    NSDictionary *instrumentDefaults;
+    
+    
+#if defined(TARGET_UKULELE)
+    instrumentDefaults = [NSDictionary dictionaryWithObject:@"Soprano (G4-C4-E4-A4)"
+                                                      forKey:@"ukuleleType"];
+#elif defined(TARGET_GUITAR)
+    instrumentDefaults = [NSDictionary dictionaryWithObject:@"Standard (E - A - D - G - B - E)"
+                                                     forKey:@"guitarType"];
+#elif defined(TARGET_MANDOLIN)
+    
+#elif defined(TARGET_BANJO)
+    
+#elif defined(TARGET_VIOLIN)
+    
+#elif defined(TARGET_BALALAIKA)
+    
+#endif
+    
     
     NSDictionary *colorDefaults = [NSDictionary dictionaryWithObject:@"default"
                                                               forKey:@"instrumentColor"];

@@ -22,15 +22,34 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     CGFloat frequency = [SHARED_MANAGER getStringToneFrequency];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString* defaultUkeType = [defaults stringForKey:KEY_UKE_TYPE];
+    NSString* defaultSubtype;
+#if defined(TARGET_UKULELE)
+    defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
+#elif defined(TARGET_GUITAR)
+    defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
+#elif defined(TARGET_MANDOLIN)
+    
+#elif defined(TARGET_BANJO)
+    
+#elif defined(TARGET_VIOLIN)
+    
+#elif defined(TARGET_BALALAIKA)
+    
+#endif
     CGFloat frequencyOffset = [[defaults stringForKey:KEY_CALIBRATED_FREQUENCY] floatValue] - REF_FREQUENCY;
     frequency += frequencyOffset;
     
-    if ([UKE_TYPE_12 isEqualToString:defaultUkeType]) {
+    if (frequency < 200.0) {
         frequency *= 2.0;
-    } else if (![UKE_TYPE_11 isEqualToString:defaultUkeType]) {
+    } else if (frequency > 440.0) {
         frequency /= 2.0;
     }
+    
+//    if ([UKE_TYPE_12 isEqualToString:defaultSubtype]) {
+//        frequency *= 2.0;
+//    } else if (![UKE_TYPE_11 isEqualToString:defaultSubtype]) {
+//        frequency /= 2.0;
+//    }
     
     double currentPhase = *((double *)inRefCon);
     
@@ -105,8 +124,22 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     
     // Get user preference
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString* defaultUkeType = [defaults stringForKey:KEY_UKE_TYPE];
-    NSArray* frequenciesArray =  [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultUkeType][2];
+    NSString* defaultSubtype;
+#if defined(TARGET_UKULELE)
+    defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
+#elif defined(TARGET_GUITAR)
+    defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
+#elif defined(TARGET_MANDOLIN)
+    
+#elif defined(TARGET_BANJO)
+    
+#elif defined(TARGET_VIOLIN)
+    
+#elif defined(TARGET_BALALAIKA)
+    
+#endif
+    
+    NSArray* frequenciesArray =  [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultSubtype][2];
     
     // use "autorelease" due to the flag "-fno-objc-arc" !!!
     SoundFile* sf = [[[SoundFile alloc] init] autorelease];

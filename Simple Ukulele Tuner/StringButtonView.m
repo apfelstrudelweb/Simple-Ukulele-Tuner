@@ -83,8 +83,23 @@
 
 -(void)populateStringsArray {
     
-    NSString* defaultUkeType = [defaults stringForKey:KEY_UKE_TYPE];
-    stringsArray = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultUkeType][1];
+    NSString* defaultSubType;
+    
+#if defined(TARGET_UKULELE)
+    defaultSubType = [defaults stringForKey:KEY_UKE_TYPE];
+#elif defined(TARGET_GUITAR)
+    defaultSubType = [defaults stringForKey:KEY_GUITAR_TYPE];
+#elif defined(TARGET_MANDOLIN)
+    
+#elif defined(TARGET_BANJO)
+    
+#elif defined(TARGET_VIOLIN)
+    
+#elif defined(TARGET_BALALAIKA)
+    
+#endif
+    
+    stringsArray = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultSubType][1];
 }
 
 
@@ -166,6 +181,7 @@
     for (UIView* subview in self.subviews) {
         if ([subview isKindOfClass:[UILabel class]]) {
             UILabel* label = (UILabel*) subview;
+            if (index == stringsArray.count) break;
             label.text = stringsArray[index];
             index++;
         }
@@ -198,6 +214,8 @@
                 CGFloat lowerLimit = 0.49 * nominalFrequency * (TONE_DIST - 1.0) / TONE_DIST;
                 
                 if (fabs(capturedFrequency - nominalFrequency) < upperLimit ||  fabs(nominalFrequency - capturedFrequency) < lowerLimit) {
+                    NSInteger num = i+NUMBER_OF_STRINGS;
+                    if (num >= imageViewsArray.count) return;
                     ((UIView*)imageViewsArray[i+NUMBER_OF_STRINGS]).alpha = alpha;
                 }
                 

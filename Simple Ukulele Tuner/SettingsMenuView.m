@@ -90,7 +90,8 @@ typedef NSUInteger SECTION_DESCR;
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         calibratedFrequency = [[defaults stringForKey:KEY_CALIBRATED_FREQUENCY] floatValue];
         
-        ukeTypesArray = [SHARED_MANAGER getInstrumentTypesArray];
+
+        ukeTypesArray = [SHARED_MANAGER getOrderedSubtypesArray];
         colorsArray = [SHARED_MANAGER getColorsArray];
         colorsDict = [SHARED_MANAGER getColorsDict];
         
@@ -195,8 +196,8 @@ typedef NSUInteger SECTION_DESCR;
     NSInteger row = indexPath.row;
     NSInteger section = indexPath.section;
     
-    // Highlight the default (Soprano) Ukulele
-    UIColor* textColor = (section == INSTRUMENT_TYPE && row == 3) ? HIGHLIGHT_TEXT_COLOR: TEXT_COLOR;
+    // Highlight the default instrument type
+    UIColor* textColor = (section == INSTRUMENT_TYPE && row == STANDARD_UKE) ? HIGHLIGHT_TEXT_COLOR: TEXT_COLOR;
     
     cell.textLabel.textColor = textColor;
     cell.detailTextLabel.textColor = textColor;
@@ -443,7 +444,7 @@ typedef NSUInteger SECTION_DESCR;
         case SIGNAL: labelText = @"Signal Info"; break;          // for FFT and autocorrelation
         case CALIBRATION:  labelText = @"Calibration"; break;    // for calibration
         case SENSITIVITY:  labelText = [NSString stringWithFormat:@"Sensitivity: %ld (%@)", (long)sensitivity, sensitivityText]; break;    // for sensitivity
-        case THEME:  labelText = @"Ukulele Color"; break;    // for background colors
+        case THEME:  labelText = @"Instrument Color"; break;    // for background colors
         default: labelText = @"Purchase already done?";  // for restore button
     }
     
@@ -540,6 +541,7 @@ typedef NSUInteger SECTION_DESCR;
         return;
     }
 
+    BOOL hasActiveSwitch = NO;
     
     if (touchedSection != CALIBRATION) {
     for (UIView* view in selectedCell.contentView.subviews) {
@@ -550,13 +552,14 @@ typedef NSUInteger SECTION_DESCR;
                 ((UIImageView*)view).image = SWITCH_OFF;
             } else {
                 ((UIImageView*)view).image = SWITCH_ON;
+                hasActiveSwitch = YES;
             }
             break;
         }
     }
     }
     
-    BOOL hasActiveSwitch = NO;
+    
     UITableViewCell* firstCell;
     
     if (touchedSection == CALIBRATION) {

@@ -162,7 +162,8 @@
             CGFloat alpha = [spectrum.alpha floatValue];
             CGFloat capturedFrequency = [spectrum.frequency floatValue] - frequencyOffset;
             
-            NSArray* frequenciesArray = [SHARED_MANAGER getInstrumentFrequencies];
+            NSString* defaultUkeType = [defaults stringForKey:KEY_UKE_TYPE];
+            NSArray* frequenciesArray = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultUkeType][2];
             
             for (NSInteger i=0; i<frequenciesArray.count; i++) {
                 CGFloat nominalFrequency = [frequenciesArray[i] floatValue];

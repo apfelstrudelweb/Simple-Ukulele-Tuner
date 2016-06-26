@@ -23,6 +23,7 @@
 @property NSInteger numberOfInstrumentType;
 @property (strong, nonatomic) NSArray *edgeFrequencyArray;
 
+
 @property NSInteger currentSamplingRate;
 
 + (id)sharedManager;
@@ -60,16 +61,16 @@
 -(void) setActualNumberOfInstrumentType:(NSInteger)number;
 -(NSInteger) getNumberOfInstrumentType;
 
--(void) setEdgeFrequencyArray:(NSArray *)edgeFrequencyArray;
--(NSArray *) getEdgeFrequencyArray;
+//-(void) setEdgeFrequencyArray:(NSArray *)edgeFrequencyArray;
+//-(NSArray *) getEdgeFrequencyArray;
 
 -(void) setCurrentSamplingRate:(NSInteger)currentSamplingRate;
 -(NSInteger)getCurrentSamplingRate;
 
+-(NSDictionary*) getInstrumentSubtypesDictionary;
+-(NSArray*) getOrderedSubtypesArray;
 
--(NSArray*) getInstrumentTypesArray;
--(NSArray*) getInstrumentNotesArray;
--(NSArray*) getInstrumentFrequencies;
+
 -(NSDictionary*) getColorsDict;
 -(NSArray*) getColorsArray;
 -(UIColor*) getHeaderColor: (NSString*) mainColor;

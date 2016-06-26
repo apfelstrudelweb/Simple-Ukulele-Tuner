@@ -52,9 +52,9 @@
     NSInteger octave = (NSInteger) floorf((log(frequency) - log(16)) / log(2));
     self.octave = [NSNumber numberWithInteger:octave];
     
-
-    NSArray *nominalFrequencies = [[SessionManager sharedManager] getInstrumentFrequencies];
-    NSArray *nominalToneNames = [[SessionManager sharedManager] getInstrumentNotesArray];
+    NSString* defaultUkeType = [defaults stringForKey:KEY_UKE_TYPE];
+    NSArray *nominalToneNames = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultUkeType][1];
+    NSArray *nominalFrequencies =  [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultUkeType][2];
     
     
     CGFloat minDeviation = 1000.0;

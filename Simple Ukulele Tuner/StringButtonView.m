@@ -84,34 +84,7 @@
 -(void)populateStringsArray {
     
     NSString* defaultUkeType = [defaults stringForKey:KEY_UKE_TYPE];
-    NSArray *stringSplitArray = [defaultUkeType componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"("]];
-    //NSString* ukeTypeName = stringSplitArray[0];
-    NSString* fullString = stringSplitArray[1];
-    NSString* ukeTypeNotes = [fullString substringToIndex:fullString.length-1];
-    ukeTypeNotes = [ukeTypeNotes stringByReplacingOccurrencesOfString:@" " withString:@""];
-    
-    NSArray* tempStringsArray = [ukeTypeNotes componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"-"]];
-    
-    stringsArray = [NSMutableArray new];
-    // remove octaves
-    for (NSString* _note in tempStringsArray) {
-        NSString* note = [_note substringToIndex:_note.length-1];
-        [stringsArray addObject:note];
-    }
-    
-    //now set index of uke for sound processing later
-    NSArray* ukeTypesArray = [SHARED_MANAGER getInstrumentTypesArray];
-    NSInteger index = 0;
-    
-    for (NSString* type in ukeTypesArray) {
-        NSString* trimmedUkeType = [type stringByReplacingOccurrencesOfString:@" " withString:@""];
-        NSString* trimmedDefaultUkeType = [defaultUkeType stringByReplacingOccurrencesOfString:@" " withString:@""];
-        
-        if ([trimmedUkeType isEqualToString:trimmedDefaultUkeType]) {
-            [SHARED_MANAGER setActualNumberOfInstrumentType:index];
-        }
-        index++;
-    }
+    stringsArray = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultUkeType][1];
 }
 
 
@@ -215,7 +188,8 @@
             CGFloat alpha = [spectrum.alpha floatValue];
             CGFloat capturedFrequency = [spectrum.frequency floatValue] - frequencyOffset;
             
-            NSArray* frequenciesArray = [SHARED_MANAGER getInstrumentFrequencies];
+            NSString* defaultUkeType = [defaults stringForKey:KEY_UKE_TYPE];
+            NSArray* frequenciesArray = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultUkeType][2];
             
             for (NSInteger i=0; i<frequenciesArray.count; i++) {
                 CGFloat nominalFrequency = [frequenciesArray[i] floatValue];

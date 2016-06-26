@@ -26,9 +26,9 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     CGFloat frequencyOffset = [[defaults stringForKey:KEY_CALIBRATED_FREQUENCY] floatValue] - REF_FREQUENCY;
     frequency += frequencyOffset;
     
-    if ([UKU_TYPE_12 isEqualToString:defaultUkeType]) {
+    if ([UKE_TYPE_12 isEqualToString:defaultUkeType]) {
         frequency *= 2.0;
-    } else if (![UKU_TYPE_11 isEqualToString:defaultUkeType]) {
+    } else if (![UKE_TYPE_11 isEqualToString:defaultUkeType]) {
         frequency /= 2.0;
     }
     
@@ -104,7 +104,9 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     [session overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:&setOverrideError];
     
     // Get user preference
-    NSArray* frequenciesArray = [SHARED_MANAGER getInstrumentFrequencies];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSString* defaultUkeType = [defaults stringForKey:KEY_UKE_TYPE];
+    NSArray* frequenciesArray =  [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultUkeType][2];
     
     // use "autorelease" due to the flag "-fno-objc-arc" !!!
     SoundFile* sf = [[[SoundFile alloc] init] autorelease];

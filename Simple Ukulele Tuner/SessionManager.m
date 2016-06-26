@@ -109,75 +109,39 @@
 
 -(void) setActualNumberOfInstrumentType:(NSInteger)number {
     self.numberOfInstrumentType = number;
-    
-    // now get min and max frequency
-    NSArray *frequencyArray = [self getInstrumentFrequencies];
-    
-    NSNumber* min = [frequencyArray valueForKeyPath:@"@min.self"];
-    NSNumber* max = [frequencyArray valueForKeyPath:@"@max.self"];
-    
-    [self setEdgeFrequencyArray:@[min, max]];
 }
 
 -(NSInteger) getNumberOfInstrumentType {
     return self.numberOfInstrumentType;
 }
 
-
-// Sound types issues
--(NSArray*) getInstrumentTypesArray {
-    NSArray *instrumentTypesArray = @[
-                                UKU_TYPE_01,
-                                UKU_TYPE_02,
-                                UKU_TYPE_03,
-                                UKU_TYPE_04,
-                                UKU_TYPE_05,
-                                UKU_TYPE_06,
-                                UKU_TYPE_07,
-                                UKU_TYPE_08,
-                                UKU_TYPE_09,
-                                UKU_TYPE_10,
-                                UKU_TYPE_11,
-                                UKU_TYPE_12
-                             ];
-    return instrumentTypesArray;
+-(NSDictionary*) getInstrumentSubtypesDictionary {
+    
+    NSDictionary* instrumentDictionary = @{ UKE_TYPE_01     : @[ @1,   @[@"D",@"G",@"B",@"E"],    @[@587.3,@392.0,@493.88,@659.26]],
+                                            UKE_TYPE_02     : @[ @2,   @[@"C",@"F",@"A",@"D"],    @[@523.25,@349.23,@440.0,@587.33]],
+                                            UKE_TYPE_03     : @[ @3,   @[@"A",@"D",@"F#",@"B"],   @[@440.0,@293.66,@370.0,@493.88]],
+                                            UKE_TYPE_04     : @[ @4,   @[@"G",@"C",@"E",@"A"],    @[@392.0,@261.63,@329.63,@440.0]],
+                                            UKE_TYPE_05     : @[ @5,   @[@"A",@"D",@"F#",@"B"],   @[@440.0,@293.66,@370.0,@493.88]],
+                                            UKE_TYPE_06     : @[ @6,   @[@"G",@"C",@"E",@"A"],    @[@392.0,@261.63,@329.63,@440.0]],
+                                            UKE_TYPE_07     : @[ @7,   @[@"A",@"D",@"F#",@"B"],   @[@440.0,@293.66,@370.0,@493.88]],
+                                            UKE_TYPE_08     : @[ @8,   @[@"G",@"C",@"E",@"A"],    @[@392.0,@261.63,@329.63,@440.0]],
+                                            UKE_TYPE_09     : @[ @9,   @[@"G",@"C",@"E",@"A"],    @[@196.0,@261.63,@329.63,@440.0]],
+                                            UKE_TYPE_10     : @[ @10,  @[@"D",@"G",@"B",@"E"],    @[@293.66,@196.0,@246.94,@329.63]],
+                                            UKE_TYPE_11     : @[ @11,  @[@"D",@"G",@"B",@"E"],    @[@146.83,@196.0,@246.94,@329.63]],
+                                            UKE_TYPE_12     : @[ @12,  @[@"E",@"A",@"D",@"G"],    @[@41.2,@55.0,@73.42,@98.0]]
+                                            };
+    
+    return instrumentDictionary;
 }
 
--(NSArray*) getInstrumentNotesArray {
-    NSArray *instrNotesArray = @[
-                               @[@"D",@"G",@"B",@"E"], // D5 - G4 - B4 - E5
-                               @[@"C",@"F",@"A",@"D"], // C5 - F4 - A4 - D5
-                               @[@"A",@"D",@"F♯",@"B"], // A4 - D4 - F#4 - B4
-                               @[@"G",@"C",@"E",@"A"], // G4 - C4 - E4 - A4
-                               @[@"A",@"D",@"F♯",@"B"], // A4 - D4 - F#4 - B4
-                               @[@"G",@"C",@"E",@"A"], // G4 - C4 - E4 - A4
-                               @[@"A",@"D",@"F♯",@"B"], // A4 - D4 - F#4 - B4
-                               @[@"G",@"C",@"E",@"A"], // G4 - C4 - E4 - A4
-                               @[@"G",@"C",@"E",@"A"], // G3 - C4 - E4 - A4
-                               @[@"D",@"G",@"B",@"E"], // D4 - G3 - B3 - E4
-                               @[@"D",@"G",@"B",@"E"], // D3 - G3 - B3 - E4
-                               @[@"E",@"A",@"D",@"G"]  // E1 - A1 - D2 - G2
-                               ];
-    return instrNotesArray[self.numberOfInstrumentType];
-}
-
-// instrument string frequencies
--(NSArray*) getInstrumentFrequencies {
-    NSArray *instrFrequenciesArray = @[
-                               @[@587.3,@392.0,@493.88,@659.26], // D5 - G4 - B4 - E5
-                               @[@523.25,@349.23,@440.0,@587.33], // C5 - F4 - A4 - D5
-                               @[@440.0,@293.66,@370.0,@493.88], // A4 - D4 - F#4 - B4
-                               @[@392.0,@261.63,@329.63,@440.0], // G4 - C4 - E4 - A4
-                               @[@440.0,@293.66,@370.0,@493.88], // A4 - D4 - F#4 - B4
-                               @[@392.0,@261.63,@329.63,@440.0], // G4 - C4 - E4 - A4
-                               @[@440.0,@293.66,@370.0,@493.88], // A4 - D4 - F#4 - B4
-                               @[@392.0,@261.63,@329.63,@440.0], // G4 - C4 - E4 - A4
-                               @[@196.0,@261.63,@329.63,@440.0], // G3 - C4 - E4 - A4
-                               @[@293.66,@196.0,@246.94,@329.63], // D4 - G3 - B3 - E4
-                               @[@146.83,@196.0,@246.94,@329.63], // D3 - G3 - B3 - E4
-                               @[@41.2,@55.0,@73.42,@98.0]  // E1 - A1 - D2 - G2
-                               ];
-    return instrFrequenciesArray[self.numberOfInstrumentType];
+-(NSArray*) getOrderedSubtypesArray {
+    
+    NSDictionary *dict = [self getInstrumentSubtypesDictionary];
+    NSArray *orderedKeys = [dict keysSortedByValueUsingComparator:^NSComparisonResult(id obj1, id obj2){
+        return [obj1[0] compare:obj2[0]];
+    }];
+    
+    return orderedKeys;
 }
 
 
@@ -240,9 +204,6 @@
     _edgeFrequencyArray = edgeFrequencyArray;
 }
 
--(NSArray *) getEdgeFrequencyArray {
-    return self.edgeFrequencyArray;
-}
 
 -(NSInteger)getCurrentSamplingRate {
     if (!self.currentSamplingRate) {

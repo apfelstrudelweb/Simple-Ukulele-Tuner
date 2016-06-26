@@ -142,22 +142,7 @@
 
 // User Defaults
 #define KEY_SENSITIVITY          @"sensitivity"
-
 #define KEY_CALIBRATED_FREQUENCY @"calibratedFrequency"
-#define KEY_UKE_TYPE             @"ukuleleType"
-#define UKU_TYPE_01              @"Sopranino (D5 - G4 - B4 - E5)"
-#define UKU_TYPE_02              @"Sopranino (C5 - F4 - A4 - D5)"
-#define UKU_TYPE_03              @"Soprano (A4 - D4 - F#4 - B4)"
-#define UKU_TYPE_04              @"Soprano (G4 - C4 - E4 - A4)"
-#define UKU_TYPE_05              @"Concert (A4 - D4 - F#4 - B4)"
-#define UKU_TYPE_06              @"Concert (G4 - C4 - E4 - A4)"
-#define UKU_TYPE_07              @"Tenor (A4 - D4 - F#4 - B4)"
-#define UKU_TYPE_08              @"Tenor (G4 - C4 - E4 - A4)"
-#define UKU_TYPE_09              @"Tenor (G3 - C4 - E4 - A4)"
-#define UKU_TYPE_10              @"Tenor (D4 - G3 - B3 - E4)"
-#define UKU_TYPE_11              @"Barritone (D3 - G3 - B3 - E4)"
-#define UKU_TYPE_12              @"Bass (E1 - A1 - D2 - G2)"
-
 
 #define KEY_INSTRUMENT_COLOR        @"instrumentColor"
 #define INSTRUMENT_COLOR_DEFAULT    @"default" // gray
@@ -168,7 +153,6 @@
 #define INSTRUMENT_COLOR_BLUE       @"blue"
 #define INSTRUMENT_COLOR_PINK       @"pink"
 #define INSTRUMENT_COLOR_GAY        @"gay" // rainbow colors
-
 
 // colors see also https://color.adobe.com/de/create/color-wheel/?base=2&rule=Analogous&selected=2&name=Mein%20Color-Thema&mode=rgb&rgbvalues=0.9596925280634413,0.6814629037190456,1,0.91,0.00600494830748649,0.5266609032981439,1,0.07863596308553111,0.05659884429394124,0.91,0.20009618075221056,0.00600494830748649,1,0.4099679015502027,0.006598844293941197&swatchOrder=0,1,2,3,4
 
@@ -188,9 +172,31 @@
 #define HEADER_BACKGROUND_COLOR_06 [UIColor colorWithRed:0.271 green:0.624 blue:0.91 alpha:1] // for blue
 #define HEADER_BACKGROUND_COLOR_07 [UIColor colorWithRed:0.71 green:0.49 blue:0.71 alpha:1.0] // for pink
 #define HEADER_BACKGROUND_COLOR_08 [UIColor colorWithRed:0.40 green:0.31 blue:0.65 alpha:1.0] // for gay
-
 // background color of settings popup window
 #define SETTINGS_BG_COLOR [UIColor colorWithRed:42.0/255.0 green:45.0/255.0 blue:52.0/255.0 alpha:1.0]
+
+
+/**
+ *
+ * Instrument specific issues
+ *
+ **/
+#define KEY_UKE_TYPE             @"ukuleleType"
+#define UKE_TYPE_01              @"Sopranino (D5 - G4 - B4 - E5)"
+#define UKE_TYPE_02              @"Sopranino (C5 - F4 - A4 - D5)"
+#define UKE_TYPE_03              @"Soprano (A4 - D4 - F#4 - B4)"
+#define UKE_TYPE_04              @"Soprano (G4 - C4 - E4 - A4)"
+#define UKE_TYPE_05              @"Concert (A4 - D4 - F#4 - B4)"
+#define UKE_TYPE_06              @"Concert (G4 - C4 - E4 - A4)"
+#define UKE_TYPE_07              @"Tenor (A4 - D4 - F#4 - B4)"
+#define UKE_TYPE_08              @"Tenor (G4 - C4 - E4 - A4)"
+#define UKE_TYPE_09              @"Tenor (G3 - C4 - E4 - A4)"
+#define UKE_TYPE_10              @"Tenor (D4 - G3 - B3 - E4)"
+#define UKE_TYPE_11              @"Barritone (D3 - G3 - B3 - E4)"
+#define UKE_TYPE_12              @"Bass (E1 - A1 - D2 - G2)"
+
+#define STANDARD_UKE            3 //Soprano (G4 - C4 - E4 - A4)
+
 
 // Version
 #define version_lite        @"lite"

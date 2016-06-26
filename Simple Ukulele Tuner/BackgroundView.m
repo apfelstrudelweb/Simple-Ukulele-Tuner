@@ -26,11 +26,11 @@
         colorsDict = [SHARED_MANAGER getColorsDict];
         
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        NSString* colorString = [defaults stringForKey:KEY_GUITAR_COLOR];
+        NSString* colorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
         
         id color = [colorsDict objectForKey:colorString];
         
-        if ([GUITAR_COLOR_GAY isEqual:color]) {
+        if ([INSTRUMENT_COLOR_GAY isEqual:color]) {
             [self makeBackgroundGay];
         } else {
             self.backgroundColor = (UIColor*)color;
@@ -56,7 +56,7 @@
 - (void) updateBackground:(NSNotification *) notification {
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString* colorString = [defaults stringForKey:KEY_GUITAR_COLOR];
+    NSString* colorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
     
     
     if (gradient) {
@@ -65,7 +65,7 @@
     
     id color = [colorsDict objectForKey:colorString];
     
-    if ([GUITAR_COLOR_GAY isEqual:color]) {
+    if ([INSTRUMENT_COLOR_GAY isEqual:color]) {
         [self makeBackgroundGay];
     } else {
         //[gradient removeFromSuperlayer];

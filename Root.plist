@@ -24,9 +24,9 @@
 			<key>Type</key>
 			<string>PSMultiValueSpecifier</string>
 			<key>Title</key>
-			<string>UkuleleColor</string>
+			<string>Instrument Color</string>
 			<key>Key</key>
-			<string>guitarColor</string>
+			<string>instrumentColor</string>
 			<key>DefaultValue</key>
 			<string>default</string>
 			<key>Values</key>

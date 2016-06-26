@@ -184,28 +184,28 @@
 // Background color issues
 -(NSDictionary*) getColorsDict {
     NSDictionary *colorsDict = @{
-                                 GUITAR_COLOR_DEFAULT: BACKGROUND_COLOR_01,
-                                 GUITAR_COLOR_WHITE: BACKGROUND_COLOR_02,
-                                 GUITAR_COLOR_ORANGE: BACKGROUND_COLOR_03,
-                                 GUITAR_COLOR_RED: BACKGROUND_COLOR_04,
-                                 GUITAR_COLOR_GREEN: BACKGROUND_COLOR_05,
-                                 GUITAR_COLOR_BLUE: BACKGROUND_COLOR_06,
-                                 GUITAR_COLOR_PINK: BACKGROUND_COLOR_07,
-                                 GUITAR_COLOR_GAY: GUITAR_COLOR_GAY // special case: make rainbow colors
+                                 INSTRUMENT_COLOR_DEFAULT: BACKGROUND_COLOR_01,
+                                 INSTRUMENT_COLOR_WHITE: BACKGROUND_COLOR_02,
+                                 INSTRUMENT_COLOR_ORANGE: BACKGROUND_COLOR_03,
+                                 INSTRUMENT_COLOR_RED: BACKGROUND_COLOR_04,
+                                 INSTRUMENT_COLOR_GREEN: BACKGROUND_COLOR_05,
+                                 INSTRUMENT_COLOR_BLUE: BACKGROUND_COLOR_06,
+                                 INSTRUMENT_COLOR_PINK: BACKGROUND_COLOR_07,
+                                 INSTRUMENT_COLOR_GAY: INSTRUMENT_COLOR_GAY // special case: make rainbow colors
                                  };
     return colorsDict;
 }
 
 -(NSArray*) getColorsArray {
     NSArray *colorsArray = @[
-                             GUITAR_COLOR_DEFAULT,
-                             GUITAR_COLOR_WHITE,
-                             GUITAR_COLOR_ORANGE,
-                             GUITAR_COLOR_RED,
-                             GUITAR_COLOR_GREEN,
-                             GUITAR_COLOR_BLUE,
-                             GUITAR_COLOR_PINK,
-                             GUITAR_COLOR_GAY
+                             INSTRUMENT_COLOR_DEFAULT,
+                             INSTRUMENT_COLOR_WHITE,
+                             INSTRUMENT_COLOR_ORANGE,
+                             INSTRUMENT_COLOR_RED,
+                             INSTRUMENT_COLOR_GREEN,
+                             INSTRUMENT_COLOR_BLUE,
+                             INSTRUMENT_COLOR_PINK,
+                             INSTRUMENT_COLOR_GAY
                              ];
     return colorsArray;
 }

@@ -45,7 +45,7 @@
                                                             forKey:@"ukuleleType"];
     
     NSDictionary *colorDefaults = [NSDictionary dictionaryWithObject:@"default"
-                                                              forKey:@"guitarColor"];
+                                                              forKey:@"instrumentColor"];
     
     NSDictionary *calFreqDefaults = [NSDictionary dictionaryWithObject:@"440.0"
                                                                 forKey:KEY_CALIBRATED_FREQUENCY];

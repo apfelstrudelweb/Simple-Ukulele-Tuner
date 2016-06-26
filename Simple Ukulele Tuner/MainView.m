@@ -45,7 +45,7 @@
         self.headerBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, size.width, 0.01*[SUBVIEW_PROPORTIONS[0] floatValue]*size.height)];
         
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        NSString* colorString = [defaults stringForKey:KEY_GUITAR_COLOR];
+        NSString* colorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
         [self.headerBackgroundView setBackgroundColor:[SHARED_MANAGER getHeaderColor:colorString]];
         
         [self addSubview:self.headerBackgroundView];
@@ -85,7 +85,7 @@
 - (void) updateBackground:(NSNotification *) notification {
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString* colorString = [defaults stringForKey:KEY_GUITAR_COLOR];
+    NSString* colorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
     [self.headerBackgroundView setBackgroundColor:[SHARED_MANAGER getHeaderColor:colorString]];
     
     [self setNeedsDisplay];

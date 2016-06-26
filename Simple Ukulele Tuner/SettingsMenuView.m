@@ -298,7 +298,7 @@ typedef NSUInteger SECTION_DESCR;
                 
                 id color = [colorsDict objectForKey:colorString];
                 
-                if ([GUITAR_COLOR_GAY isEqual:color]) {
+                if ([INSTRUMENT_COLOR_GAY isEqual:color]) {
                     [self makeBackgroundGay:colorPrevView];
                 } else {
                     colorPrevView.backgroundColor = (UIColor*)color;
@@ -324,7 +324,7 @@ typedef NSUInteger SECTION_DESCR;
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     NSString* defaultUkeType = [defaults stringForKey:KEY_UKE_TYPE];
-    NSString* defaultColorString = [defaults stringForKey:KEY_GUITAR_COLOR];
+    NSString* defaultColorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
     
     NSString* trimmedDefaultUkeType = [defaultUkeType stringByReplacingOccurrencesOfString:@" " withString:@""];
     
@@ -629,7 +629,7 @@ typedef NSUInteger SECTION_DESCR;
     // Background Color
     if (touchedSection == THEME) {
         NSString* selectedColor = [colorsArray objectAtIndex:touchedRow];
-        [defaults setObject:selectedColor forKey:KEY_GUITAR_COLOR];
+        [defaults setObject:selectedColor forKey:KEY_INSTRUMENT_COLOR];
     }
     
     [defaults synchronize];

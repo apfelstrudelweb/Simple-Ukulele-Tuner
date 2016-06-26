@@ -159,15 +159,15 @@
 #define UKU_TYPE_12              @"Bass (E1 - A1 - D2 - G2)"
 
 
-#define KEY_GUITAR_COLOR        @"guitarColor"
-#define GUITAR_COLOR_DEFAULT    @"default" // gray
-#define GUITAR_COLOR_WHITE      @"white"
-#define GUITAR_COLOR_ORANGE     @"orange"
-#define GUITAR_COLOR_RED        @"red"
-#define GUITAR_COLOR_GREEN      @"green"
-#define GUITAR_COLOR_BLUE       @"blue"
-#define GUITAR_COLOR_PINK       @"pink"
-#define GUITAR_COLOR_GAY        @"gay" // rainbow colors
+#define KEY_INSTRUMENT_COLOR        @"instrumentColor"
+#define INSTRUMENT_COLOR_DEFAULT    @"default" // gray
+#define INSTRUMENT_COLOR_WHITE      @"white"
+#define INSTRUMENT_COLOR_ORANGE     @"orange"
+#define INSTRUMENT_COLOR_RED        @"red"
+#define INSTRUMENT_COLOR_GREEN      @"green"
+#define INSTRUMENT_COLOR_BLUE       @"blue"
+#define INSTRUMENT_COLOR_PINK       @"pink"
+#define INSTRUMENT_COLOR_GAY        @"gay" // rainbow colors
 
 
 // colors see also https://color.adobe.com/de/create/color-wheel/?base=2&rule=Analogous&selected=2&name=Mein%20Color-Thema&mode=rgb&rgbvalues=0.9596925280634413,0.6814629037190456,1,0.91,0.00600494830748649,0.5266609032981439,1,0.07863596308553111,0.05659884429394124,0.91,0.20009618075221056,0.00600494830748649,1,0.4099679015502027,0.006598844293941197&swatchOrder=0,1,2,3,4

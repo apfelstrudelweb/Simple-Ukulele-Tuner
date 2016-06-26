@@ -39,7 +39,7 @@
         //[self.headerBackgroundView setBackgroundColor:HEADER_BACKGROUND_COLOR_02];
         
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-        NSString* colorString = [defaults stringForKey:KEY_GUITAR_COLOR];
+        NSString* colorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
         [self.headerBackgroundView setBackgroundColor:[SHARED_MANAGER getHeaderColor:colorString]];
         
         
@@ -176,7 +176,7 @@
 - (void) updateBackground:(NSNotification *) notification {
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString* colorString = [defaults stringForKey:KEY_GUITAR_COLOR];
+    NSString* colorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
     [self.headerBackgroundView setBackgroundColor:[SHARED_MANAGER getHeaderColor:colorString]];
     
     [self setNeedsDisplay];

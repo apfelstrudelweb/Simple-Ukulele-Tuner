@@ -11,6 +11,7 @@
 @interface BackgroundView() {
     NSDictionary* colorsDict;
     CAGradientLayer *gradient;
+    NSUserDefaults *defaults;
 }
 @end
 
@@ -25,7 +26,7 @@
   
         colorsDict = [SHARED_MANAGER getColorsDict];
         
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        defaults = [NSUserDefaults standardUserDefaults];
         NSString* colorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
         
         id color = [colorsDict objectForKey:colorString];
@@ -55,7 +56,6 @@
 #pragma mark - Notification
 - (void) updateBackground:(NSNotification *) notification {
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSString* colorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
     
     

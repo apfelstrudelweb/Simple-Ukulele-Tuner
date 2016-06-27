@@ -57,6 +57,8 @@ typedef NSUInteger SECTION_DESCR;
     CGFloat yPicker;
     
     UISlider *slider;
+    
+    NSUserDefaults *defaults;
 }
 
 @end
@@ -68,7 +70,6 @@ typedef NSUInteger SECTION_DESCR;
 - (void)setCalibratedFrequeny:(CGFloat)frequency {
     calibratedFrequency = frequency;
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:@(frequency) forKey:KEY_CALIBRATED_FREQUENCY];
     
     picker = nil;
@@ -87,7 +88,7 @@ typedef NSUInteger SECTION_DESCR;
         
         [self getCurrentVersion];
         
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        defaults = [NSUserDefaults standardUserDefaults];
         calibratedFrequency = [[defaults stringForKey:KEY_CALIBRATED_FREQUENCY] floatValue];
         
 
@@ -279,7 +280,6 @@ typedef NSUInteger SECTION_DESCR;
         slider.minimumValue = 1.0;
         slider.maximumValue = 5.0;
         slider.continuous = NO;
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSInteger sensitivity = [[defaults stringForKey:KEY_SENSITIVITY] integerValue];
         slider.value = sensitivity;
         [cell addSubview:slider];
@@ -321,8 +321,6 @@ typedef NSUInteger SECTION_DESCR;
 
     
     // get the data from user config!
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
     NSString* instrumentSubtype = [SHARED_CONTEXT getInstrumentSubtype];
     
     NSString* defaultColorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
@@ -435,7 +433,6 @@ typedef NSUInteger SECTION_DESCR;
     
     NSString* labelText = @"";
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSInteger sensitivity = [[defaults stringForKey:KEY_SENSITIVITY] integerValue];
     NSString *sensitivityText = SENSITIVITY_TEXT[sensitivity-1];
     
@@ -644,7 +641,6 @@ typedef NSUInteger SECTION_DESCR;
         [SHARED_CONTEXT updateInstrumentSubtype:subtype];
     }
 
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     // Background Color
     if (touchedSection == THEME) {
         NSString* selectedColor = [colorsArray objectAtIndex:touchedRow];
@@ -903,7 +899,6 @@ typedef NSUInteger SECTION_DESCR;
 }
 
 - (void) setSensitivityAction:(id)sender {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     [defaults setObject:@(slider.value) forKey:KEY_SENSITIVITY];
     [defaults synchronize];
     

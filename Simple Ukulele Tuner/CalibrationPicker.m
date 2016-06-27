@@ -18,6 +18,7 @@
     CGFloat pickerHeight;
     
     CGFloat calibratedFrequency;
+    NSUserDefaults *defaults;
 }
 
 @end
@@ -30,7 +31,7 @@
     
     if (self) {
         
-        NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+        defaults = [NSUserDefaults standardUserDefaults];
         
         calibratedFrequency = [[defaults stringForKey:@"calibratedFrequency"] floatValue];
         

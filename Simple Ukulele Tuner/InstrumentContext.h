@@ -13,11 +13,13 @@
 + (id)sharedContext;
 
 @property NSInteger numberOfStrings;
+@property CGFloat frequencyShiftFactor;
 @property(strong, nonatomic) NSArray *frequenciesArray;
 @property(strong, nonatomic) NSArray *stringNamesArray;
 @property(strong, nonatomic) NSString *instrumentSubtype;
 
 - (NSInteger) getNumberOfStrings;
+- (CGFloat) getFrequencyShiftFactor;
 - (NSArray *) getFrequenciesArray;
 - (NSArray *) getStringNamesArray;
 - (NSString *) getInstrumentSubtype;

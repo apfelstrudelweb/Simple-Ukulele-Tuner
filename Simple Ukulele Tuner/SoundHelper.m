@@ -20,25 +20,15 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     
     
     CGFloat frequency = [SHARED_MANAGER getStringToneFrequency];
-    
-    //NSString* subtype = [SHARED_CONTEXT getInstrumentSubtype];
-    
+
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
 
     CGFloat frequencyOffset = [[defaults stringForKey:KEY_CALIBRATED_FREQUENCY] floatValue] - REF_FREQUENCY;
     frequency += frequencyOffset;
     
-    if (frequency < 200.0) {
-        frequency *= 2.0;
-    } else if (frequency > 440.0) {
-        frequency /= 2.0;
-    }
+    CGFloat factor = [SHARED_CONTEXT getFrequencyShiftFactor];
     
-//    if ([UKE_TYPE_12 isEqualToString:defaultSubtype]) {
-//        frequency *= 2.0;
-//    } else if (![UKE_TYPE_11 isEqualToString:defaultSubtype]) {
-//        frequency /= 2.0;
-//    }
+    frequency *= factor;
     
     double currentPhase = *((double *)inRefCon);
     

@@ -32,22 +32,8 @@
 }
 
 - (NSArray *) getFrequenciesArray {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    NSString* defaultSubtype;
-#if defined(TARGET_UKULELE)
-    defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
-#elif defined(TARGET_GUITAR)
-    defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
-#elif defined(TARGET_MANDOLIN)
-    
-#elif defined(TARGET_BANJO)
-    
-#elif defined(TARGET_VIOLIN)
-    
-#elif defined(TARGET_BALALAIKA)
-    
-#endif
+    NSString* defaultSubtype = [self getInstrumentSubtype];
     
     NSDictionary *instrDict = [SHARED_MANAGER getInstrumentSubtypesDictionary];
     NSArray* frequenciesArray = [instrDict objectForKey:defaultSubtype][2];
@@ -55,23 +41,19 @@
     return frequenciesArray;
 }
 
+- (CGFloat) getFrequencyShiftFactor {
+
+    NSString* defaultSubtype = [self getInstrumentSubtype];
+    
+    NSDictionary *instrDict = [SHARED_MANAGER getInstrumentSubtypesDictionary];
+    CGFloat frequencyShiftFactor = [[instrDict objectForKey:defaultSubtype][3] floatValue];
+    
+    return frequencyShiftFactor;
+}
+
 - (NSArray *) getStringNamesArray {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    NSString* defaultSubtype;
-#if defined(TARGET_UKULELE)
-    defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
-#elif defined(TARGET_GUITAR)
-    defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
-#elif defined(TARGET_MANDOLIN)
-    
-#elif defined(TARGET_BANJO)
-    
-#elif defined(TARGET_VIOLIN)
-    
-#elif defined(TARGET_BALALAIKA)
-    
-#endif
+    NSString* defaultSubtype = [self getInstrumentSubtype];
     
     NSDictionary *instrDict = [SHARED_MANAGER getInstrumentSubtypesDictionary];
     NSArray* stringNamesArray = [instrDict objectForKey:defaultSubtype][1];

@@ -21,7 +21,7 @@
 @property (strong, nonatomic) GraphView *graphView;
 @property (strong, nonatomic) TabView *tabView;
 @property (strong, nonatomic) BridgeView *bridgeView;
-@property (strong, nonatomic) UkeTypeView *ukeTypeView;
+@property (strong, nonatomic) InstrumentSubtypeView *instrumentSubtypeView;
 @property (strong, nonatomic) MeterView *meterView;
 @property (strong, nonatomic) DeviationView *deviationView;
 @property (strong, nonatomic) GaugeView *gaugeView;

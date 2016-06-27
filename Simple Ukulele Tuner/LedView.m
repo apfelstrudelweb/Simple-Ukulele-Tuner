@@ -64,23 +64,7 @@
                                                      name:@"UpdateDefaultsNotification"
                                                    object:nil];
         
-        
-        NSString* defaultSubtype;
-#if defined(TARGET_UKULELE)
-        defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
-#elif defined(TARGET_GUITAR)
-        defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
-#elif defined(TARGET_MANDOLIN)
-        
-#elif defined(TARGET_BANJO)
-        
-#elif defined(TARGET_VIOLIN)
-        
-#elif defined(TARGET_BALALAIKA)
-        
-#endif
-        NSArray* frequenciesArray = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultSubtype][2];
-        numberOfStrings = frequenciesArray.count;
+        numberOfStrings = [SHARED_CONTEXT getNumberOfStrings];
         
         [self createImage];
         [self setupLedConstraints];
@@ -156,22 +140,8 @@
 
 #pragma mark - Notification
 -(void) updateLedGroup:(NSNotification *) notification {
-    NSString* defaultSubtype;
-#if defined(TARGET_UKULELE)
-    defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
-#elif defined(TARGET_GUITAR)
-    defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
-#elif defined(TARGET_MANDOLIN)
-    
-#elif defined(TARGET_BANJO)
-    
-#elif defined(TARGET_VIOLIN)
-    
-#elif defined(TARGET_BALALAIKA)
-    
-#endif
-    NSArray* frequenciesArray = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultSubtype][2];
-    numberOfStrings = frequenciesArray.count;
+
+    numberOfStrings = [SHARED_CONTEXT getNumberOfStrings];
     
     [self createImage];
     [self setupLedConstraints];
@@ -212,21 +182,7 @@
             CGFloat alpha = [spectrum.alpha floatValue];
             CGFloat capturedFrequency = [spectrum.frequency floatValue] - frequencyOffset;
             
-            NSString* defaultSubtype;
-#if defined(TARGET_UKULELE)
-            defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
-#elif defined(TARGET_GUITAR)
-            defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
-#elif defined(TARGET_MANDOLIN)
-            
-#elif defined(TARGET_BANJO)
-            
-#elif defined(TARGET_VIOLIN)
-            
-#elif defined(TARGET_BALALAIKA)
-            
-#endif
-            NSArray* frequenciesArray = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultSubtype][2];
+            NSArray* frequenciesArray = [SHARED_CONTEXT getFrequenciesArray];
             
             for (NSInteger i=0; i<frequenciesArray.count; i++) {
                 CGFloat nominalFrequency = [frequenciesArray[i] floatValue];

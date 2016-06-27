@@ -171,11 +171,11 @@ typedef NSUInteger SECTION_DESCR;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     switch (section) {
-        case INSTRUMENT_TYPE: return subtypesArray.count; // for ukulele types
+        case INSTRUMENT_TYPE: return subtypesArray.count; // for instrument  subtypes
         case SIGNAL: return 1;
         case CALIBRATION: return 1;
-        case SENSITIVITY: return 1;    // for calibration
-        case THEME: return colorsDict.count;    // for background colors
+        case SENSITIVITY: return 1;
+        case THEME: return colorsDict.count;
         default: return 1;                       // for restore button
     }
 }
@@ -230,20 +230,20 @@ typedef NSUInteger SECTION_DESCR;
     
     if (section == INSTRUMENT_TYPE) {
         // Label only for sound types
-        NSString* ukeType = subtypesArray[row];
-        NSArray *stringSplitArray = [ukeType componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"("]];
-        NSString* ukeTypeName = stringSplitArray[0];
+        NSString* subtype = subtypesArray[row];
+        NSArray *stringSplitArray = [subtype componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"("]];
+        NSString* subtypeName = stringSplitArray[0];
         NSString* fullString = stringSplitArray[1];
-        NSString* ukeTypeNotes = [fullString substringToIndex:fullString.length-1];
+        NSString* subtypeNotes = [fullString substringToIndex:fullString.length-1];
         
         NSString *language = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex:0];
         
         if ([language isEqualToString:@"de"]) {
-            ukeTypeNotes = [ukeTypeNotes stringByReplacingOccurrencesOfString:@"B" withString:@"H"];
+            subtypeNotes = [subtypeNotes stringByReplacingOccurrencesOfString:@"B" withString:@"H"];
         }
         
-        cell.textLabel.text = ukeTypeName;//formattedString;
-        cell.detailTextLabel.text = ukeTypeNotes;
+        cell.textLabel.text = subtypeName;//formattedString;
+        cell.detailTextLabel.text = subtypeNotes;
         
         UIFont* font = [UIFont fontWithName:FONT_BOLD size:[UILabel getFontSizeForSubHeadline]];
         
@@ -323,26 +323,11 @@ typedef NSUInteger SECTION_DESCR;
     // get the data from user config!
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    NSString* defaultSubtype;
-    
-#if defined(TARGET_UKULELE)
-    defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
-#elif defined(TARGET_GUITAR)
-    defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
-#elif defined(TARGET_MANDOLIN)
-    
-#elif defined(TARGET_BANJO)
-    
-#elif defined(TARGET_VIOLIN)
-    
-#elif defined(TARGET_BALALAIKA)
-    
-#endif
-    
+    NSString* instrumentSubtype = [SHARED_CONTEXT getInstrumentSubtype];
     
     NSString* defaultColorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
     
-    NSString* trimmedDefaultSubtype = [defaultSubtype stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSString* trimmedDefaultSubtype = [instrumentSubtype stringByReplacingOccurrencesOfString:@" " withString:@""];
     
     // show switches or purchase button dependent on the current version
     // uke type
@@ -651,37 +636,23 @@ typedef NSUInteger SECTION_DESCR;
     }
 
     // now evaluate
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
     
     // Instrument Type
     if (touchedSection == INSTRUMENT_TYPE) {
         NSString* subtype = [subtypesArray objectAtIndex:touchedRow];
-        
-#if defined(TARGET_UKULELE)
-        [defaults setObject:subtype forKey:KEY_UKE_TYPE];
-#elif defined(TARGET_GUITAR)
-        [defaults setObject:subtype forKey:KEY_GUITAR_TYPE];
-#elif defined(TARGET_MANDOLIN)
-        
-#elif defined(TARGET_BANJO)
-        
-#elif defined(TARGET_VIOLIN)
-        
-#elif defined(TARGET_BALALAIKA)
-        
-#endif
-        
+        [SHARED_CONTEXT updateInstrumentSubtype:subtype];
     }
 
-    
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     // Background Color
     if (touchedSection == THEME) {
         NSString* selectedColor = [colorsArray objectAtIndex:touchedRow];
         [defaults setObject:selectedColor forKey:KEY_INSTRUMENT_COLOR];
+        [defaults synchronize];
     }
     
-    [defaults synchronize];
-    
+
     // inform BackgroundView of color change
     [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateDefaultsNotification" object:nil];
     

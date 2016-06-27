@@ -53,7 +53,7 @@
 		1B2E12281D1FDD5100BD31C4 /* CalibrationPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041D41C99FCC8005103EC /* CalibrationPicker.m */; };
 		1B2E12291D1FDD5100BD31C4 /* SoundFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0426B1C99FDE6005103EC /* SoundFile.m */; };
 		1B2E122A1D1FDD5100BD31C4 /* HorizontalPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041CA1C99FCC8005103EC /* HorizontalPicker.m */; };
-		1B2E122B1D1FDD5100BD31C4 /* UkeTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A41C99FC76005103EC /* UkeTypeView.m */; };
+		1B2E122B1D1FDD5100BD31C4 /* InstrumentSubtypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A41C99FC76005103EC /* InstrumentSubtypeView.m */; };
 		1B2E122C1D1FDD5100BD31C4 /* ButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041AD1C99FC76005103EC /* ButtonView.m */; };
 		1B2E122D1D1FDD5100BD31C4 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041DC1C99FCDA005103EC /* MainView.m */; };
 		1B2E122E1D1FDD5100BD31C4 /* SettingsMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041881C99FC46005103EC /* SettingsMenuView.m */; };
@@ -192,7 +192,7 @@
 		1B2E12BC1D1FDDA600BD31C4 /* CalibrationPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041D41C99FCC8005103EC /* CalibrationPicker.m */; };
 		1B2E12BD1D1FDDA600BD31C4 /* SoundFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0426B1C99FDE6005103EC /* SoundFile.m */; };
 		1B2E12BE1D1FDDA600BD31C4 /* HorizontalPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041CA1C99FCC8005103EC /* HorizontalPicker.m */; };
-		1B2E12BF1D1FDDA600BD31C4 /* UkeTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A41C99FC76005103EC /* UkeTypeView.m */; };
+		1B2E12BF1D1FDDA600BD31C4 /* InstrumentSubtypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A41C99FC76005103EC /* InstrumentSubtypeView.m */; };
 		1B2E12C01D1FDDA600BD31C4 /* ButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041AD1C99FC76005103EC /* ButtonView.m */; };
 		1B2E12C11D1FDDA600BD31C4 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041DC1C99FCDA005103EC /* MainView.m */; };
 		1B2E12C21D1FDDA600BD31C4 /* SettingsMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041881C99FC46005103EC /* SettingsMenuView.m */; };
@@ -331,7 +331,7 @@
 		1B2E13501D1FDDD100BD31C4 /* CalibrationPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041D41C99FCC8005103EC /* CalibrationPicker.m */; };
 		1B2E13511D1FDDD100BD31C4 /* SoundFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0426B1C99FDE6005103EC /* SoundFile.m */; };
 		1B2E13521D1FDDD100BD31C4 /* HorizontalPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041CA1C99FCC8005103EC /* HorizontalPicker.m */; };
-		1B2E13531D1FDDD100BD31C4 /* UkeTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A41C99FC76005103EC /* UkeTypeView.m */; };
+		1B2E13531D1FDDD100BD31C4 /* InstrumentSubtypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A41C99FC76005103EC /* InstrumentSubtypeView.m */; };
 		1B2E13541D1FDDD100BD31C4 /* ButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041AD1C99FC76005103EC /* ButtonView.m */; };
 		1B2E13551D1FDDD100BD31C4 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041DC1C99FCDA005103EC /* MainView.m */; };
 		1B2E13561D1FDDD100BD31C4 /* SettingsMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041881C99FC46005103EC /* SettingsMenuView.m */; };
@@ -470,7 +470,7 @@
 		1B2E13E41D1FDE1300BD31C4 /* CalibrationPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041D41C99FCC8005103EC /* CalibrationPicker.m */; };
 		1B2E13E51D1FDE1300BD31C4 /* SoundFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0426B1C99FDE6005103EC /* SoundFile.m */; };
 		1B2E13E61D1FDE1300BD31C4 /* HorizontalPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041CA1C99FCC8005103EC /* HorizontalPicker.m */; };
-		1B2E13E71D1FDE1300BD31C4 /* UkeTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A41C99FC76005103EC /* UkeTypeView.m */; };
+		1B2E13E71D1FDE1300BD31C4 /* InstrumentSubtypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A41C99FC76005103EC /* InstrumentSubtypeView.m */; };
 		1B2E13E81D1FDE1300BD31C4 /* ButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041AD1C99FC76005103EC /* ButtonView.m */; };
 		1B2E13E91D1FDE1300BD31C4 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041DC1C99FCDA005103EC /* MainView.m */; };
 		1B2E13EA1D1FDE1300BD31C4 /* SettingsMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041881C99FC46005103EC /* SettingsMenuView.m */; };
@@ -576,6 +576,12 @@
 		1B2E146C1D2026A900BD31C4 /* background6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14671D2026A900BD31C4 /* background6.png */; };
 		1B2E146D1D2026A900BD31C4 /* background6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14671D2026A900BD31C4 /* background6.png */; };
 		1B2E146E1D204E1200BD31C4 /* background6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14671D2026A900BD31C4 /* background6.png */; };
+		1B2E14741D21218E00BD31C4 /* InstrumentContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E14731D21218E00BD31C4 /* InstrumentContext.m */; };
+		1B2E14751D21218E00BD31C4 /* InstrumentContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E14731D21218E00BD31C4 /* InstrumentContext.m */; };
+		1B2E14761D21218E00BD31C4 /* InstrumentContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E14731D21218E00BD31C4 /* InstrumentContext.m */; };
+		1B2E14771D21218E00BD31C4 /* InstrumentContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E14731D21218E00BD31C4 /* InstrumentContext.m */; };
+		1B2E14781D21218E00BD31C4 /* InstrumentContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E14731D21218E00BD31C4 /* InstrumentContext.m */; };
+		1B2E14791D21218E00BD31C4 /* InstrumentContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E14731D21218E00BD31C4 /* InstrumentContext.m */; };
 		1B6C14411CCC026400C82B9B /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6C14401CCC026400C82B9B /* knob.png */; };
 		1BC0413E1C99F8C6005103EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0413D1C99F8C6005103EC /* main.m */; };
 		1BC041411C99F8C6005103EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041401C99F8C6005103EC /* AppDelegate.m */; };
@@ -611,7 +617,7 @@
 		1BC041AF1C99FC76005103EC /* GraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0419E1C99FC76005103EC /* GraphView.m */; };
 		1BC041B01C99FC76005103EC /* TabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A01C99FC76005103EC /* TabView.m */; };
 		1BC041B11C99FC76005103EC /* BridgeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A21C99FC76005103EC /* BridgeView.m */; };
-		1BC041B21C99FC76005103EC /* UkeTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A41C99FC76005103EC /* UkeTypeView.m */; };
+		1BC041B21C99FC76005103EC /* InstrumentSubtypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A41C99FC76005103EC /* InstrumentSubtypeView.m */; };
 		1BC041B41C99FC76005103EC /* MeterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A71C99FC76005103EC /* MeterView.m */; };
 		1BC041B51C99FC76005103EC /* DeviationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A91C99FC76005103EC /* DeviationView.m */; };
 		1BC041B61C99FC76005103EC /* GaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041AB1C99FC76005103EC /* GaugeView.m */; };
@@ -738,7 +744,7 @@
 		1BCCC1BF1D1FD6A200AD17D0 /* CalibrationPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041D41C99FCC8005103EC /* CalibrationPicker.m */; };
 		1BCCC1C01D1FD6A200AD17D0 /* SoundFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0426B1C99FDE6005103EC /* SoundFile.m */; };
 		1BCCC1C11D1FD6A200AD17D0 /* HorizontalPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041CA1C99FCC8005103EC /* HorizontalPicker.m */; };
-		1BCCC1C21D1FD6A200AD17D0 /* UkeTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A41C99FC76005103EC /* UkeTypeView.m */; };
+		1BCCC1C21D1FD6A200AD17D0 /* InstrumentSubtypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A41C99FC76005103EC /* InstrumentSubtypeView.m */; };
 		1BCCC1C31D1FD6A200AD17D0 /* ButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041AD1C99FC76005103EC /* ButtonView.m */; };
 		1BCCC1C41D1FD6A200AD17D0 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041DC1C99FCDA005103EC /* MainView.m */; };
 		1BCCC1C51D1FD6A200AD17D0 /* SettingsMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041881C99FC46005103EC /* SettingsMenuView.m */; };
@@ -867,6 +873,10 @@
 		1B2E145E1D1FE47800BD31C4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Simple Balalaika Tuner/Info.plist"; sourceTree = "<group>"; };
 		1B2E14601D20262D00BD31C4 /* background5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background5.png; sourceTree = "<group>"; };
 		1B2E14671D2026A900BD31C4 /* background6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background6.png; sourceTree = "<group>"; };
+		1B2E14701D211D2D00BD31C4 /* Uke_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Uke_Constants.h; sourceTree = "<group>"; };
+		1B2E14711D211E0B00BD31C4 /* Guitar_Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Guitar_Constants.h; sourceTree = "<group>"; };
+		1B2E14721D21218E00BD31C4 /* InstrumentContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentContext.h; sourceTree = "<group>"; };
+		1B2E14731D21218E00BD31C4 /* InstrumentContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrumentContext.m; sourceTree = "<group>"; };
 		1B6C14401CCC026400C82B9B /* knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knob.png; sourceTree = "<group>"; };
 		1BC041391C99F8C6005103EC /* Simple Ukulele Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Ukulele Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC0413D1C99F8C6005103EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -921,8 +931,8 @@
 		1BC041A01C99FC76005103EC /* TabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabView.m; sourceTree = "<group>"; };
 		1BC041A11C99FC76005103EC /* BridgeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BridgeView.h; sourceTree = "<group>"; };
 		1BC041A21C99FC76005103EC /* BridgeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BridgeView.m; sourceTree = "<group>"; };
-		1BC041A31C99FC76005103EC /* UkeTypeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UkeTypeView.h; sourceTree = "<group>"; };
-		1BC041A41C99FC76005103EC /* UkeTypeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UkeTypeView.m; sourceTree = "<group>"; };
+		1BC041A31C99FC76005103EC /* InstrumentSubtypeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentSubtypeView.h; sourceTree = "<group>"; };
+		1BC041A41C99FC76005103EC /* InstrumentSubtypeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrumentSubtypeView.m; sourceTree = "<group>"; };
 		1BC041A61C99FC76005103EC /* MeterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeterView.h; sourceTree = "<group>"; };
 		1BC041A71C99FC76005103EC /* MeterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeterView.m; sourceTree = "<group>"; };
 		1BC041A81C99FC76005103EC /* DeviationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviationView.h; sourceTree = "<group>"; };
@@ -1274,6 +1284,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		1B2E146F1D211CFD00BD31C4 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				1B2E14701D211D2D00BD31C4 /* Uke_Constants.h */,
+				1B2E14711D211E0B00BD31C4 /* Guitar_Constants.h */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		1BC041301C99F8C6005103EC = {
 			isa = PBXGroup;
 			children = (
@@ -1307,6 +1326,7 @@
 		1BC0413B1C99F8C6005103EC /* Simple Ukulele Tuner */ = {
 			isa = PBXGroup;
 			children = (
+				1B2E146F1D211CFD00BD31C4 /* Constants */,
 				1BC0413C1C99F8C6005103EC /* Supporting Files */,
 				1BC0413F1C99F8C6005103EC /* AppDelegate.h */,
 				1BC041401C99F8C6005103EC /* AppDelegate.m */,
@@ -1316,6 +1336,8 @@
 				1BC042781C99FE11005103EC /* SessionManager.m */,
 				1BC042791C99FE11005103EC /* VersionManager.h */,
 				1BC0427A1C99FE11005103EC /* VersionManager.m */,
+				1B2E14721D21218E00BD31C4 /* InstrumentContext.h */,
+				1B2E14731D21218E00BD31C4 /* InstrumentContext.m */,
 				1BC041481C99F8C6005103EC /* Assets.xcassets */,
 				1BC041E11C99FCF7005103EC /* images */,
 				1BC041541C99F9C9005103EC /* iRate */,
@@ -1437,8 +1459,8 @@
 				1BC041A01C99FC76005103EC /* TabView.m */,
 				1BC041A11C99FC76005103EC /* BridgeView.h */,
 				1BC041A21C99FC76005103EC /* BridgeView.m */,
-				1BC041A31C99FC76005103EC /* UkeTypeView.h */,
-				1BC041A41C99FC76005103EC /* UkeTypeView.m */,
+				1BC041A31C99FC76005103EC /* InstrumentSubtypeView.h */,
+				1BC041A41C99FC76005103EC /* InstrumentSubtypeView.m */,
 				1BC041A61C99FC76005103EC /* MeterView.h */,
 				1BC041A71C99FC76005103EC /* MeterView.m */,
 				1BC041A81C99FC76005103EC /* DeviationView.h */,
@@ -2358,6 +2380,7 @@
 				1B2E12171D1FDD5100BD31C4 /* HeaderView.m in Sources */,
 				1B2E12181D1FDD5100BD31C4 /* CircleView.m in Sources */,
 				1B2E12191D1FDD5100BD31C4 /* PDKeychainBindings.m in Sources */,
+				1B2E14761D21218E00BD31C4 /* InstrumentContext.m in Sources */,
 				1B2E121A1D1FDD5100BD31C4 /* VersionManager.m in Sources */,
 				1B2E121B1D1FDD5100BD31C4 /* UpgradeMenuView.m in Sources */,
 				1B2E121C1D1FDD5100BD31C4 /* CorrMinimum.m in Sources */,
@@ -2375,7 +2398,7 @@
 				1B2E12281D1FDD5100BD31C4 /* CalibrationPicker.m in Sources */,
 				1B2E12291D1FDD5100BD31C4 /* SoundFile.m in Sources */,
 				1B2E122A1D1FDD5100BD31C4 /* HorizontalPicker.m in Sources */,
-				1B2E122B1D1FDD5100BD31C4 /* UkeTypeView.m in Sources */,
+				1B2E122B1D1FDD5100BD31C4 /* InstrumentSubtypeView.m in Sources */,
 				1B2E122C1D1FDD5100BD31C4 /* ButtonView.m in Sources */,
 				1B2E122D1D1FDD5100BD31C4 /* MainView.m in Sources */,
 				1B2E122E1D1FDD5100BD31C4 /* SettingsMenuView.m in Sources */,
@@ -2417,6 +2440,7 @@
 				1B2E12AB1D1FDDA600BD31C4 /* HeaderView.m in Sources */,
 				1B2E12AC1D1FDDA600BD31C4 /* CircleView.m in Sources */,
 				1B2E12AD1D1FDDA600BD31C4 /* PDKeychainBindings.m in Sources */,
+				1B2E14771D21218E00BD31C4 /* InstrumentContext.m in Sources */,
 				1B2E12AE1D1FDDA600BD31C4 /* VersionManager.m in Sources */,
 				1B2E12AF1D1FDDA600BD31C4 /* UpgradeMenuView.m in Sources */,
 				1B2E12B01D1FDDA600BD31C4 /* CorrMinimum.m in Sources */,
@@ -2434,7 +2458,7 @@
 				1B2E12BC1D1FDDA600BD31C4 /* CalibrationPicker.m in Sources */,
 				1B2E12BD1D1FDDA600BD31C4 /* SoundFile.m in Sources */,
 				1B2E12BE1D1FDDA600BD31C4 /* HorizontalPicker.m in Sources */,
-				1B2E12BF1D1FDDA600BD31C4 /* UkeTypeView.m in Sources */,
+				1B2E12BF1D1FDDA600BD31C4 /* InstrumentSubtypeView.m in Sources */,
 				1B2E12C01D1FDDA600BD31C4 /* ButtonView.m in Sources */,
 				1B2E12C11D1FDDA600BD31C4 /* MainView.m in Sources */,
 				1B2E12C21D1FDDA600BD31C4 /* SettingsMenuView.m in Sources */,
@@ -2476,6 +2500,7 @@
 				1B2E133F1D1FDDD100BD31C4 /* HeaderView.m in Sources */,
 				1B2E13401D1FDDD100BD31C4 /* CircleView.m in Sources */,
 				1B2E13411D1FDDD100BD31C4 /* PDKeychainBindings.m in Sources */,
+				1B2E14781D21218E00BD31C4 /* InstrumentContext.m in Sources */,
 				1B2E13421D1FDDD100BD31C4 /* VersionManager.m in Sources */,
 				1B2E13431D1FDDD100BD31C4 /* UpgradeMenuView.m in Sources */,
 				1B2E13441D1FDDD100BD31C4 /* CorrMinimum.m in Sources */,
@@ -2493,7 +2518,7 @@
 				1B2E13501D1FDDD100BD31C4 /* CalibrationPicker.m in Sources */,
 				1B2E13511D1FDDD100BD31C4 /* SoundFile.m in Sources */,
 				1B2E13521D1FDDD100BD31C4 /* HorizontalPicker.m in Sources */,
-				1B2E13531D1FDDD100BD31C4 /* UkeTypeView.m in Sources */,
+				1B2E13531D1FDDD100BD31C4 /* InstrumentSubtypeView.m in Sources */,
 				1B2E13541D1FDDD100BD31C4 /* ButtonView.m in Sources */,
 				1B2E13551D1FDDD100BD31C4 /* MainView.m in Sources */,
 				1B2E13561D1FDDD100BD31C4 /* SettingsMenuView.m in Sources */,
@@ -2535,6 +2560,7 @@
 				1B2E13D31D1FDE1300BD31C4 /* HeaderView.m in Sources */,
 				1B2E13D41D1FDE1300BD31C4 /* CircleView.m in Sources */,
 				1B2E13D51D1FDE1300BD31C4 /* PDKeychainBindings.m in Sources */,
+				1B2E14791D21218E00BD31C4 /* InstrumentContext.m in Sources */,
 				1B2E13D61D1FDE1300BD31C4 /* VersionManager.m in Sources */,
 				1B2E13D71D1FDE1300BD31C4 /* UpgradeMenuView.m in Sources */,
 				1B2E13D81D1FDE1300BD31C4 /* CorrMinimum.m in Sources */,
@@ -2552,7 +2578,7 @@
 				1B2E13E41D1FDE1300BD31C4 /* CalibrationPicker.m in Sources */,
 				1B2E13E51D1FDE1300BD31C4 /* SoundFile.m in Sources */,
 				1B2E13E61D1FDE1300BD31C4 /* HorizontalPicker.m in Sources */,
-				1B2E13E71D1FDE1300BD31C4 /* UkeTypeView.m in Sources */,
+				1B2E13E71D1FDE1300BD31C4 /* InstrumentSubtypeView.m in Sources */,
 				1B2E13E81D1FDE1300BD31C4 /* ButtonView.m in Sources */,
 				1B2E13E91D1FDE1300BD31C4 /* MainView.m in Sources */,
 				1B2E13EA1D1FDE1300BD31C4 /* SettingsMenuView.m in Sources */,
@@ -2594,6 +2620,7 @@
 				1BC041AE1C99FC76005103EC /* HeaderView.m in Sources */,
 				1BC041D91C99FCC8005103EC /* CircleView.m in Sources */,
 				1BC041691C99FBB6005103EC /* PDKeychainBindings.m in Sources */,
+				1B2E14741D21218E00BD31C4 /* InstrumentContext.m in Sources */,
 				1BC0427C1C99FE11005103EC /* VersionManager.m in Sources */,
 				1BC041901C99FC46005103EC /* UpgradeMenuView.m in Sources */,
 				1BC0426E1C99FDE6005103EC /* CorrMinimum.m in Sources */,
@@ -2611,7 +2638,7 @@
 				1BC041DA1C99FCC8005103EC /* CalibrationPicker.m in Sources */,
 				1BC0426F1C99FDE6005103EC /* SoundFile.m in Sources */,
 				1BC041D51C99FCC8005103EC /* HorizontalPicker.m in Sources */,
-				1BC041B21C99FC76005103EC /* UkeTypeView.m in Sources */,
+				1BC041B21C99FC76005103EC /* InstrumentSubtypeView.m in Sources */,
 				1BC041B71C99FC76005103EC /* ButtonView.m in Sources */,
 				1BC041DF1C99FCDA005103EC /* MainView.m in Sources */,
 				1BC0418E1C99FC46005103EC /* SettingsMenuView.m in Sources */,
@@ -2653,6 +2680,7 @@
 				1BCCC1AE1D1FD6A200AD17D0 /* HeaderView.m in Sources */,
 				1BCCC1AF1D1FD6A200AD17D0 /* CircleView.m in Sources */,
 				1BCCC1B01D1FD6A200AD17D0 /* PDKeychainBindings.m in Sources */,
+				1B2E14751D21218E00BD31C4 /* InstrumentContext.m in Sources */,
 				1BCCC1B11D1FD6A200AD17D0 /* VersionManager.m in Sources */,
 				1BCCC1B21D1FD6A200AD17D0 /* UpgradeMenuView.m in Sources */,
 				1BCCC1B31D1FD6A200AD17D0 /* CorrMinimum.m in Sources */,
@@ -2670,7 +2698,7 @@
 				1BCCC1BF1D1FD6A200AD17D0 /* CalibrationPicker.m in Sources */,
 				1BCCC1C01D1FD6A200AD17D0 /* SoundFile.m in Sources */,
 				1BCCC1C11D1FD6A200AD17D0 /* HorizontalPicker.m in Sources */,
-				1BCCC1C21D1FD6A200AD17D0 /* UkeTypeView.m in Sources */,
+				1BCCC1C21D1FD6A200AD17D0 /* InstrumentSubtypeView.m in Sources */,
 				1BCCC1C31D1FD6A200AD17D0 /* ButtonView.m in Sources */,
 				1BCCC1C41D1FD6A200AD17D0 /* MainView.m in Sources */,
 				1BCCC1C51D1FD6A200AD17D0 /* SettingsMenuView.m in Sources */,

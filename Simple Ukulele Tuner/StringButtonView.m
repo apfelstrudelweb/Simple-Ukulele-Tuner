@@ -17,7 +17,7 @@
     //float imageWidth;
     NSMutableArray *imageViewsArray;
     NSMutableArray *labelsArray;
-    NSMutableArray *stringsArray;
+    NSArray *stringsArray;
     UIImage *ledBg;
     UIImage *led;
     
@@ -48,7 +48,7 @@
         defaults = [NSUserDefaults standardUserDefaults];
         frequencyOffset = [[defaults stringForKey:KEY_CALIBRATED_FREQUENCY] floatValue] - REF_FREQUENCY;
         
-        [self populateStringsArray];
+        stringsArray = [SHARED_CONTEXT getStringNamesArray];
         
         ledBg = [UIImage imageNamed:@"stringPassive.png"];
         led = [UIImage imageNamed:@"stringActive.png"];
@@ -76,22 +76,8 @@
                                                      name:@"UpdateCalibratedFrequencyNotification"
                                                    object:nil];
         
-        NSString* defaultSubtype;
-#if defined(TARGET_UKULELE)
-        defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
-#elif defined(TARGET_GUITAR)
-        defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
-#elif defined(TARGET_MANDOLIN)
-        
-#elif defined(TARGET_BANJO)
-        
-#elif defined(TARGET_VIOLIN)
-        
-#elif defined(TARGET_BALALAIKA)
-        
-#endif
-        NSArray* frequenciesArray = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultSubtype][2];
-        numberOfStrings = frequenciesArray.count;
+
+        numberOfStrings = [SHARED_CONTEXT getNumberOfStrings];
         
         [self createImage];
         [self setupLedConstraints];
@@ -100,26 +86,6 @@
     return self;
 }
 
--(void)populateStringsArray {
-    
-    NSString* defaultSubType;
-    
-#if defined(TARGET_UKULELE)
-    defaultSubType = [defaults stringForKey:KEY_UKE_TYPE];
-#elif defined(TARGET_GUITAR)
-    defaultSubType = [defaults stringForKey:KEY_GUITAR_TYPE];
-#elif defined(TARGET_MANDOLIN)
-    
-#elif defined(TARGET_BANJO)
-    
-#elif defined(TARGET_VIOLIN)
-    
-#elif defined(TARGET_BALALAIKA)
-    
-#endif
-    
-    stringsArray = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultSubType][1];
-}
 
 
 #pragma mark - gesture recognizer
@@ -200,24 +166,8 @@
         }
     }
     
-    NSString* defaultSubtype;
-#if defined(TARGET_UKULELE)
-    defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
-#elif defined(TARGET_GUITAR)
-    defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
-#elif defined(TARGET_MANDOLIN)
-    
-#elif defined(TARGET_BANJO)
-    
-#elif defined(TARGET_VIOLIN)
-    
-#elif defined(TARGET_BALALAIKA)
-    
-#endif
-    NSArray* frequenciesArray = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultSubtype][2];
-    numberOfStrings = frequenciesArray.count;
-    
-    [self populateStringsArray];
+    numberOfStrings = [SHARED_CONTEXT getNumberOfStrings];
+    stringsArray = [SHARED_CONTEXT getStringNamesArray];
     
     int index = 0;
     
@@ -250,8 +200,7 @@
             CGFloat alpha = [spectrum.alpha floatValue];
             CGFloat capturedFrequency = [spectrum.frequency floatValue] - frequencyOffset;
             
-            NSString* defaultUkeType = [defaults stringForKey:KEY_UKE_TYPE];
-            NSArray* frequenciesArray = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultUkeType][2];
+            NSArray* frequenciesArray = [SHARED_CONTEXT getFrequenciesArray];
             
             for (NSInteger i=0; i<frequenciesArray.count; i++) {
                 CGFloat nominalFrequency = [frequenciesArray[i] floatValue];

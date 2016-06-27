@@ -1,22 +1,22 @@
 //
-//  UkeTypeView.m
+//  InstrumentSubtypeView.m
 //  Simple Ukulele Tuner
 //
 //  Created by imac on 20.07.15.
 //  Copyright (c) 2015 Vormbrock. All rights reserved.
 //
 
-#import "UkeTypeView.h"
+#import "InstrumentSubtypeView.h"
 
 #define OCTAVE_COLOR [UIColor colorWithRed:172.0/255.0 green:174.0/255.0 blue:178.0/255.0 alpha:1.0]
 
-@interface UkeTypeView() {
+@interface InstrumentSubtypeView() {
     CGFloat shadowRadius, shadowOffset;
-    NSString* ukeType;
+    NSString *instrumentSubtype;
 }
 @end
 
-@implementation UkeTypeView
+@implementation InstrumentSubtypeView
 
 
 - (id)initWithFrame:(CGRect)frame {
@@ -24,34 +24,34 @@
     self = [super initWithFrame:frame];
     if (self) {
         
-        [self setUkeType];
+        [self setInstrumentSubtype];
         
         shadowRadius = IS_IPAD ? 0.4 : 0.2;
         shadowOffset = IS_IPAD ? 0.7 : 0.5;
         
-        self.ukeTypeLabel = [[UILabel alloc] initWithFrame:frame];
+        self.subtypeLabel = [[UILabel alloc] initWithFrame:frame];
         
-        self.ukeTypeLabel.textAlignment = NSTextAlignmentCenter;
-        self.ukeTypeLabel.textColor = OCTAVE_COLOR;
-        [self.ukeTypeLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
-        self.ukeTypeLabel.text = ukeType;
+        self.subtypeLabel.textAlignment = NSTextAlignmentCenter;
+        self.subtypeLabel.textColor = OCTAVE_COLOR;
+        [self.subtypeLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
+        self.subtypeLabel.text = instrumentSubtype;
         
-        self.ukeTypeLabel.font = [UIFont fontWithName:FONT size:[UILabel getFontSizeForToneName]];
+        self.subtypeLabel.font = [UIFont fontWithName:FONT size:[UILabel getFontSizeForToneName]];
         
-        self.ukeTypeLabel.layer.shadowColor = [UIColor blackColor].CGColor;
-        self.ukeTypeLabel.layer.shadowRadius = shadowRadius;
-        self.ukeTypeLabel.layer.shadowOpacity = 1;
-        self.ukeTypeLabel.layer.shadowOffset = CGSizeMake(shadowOffset, shadowOffset);
-        self.ukeTypeLabel.layer.masksToBounds = NO;
+        self.subtypeLabel.layer.shadowColor = [UIColor blackColor].CGColor;
+        self.subtypeLabel.layer.shadowRadius = shadowRadius;
+        self.subtypeLabel.layer.shadowOpacity = 1;
+        self.subtypeLabel.layer.shadowOffset = CGSizeMake(shadowOffset, shadowOffset);
+        self.subtypeLabel.layer.masksToBounds = NO;
         
         
-        [self addSubview:self.ukeTypeLabel];
+        [self addSubview:self.subtypeLabel];
         [self setupLabelConstraints];
         
         
         // input coming from config menu
         [[NSNotificationCenter defaultCenter] addObserver:self
-                                                 selector:@selector(updateUkeType:)
+                                                 selector:@selector(updateInstrumentSubtype:)
                                                      name:@"UpdateDefaultsNotification"
                                                    object:nil];
 
@@ -60,33 +60,31 @@
     return self;
 }
 
--(void)setUkeType {
+-(void)setInstrumentSubtype {
     
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString* defaultSubtype;
-#if defined(TARGET_UKULELE)
-    defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
-#elif defined(TARGET_GUITAR)
-    defaultSubtype = [[defaults stringForKey:KEY_GUITAR_TYPE] substringFromIndex:4];
-#elif defined(TARGET_MANDOLIN)
+    //NSString *subtype = [[SHARED_CONTEXT getInstrumentSubtype] substringFromIndex:4];
+    NSString *subtype = [SHARED_CONTEXT getInstrumentSubtype];
     
-#elif defined(TARGET_BANJO)
     
-#elif defined(TARGET_VIOLIN)
+    // Remove number (of strings) - we only want to see the subtype of the instrument
+    NSString *expression = @"[0-9]";
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:expression options:NSRegularExpressionCaseInsensitive error:nil];
+    NSTextCheckingResult *match = [regex firstMatchInString:subtype options:0 range:NSMakeRange(0, 1)];
     
-#elif defined(TARGET_BALALAIKA)
+    if (match) {
+        subtype = [subtype substringFromIndex:4];
+    }
     
-#endif
-    NSArray *stringSplitArray = [defaultSubtype componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"("]];
-    ukeType = stringSplitArray[0];
+    NSArray *stringSplitArray = [subtype componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"("]];
+    instrumentSubtype = stringSplitArray[0];
    
 }
 
 #pragma mark - Notification
--(void) updateUkeType:(NSNotification *) notification {
+-(void) updateInstrumentSubtype:(NSNotification *) notification {
     
-    [self setUkeType];
-    self.ukeTypeLabel.text = ukeType;
+    [self setInstrumentSubtype];
+    self.subtypeLabel.text = instrumentSubtype;
 }
 
 
@@ -99,7 +97,7 @@
     
     
     // Center vertically
-    [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.ukeTypeLabel
+    [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.subtypeLabel
                                                               attribute:NSLayoutAttributeCenterY
                                                               relatedBy:NSLayoutRelationEqual
                                                                  toItem:self
@@ -108,7 +106,7 @@
                                                                constant:0.0]];
     
     // Center horizontally
-    [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.ukeTypeLabel
+    [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.subtypeLabel
                                                               attribute:NSLayoutAttributeCenterX
                                                               relatedBy:NSLayoutRelationEqual
                                                                  toItem:self

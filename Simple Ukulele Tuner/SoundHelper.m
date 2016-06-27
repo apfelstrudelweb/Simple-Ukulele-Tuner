@@ -21,21 +21,10 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     
     CGFloat frequency = [SHARED_MANAGER getStringToneFrequency];
     
+    //NSString* subtype = [SHARED_CONTEXT getInstrumentSubtype];
+    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString* defaultSubtype;
-#if defined(TARGET_UKULELE)
-    defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
-#elif defined(TARGET_GUITAR)
-    defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
-#elif defined(TARGET_MANDOLIN)
-    
-#elif defined(TARGET_BANJO)
-    
-#elif defined(TARGET_VIOLIN)
-    
-#elif defined(TARGET_BALALAIKA)
-    
-#endif
+
     CGFloat frequencyOffset = [[defaults stringForKey:KEY_CALIBRATED_FREQUENCY] floatValue] - REF_FREQUENCY;
     frequency += frequencyOffset;
     
@@ -122,24 +111,8 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     
     [session overrideOutputAudioPort:AVAudioSessionPortOverrideSpeaker error:&setOverrideError];
     
-    // Get user preference
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString* defaultSubtype;
-#if defined(TARGET_UKULELE)
-    defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
-#elif defined(TARGET_GUITAR)
-    defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
-#elif defined(TARGET_MANDOLIN)
     
-#elif defined(TARGET_BANJO)
-    
-#elif defined(TARGET_VIOLIN)
-    
-#elif defined(TARGET_BALALAIKA)
-    
-#endif
-    
-    NSArray* frequenciesArray =  [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultSubtype][2];
+    NSArray* frequenciesArray = [SHARED_CONTEXT getFrequenciesArray];
     
     // use "autorelease" due to the flag "-fno-objc-arc" !!!
     SoundFile* sf = [[[SoundFile alloc] init] autorelease];

@@ -52,22 +52,10 @@
     NSInteger octave = (NSInteger) floorf((log(frequency) - log(16)) / log(2));
     self.octave = [NSNumber numberWithInteger:octave];
     
-    NSString* defaultSubtype;
-#if defined(TARGET_UKULELE)
-    defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
-#elif defined(TARGET_GUITAR)
-    defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
-#elif defined(TARGET_MANDOLIN)
-    
-#elif defined(TARGET_BANJO)
-    
-#elif defined(TARGET_VIOLIN)
-    
-#elif defined(TARGET_BALALAIKA)
-    
-#endif
-    NSArray *nominalToneNames = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultSubtype][1];
-    NSArray *nominalFrequencies =  [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultSubtype][2];
+    NSString* subtype = [SHARED_CONTEXT getInstrumentSubtype];
+
+    NSArray *nominalToneNames = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:subtype][1];
+    NSArray *nominalFrequencies =  [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:subtype][2];
     
     
     CGFloat minDeviation = 1000.0;

@@ -30,7 +30,7 @@
                           @"graph"       : self.graphView,
                           @"tab"         : self.tabView,
                           @"bridge"      : self.bridgeView,
-                          @"type"        : self.ukeTypeView,
+                          @"type"        : self.instrumentSubtypeView,
                           @"meter"       : self.meterView,
                           @"deviation"      : self.deviationView,
                           @"gauge"       : self.gaugeView,
@@ -54,7 +54,7 @@
         [self addSubview:self.graphView];
         [self addSubview:self.tabView];
         [self addSubview:self.bridgeView];
-        [self addSubview:self.ukeTypeView];
+        [self addSubview:self.instrumentSubtypeView];
         [self addSubview:self.meterView];
         [self addSubview:self.deviationView];
         [self addSubview:self.gaugeView];
@@ -161,13 +161,13 @@
     return _bridgeView;
 }
 
-- (UkeTypeView*) ukeTypeView {
-    if (_ukeTypeView == nil) {
-        _ukeTypeView = [UkeTypeView new];
-        _ukeTypeView.layer.borderColor = [UIColor whiteColor].CGColor;
-        [_ukeTypeView setTranslatesAutoresizingMaskIntoConstraints:NO];
+- (InstrumentSubtypeView*) instrumentSubtypeView {
+    if (_instrumentSubtypeView == nil) {
+        _instrumentSubtypeView = [InstrumentSubtypeView new];
+        _instrumentSubtypeView.layer.borderColor = [UIColor whiteColor].CGColor;
+        [_instrumentSubtypeView setTranslatesAutoresizingMaskIntoConstraints:NO];
     }
-    return _ukeTypeView;
+    return _instrumentSubtypeView;
 }
 
 - (MeterView*) meterView {
@@ -214,27 +214,8 @@
 }
 
 - (void) setBackgroundImage {
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    
-    NSString* defaultSubtype;
-#if defined(TARGET_UKULELE)
-    defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
-#elif defined(TARGET_GUITAR)
-    defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
-#elif defined(TARGET_MANDOLIN)
-    
-#elif defined(TARGET_BANJO)
-    
-#elif defined(TARGET_VIOLIN)
-    
-#elif defined(TARGET_BALALAIKA)
-    
-#endif
-    
-    NSDictionary *instrDict = [SHARED_MANAGER getInstrumentSubtypesDictionary];
-    NSArray* frequenciesArray = [instrDict objectForKey:defaultSubtype][2];
-    NSInteger numberOfStrings = frequenciesArray.count;
+
+    NSInteger numberOfStrings = [SHARED_CONTEXT getNumberOfStrings];
     
     NSString *backgrImgName;
     
@@ -271,7 +252,7 @@
                                                                                    metrics:nil
                                                                                      views:_viewsDictionary];
     
-    NSArray* viewsArray = @[self.headerView, self.graphView, self.tabView, self.bridgeView, self.ukeTypeView, self.meterView, self.deviationView, self.gaugeView, self.buttonView];
+    NSArray* viewsArray = @[self.headerView, self.graphView, self.tabView, self.bridgeView, self.instrumentSubtypeView, self.meterView, self.deviationView, self.gaugeView, self.buttonView];
     
     
     for (NSInteger i=0; i<SUBVIEW_PROPORTIONS.count;i++) {

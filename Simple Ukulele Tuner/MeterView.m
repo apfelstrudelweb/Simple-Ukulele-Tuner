@@ -45,23 +45,8 @@
 
 #pragma mark - Notification
 -(void) updateWidth:(NSNotification *) notification {
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSString* defaultSubtype;
-#if defined(TARGET_UKULELE)
-    defaultSubtype = [defaults stringForKey:KEY_UKE_TYPE];
-#elif defined(TARGET_GUITAR)
-    defaultSubtype = [defaults stringForKey:KEY_GUITAR_TYPE];
-#elif defined(TARGET_MANDOLIN)
-    
-#elif defined(TARGET_BANJO)
-    
-#elif defined(TARGET_VIOLIN)
-    
-#elif defined(TARGET_BALALAIKA)
-    
-#endif
-    NSArray* frequenciesArray = [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:defaultSubtype][2];
-    NSInteger numberOfStrings = frequenciesArray.count;
+
+    NSInteger numberOfStrings = [SHARED_CONTEXT getNumberOfStrings];
     
     if (numberOfStrings < 6) {
         meterWidth = 0.495;

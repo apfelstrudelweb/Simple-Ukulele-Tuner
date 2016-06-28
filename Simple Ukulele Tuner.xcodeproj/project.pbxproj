@@ -500,6 +500,16 @@
 		1B2E14951D22620800BD31C4 /* guit_en_manual5.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14871D22620800BD31C4 /* guit_en_manual5.html */; };
 		1B2E14961D22620800BD31C4 /* guit_en_manual6.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14881D22620800BD31C4 /* guit_en_manual6.html */; };
 		1B2E14971D22620800BD31C4 /* guit_en_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14891D22620800BD31C4 /* guit_en_manual7.html */; };
+		1B2E14A01D2288CB00BD31C4 /* guit_tuning_options.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E149F1D2288CB00BD31C4 /* guit_tuning_options.png */; };
+		1B2E14A21D228B7700BD31C4 /* guit_subtypes_tuning.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14A11D228B7700BD31C4 /* guit_subtypes_tuning.png */; };
+		1B2E14A41D228CA300BD31C4 /* guit_calibrated_tuning.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14A31D228CA300BD31C4 /* guit_calibrated_tuning.png */; };
+		1B2E14A61D228DC100BD31C4 /* guit_overtuning.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14A51D228DC100BD31C4 /* guit_overtuning.png */; };
+		1B2E14A81D228E9D00BD31C4 /* guit_leds.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14A71D228E9D00BD31C4 /* guit_leds.png */; };
+		1B2E14AA1D228F5500BD31C4 /* guit_types_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14A91D228F5500BD31C4 /* guit_types_active.png */; };
+		1B2E14AC1D228FC000BD31C4 /* guit_types_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14AB1D228FC000BD31C4 /* guit_types_inactive.png */; };
+		1B2E14AE1D22914B00BD31C4 /* guit_inapppurchase_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14AD1D22914B00BD31C4 /* guit_inapppurchase_01.png */; };
+		1B2E14B01D22926F00BD31C4 /* guit_inapppurchase_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14AF1D22926F00BD31C4 /* guit_inapppurchase_02.png */; };
+		1B2E14B21D22933700BD31C4 /* guit_inapppurchase_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14B11D22933700BD31C4 /* guit_inapppurchase_03.png */; };
 		1B6C14411CCC026400C82B9B /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6C14401CCC026400C82B9B /* knob.png */; };
 		1BC0413E1C99F8C6005103EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0413D1C99F8C6005103EC /* main.m */; };
 		1BC041411C99F8C6005103EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041401C99F8C6005103EC /* AppDelegate.m */; };
@@ -785,6 +795,16 @@
 		1B2E14871D22620800BD31C4 /* guit_en_manual5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_en_manual5.html; sourceTree = "<group>"; };
 		1B2E14881D22620800BD31C4 /* guit_en_manual6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_en_manual6.html; sourceTree = "<group>"; };
 		1B2E14891D22620800BD31C4 /* guit_en_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_en_manual7.html; sourceTree = "<group>"; };
+		1B2E149F1D2288CB00BD31C4 /* guit_tuning_options.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_tuning_options.png; sourceTree = "<group>"; };
+		1B2E14A11D228B7700BD31C4 /* guit_subtypes_tuning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_subtypes_tuning.png; sourceTree = "<group>"; };
+		1B2E14A31D228CA300BD31C4 /* guit_calibrated_tuning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_calibrated_tuning.png; sourceTree = "<group>"; };
+		1B2E14A51D228DC100BD31C4 /* guit_overtuning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_overtuning.png; sourceTree = "<group>"; };
+		1B2E14A71D228E9D00BD31C4 /* guit_leds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_leds.png; sourceTree = "<group>"; };
+		1B2E14A91D228F5500BD31C4 /* guit_types_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_types_active.png; sourceTree = "<group>"; };
+		1B2E14AB1D228FC000BD31C4 /* guit_types_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_types_inactive.png; sourceTree = "<group>"; };
+		1B2E14AD1D22914B00BD31C4 /* guit_inapppurchase_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_inapppurchase_01.png; sourceTree = "<group>"; };
+		1B2E14AF1D22926F00BD31C4 /* guit_inapppurchase_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_inapppurchase_02.png; sourceTree = "<group>"; };
+		1B2E14B11D22933700BD31C4 /* guit_inapppurchase_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_inapppurchase_03.png; sourceTree = "<group>"; };
 		1B6C14401CCC026400C82B9B /* knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knob.png; sourceTree = "<group>"; };
 		1BC041391C99F8C6005103EC /* Simple Ukulele Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Ukulele Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC0413D1C99F8C6005103EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1298,6 +1318,16 @@
 		1B2E149D1D226DCF00BD31C4 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1B2E149F1D2288CB00BD31C4 /* guit_tuning_options.png */,
+				1B2E14A11D228B7700BD31C4 /* guit_subtypes_tuning.png */,
+				1B2E14A31D228CA300BD31C4 /* guit_calibrated_tuning.png */,
+				1B2E14A51D228DC100BD31C4 /* guit_overtuning.png */,
+				1B2E14A71D228E9D00BD31C4 /* guit_leds.png */,
+				1B2E14A91D228F5500BD31C4 /* guit_types_active.png */,
+				1B2E14AB1D228FC000BD31C4 /* guit_types_inactive.png */,
+				1B2E14AD1D22914B00BD31C4 /* guit_inapppurchase_01.png */,
+				1B2E14AF1D22926F00BD31C4 /* guit_inapppurchase_02.png */,
+				1B2E14B11D22933700BD31C4 /* guit_inapppurchase_03.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -2172,7 +2202,9 @@
 				1B2E14941D22620800BD31C4 /* guit_en_manual4.html in Resources */,
 				1BCCC1DE1D1FD6A200AD17D0 /* fft_02.png in Resources */,
 				1B2E148E1D22620800BD31C4 /* guit_de_manual5.html in Resources */,
+				1B2E14A21D228B7700BD31C4 /* guit_subtypes_tuning.png in Resources */,
 				1BCCC1E01D1FD6A200AD17D0 /* closeButton.png in Resources */,
+				1B2E14A41D228CA300BD31C4 /* guit_calibrated_tuning.png in Resources */,
 				1BCCC1E21D1FD6A200AD17D0 /* gaugeBackground.png in Resources */,
 				1BCCC1E31D1FD6A200AD17D0 /* calibration_01.png in Resources */,
 				1BCCC1E41D1FD6A200AD17D0 /* gaugePattern.png in Resources */,
@@ -2201,6 +2233,7 @@
 				1BCCC1FD1D1FD6A200AD17D0 /* style.css in Resources */,
 				1BCCC1FE1D1FD6A200AD17D0 /* close.png in Resources */,
 				1BCCC2011D1FD6A200AD17D0 /* settingsTop.png in Resources */,
+				1B2E14A61D228DC100BD31C4 /* guit_overtuning.png in Resources */,
 				1BCCC2031D1FD6A200AD17D0 /* calibrationButton.png in Resources */,
 				1BCCC2051D1FD6A200AD17D0 /* stringPassive.png in Resources */,
 				1BCCC2061D1FD6A200AD17D0 /* arrowUp.png in Resources */,
@@ -2211,12 +2244,16 @@
 				1B2E148F1D22620800BD31C4 /* guit_de_manual6.html in Resources */,
 				1BCCC20B1D1FD6A200AD17D0 /* settings.png in Resources */,
 				1BCCC20C1D1FD6A200AD17D0 /* Assets.xcassets in Resources */,
+				1B2E14A01D2288CB00BD31C4 /* guit_tuning_options.png in Resources */,
+				1B2E14B21D22933700BD31C4 /* guit_inapppurchase_03.png in Resources */,
 				1BCCC20D1D1FD6A200AD17D0 /* microphoneOn.png in Resources */,
 				1BCCC20E1D1FD6A200AD17D0 /* autocorr_animated.gif in Resources */,
+				1B2E14A81D228E9D00BD31C4 /* guit_leds.png in Resources */,
 				1BCCC20F1D1FD6A200AD17D0 /* stringActive.png in Resources */,
 				1BCCC2111D1FD6A200AD17D0 /* tabPassive.png in Resources */,
 				1BCCC2121D1FD6A200AD17D0 /* inapppurch_02.png in Resources */,
 				1BCCC2151D1FD6A200AD17D0 /* restoreButton.png in Resources */,
+				1B2E14AC1D228FC000BD31C4 /* guit_types_inactive.png in Resources */,
 				1B2E14621D20262D00BD31C4 /* background5.png in Resources */,
 				1B2E14911D22620800BD31C4 /* guit_en_manual1.html in Resources */,
 				1BCCC2181D1FD6A200AD17D0 /* onButton.png in Resources */,
@@ -2225,8 +2262,11 @@
 				1BCCC21A1D1FD6A200AD17D0 /* arrowLeft.png in Resources */,
 				1BCCC21B1D1FD6A200AD17D0 /* fft_01.png in Resources */,
 				1BCCC21D1D1FD6A200AD17D0 /* microphoneOff.png in Resources */,
+				1B2E14B01D22926F00BD31C4 /* guit_inapppurchase_02.png in Resources */,
+				1B2E14AE1D22914B00BD31C4 /* guit_inapppurchase_01.png in Resources */,
 				1BCCC21E1D1FD6A200AD17D0 /* autocorr_02.png in Resources */,
 				1BCCC21F1D1FD6A200AD17D0 /* gaugePatternGreen.png in Resources */,
+				1B2E14AA1D228F5500BD31C4 /* guit_types_active.png in Resources */,
 				1B2E148C1D22620800BD31C4 /* guit_de_manual3.html in Resources */,
 				1BCCC2211D1FD6A200AD17D0 /* ledActive.png in Resources */,
 				1BCCC2221D1FD6A200AD17D0 /* info.png in Resources */,

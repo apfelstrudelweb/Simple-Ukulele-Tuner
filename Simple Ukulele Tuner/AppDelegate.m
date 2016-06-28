@@ -21,7 +21,7 @@
 
 + (void)initialize {
     
-    [iRate sharedInstance].appStoreID = [APPSTORE_ID integerValue]; // Simple Ukulele Tuner on the App Store
+    [iRate sharedInstance].appStoreID = [APPSTORE_ID integerValue]; // App ID from App Store
     
     [iRate sharedInstance].daysUntilPrompt = 5;
     [iRate sharedInstance].usesUntilPrompt = 10;
@@ -100,9 +100,9 @@
         splashPreferences.splashTemplateAppName = @"Simple Ukulele Tuner";
         [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
 #elif defined(TARGET_GUITAR)
-        sdk.appID = @"????";
+        sdk.appID = @"205646855";
         splashPreferences.splashTemplateAppName = @"Simple Guitar Tuner";
-        //[[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
+        [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"160ad6c5c353453ebd3f98d8867b8c25"];
 #elif defined(TARGET_MANDOLIN)
         sdk.appID = @"????";
         splashPreferences.splashTemplateAppName = @"Simple Mandolin Tuner";

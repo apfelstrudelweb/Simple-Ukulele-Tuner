@@ -42,10 +42,27 @@
     NSMutableArray* _htmlPages = HTML_PAGES;
     
     NSString *language = [[[NSBundle mainBundle] preferredLocalizations] objectAtIndex:0];
-    NSString *prefix = [language isEqualToString:@"de"] ? @"de" : @"en";
+    NSString *languagePrefix = [language isEqualToString:@"de"] ? @"de" : @"en";
+    
+    NSString *instrumentPrefix;
+    
+#if defined(TARGET_UKULELE)
+    instrumentPrefix = @"uke";
+#elif defined(TARGET_GUITAR)
+    instrumentPrefix = @"guit";
+#elif defined(TARGET_MANDOLIN)
+    
+#elif defined(TARGET_BANJO)
+    
+#elif defined(TARGET_VIOLIN)
+    
+#elif defined(TARGET_BALALAIKA)
+    
+#endif
+    
     
     for (NSString *page in _htmlPages) {
-        NSString *locPage = [NSString stringWithFormat:@"%@_%@", prefix, page];
+        NSString *locPage = [NSString stringWithFormat:@"%@_%@_%@", instrumentPrefix, languagePrefix, page];
         [htmlPages addObject:locPage];
     }
     

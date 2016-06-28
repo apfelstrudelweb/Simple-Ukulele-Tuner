@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="de-DE">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Benutzer-Handbuch</title>
+        <script type="text/javascript">
+            /////////////////////////////////////////////////////
+            function draw() {
+                
+                <!--    var width = window.innerWidth-->
+                <!--    || document.documentElement.clientWidth-->
+                <!--    || document.body.clientWidth;-->
+                <!--    -->
+                <!--    alert(width);-->
+                
+                
+                // get values directly from form
+                var Vp=1;
+                var fo=220;
+                var phase=90;
+                var Vmax=2;
+                var Tmax=0.8;
+                var N=200;
+                var percent=document.getElementById("range").value;
+                
+                document.getElementById("val").innerHTML=percent;
+                
+                Vp=Number(Vp);
+                fo=Number(fo);
+                phase=Number(phase);
+                Vmax=Number(Vmax);
+                Tmax=Number(Tmax);
+                N=Number(N);
+                percent=Number(percent);
+                
+                var delta = fo * percent / 100;
+                
+                // define canvas
+                var canvas = document.getElementById("canvas");
+                if (null==canvas || !canvas.getContext) return;
+                ctx=canvas.getContext("2d");
+                
+                // fill canvas
+                ctx.fillStyle="#222222";
+                ctx.fillRect(0,0,501,201);
+                
+                // define origin at plot center
+                var axes={};
+                axes.x0 = 0.5 + 0.5*canvas.width;  // x0, y0 place plot origin in middle of canvas
+                axes.y0 = 0.5 + 0.5*canvas.height;
+                
+                // draw axes
+                // showAxes(ctx,axes);
+                
+                var x=new Array(), y=new Array();  // x,y plotting variables
+                var dt, tstart, tstop;             // time variables
+                
+                // define plot paramaters
+                tstart=-Tmax;
+                tstop=Tmax;
+                dt = (tstop - tstart) / (N-1);				// time increment over N points
+                axes.xscale = (canvas.width)/(2*Tmax); 	// x pix per s
+                axes.yscale = (canvas.height)/(2*Vmax);    // y pix per V
+                axes.N = N;
+                
+                
+                // create function
+                for ( i=0; i<N; i++) {
+                    x[i]=tstart + i*dt;
+                    y[i] = Vp*Math.sin(2*3.1415*fo*x[i] + phase*3.1415/180) + Vp*Math.sin(2*3.1415*(fo+delta)*x[i] + phase*3.1415/180) ;
+                }
+                
+                // display variables for debug, remove /* and */
+                /*
+                 alert(   "N=" + N + "\n"
+                 + "dt=" + dt + "\n"
+                 + "tstart=" + tstart + "\n"
+                 + "tstop=" + tstop + "\n"
+                 + "fo=" + fo + "\n"
+                 + "x[50]=" + x[50] + "\n"        );
+                 */
+                
+                // plot function
+                GraphArray(ctx,axes,x,y,"#00EE72",1);
+                
+            }
+        
+        ///////////////////////////////////////////////////////
+        function GraphArray (ctx,axes,x,y,color,thick) {
+            
+            var i, x0, y0, xscale, yscale, xp, yp;
+            
+            x0=axes.x0;  y0=axes.y0;
+            xscale=axes.xscale;  yscale=axes.yscale;
+            
+            ctx.beginPath();
+            ctx.lineWidth = thick;
+            ctx.strokeStyle = color;
+            
+            for (i=0; i<axes.N; i++) {
+                // translate actual x,y to plot xp,yp
+                xp = x0 + x[i]*xscale;
+                yp = y0 - y[i]*yscale;
+                
+                // draw ine to next point
+                if (i==0) ctx.moveTo( xp, yp );
+                else      ctx.lineTo( xp, yp );
+            }
+            
+            ctx.stroke();
+        }
+        //////////////////////////////////////////////////////
+        function showAxes(ctx,axes) {
+            var x0=axes.x0, w=ctx.canvas.width;
+            var y0=axes.y0, h=ctx.canvas.height;
+            
+            ctx.beginPath();
+            ctx.strokeStyle = "rgb(128,128,128)";
+            ctx.moveTo(0,y0);    ctx.lineTo(w,y0);  // X axis
+            ctx.moveTo(x0,0);    ctx.lineTo(x0,h);  // Y axis
+            ctx.stroke();
+            
+        }
+        /////////////////////////////////////////////////////
+        
+            </script>
+        <link rel="stylesheet" href="style.css">
+            </head>
+    <body onload="draw()" style="margin:0; padding:0; font-size:100%;background-color:#454851">
+        <div id="page" style="max-width:960px; margin:0 auto;">
+            <div id="header" style="padding:0 3.125%;">
+                <h1>User Manual</h1>
+                <h2>2. Attuning by ear</h2>
+            </div><!-- #header -->
+            <div id="content1" style="clear:both;  padding:0 3.125%;">
+                <p>You can attune your ukulele by ear, and subsequently verify your result by performing a frequency analysis. You simply need to touch the round or the rectangular button (with the string indicator) - see screenshot below:</p>
+            </div><!-- #content -->
+            <div id="uke_leds" style="clear:both;  padding:0 3.125%;">
+                <p><center><img src="uke_leds.png" alt="Screenshot Pro Version" class="img" /></center></p>
+            </div>
+            <!-- #sidebar -->
+            <div id="content2" style="clear:both;  padding:0 3.125%;">
+                <p>The sound of the corresponding string will be heard (of a square wave), and will be played in a loop until you either press the same button (round or rectangular) or change to another tone by using one of the four button pairs. Once you have touched one button of a button pair, both buttons (representing the same string) will change their color from silver to green.
+                </p>
+                <p>As soon as a sound is played, the microphone button is disabled: it's not possible to play tones and perform a frequency analysis at the same time.
+                </p>
+            </div>
+            <div id="content3" style="clear:both;  padding:0 3.125%;">
+                <h2>Hint</h2>
+                <p>After you've unlocked additional ukulele types by In-App Purchase, the strings (identifieres) and the frequencies of the reference tones are updated according to the ukulele (and tuning) which you've chosen before in the settings menu - see screenshot below.<br/><br/>
+                <b>Example:</b><br/>In the settings menu, you've chosen "Sopranino" with the "D-G-B-E" tuning. When you go back to the main screen, the strings are marked as such - and you can also see the info "Sopranino" above the volume meter. In addition, the tone frequencies are updated as well. Take for example the D string which has a frequency of about 587.3 Hz: the reference tone ("tuning by ear") has the same frequency and also the pitch detection algorithm works with 587.3 Hz in order to recognize a well-tuned D string. As soon as a frequency of about 587.3 Hz (+/- minimal deviation) has been detected, several elements (string buttons and gauge) change their color from silver to green.
+                </p>
+            </div>
+            <div id="uke_subtypes_tuning" style="clear:both;  padding:0 3.125%;">
+                <p><center><img src="uke_subtypes_tuning.png" alt="Screenshot Pro Version" class="img" /></center></p>
+            </div>
+            <br/>
+            <div id="content4" style="clear:both;  padding:0 3.125%;">
+                <h2>Physical background</h2>
+                <p>Do you know the term "beats"? This phenomenon occurs when two sounds with slightly different frequencies resonate - the volume varies, and the sound is modulated. When you hear such a beat, you're already quite close to the desired frequency of the ukulele string. The closer  you get  to the target frequency, the slower the beat! Now you just need to perform some fine-tuning - be it by ear or even by frequency analysis, which is made possible by this app. To understand the phenomenon of beats better, you can use the slide control further down: the graph shows a superposition of two sinusoidal oscillation-similar frequencies - you can vary the frequency of the second oscillation with the slider. The greater the frequency difference, the faster the volume variation.</p>
+            </div>
+            <div id="content5" style="clear:both;  padding:0 3.125%;">
+                <center>
+                    <canvas id="canvas" class="canvas"></canvas><br /><br />
+                    <input type="range" id="range" class="slider-width" min="0" max="1" step="0.01" onchange="draw()" />
+                    <p>frequency difference :&nbsp;<span id="val">0</span>&nbsp;%</p>
+                </center>
+            </div>
+            <div id="footer" style="clear:both; padding:0 3.125%;">
+                <center><span class="copyright">Copyright 2016 - Ullrich Vormbrock - All Rights Reserved<br/><br/><br/></span></center>
+            </div><!-- #footer -->
+        </div><!-- #page -->
+    </body>
+</html>

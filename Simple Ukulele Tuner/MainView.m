@@ -86,7 +86,6 @@
 
 - (void) updateBackground:(NSNotification *) notification {
     
-    defaults = [NSUserDefaults standardUserDefaults];
     NSString* colorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
     [self.headerBackgroundView setBackgroundColor:[SHARED_MANAGER getHeaderColor:colorString]];
     

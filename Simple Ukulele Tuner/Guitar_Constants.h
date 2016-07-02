@@ -10,8 +10,8 @@
 #define Guitar_Constants_h
 
 
-#define APPSTORE_ID @"1128226635"
-#define STANDARD_SUBTYPE             @[@0, @8] // Acoustic Standard (E - A - D - G - B - E) and Bass Standard (E - A - D -G)
+#define APPSTORE_ID              @"1128226635"
+#define STANDARD_SUBTYPE         @[@0, @8] // Acoustic Standard (E - A - D - G - B - E) and Bass Standard (E - A - D -G)
 
 
 #define KEY_GUITAR_TYPE          @"guitarType"

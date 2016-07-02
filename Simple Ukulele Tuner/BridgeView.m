@@ -257,6 +257,7 @@
     NSMutableArray *layoutConstraints = [NSMutableArray new];
     
     CGFloat height = [UIScreen mainScreen].applicationFrame.size.width / 5.5;
+    CGFloat offsetX = [UIScreen mainScreen].applicationFrame.size.width / 20.0;
     
     
     // Center vertically
@@ -274,8 +275,8 @@
                                                               relatedBy:NSLayoutRelationEqual
                                                                  toItem:self
                                                               attribute:NSLayoutAttributeLeft
-                                                             multiplier:1.05
-                                                               constant:0.0]];
+                                                             multiplier:1.0
+                                                               constant:-offsetX]];
     
     [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.arrowUpView
                                                               attribute:NSLayoutAttributeWidth
@@ -309,8 +310,8 @@
                                                               relatedBy:NSLayoutRelationEqual
                                                                  toItem:self
                                                               attribute:NSLayoutAttributeRight
-                                                             multiplier:1.05
-                                                               constant:0.0]];
+                                                             multiplier:1.0
+                                                               constant:offsetX]];
     
     [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.arrowDownView
                                                               attribute:NSLayoutAttributeWidth

@@ -109,7 +109,6 @@
 		1B2E12721D1FDD5100BD31C4 /* settingsPatternDark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042051C99FD23005103EC /* settingsPatternDark.png */; };
 		1B2E12731D1FDD5100BD31C4 /* arrowRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0421F1C99FD3D005103EC /* arrowRight.png */; };
 		1B2E12741D1FDD5100BD31C4 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041ED1C99FD0A005103EC /* settings.png */; };
-		1B2E12751D1FDD5100BD31C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041481C99F8C6005103EC /* Assets.xcassets */; };
 		1B2E12761D1FDD5100BD31C4 /* microphoneOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E51C99FD0A005103EC /* microphoneOn.png */; };
 		1B2E12771D1FDD5100BD31C4 /* autocorr_animated.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042201C99FD3D005103EC /* autocorr_animated.gif */; };
 		1B2E12781D1FDD5100BD31C4 /* stringActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EE1C99FD0A005103EC /* stringActive.png */; };
@@ -224,7 +223,6 @@
 		1B2E13061D1FDDA600BD31C4 /* settingsPatternDark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042051C99FD23005103EC /* settingsPatternDark.png */; };
 		1B2E13071D1FDDA600BD31C4 /* arrowRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0421F1C99FD3D005103EC /* arrowRight.png */; };
 		1B2E13081D1FDDA600BD31C4 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041ED1C99FD0A005103EC /* settings.png */; };
-		1B2E13091D1FDDA600BD31C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041481C99F8C6005103EC /* Assets.xcassets */; };
 		1B2E130A1D1FDDA600BD31C4 /* microphoneOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E51C99FD0A005103EC /* microphoneOn.png */; };
 		1B2E130B1D1FDDA600BD31C4 /* autocorr_animated.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042201C99FD3D005103EC /* autocorr_animated.gif */; };
 		1B2E130C1D1FDDA600BD31C4 /* stringActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EE1C99FD0A005103EC /* stringActive.png */; };
@@ -339,7 +337,6 @@
 		1B2E139A1D1FDDD100BD31C4 /* settingsPatternDark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042051C99FD23005103EC /* settingsPatternDark.png */; };
 		1B2E139B1D1FDDD100BD31C4 /* arrowRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0421F1C99FD3D005103EC /* arrowRight.png */; };
 		1B2E139C1D1FDDD100BD31C4 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041ED1C99FD0A005103EC /* settings.png */; };
-		1B2E139D1D1FDDD100BD31C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041481C99F8C6005103EC /* Assets.xcassets */; };
 		1B2E139E1D1FDDD100BD31C4 /* microphoneOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E51C99FD0A005103EC /* microphoneOn.png */; };
 		1B2E139F1D1FDDD100BD31C4 /* autocorr_animated.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042201C99FD3D005103EC /* autocorr_animated.gif */; };
 		1B2E13A01D1FDDD100BD31C4 /* stringActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EE1C99FD0A005103EC /* stringActive.png */; };
@@ -454,7 +451,6 @@
 		1B2E142E1D1FDE1300BD31C4 /* settingsPatternDark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042051C99FD23005103EC /* settingsPatternDark.png */; };
 		1B2E142F1D1FDE1300BD31C4 /* arrowRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0421F1C99FD3D005103EC /* arrowRight.png */; };
 		1B2E14301D1FDE1300BD31C4 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041ED1C99FD0A005103EC /* settings.png */; };
-		1B2E14311D1FDE1300BD31C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041481C99F8C6005103EC /* Assets.xcassets */; };
 		1B2E14321D1FDE1300BD31C4 /* microphoneOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E51C99FD0A005103EC /* microphoneOn.png */; };
 		1B2E14331D1FDE1300BD31C4 /* autocorr_animated.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042201C99FD3D005103EC /* autocorr_animated.gif */; };
 		1B2E14341D1FDE1300BD31C4 /* stringActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EE1C99FD0A005103EC /* stringActive.png */; };
@@ -510,11 +506,12 @@
 		1B2E14AE1D22914B00BD31C4 /* guit_inapppurchase_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14AD1D22914B00BD31C4 /* guit_inapppurchase_01.png */; };
 		1B2E14B01D22926F00BD31C4 /* guit_inapppurchase_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14AF1D22926F00BD31C4 /* guit_inapppurchase_02.png */; };
 		1B2E14B21D22933700BD31C4 /* guit_inapppurchase_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14B11D22933700BD31C4 /* guit_inapppurchase_03.png */; };
+		1B2E14B41D23C0C400BD31C4 /* Guitar_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14B31D23C0C400BD31C4 /* Guitar_Assets.xcassets */; };
+		1B2E14B51D23C54300BD31C4 /* Ukulele_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041481C99F8C6005103EC /* Ukulele_Assets.xcassets */; };
 		1B6C14411CCC026400C82B9B /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6C14401CCC026400C82B9B /* knob.png */; };
 		1BC0413E1C99F8C6005103EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0413D1C99F8C6005103EC /* main.m */; };
 		1BC041411C99F8C6005103EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041401C99F8C6005103EC /* AppDelegate.m */; };
 		1BC041441C99F8C6005103EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041431C99F8C6005103EC /* ViewController.m */; };
-		1BC041491C99F8C6005103EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041481C99F8C6005103EC /* Assets.xcassets */; };
 		1BC041581C99F9DA005103EC /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041551C99F9DA005103EC /* iRate.bundle */; };
 		1BC041591C99F9DA005103EC /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041571C99F9DA005103EC /* iRate.m */; };
 		1BC0415D1C99FA19005103EC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC0415C1C99FA19005103EC /* AudioToolbox.framework */; };
@@ -728,7 +725,6 @@
 		1BCCC2091D1FD6A200AD17D0 /* settingsPatternDark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042051C99FD23005103EC /* settingsPatternDark.png */; };
 		1BCCC20A1D1FD6A200AD17D0 /* arrowRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0421F1C99FD3D005103EC /* arrowRight.png */; };
 		1BCCC20B1D1FD6A200AD17D0 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041ED1C99FD0A005103EC /* settings.png */; };
-		1BCCC20C1D1FD6A200AD17D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041481C99F8C6005103EC /* Assets.xcassets */; };
 		1BCCC20D1D1FD6A200AD17D0 /* microphoneOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E51C99FD0A005103EC /* microphoneOn.png */; };
 		1BCCC20E1D1FD6A200AD17D0 /* autocorr_animated.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042201C99FD3D005103EC /* autocorr_animated.gif */; };
 		1BCCC20F1D1FD6A200AD17D0 /* stringActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EE1C99FD0A005103EC /* stringActive.png */; };
@@ -805,6 +801,7 @@
 		1B2E14AD1D22914B00BD31C4 /* guit_inapppurchase_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_inapppurchase_01.png; sourceTree = "<group>"; };
 		1B2E14AF1D22926F00BD31C4 /* guit_inapppurchase_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_inapppurchase_02.png; sourceTree = "<group>"; };
 		1B2E14B11D22933700BD31C4 /* guit_inapppurchase_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_inapppurchase_03.png; sourceTree = "<group>"; };
+		1B2E14B31D23C0C400BD31C4 /* Guitar_Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Guitar_Assets.xcassets; sourceTree = "<group>"; };
 		1B6C14401CCC026400C82B9B /* knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knob.png; sourceTree = "<group>"; };
 		1BC041391C99F8C6005103EC /* Simple Ukulele Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Ukulele Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC0413D1C99F8C6005103EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -812,7 +809,7 @@
 		1BC041401C99F8C6005103EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		1BC041421C99F8C6005103EC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1BC041431C99F8C6005103EC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		1BC041481C99F8C6005103EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1BC041481C99F8C6005103EC /* Ukulele_Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Ukulele_Assets.xcassets; sourceTree = "<group>"; };
 		1BC0414D1C99F8C6005103EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BC041531C99F985005103EC /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		1BC041551C99F9DA005103EC /* iRate.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = iRate.bundle; sourceTree = "<group>"; };
@@ -1394,7 +1391,7 @@
 				1BC0427A1C99FE11005103EC /* VersionManager.m */,
 				1B2E14721D21218E00BD31C4 /* InstrumentContext.h */,
 				1B2E14731D21218E00BD31C4 /* InstrumentContext.m */,
-				1BC041481C99F8C6005103EC /* Assets.xcassets */,
+				1BC041481C99F8C6005103EC /* Ukulele_Assets.xcassets */,
 				1BC041E11C99FCF7005103EC /* images */,
 				1BC041541C99F9C9005103EC /* iRate */,
 				1BC042701C99FDED005103EC /* Categories */,
@@ -1675,6 +1672,7 @@
 			isa = PBXGroup;
 			children = (
 				1BCCC1801D1FD5E800AD17D0 /* Supporting Files */,
+				1B2E14B31D23C0C400BD31C4 /* Guitar_Assets.xcassets */,
 			);
 			path = "Simple Guitar Tuner";
 			sourceTree = "<group>";
@@ -1924,7 +1922,6 @@
 				1B2E12721D1FDD5100BD31C4 /* settingsPatternDark.png in Resources */,
 				1B2E12731D1FDD5100BD31C4 /* arrowRight.png in Resources */,
 				1B2E12741D1FDD5100BD31C4 /* settings.png in Resources */,
-				1B2E12751D1FDD5100BD31C4 /* Assets.xcassets in Resources */,
 				1B2E12761D1FDD5100BD31C4 /* microphoneOn.png in Resources */,
 				1B2E12771D1FDD5100BD31C4 /* autocorr_animated.gif in Resources */,
 				1B2E12781D1FDD5100BD31C4 /* stringActive.png in Resources */,
@@ -1981,7 +1978,6 @@
 				1B2E13061D1FDDA600BD31C4 /* settingsPatternDark.png in Resources */,
 				1B2E13071D1FDDA600BD31C4 /* arrowRight.png in Resources */,
 				1B2E13081D1FDDA600BD31C4 /* settings.png in Resources */,
-				1B2E13091D1FDDA600BD31C4 /* Assets.xcassets in Resources */,
 				1B2E130A1D1FDDA600BD31C4 /* microphoneOn.png in Resources */,
 				1B2E130B1D1FDDA600BD31C4 /* autocorr_animated.gif in Resources */,
 				1B2E130C1D1FDDA600BD31C4 /* stringActive.png in Resources */,
@@ -2038,7 +2034,6 @@
 				1B2E139A1D1FDDD100BD31C4 /* settingsPatternDark.png in Resources */,
 				1B2E139B1D1FDDD100BD31C4 /* arrowRight.png in Resources */,
 				1B2E139C1D1FDDD100BD31C4 /* settings.png in Resources */,
-				1B2E139D1D1FDDD100BD31C4 /* Assets.xcassets in Resources */,
 				1B2E139E1D1FDDD100BD31C4 /* microphoneOn.png in Resources */,
 				1B2E139F1D1FDDD100BD31C4 /* autocorr_animated.gif in Resources */,
 				1B2E13A01D1FDDD100BD31C4 /* stringActive.png in Resources */,
@@ -2095,7 +2090,6 @@
 				1B2E142E1D1FDE1300BD31C4 /* settingsPatternDark.png in Resources */,
 				1B2E142F1D1FDE1300BD31C4 /* arrowRight.png in Resources */,
 				1B2E14301D1FDE1300BD31C4 /* settings.png in Resources */,
-				1B2E14311D1FDE1300BD31C4 /* Assets.xcassets in Resources */,
 				1B2E14321D1FDE1300BD31C4 /* microphoneOn.png in Resources */,
 				1B2E14331D1FDE1300BD31C4 /* autocorr_animated.gif in Resources */,
 				1B2E14341D1FDE1300BD31C4 /* stringActive.png in Resources */,
@@ -2167,11 +2161,11 @@
 				1BC042111C99FD23005103EC /* settingsPatternDark.png in Resources */,
 				1BC042341C99FD3D005103EC /* arrowRight.png in Resources */,
 				1BC041FD1C99FD0A005103EC /* settings.png in Resources */,
-				1BC041491C99F8C6005103EC /* Assets.xcassets in Resources */,
 				1BC041F51C99FD0A005103EC /* microphoneOn.png in Resources */,
 				1BC042351C99FD3D005103EC /* autocorr_animated.gif in Resources */,
 				1BC041FE1C99FD0A005103EC /* stringActive.png in Resources */,
 				1BC0417A1C99FBEB005103EC /* uke_en_manual3.html in Resources */,
+				1B2E14B51D23C54300BD31C4 /* Ukulele_Assets.xcassets in Resources */,
 				1BC042011C99FD0A005103EC /* tabPassive.png in Resources */,
 				1BC042421C99FD3D005103EC /* inapppurch_02.png in Resources */,
 				1BC0417D1C99FBEB005103EC /* uke_de_manual1.html in Resources */,
@@ -2228,6 +2222,7 @@
 				1B2E14971D22620800BD31C4 /* guit_en_manual7.html in Resources */,
 				1B2E148B1D22620800BD31C4 /* guit_de_manual2.html in Resources */,
 				1BCCC1F91D1FD6A200AD17D0 /* knob.png in Resources */,
+				1B2E14B41D23C0C400BD31C4 /* Guitar_Assets.xcassets in Resources */,
 				1BCCC1FA1D1FD6A200AD17D0 /* autocorr_01.png in Resources */,
 				1BCCC1FB1D1FD6A200AD17D0 /* iRate.bundle in Resources */,
 				1BCCC1FD1D1FD6A200AD17D0 /* style.css in Resources */,
@@ -2243,7 +2238,6 @@
 				1BCCC20A1D1FD6A200AD17D0 /* arrowRight.png in Resources */,
 				1B2E148F1D22620800BD31C4 /* guit_de_manual6.html in Resources */,
 				1BCCC20B1D1FD6A200AD17D0 /* settings.png in Resources */,
-				1BCCC20C1D1FD6A200AD17D0 /* Assets.xcassets in Resources */,
 				1B2E14A01D2288CB00BD31C4 /* guit_tuning_options.png in Resources */,
 				1B2E14B21D22933700BD31C4 /* guit_inapppurchase_03.png in Resources */,
 				1BCCC20D1D1FD6A200AD17D0 /* microphoneOn.png in Resources */,

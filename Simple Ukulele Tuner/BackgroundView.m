@@ -146,12 +146,11 @@
         CGFloat div = 4.0;
         
 #if defined(TARGET_BANJO)
-        posY = IS_IPAD ? 0.805*height/2 : 0.855*height/2;
-        div = 1.82;
+        posY = IS_IPAD ? 0.83*height/2 : 0.88*height/2; //IS_IPAD ? 0.805*height/2 : 0.855*height/2;
+        div = 2.05; //1.82;
         
         UIColor *banjoColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"banjoTexture.png"]];
-        
-        _circleView.backgroundColor = [banjoColor colorWithAlphaComponent:0.5];
+        _circleView.backgroundColor = [banjoColor colorWithAlphaComponent:0.75];
 #endif
         
         CAShapeLayer *shape = [CAShapeLayer layer];

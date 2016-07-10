@@ -33,6 +33,11 @@
         
         self.subtypeLabel.textAlignment = NSTextAlignmentCenter;
         self.subtypeLabel.textColor = OCTAVE_COLOR;
+        
+#if defined(TARGET_BANJO)
+        self.subtypeLabel.textColor = [UIColor colorWithRed:0.35 green:0.35 blue:0.35 alpha:1.0];
+#endif
+        
         [self.subtypeLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
         self.subtypeLabel.text = instrumentSubtype;
         

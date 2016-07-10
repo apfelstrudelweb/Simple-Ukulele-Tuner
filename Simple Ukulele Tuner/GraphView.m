@@ -8,8 +8,14 @@
 
 #import "GraphView.h"
 
-#define BACKGROUND_COLOR_DARK [UIColor colorWithRed:0.118 green:0.129 blue:0.157 alpha:1.0]
-#define BACKGROUND_COLOR_LIGHT [UIColor colorWithRed:0.118 green:0.129 blue:0.157 alpha:0.9]
+#if defined(TARGET_BANJO)
+    #define BACKGROUND_COLOR_DARK [UIColor colorWithRed:0.118 green:0.129 blue:0.157 alpha:0.9]
+    #define BACKGROUND_COLOR_LIGHT [UIColor colorWithRed:0.118 green:0.129 blue:0.157 alpha:0.85]
+#elif
+    #define BACKGROUND_COLOR_DARK [UIColor colorWithRed:0.118 green:0.129 blue:0.157 alpha:1.0]
+    #define BACKGROUND_COLOR_LIGHT [UIColor colorWithRed:0.118 green:0.129 blue:0.157 alpha:0.9]
+#endif
+
 
 
 @implementation GraphView
@@ -23,6 +29,8 @@
     gradient.frame = self.bounds;
     gradient.colors = @[(id)BACKGROUND_COLOR_LIGHT.CGColor, (id)BACKGROUND_COLOR_DARK.CGColor];
     gradient.locations = @[@0.0, @0.5, @1.0];
+    
+
     
     [self.layer addSublayer:gradient];
     

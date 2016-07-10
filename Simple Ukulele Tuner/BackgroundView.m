@@ -70,6 +70,7 @@
     } else {
         //[gradient removeFromSuperlayer];
         self.backgroundColor = (UIColor*)color;
+        
     }
     
     [self setNeedsDisplay];
@@ -141,10 +142,21 @@
         CGFloat width = screenRect.size.width;
         CGFloat height = screenRect.size.height;
         
-        CGFloat posY = IS_IPAD ? 0.6*height/2 : 0.65*height/2;
+        CGFloat posY = IS_IPAD ? 0.5*height/2 : 0.55*height/2;
+        CGFloat div = 4.0;
+        
+#if defined(TARGET_BANJO)
+        posY = IS_IPAD ? 0.805*height/2 : 0.855*height/2;
+        div = 1.82;
+        
+        UIColor *banjoColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"banjoTexture.png"]];
+        
+        _circleView.backgroundColor = [banjoColor colorWithAlphaComponent:0.5];
+#endif
         
         CAShapeLayer *shape = [CAShapeLayer layer];
-        UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(width/2, posY) radius:(width/4.0) startAngle:0 endAngle:(2 * M_PI) clockwise:YES];
+
+        UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(width/2, posY) radius:(width/div) startAngle:0 endAngle:(2 * M_PI) clockwise:YES];
         shape.path = path.CGPath;
         _circleView.layer.mask = shape;
         [_circleView setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -152,6 +164,7 @@
     
     return _circleView;
 }
+
 
 - (void)setupLayoutConstraints {
     

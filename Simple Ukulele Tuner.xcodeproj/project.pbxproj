@@ -11,6 +11,7 @@
 		1B0721501CC3DE7300102B13 /* uke_overtuning.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B07214F1CC3DE7300102B13 /* uke_overtuning.png */; };
 		1B0721521CC3DF2000102B13 /* uke_en_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B0721511CC3DF2000102B13 /* uke_en_manual7.html */; };
 		1B0721541CC3E64100102B13 /* uke_de_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B0721531CC3E64100102B13 /* uke_de_manual7.html */; };
+		1B0D55751D32E8FC00162F59 /* banjoTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0D55741D32E8FC00162F59 /* banjoTexture.png */; };
 		1B2E12001D1FDD5100BD31C4 /* Spectrum.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC042651C99FDE6005103EC /* Spectrum.m */; };
 		1B2E12011D1FDD5100BD31C4 /* Yin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0424C1C99FD6F005103EC /* Yin.mm */; };
 		1B2E12021D1FDD5100BD31C4 /* LedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041C01C99FC92005103EC /* LedView.m */; };
@@ -763,10 +764,10 @@
 /* Begin PBXFileReference section */
 		1B059C9E1D32B0C900FB70B5 /* Banjo_Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Banjo_Assets.xcassets; path = "Simple Banjo Tuner/Banjo_Assets.xcassets"; sourceTree = "<group>"; };
 		1B059CA01D32B13C00FB70B5 /* Banjo_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Banjo_Constants.h; sourceTree = "<group>"; };
-		1B059CA11D32CE4C00FB70B5 /* Banjo_Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Banjo_Assets.xcassets; path = "Simple Banjo Tuner/Banjo_Assets.xcassets"; sourceTree = "<group>"; };
 		1B07214F1CC3DE7300102B13 /* uke_overtuning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uke_overtuning.png; sourceTree = "<group>"; };
 		1B0721511CC3DF2000102B13 /* uke_en_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = uke_en_manual7.html; sourceTree = "<group>"; };
 		1B0721531CC3E64100102B13 /* uke_de_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = uke_de_manual7.html; sourceTree = "<group>"; };
+		1B0D55741D32E8FC00162F59 /* banjoTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjoTexture.png; sourceTree = "<group>"; };
 		1B2E12901D1FDD5100BD31C4 /* Simple Mandolin Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Mandolin Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2E13241D1FDDA600BD31C4 /* Simple Banjo Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Banjo Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2E13B81D1FDDD100BD31C4 /* Simple Violin Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Violin Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1355,7 +1356,6 @@
 		1BC041301C99F8C6005103EC = {
 			isa = PBXGroup;
 			children = (
-				1B059CA11D32CE4C00FB70B5 /* Banjo_Assets.xcassets */,
 				1BE7949E1C9B3D35001A5E72 /* Frameworks */,
 				1BE7948B1C9B3C95001A5E72 /* StartApp SDK */,
 				1BC0428C1C9A082D005103EC /* Root.plist */,
@@ -1565,6 +1565,7 @@
 				1BC042021C99FD11005103EC /* Settings */,
 				1BC041E21C99FD0A005103EC /* arrowDown.png */,
 				1BC041E31C99FD0A005103EC /* arrowUp.png */,
+				1B0D55741D32E8FC00162F59 /* banjoTexture.png */,
 				1BC041E41C99FD0A005103EC /* background4.png */,
 				1B2E14601D20262D00BD31C4 /* background5.png */,
 				1B2E14671D2026A900BD31C4 /* background6.png */,
@@ -1998,6 +1999,7 @@
 				1B2E13181D1FDDA600BD31C4 /* fft_01.png in Resources */,
 				1B2E131A1D1FDDA600BD31C4 /* microphoneOff.png in Resources */,
 				1B2E131B1D1FDDA600BD31C4 /* autocorr_02.png in Resources */,
+				1B0D55751D32E8FC00162F59 /* banjoTexture.png in Resources */,
 				1B2E131C1D1FDDA600BD31C4 /* gaugePatternGreen.png in Resources */,
 				1B2E131E1D1FDDA600BD31C4 /* ledActive.png in Resources */,
 				1B2E131F1D1FDDA600BD31C4 /* info.png in Resources */,

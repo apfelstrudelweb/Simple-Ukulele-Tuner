@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1B059C9F1D32B0C900FB70B5 /* Banjo_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B059C9E1D32B0C900FB70B5 /* Banjo_Assets.xcassets */; };
+		1B059CA31D32CF4B00FB70B5 /* Banjo_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B059C9E1D32B0C900FB70B5 /* Banjo_Assets.xcassets */; };
 		1B0721501CC3DE7300102B13 /* uke_overtuning.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B07214F1CC3DE7300102B13 /* uke_overtuning.png */; };
 		1B0721521CC3DF2000102B13 /* uke_en_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B0721511CC3DF2000102B13 /* uke_en_manual7.html */; };
 		1B0721541CC3E64100102B13 /* uke_de_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B0721531CC3E64100102B13 /* uke_de_manual7.html */; };
@@ -763,6 +763,7 @@
 /* Begin PBXFileReference section */
 		1B059C9E1D32B0C900FB70B5 /* Banjo_Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Banjo_Assets.xcassets; path = "Simple Banjo Tuner/Banjo_Assets.xcassets"; sourceTree = "<group>"; };
 		1B059CA01D32B13C00FB70B5 /* Banjo_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Banjo_Constants.h; sourceTree = "<group>"; };
+		1B059CA11D32CE4C00FB70B5 /* Banjo_Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Banjo_Assets.xcassets; path = "Simple Banjo Tuner/Banjo_Assets.xcassets"; sourceTree = "<group>"; };
 		1B07214F1CC3DE7300102B13 /* uke_overtuning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uke_overtuning.png; sourceTree = "<group>"; };
 		1B0721511CC3DF2000102B13 /* uke_en_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = uke_en_manual7.html; sourceTree = "<group>"; };
 		1B0721531CC3E64100102B13 /* uke_de_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = uke_de_manual7.html; sourceTree = "<group>"; };
@@ -1354,6 +1355,7 @@
 		1BC041301C99F8C6005103EC = {
 			isa = PBXGroup;
 			children = (
+				1B059CA11D32CE4C00FB70B5 /* Banjo_Assets.xcassets */,
 				1BE7949E1C9B3D35001A5E72 /* Frameworks */,
 				1BE7948B1C9B3C95001A5E72 /* StartApp SDK */,
 				1BC0428C1C9A082D005103EC /* Root.plist */,
@@ -1975,7 +1977,7 @@
 				1B2E146B1D2026A900BD31C4 /* background6.png in Resources */,
 				1B2E12FB1D1FDDA600BD31C4 /* close.png in Resources */,
 				1B2E12FE1D1FDDA600BD31C4 /* settingsTop.png in Resources */,
-				1B059C9F1D32B0C900FB70B5 /* Banjo_Assets.xcassets in Resources */,
+				1B059CA31D32CF4B00FB70B5 /* Banjo_Assets.xcassets in Resources */,
 				1B2E13001D1FDDA600BD31C4 /* calibrationButton.png in Resources */,
 				1B2E13021D1FDDA600BD31C4 /* stringPassive.png in Resources */,
 				1B2E13031D1FDDA600BD31C4 /* arrowUp.png in Resources */,

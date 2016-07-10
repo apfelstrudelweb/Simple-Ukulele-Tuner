@@ -19,7 +19,7 @@
 #elif defined(TARGET_MANDOLIN)
 // TODO: implement
 #elif defined(TARGET_BANJO)
-// TODO: implement
+    #import "Banjo_Constants.h"
 #elif defined(TARGET_VIOLIN)
 // TODO: implement
 #elif defined(TARGET_BALALAIKA)

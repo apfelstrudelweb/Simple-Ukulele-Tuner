@@ -66,6 +66,8 @@
 
 - (void) captureSound {
     
+    [[AVAudioSession sharedInstance] overrideOutputAudioPort:AVAudioSessionPortOverrideNone error:nil];
+    
     sensitivity = [[defaults stringForKey:KEY_SENSITIVITY] integerValue];
     
     __block CGFloat dbVal = 0.0;
@@ -112,9 +114,9 @@
         NSInteger numHops = 20;
         
         switch(sensitivity) {
-            case 1: numHops = 50; break;
-            case 2: numHops = 30; break;
-            case 3: numHops = 15; break;
+            case 1: numHops = 20; break;
+            case 2: numHops = 15; break;
+            case 3: numHops = 10; break;
             case 4: numHops = 5; break;
             case 5: numHops = 1; break;
         }

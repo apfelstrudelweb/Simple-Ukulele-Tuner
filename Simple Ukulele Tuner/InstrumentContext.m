@@ -67,12 +67,11 @@
 #if defined(TARGET_UKULELE)
     subtype = [defaults stringForKey:KEY_UKE_TYPE];
 #elif defined(TARGET_GUITAR)
-    //subtype = [[defaults stringForKey:KEY_GUITAR_TYPE] substringFromIndex:4];
     subtype = [defaults stringForKey:KEY_GUITAR_TYPE];
 #elif defined(TARGET_MANDOLIN)
     
 #elif defined(TARGET_BANJO)
-    
+    subtype = [defaults stringForKey:KEY_BANJO_TYPE];
 #elif defined(TARGET_VIOLIN)
     
 #elif defined(TARGET_BALALAIKA)

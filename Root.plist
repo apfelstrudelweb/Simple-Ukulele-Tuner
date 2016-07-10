@@ -93,6 +93,31 @@
                 <string>4 - Bass Drop C (C - A - D - G)</string>
             </array>
         </dict>
+        <dict>
+            <key>Type</key>
+            <string>PSMultiValueSpecifier</string>
+            <key>Title</key>
+            <string>BanjoType</string>
+            <key>Key</key>
+            <string>banjoType</string>
+            <key>DefaultValue</key>
+            <string>Soprano (G4 - C4 - E4 - A4)</string>
+            <key>Values</key>
+            <array>
+                <string>Sopranino (D5 - G4 - B4 - E5)</string>
+                <string>Sopranino (C5 - F4 - A4 - D5)</string>
+                <string>Soprano (A4 - D4 - F#4 - B4)</string>
+                <string>Soprano (G4 - C4 - E4 - A4)</string>
+                <string>Concert (A4 - D4 - F#4 - B4)</string>
+                <string>Concert (G4 - C4 - E4 - A4)</string>
+                <string>Tenor (A4 - D4 - F#4 - B4)</string>
+                <string>Tenor (G4 - C4 - E4 - A4)</string>
+                <string>Tenor (G3 - C4 - E4 - A4)</string>
+                <string>Tenor (D4 - G3 - B3 - E4)</string>
+                <string>Barritone (D3 - G3 - B3 - E4)</string>
+                <string>Bass (E1 - A1 - D2 - G2)</string>
+            </array>
+        </dict>
 	</array>
 	<key>StringsTable</key>
 	<string>Root</string>

@@ -32,12 +32,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    //    // TODO: REMOVE LATER, it's only for testing!
-    PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
-    [bindings setObject:version_premium forKey:UPGRADE_TYPE];
-    //[bindings setObject:version_instrument forKey:UPGRADE_TYPE];
-    //[bindings setObject:version_signal forKey:UPGRADE_TYPE];
-    //[bindings removeObjectForKey:UPGRADE_TYPE];
+//    //    // TODO: REMOVE LATER, it's only for testing!
+//    PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
+//    [bindings setObject:version_premium forKey:UPGRADE_TYPE];
+//    //[bindings setObject:version_instrument forKey:UPGRADE_TYPE];
+//    //[bindings setObject:version_signal forKey:UPGRADE_TYPE];
+//    [bindings removeObjectForKey:UPGRADE_TYPE];
     
     // Set the application defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -53,7 +53,8 @@
 #elif defined(TARGET_MANDOLIN)
     
 #elif defined(TARGET_BANJO)
-    
+    instrumentDefaults = [NSDictionary dictionaryWithObject:@"Soprano (G4 - C4 - E4 - A4)"
+                                                     forKey:@"banjoType"];
 #elif defined(TARGET_VIOLIN)
     
 #elif defined(TARGET_BALALAIKA)

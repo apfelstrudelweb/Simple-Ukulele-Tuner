@@ -31,10 +31,12 @@
     self = [super initWithFrame:frame];
     if (self) {
         
+#if !defined(TARGET_BANJO)
         self.ledView = [LedView new];
         [self.ledView setTranslatesAutoresizingMaskIntoConstraints:NO];
         [self addSubview:self.ledView];
         [self setupLedConstraints];
+#endif
         
         self.stringButtonView = [StringButtonView new];
         [self.stringButtonView setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -210,7 +212,16 @@
 - (void) setupStringButtonConstraints {
     NSMutableArray *layoutConstraints = [NSMutableArray new];
     
-    
+#if defined(TARGET_BANJO)
+    // Center vertically
+    [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.stringButtonView
+                                                              attribute:NSLayoutAttributeCenterY
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self
+                                                              attribute:NSLayoutAttributeCenterY
+                                                             multiplier:1.0
+                                                               constant:0.0]];
+#elif
     // Center vertically
     [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.stringButtonView
                                                               attribute:NSLayoutAttributeBaseline
@@ -219,6 +230,7 @@
                                                               attribute:NSLayoutAttributeBaseline
                                                              multiplier:1.0
                                                                constant:0.0]];
+#endif
     
     // Center horizontally
     [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.stringButtonView

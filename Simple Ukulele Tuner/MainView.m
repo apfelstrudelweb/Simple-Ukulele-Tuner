@@ -221,11 +221,11 @@
     NSString *backgrImgName;
     
     if (numberOfStrings == 4) {
-        backgrImgName = @"background4";
+        backgrImgName = @"banjo_background4";
     } else if (numberOfStrings == 5) {
-        backgrImgName = @"background5";
+        backgrImgName = @"banjo_background5";
     } else {
-        backgrImgName = @"background6";
+        backgrImgName = @"banjo_background6";
     }
 
     

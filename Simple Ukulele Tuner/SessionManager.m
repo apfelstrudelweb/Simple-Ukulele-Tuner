@@ -156,7 +156,7 @@
     instrumentDictionary = @{ BANJO_TYPE_01     : @[ @1,   @[@"D",@"G",@"B",@"E"],              @[@146.8,@196.0,@246.9,@329.6],                @1.0], // Chicago
                               BANJO_TYPE_02     : @[ @2,   @[@"G",@"D",@"G",@"B",@"D"],         @[@392.0,@146.8,@196.0,@246.9,@293.7],         @1.0], // Open G
                               BANJO_TYPE_03     : @[ @3,   @[@"G",@"G",@"D",@"G",@"B",@"D"],    @[@392.0,@98.0,@146.8,@196.0,@246.9,@293.7],   @1.0]  // Open G
-                              };
+                            };
 #elif defined(TARGET_VIOLIN)
     // TODO: implement
 #elif defined(TARGET_BALALAIKA)

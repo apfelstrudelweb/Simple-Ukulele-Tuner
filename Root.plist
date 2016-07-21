@@ -101,12 +101,16 @@
             <key>Key</key>
             <string>banjoType</string>
             <key>DefaultValue</key>
-            <string>Soprano (G4 - C4 - E4 - A4)</string>
+            <string>5 - Open G (G4 - D3 - G3 - B3 - D4)</string>
             <key>Values</key>
             <array>
-                <string>Chicago (D3 - G3 - B3 - E4)</string>
-                <string>Open G (G4 - D3 - G3 - B3 - D4)</string>
-                <string>Open G (G4 - G2 - D3 - G3 - B3 - D4)</string>
+                <string>4 - Chicago (D3 - G3 - B3 - E4)</string>
+                <string>4 - C (C3 - G3 - B3 - D4)</string>
+                <string>4 - Irish Tenor (G2 - D3 - A3 - E4)</string>
+                <string>4 - Open G (D3 - G3 - B3 - D4)</string>
+                <string>4 - Tenor (C3 - G3 - D4 - A4)</string>
+                <string>5 - Standard (G4 - D3 - G3 - B3 - D4)</string>
+                <string>6 - Open G (G4 - G2 - D3 - G3 - B3 - D4)</string>
             </array>
         </dict>
 	</array>

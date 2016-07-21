@@ -53,7 +53,7 @@
 #elif defined(TARGET_MANDOLIN)
     
 #elif defined(TARGET_BANJO)
-    instrumentDefaults = [NSDictionary dictionaryWithObject:@"Open G (G4 - D3 - G3 - B3 - D4)"
+    instrumentDefaults = [NSDictionary dictionaryWithObject:@"5 - Standard (G4 - D3 - G3 - B3 - D4)"
                                                      forKey:@"banjoType"];
 #elif defined(TARGET_VIOLIN)
     

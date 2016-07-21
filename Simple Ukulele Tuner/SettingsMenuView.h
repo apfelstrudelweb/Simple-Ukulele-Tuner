@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UpgradeView.h"
 
-@interface SettingsMenuView : UIView<UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
+@interface SettingsMenuView : UIView <UITableViewDelegate, UITableViewDataSource, UIScrollViewDelegate>
 
 @property (nonatomic, strong) UITableView* tableView;
 @property (strong, nonatomic) UpgradeView *upgradeView;

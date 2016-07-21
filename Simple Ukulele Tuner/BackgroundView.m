@@ -37,8 +37,10 @@
             self.backgroundColor = (UIColor*)color;
         }
         
+#if !defined(TARGET_BANJO)
         // draw sound hole as part of background image (guitar)
         [self addSubview:self.circleView];
+#endif
         [self addSubview:self.mainView];
         
         [self setupLayoutConstraints];
@@ -144,15 +146,7 @@
         
         CGFloat posY = IS_IPAD ? 0.5*height/2 : 0.55*height/2;
         CGFloat div = 4.0;
-        
-//#if defined(TARGET_BANJO)
-//        posY = IS_IPAD ? 0.83*height/2 : 0.88*height/2; //IS_IPAD ? 0.805*height/2 : 0.855*height/2;
-//        div = 2.05; //1.82;
-//        
-//        UIColor *banjoColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"banjoTexture.png"]];
-//        _circleView.backgroundColor = [banjoColor colorWithAlphaComponent:0.75];
-//#endif
-        
+
         CAShapeLayer *shape = [CAShapeLayer layer];
 
         UIBezierPath *path = [UIBezierPath bezierPathWithArcCenter:CGPointMake(width/2, posY) radius:(width/div) startAngle:0 endAngle:(2 * M_PI) clockwise:YES];
@@ -207,7 +201,8 @@
                                                               attribute:NSLayoutAttributeHeight
                                                              multiplier:1.0
                                                                constant:0.0]];
-    
+
+#if !defined(TARGET_BANJO)
     // CIRCLE VIEW
     
     // Center vertically
@@ -246,7 +241,7 @@
                                                               attribute:NSLayoutAttributeHeight
                                                              multiplier:1.0
                                                                constant:0.0]];
-    
+#endif
     // add all constraints at once
     [self addConstraints:layoutConstraints];
     

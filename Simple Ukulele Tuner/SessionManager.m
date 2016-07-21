@@ -154,22 +154,21 @@
     // TODO: implement
 #elif defined(TARGET_BANJO)
     instrumentDictionary = @{ BANJO_TYPE_01     : @[ @1,   @[@"D",@"G",@"B",@"E"],              @[@146.8,@196.0,@246.9,@329.6],                @1.0], // Chicago
-                              BANJO_TYPE_02     : @[ @2,   @[@"G",@"D",@"G",@"B",@"D"],         @[@392.0,@146.8,@196.0,@246.9,@293.7],         @1.0], // Open G
-                              BANJO_TYPE_03     : @[ @3,   @[@"G",@"G",@"D",@"G",@"B",@"D"],    @[@392.0,@98.0,@146.8,@196.0,@246.9,@293.7],   @1.0]  // Open G
+                              BANJO_TYPE_02     : @[ @2,   @[@"C",@"G",@"B",@"D"],              @[@130.8,@196.0,@246.9,@293.7],                @1.0], // C
+                              BANJO_TYPE_03     : @[ @3,   @[@"G",@"D",@"A",@"E"],              @[@98.0,@146.8,@220.0,@329.6],                @1.0], // Irish Tenor
+                              BANJO_TYPE_04     : @[ @4,   @[@"D",@"G",@"B",@"D"],              @[@146.8,@196.0,@246.9,@293.7],                @1.0], // Open G
+                              BANJO_TYPE_05     : @[ @5,   @[@"C",@"G",@"D",@"A"],              @[@130.8,@196.0,@293.7,@440.0],                @1.0], // Tenor
+                              
+                              BANJO_TYPE_06     : @[ @6,   @[@"G",@"D",@"G",@"B",@"D"],         @[@392.0,@146.8,@196.0,@246.9,@293.7],         @1.0], // Open G
+                              BANJO_TYPE_07     : @[ @7,   @[@"G",@"G",@"D",@"G",@"B",@"D"],    @[@392.0,@98.0,@146.8,@196.0,@246.9,@293.7],   @1.0]  // Open G
                             };
+
 #elif defined(TARGET_VIOLIN)
     // TODO: implement
 #elif defined(TARGET_BALALAIKA)
     // TODO: implement
 #endif
-    
-//#define BANJO_TYPE_01              @"Chicago (D3 - G3 - B3 - E4)"
-//    // 5 string
-//#define BANJO_TYPE_02              @"Open G (G4 - D3 - G3 - B3 - D4)"
-//    // 6 string
-//#define BANJO_TYPE_03              @"Open G (G4 - G2 - D3 - G3 - B3 - D4)"
 
-    
     return instrumentDictionary;
 }
 

@@ -43,8 +43,7 @@ typedef NSUInteger SECTION_DESCR;
     CAGradientLayer *gradient;
     
     CGFloat colorPrevCornerRadius;
-    
-    
+
     NSString* version;
     BOOL enableSubtypes;
     BOOL enableThemes;
@@ -91,7 +90,6 @@ typedef NSUInteger SECTION_DESCR;
         defaults = [NSUserDefaults standardUserDefaults];
         calibratedFrequency = [[defaults stringForKey:KEY_CALIBRATED_FREQUENCY] floatValue];
         
-
         subtypesArray = [SHARED_MANAGER getOrderedSubtypesArray];
         colorsArray = [SHARED_MANAGER getColorsArray];
         colorsDict = [SHARED_MANAGER getColorsDict];
@@ -113,8 +111,7 @@ typedef NSUInteger SECTION_DESCR;
         //self.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"settingsPattern.png"]];
         
         self.layer.cornerRadius = IS_IPAD ? 20.0 : 10.0;
-        
-        
+
         self.layer.shadowColor = [[UIColor blackColor] CGColor];
         self.layer.shadowRadius = shadowRadius;
         self.layer.shadowOpacity = 1;
@@ -172,12 +169,18 @@ typedef NSUInteger SECTION_DESCR;
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     switch (section) {
-        case INSTRUMENT_TYPE: return subtypesArray.count; // for instrument  subtypes
-        case SIGNAL: return 1;
-        case CALIBRATION: return 1;
-        case SENSITIVITY: return 1;
-        case THEME: return colorsDict.count;
-        default: return 1;                       // for restore button
+        case INSTRUMENT_TYPE:
+            return subtypesArray.count; // for instrument  subtypes
+        case SIGNAL:
+            return 1;
+        case CALIBRATION:
+            return 1;
+        case SENSITIVITY:
+            return 1;
+        case THEME:
+            return colorsDict.count;
+        default:
+            return 1;                  // for restore button
     }
 }
 
@@ -442,13 +445,13 @@ typedef NSUInteger SECTION_DESCR;
 #elif defined(TARGET_GUITAR)
     subtype = @"Guitar Type";
 #elif defined(TARGET_MANDOLIN)
-    
+    subtype = @"Mandolin Type";
 #elif defined(TARGET_BANJO)
-    
+    subtype = @"Banjo Type";
 #elif defined(TARGET_VIOLIN)
-    
+    subtype = @"Violin Type";
 #elif defined(TARGET_BALALAIKA)
-    
+    subtype = @"Balalaika Type";
 #endif
     
     
@@ -462,7 +465,6 @@ typedef NSUInteger SECTION_DESCR;
     }
     
     headerLabel.text = labelText;
-    
     headerLabel.font = [UIFont fontWithName:FONT_BOLD size:[UILabel getFontSizeForSubHeadline]];
     
     [view addSubview:headerLabel];

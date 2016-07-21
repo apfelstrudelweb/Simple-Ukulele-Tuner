@@ -512,7 +512,7 @@
 		1B2E14B51D23C54300BD31C4 /* Ukulele_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041481C99F8C6005103EC /* Ukulele_Assets.xcassets */; };
 		1B5C8C651D3ED7FC00977534 /* banjo_background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B5C8C641D3ED7FC00977534 /* banjo_background5.png */; };
 		1B6717891D402832004AE1A0 /* banjo_background6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717881D402832004AE1A0 /* banjo_background6.png */; };
-		1B67178B1D402942004AE1A0 /* banjo_background4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B67178A1D402942004AE1A0 /* banjo_background4.png */; };
+		1B67179B1D4177A2004AE1A0 /* banjo_background4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B67179A1D4177A2004AE1A0 /* banjo_background4.png */; };
 		1B6C14411CCC026400C82B9B /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6C14401CCC026400C82B9B /* knob.png */; };
 		1BC0413E1C99F8C6005103EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0413D1C99F8C6005103EC /* main.m */; };
 		1BC041411C99F8C6005103EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041401C99F8C6005103EC /* AppDelegate.m */; };
@@ -812,7 +812,7 @@
 		1B2E14B31D23C0C400BD31C4 /* Guitar_Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Guitar_Assets.xcassets; sourceTree = "<group>"; };
 		1B5C8C641D3ED7FC00977534 /* banjo_background5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_background5.png; sourceTree = "<group>"; };
 		1B6717881D402832004AE1A0 /* banjo_background6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_background6.png; sourceTree = "<group>"; };
-		1B67178A1D402942004AE1A0 /* banjo_background4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_background4.png; sourceTree = "<group>"; };
+		1B67179A1D4177A2004AE1A0 /* banjo_background4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_background4.png; sourceTree = "<group>"; };
 		1B6C14401CCC026400C82B9B /* knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knob.png; sourceTree = "<group>"; };
 		1BC041391C99F8C6005103EC /* Simple Ukulele Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Ukulele Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC0413D1C99F8C6005103EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1571,7 +1571,7 @@
 				1BC042021C99FD11005103EC /* Settings */,
 				1BC041E21C99FD0A005103EC /* arrowDown.png */,
 				1BC041E31C99FD0A005103EC /* arrowUp.png */,
-				1B67178A1D402942004AE1A0 /* banjo_background4.png */,
+				1B67179A1D4177A2004AE1A0 /* banjo_background4.png */,
 				1B5C8C641D3ED7FC00977534 /* banjo_background5.png */,
 				1B6717881D402832004AE1A0 /* banjo_background6.png */,
 				1B0D55741D32E8FC00162F59 /* banjoTexture.png */,
@@ -2009,7 +2009,7 @@
 				1B2E13171D1FDDA600BD31C4 /* arrowLeft.png in Resources */,
 				1B2E13181D1FDDA600BD31C4 /* fft_01.png in Resources */,
 				1B2E131A1D1FDDA600BD31C4 /* microphoneOff.png in Resources */,
-				1B67178B1D402942004AE1A0 /* banjo_background4.png in Resources */,
+				1B67179B1D4177A2004AE1A0 /* banjo_background4.png in Resources */,
 				1B2E131B1D1FDDA600BD31C4 /* autocorr_02.png in Resources */,
 				1B0D55751D32E8FC00162F59 /* banjoTexture.png in Resources */,
 				1B2E131C1D1FDDA600BD31C4 /* gaugePatternGreen.png in Resources */,

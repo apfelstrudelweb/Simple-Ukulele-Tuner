@@ -91,7 +91,7 @@
 #elif defined(TARGET_MANDOLIN)
     
 #elif defined(TARGET_BANJO)
-    
+    [defaults setObject:subtype forKey:KEY_BANJO_TYPE];
 #elif defined(TARGET_VIOLIN)
     
 #elif defined(TARGET_BALALAIKA)

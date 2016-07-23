@@ -40,7 +40,29 @@
 #if !defined(TARGET_BANJO)
         // draw sound hole as part of background image (guitar)
         [self addSubview:self.circleView];
+        
+#else
+        
+        CGRect screenRect = [[UIScreen mainScreen] bounds];
+        CGFloat width = screenRect.size.width;
+        CGFloat height = screenRect.size.height;
+        
+        CGFloat posY = IS_IPAD ? 0.51*height/2 : 0.55*height/2;
+        
+        CAShapeLayer *circle = [CAShapeLayer layer];
+        circle.path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0.02*width, posY, 0.96*width, 0.96*width) cornerRadius:0.48*width].CGPath;
+        
+        // Configure the apperence of the circle
+        circle.fillColor = [UIColor clearColor].CGColor;
+        circle.strokeColor = [UIColor whiteColor].CGColor;
+        circle.lineWidth = 1.0;
+        circle.lineDashPattern = @[@1, @1];
+        [[self layer] addSublayer:circle];
+        
 #endif
+        
+        
+        
         [self addSubview:self.mainView];
         
         [self setupLayoutConstraints];
@@ -134,11 +156,6 @@
 // draw the sound hole of the guitar (we don't use png for it)
 
 - (CircleView*) circleView {
-    
-    // TODO: dotted circle for banjo:
-    // circle.strokeColor = [UIColor whiteColor].CGColor;
-    // circle.lineWidth = 1;
-    // circle.lineDashPattern = @[@2, @3];
     
     if (_circleView == nil) {
         

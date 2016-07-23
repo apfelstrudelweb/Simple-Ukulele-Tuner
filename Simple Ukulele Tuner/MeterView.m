@@ -46,6 +46,11 @@
 #pragma mark - Notification
 -(void) updateWidth:(NSNotification *) notification {
 
+    
+
+#if defined(TARGET_BANJO)
+    meterWidth = 0.495;
+#else
     NSInteger numberOfStrings = [SHARED_CONTEXT getNumberOfStrings];
     
     if (numberOfStrings < 6) {
@@ -53,6 +58,7 @@
     } else {
         meterWidth = 0.66;
     }
+#endif
     
     [self setupConstraints];
 }

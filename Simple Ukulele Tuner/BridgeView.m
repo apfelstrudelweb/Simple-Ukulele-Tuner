@@ -219,7 +219,7 @@
                                                               relatedBy:NSLayoutRelationEqual
                                                                  toItem:self
                                                               attribute:NSLayoutAttributeCenterY
-                                                             multiplier:1.0
+                                                             multiplier:1.5
                                                                constant:0.0]];
 #elif
     // Center vertically

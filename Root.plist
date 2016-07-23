@@ -110,7 +110,14 @@
                 <string>4 - Open G (D3 - G3 - B3 - D4)</string>
                 <string>4 - Tenor (C3 - G3 - D4 - A4)</string>
                 <string>5 - Standard (G4 - D3 - G3 - B3 - D4)</string>
+                <string>5 - C (G4 - C3 - G3 - B3 - D4)</string>
+                <string>5 - Double C (G4 - C3 - G3 - C4 - D4)</string>
+                <string>5 - Oldtime D (A4 - D3 - A3 - D4 - E4)</string>
+                <string>5 - Open A (A4 - E3 - A3 - C#4 - E4)</string>
+                <string>5 - Open D (F#4 - D3 - F#3 - A3 - D4)</string>
+                <string>5 - Sawmill (G4 - D3 - G3 - C4 - D4)</string>
                 <string>6 - Open G (G4 - G2 - D3 - G3 - B3 - D4)</string>
+                <string>6 - Banjo Guitar (E2 - A2 - D3 - G3 - B3 - E4)</string>
             </array>
         </dict>
 	</array>

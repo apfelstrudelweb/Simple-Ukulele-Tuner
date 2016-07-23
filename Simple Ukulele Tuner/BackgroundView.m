@@ -47,7 +47,7 @@
         CGFloat width = screenRect.size.width;
         CGFloat height = screenRect.size.height;
         
-        CGFloat posY = IS_IPAD ? 0.51*height/2 : 0.55*height/2;
+        CGFloat posY = IS_IPAD ? 0.51*height/2 : 0.6*height/2;
         
         CAShapeLayer *circle = [CAShapeLayer layer];
         circle.path = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(0.02*width, posY, 0.96*width, 0.96*width) cornerRadius:0.48*width].CGPath;

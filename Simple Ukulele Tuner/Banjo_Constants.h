@@ -21,8 +21,15 @@
 #define BANJO_TYPE_05              @"4 - Tenor (C3 - G3 - D4 - A4)"
 // 5 string
 #define BANJO_TYPE_06              @"5 - Standard (G4 - D3 - G3 - B3 - D4)"
+#define BANJO_TYPE_07              @"5 - C (G4 - C3 - G3 - B3 - D4)"
+#define BANJO_TYPE_08              @"5 - Double C (G4 - C3 - G3 - C4 - D4)"
+#define BANJO_TYPE_09              @"5 - Oldtime D (A4 - D3 - A3 - D4 - E4)"
+#define BANJO_TYPE_10              @"5 - Open A (A4 - E3 - A3 - C#4 - E4)"
+#define BANJO_TYPE_11              @"5 - Open D (F#4 - D3 - F#3 - A3 - D4)"
+#define BANJO_TYPE_12              @"5 - Sawmill (G4 - D3 - G3 - C4 - D4)"
 // 6 string
-#define BANJO_TYPE_07              @"6 - Open G (G4 - G2 - D3 - G3 - B3 - D4)"
+#define BANJO_TYPE_13              @"6 - Open G (G4 - G2 - D3 - G3 - B3 - D4)"
+#define BANJO_TYPE_14              @"6 - Banjo Guitar (E2 - A2 - D3 - G3 - B3 - E4)"
 
 // Version
 #define version_lite            @"lite"

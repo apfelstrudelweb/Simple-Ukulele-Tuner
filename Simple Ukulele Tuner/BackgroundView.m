@@ -135,6 +135,11 @@
 
 - (CircleView*) circleView {
     
+    // TODO: dotted circle for banjo:
+    // circle.strokeColor = [UIColor whiteColor].CGColor;
+    // circle.lineWidth = 1;
+    // circle.lineDashPattern = @[@2, @3];
+    
     if (_circleView == nil) {
         
         _circleView = [CircleView new];

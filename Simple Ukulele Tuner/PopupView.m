@@ -53,7 +53,7 @@
 #elif defined(TARGET_MANDOLIN)
     
 #elif defined(TARGET_BANJO)
-    
+    instrumentPrefix = @"banjo";
 #elif defined(TARGET_VIOLIN)
     
 #elif defined(TARGET_BALALAIKA)

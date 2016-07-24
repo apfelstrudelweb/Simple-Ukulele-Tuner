@@ -513,6 +513,26 @@
 		1B67179B1D4177A2004AE1A0 /* banjo_background4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B67179A1D4177A2004AE1A0 /* banjo_background4.png */; };
 		1B67179F1D43FFF4004AE1A0 /* banjo_background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B67179E1D43FFF4004AE1A0 /* banjo_background5.png */; };
 		1B6717A11D4400CB004AE1A0 /* banjo_background6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717A01D4400CB004AE1A0 /* banjo_background6.png */; };
+		1B6717AD1D454D30004AE1A0 /* banjo_en_manual1.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717A61D454D30004AE1A0 /* banjo_en_manual1.html */; };
+		1B6717AE1D454D30004AE1A0 /* banjo_en_manual2.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717A71D454D30004AE1A0 /* banjo_en_manual2.html */; };
+		1B6717AF1D454D30004AE1A0 /* banjo_en_manual3.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717A81D454D30004AE1A0 /* banjo_en_manual3.html */; };
+		1B6717B01D454D30004AE1A0 /* banjo_en_manual4.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717A91D454D30004AE1A0 /* banjo_en_manual4.html */; };
+		1B6717B11D454D30004AE1A0 /* banjo_en_manual5.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717AA1D454D30004AE1A0 /* banjo_en_manual5.html */; };
+		1B6717B21D454D30004AE1A0 /* banjo_en_manual6.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717AB1D454D30004AE1A0 /* banjo_en_manual6.html */; };
+		1B6717B31D454D30004AE1A0 /* banjo_en_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717AC1D454D30004AE1A0 /* banjo_en_manual7.html */; };
+		1B6717BB1D454D46004AE1A0 /* banjo_de_manual1.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717B41D454D46004AE1A0 /* banjo_de_manual1.html */; };
+		1B6717BC1D454D46004AE1A0 /* banjo_de_manual2.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717B51D454D46004AE1A0 /* banjo_de_manual2.html */; };
+		1B6717BD1D454D46004AE1A0 /* banjo_de_manual3.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717B61D454D46004AE1A0 /* banjo_de_manual3.html */; };
+		1B6717BE1D454D46004AE1A0 /* banjo_de_manual4.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717B71D454D46004AE1A0 /* banjo_de_manual4.html */; };
+		1B6717BF1D454D46004AE1A0 /* banjo_de_manual5.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717B81D454D46004AE1A0 /* banjo_de_manual5.html */; };
+		1B6717C01D454D46004AE1A0 /* banjo_de_manual6.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717B91D454D46004AE1A0 /* banjo_de_manual6.html */; };
+		1B6717C11D454D46004AE1A0 /* banjo_de_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717BA1D454D46004AE1A0 /* banjo_de_manual7.html */; };
+		1B6717C31D455957004AE1A0 /* banjo_leds.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717C21D455957004AE1A0 /* banjo_leds.png */; };
+		1B6717C51D455BB0004AE1A0 /* banjo_subtypes_tuning.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717C41D455BB0004AE1A0 /* banjo_subtypes_tuning.png */; };
+		1B6717C71D455D6B004AE1A0 /* banjo_types_active.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717C61D455D6B004AE1A0 /* banjo_types_active.png */; };
+		1B6717C91D455F80004AE1A0 /* banjo_tuning_options.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717C81D455F80004AE1A0 /* banjo_tuning_options.png */; };
+		1B6717CB1D45624C004AE1A0 /* banjo_overtuning.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717CA1D45624C004AE1A0 /* banjo_overtuning.png */; };
+		1B6717CD1D456472004AE1A0 /* banjo_calibrated_tuning.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717CC1D456472004AE1A0 /* banjo_calibrated_tuning.png */; };
 		1B6C14411CCC026400C82B9B /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6C14401CCC026400C82B9B /* knob.png */; };
 		1BC0413E1C99F8C6005103EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0413D1C99F8C6005103EC /* main.m */; };
 		1BC041411C99F8C6005103EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041401C99F8C6005103EC /* AppDelegate.m */; };
@@ -813,6 +833,26 @@
 		1B67179A1D4177A2004AE1A0 /* banjo_background4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_background4.png; sourceTree = "<group>"; };
 		1B67179E1D43FFF4004AE1A0 /* banjo_background5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_background5.png; sourceTree = "<group>"; };
 		1B6717A01D4400CB004AE1A0 /* banjo_background6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_background6.png; sourceTree = "<group>"; };
+		1B6717A61D454D30004AE1A0 /* banjo_en_manual1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banjo_en_manual1.html; sourceTree = "<group>"; };
+		1B6717A71D454D30004AE1A0 /* banjo_en_manual2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banjo_en_manual2.html; sourceTree = "<group>"; };
+		1B6717A81D454D30004AE1A0 /* banjo_en_manual3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banjo_en_manual3.html; sourceTree = "<group>"; };
+		1B6717A91D454D30004AE1A0 /* banjo_en_manual4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banjo_en_manual4.html; sourceTree = "<group>"; };
+		1B6717AA1D454D30004AE1A0 /* banjo_en_manual5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banjo_en_manual5.html; sourceTree = "<group>"; };
+		1B6717AB1D454D30004AE1A0 /* banjo_en_manual6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banjo_en_manual6.html; sourceTree = "<group>"; };
+		1B6717AC1D454D30004AE1A0 /* banjo_en_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banjo_en_manual7.html; sourceTree = "<group>"; };
+		1B6717B41D454D46004AE1A0 /* banjo_de_manual1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banjo_de_manual1.html; sourceTree = "<group>"; };
+		1B6717B51D454D46004AE1A0 /* banjo_de_manual2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banjo_de_manual2.html; sourceTree = "<group>"; };
+		1B6717B61D454D46004AE1A0 /* banjo_de_manual3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banjo_de_manual3.html; sourceTree = "<group>"; };
+		1B6717B71D454D46004AE1A0 /* banjo_de_manual4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banjo_de_manual4.html; sourceTree = "<group>"; };
+		1B6717B81D454D46004AE1A0 /* banjo_de_manual5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banjo_de_manual5.html; sourceTree = "<group>"; };
+		1B6717B91D454D46004AE1A0 /* banjo_de_manual6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banjo_de_manual6.html; sourceTree = "<group>"; };
+		1B6717BA1D454D46004AE1A0 /* banjo_de_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banjo_de_manual7.html; sourceTree = "<group>"; };
+		1B6717C21D455957004AE1A0 /* banjo_leds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_leds.png; sourceTree = "<group>"; };
+		1B6717C41D455BB0004AE1A0 /* banjo_subtypes_tuning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_subtypes_tuning.png; sourceTree = "<group>"; };
+		1B6717C61D455D6B004AE1A0 /* banjo_types_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_types_active.png; sourceTree = "<group>"; };
+		1B6717C81D455F80004AE1A0 /* banjo_tuning_options.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_tuning_options.png; sourceTree = "<group>"; };
+		1B6717CA1D45624C004AE1A0 /* banjo_overtuning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_overtuning.png; sourceTree = "<group>"; };
+		1B6717CC1D456472004AE1A0 /* banjo_calibrated_tuning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_calibrated_tuning.png; sourceTree = "<group>"; };
 		1B6C14401CCC026400C82B9B /* knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knob.png; sourceTree = "<group>"; };
 		1BC041391C99F8C6005103EC /* Simple Ukulele Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Ukulele Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC0413D1C99F8C6005103EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1328,16 +1368,16 @@
 		1B2E149D1D226DCF00BD31C4 /* images */ = {
 			isa = PBXGroup;
 			children = (
-				1B2E149F1D2288CB00BD31C4 /* guit_tuning_options.png */,
-				1B2E14A11D228B7700BD31C4 /* guit_subtypes_tuning.png */,
-				1B2E14A31D228CA300BD31C4 /* guit_calibrated_tuning.png */,
-				1B2E14A51D228DC100BD31C4 /* guit_overtuning.png */,
-				1B2E14A71D228E9D00BD31C4 /* guit_leds.png */,
-				1B2E14A91D228F5500BD31C4 /* guit_types_active.png */,
-				1B2E14AB1D228FC000BD31C4 /* guit_types_inactive.png */,
 				1B2E14AD1D22914B00BD31C4 /* guit_inapppurchase_01.png */,
 				1B2E14AF1D22926F00BD31C4 /* guit_inapppurchase_02.png */,
 				1B2E14B11D22933700BD31C4 /* guit_inapppurchase_03.png */,
+				1B2E14A71D228E9D00BD31C4 /* guit_leds.png */,
+				1B2E14A11D228B7700BD31C4 /* guit_subtypes_tuning.png */,
+				1B2E14A91D228F5500BD31C4 /* guit_types_active.png */,
+				1B2E149F1D2288CB00BD31C4 /* guit_tuning_options.png */,
+				1B2E14A51D228DC100BD31C4 /* guit_overtuning.png */,
+				1B2E14A31D228CA300BD31C4 /* guit_calibrated_tuning.png */,
+				1B2E14AB1D228FC000BD31C4 /* guit_types_inactive.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -1357,6 +1397,57 @@
 				1BC0422E1C99FD3D005103EC /* uke_inapppurchase_03.png */,
 			);
 			name = images;
+			sourceTree = "<group>";
+		};
+		1B6717A21D454C80004AE1A0 /* banjo */ = {
+			isa = PBXGroup;
+			children = (
+				1B6717A41D454CF0004AE1A0 /* en */,
+				1B6717A51D454CF8004AE1A0 /* de */,
+				1B6717A31D454CB4004AE1A0 /* images */,
+			);
+			name = banjo;
+			sourceTree = "<group>";
+		};
+		1B6717A31D454CB4004AE1A0 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				1B6717C21D455957004AE1A0 /* banjo_leds.png */,
+				1B6717C41D455BB0004AE1A0 /* banjo_subtypes_tuning.png */,
+				1B6717C61D455D6B004AE1A0 /* banjo_types_active.png */,
+				1B6717C81D455F80004AE1A0 /* banjo_tuning_options.png */,
+				1B6717CA1D45624C004AE1A0 /* banjo_overtuning.png */,
+				1B6717CC1D456472004AE1A0 /* banjo_calibrated_tuning.png */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		1B6717A41D454CF0004AE1A0 /* en */ = {
+			isa = PBXGroup;
+			children = (
+				1B6717A61D454D30004AE1A0 /* banjo_en_manual1.html */,
+				1B6717A71D454D30004AE1A0 /* banjo_en_manual2.html */,
+				1B6717A81D454D30004AE1A0 /* banjo_en_manual3.html */,
+				1B6717A91D454D30004AE1A0 /* banjo_en_manual4.html */,
+				1B6717AA1D454D30004AE1A0 /* banjo_en_manual5.html */,
+				1B6717AB1D454D30004AE1A0 /* banjo_en_manual6.html */,
+				1B6717AC1D454D30004AE1A0 /* banjo_en_manual7.html */,
+			);
+			name = en;
+			sourceTree = "<group>";
+		};
+		1B6717A51D454CF8004AE1A0 /* de */ = {
+			isa = PBXGroup;
+			children = (
+				1B6717B41D454D46004AE1A0 /* banjo_de_manual1.html */,
+				1B6717B51D454D46004AE1A0 /* banjo_de_manual2.html */,
+				1B6717B61D454D46004AE1A0 /* banjo_de_manual3.html */,
+				1B6717B71D454D46004AE1A0 /* banjo_de_manual4.html */,
+				1B6717B81D454D46004AE1A0 /* banjo_de_manual5.html */,
+				1B6717B91D454D46004AE1A0 /* banjo_de_manual6.html */,
+				1B6717BA1D454D46004AE1A0 /* banjo_de_manual7.html */,
+			);
+			name = de;
 			sourceTree = "<group>";
 		};
 		1BC041301C99F8C6005103EC = {
@@ -1454,6 +1545,7 @@
 				1B2E149C1D226DB400BD31C4 /* generic_images */,
 				1B2E147B1D2261DC00BD31C4 /* guitar */,
 				1B2E147A1D225DFE00BD31C4 /* ukulele */,
+				1B6717A21D454C80004AE1A0 /* banjo */,
 				1BC0416C1C99FBEB005103EC /* style.css */,
 			);
 			name = HTML;
@@ -1965,12 +2057,17 @@
 				1B2E12DA1D1FDDA600BD31C4 /* Localizable.strings in Resources */,
 				1B2E12DB1D1FDDA600BD31C4 /* fft_02.png in Resources */,
 				1B67179F1D43FFF4004AE1A0 /* banjo_background5.png in Resources */,
+				1B6717BE1D454D46004AE1A0 /* banjo_de_manual4.html in Resources */,
+				1B6717C91D455F80004AE1A0 /* banjo_tuning_options.png in Resources */,
 				1B2E12DD1D1FDDA600BD31C4 /* closeButton.png in Resources */,
 				1B2E12DF1D1FDDA600BD31C4 /* gaugeBackground.png in Resources */,
+				1B6717BF1D454D46004AE1A0 /* banjo_de_manual5.html in Resources */,
+				1B6717C01D454D46004AE1A0 /* banjo_de_manual6.html in Resources */,
 				1B2E12E01D1FDDA600BD31C4 /* calibration_01.png in Resources */,
 				1B2E12E11D1FDDA600BD31C4 /* gaugePattern.png in Resources */,
 				1B2E12E31D1FDDA600BD31C4 /* Root.plist in Resources */,
 				1B2E12E51D1FDDA600BD31C4 /* settingsPattern.png in Resources */,
+				1B6717AE1D454D30004AE1A0 /* banjo_en_manual2.html in Resources */,
 				1B2E12E61D1FDDA600BD31C4 /* settingsMiddle.png in Resources */,
 				1B2E12E71D1FDDA600BD31C4 /* tabActive.png in Resources */,
 				1B6717A11D4400CB004AE1A0 /* banjo_background6.png in Resources */,
@@ -1982,6 +2079,7 @@
 				1B2E12F01D1FDDA600BD31C4 /* linePattern.png in Resources */,
 				1B2E12F41D1FDDA600BD31C4 /* shoppingCart.png in Resources */,
 				1B2E12F51D1FDDA600BD31C4 /* background4.png in Resources */,
+				1B6717C51D455BB0004AE1A0 /* banjo_subtypes_tuning.png in Resources */,
 				1B2E12F61D1FDDA600BD31C4 /* knob.png in Resources */,
 				1B2E12F71D1FDDA600BD31C4 /* autocorr_01.png in Resources */,
 				1B2E12F81D1FDDA600BD31C4 /* iRate.bundle in Resources */,
@@ -1990,17 +2088,26 @@
 				1B2E12FB1D1FDDA600BD31C4 /* close.png in Resources */,
 				1B2E12FE1D1FDDA600BD31C4 /* settingsTop.png in Resources */,
 				1B059CA31D32CF4B00FB70B5 /* Banjo_Assets.xcassets in Resources */,
+				1B6717AD1D454D30004AE1A0 /* banjo_en_manual1.html in Resources */,
 				1B2E13001D1FDDA600BD31C4 /* calibrationButton.png in Resources */,
+				1B6717B01D454D30004AE1A0 /* banjo_en_manual4.html in Resources */,
+				1B6717BB1D454D46004AE1A0 /* banjo_de_manual1.html in Resources */,
+				1B6717C11D454D46004AE1A0 /* banjo_de_manual7.html in Resources */,
 				1B2E13021D1FDDA600BD31C4 /* stringPassive.png in Resources */,
+				1B6717B21D454D30004AE1A0 /* banjo_en_manual6.html in Resources */,
 				1B2E13031D1FDDA600BD31C4 /* arrowUp.png in Resources */,
+				1B6717CB1D45624C004AE1A0 /* banjo_overtuning.png in Resources */,
 				1B2E13041D1FDDA600BD31C4 /* offButton.png in Resources */,
 				1B2E13051D1FDDA600BD31C4 /* fft_animated.gif in Resources */,
+				1B6717B31D454D30004AE1A0 /* banjo_en_manual7.html in Resources */,
 				1B2E13061D1FDDA600BD31C4 /* settingsPatternDark.png in Resources */,
+				1B6717BD1D454D46004AE1A0 /* banjo_de_manual3.html in Resources */,
 				1B2E13071D1FDDA600BD31C4 /* arrowRight.png in Resources */,
 				1B2E13081D1FDDA600BD31C4 /* settings.png in Resources */,
 				1B2E130A1D1FDDA600BD31C4 /* microphoneOn.png in Resources */,
 				1B2E130B1D1FDDA600BD31C4 /* autocorr_animated.gif in Resources */,
 				1B2E130C1D1FDDA600BD31C4 /* stringActive.png in Resources */,
+				1B6717C31D455957004AE1A0 /* banjo_leds.png in Resources */,
 				1B2E130E1D1FDDA600BD31C4 /* tabPassive.png in Resources */,
 				1B2E130F1D1FDDA600BD31C4 /* inapppurch_02.png in Resources */,
 				1B2E13121D1FDDA600BD31C4 /* restoreButton.png in Resources */,
@@ -2008,11 +2115,16 @@
 				1B2E13151D1FDDA600BD31C4 /* onButton.png in Resources */,
 				1B2E13171D1FDDA600BD31C4 /* arrowLeft.png in Resources */,
 				1B2E13181D1FDDA600BD31C4 /* fft_01.png in Resources */,
+				1B6717AF1D454D30004AE1A0 /* banjo_en_manual3.html in Resources */,
 				1B2E131A1D1FDDA600BD31C4 /* microphoneOff.png in Resources */,
+				1B6717B11D454D30004AE1A0 /* banjo_en_manual5.html in Resources */,
 				1B67179B1D4177A2004AE1A0 /* banjo_background4.png in Resources */,
 				1B2E131B1D1FDDA600BD31C4 /* autocorr_02.png in Resources */,
+				1B6717BC1D454D46004AE1A0 /* banjo_de_manual2.html in Resources */,
 				1B0D55751D32E8FC00162F59 /* banjoTexture.png in Resources */,
+				1B6717CD1D456472004AE1A0 /* banjo_calibrated_tuning.png in Resources */,
 				1B2E131C1D1FDDA600BD31C4 /* gaugePatternGreen.png in Resources */,
+				1B6717C71D455D6B004AE1A0 /* banjo_types_active.png in Resources */,
 				1B2E131E1D1FDDA600BD31C4 /* ledActive.png in Resources */,
 				1B2E131F1D1FDDA600BD31C4 /* info.png in Resources */,
 				1B2E13201D1FDDA600BD31C4 /* ledPassive.png in Resources */,

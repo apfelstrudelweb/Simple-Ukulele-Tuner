@@ -368,6 +368,7 @@ typedef NSUInteger SECTION_DESCR;
     if (enableSignal==NO && section == SIGNAL) {
         imv.image = PURCHASE;
         if (blockUserInteraction==YES) {
+            imv.alpha = 0.2;
             imvPick.alpha = 0.2;
         }
     }
@@ -384,6 +385,7 @@ typedef NSUInteger SECTION_DESCR;
         slider.alpha = enableSignal ? 1.0 : 0.2;
         if (blockUserInteraction==YES) {
             imvPick.alpha = 0.2;
+            imv.alpha = 0.2;
         }
     }
     if (enableThemes==NO && section == THEME && row != 0) {

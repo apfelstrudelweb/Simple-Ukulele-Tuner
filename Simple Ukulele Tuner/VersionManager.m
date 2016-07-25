@@ -43,7 +43,7 @@
 #elif defined(TARGET_MANDOLIN)
         
 #elif defined(TARGET_BANJO)
-        
+        inAppPurchaseArray = BANJO_INAPP_PURCHASE_ARRAY;
 #elif defined(TARGET_VIOLIN)
         
 #elif defined(TARGET_BALALAIKA)
@@ -134,7 +134,9 @@
 #elif defined(TARGET_MANDOLIN)
     
 #elif defined(TARGET_BANJO)
-    
+    upgradeOptionPremium = banjo_inAppPurchasePremium;
+    upgradeOptionInstrument = banjo_inAppPurchaseBanjo;
+    upgradeOptionSignal = banjo_inAppPurchaseSignal;
 #elif defined(TARGET_VIOLIN)
     
 #elif defined(TARGET_BALALAIKA)

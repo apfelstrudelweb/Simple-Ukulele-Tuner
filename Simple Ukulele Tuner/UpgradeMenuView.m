@@ -223,7 +223,13 @@
 #elif defined(TARGET_MANDOLIN)
     
 #elif defined(TARGET_BANJO)
-    
+    if ([productID isEqualToString:banjo_inAppPurchasePremium]) {
+        [SHARED_VERSION_MANAGER setCurrentVersion:version_premium];
+    } else if ([productID isEqualToString:banjo_inAppPurchaseBanjo]) {
+        [SHARED_VERSION_MANAGER setCurrentVersion:version_instrument];
+    } else if ([productID isEqualToString:banjo_inAppPurchaseSignal]) {
+        [SHARED_VERSION_MANAGER setCurrentVersion:version_signal];
+    }
 #elif defined(TARGET_VIOLIN)
     
 #elif defined(TARGET_BALALAIKA)

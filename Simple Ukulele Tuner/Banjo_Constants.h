@@ -9,7 +9,7 @@
 #ifndef Banjo_Constants_h
 #define Banjo_Constants_h
 
-#define APPSTORE_ID @"1095159631"
+#define APPSTORE_ID @"1132968868"
 #define STANDARD_SUBTYPE             @[@5] // 5 - Standard (G4 - D3 - G3 - B3 - D4)
 
 #define KEY_BANJO_TYPE             @"banjoType"
@@ -32,12 +32,12 @@
 #define BANJO_TYPE_14              @"6 - Banjo Guitar (E2 - A2 - D3 - G3 - B3 - E4)"
 
 // Version
-#define version_lite            @"lite"
-#define version_instrument      @"instrument"
-#define version_signal          @"signal"
-#define version_premium         @"premium"
+#define version_lite                @"lite"
+#define version_instrument          @"instrument"
+#define version_signal              @"signal"
+#define version_premium             @"premium"
 
-#define banjo_inAppPurchaseUke        @"ch.vormbrock.simplebanjotuner.allbanjo"
+#define banjo_inAppPurchaseBanjo      @"ch.vormbrock.simplebanjotuner.allbanjo"
 #define banjo_inAppPurchaseSignal     @"ch.vormbrock.simplebanjotuner.signalplus"
 #define banjo_inAppPurchasePremium    @"ch.vormbrock.simplebanjotuner.premium"
 #define BANJO_INAPP_PURCHASE_ARRAY    @[banjo_inAppPurchasePremium, banjo_inAppPurchaseBanjo, banjo_inAppPurchaseSignal]

@@ -37,7 +37,7 @@
     [bindings setObject:version_premium forKey:UPGRADE_TYPE];
     //[bindings setObject:version_instrument forKey:UPGRADE_TYPE];
     //[bindings setObject:version_signal forKey:UPGRADE_TYPE];
-    //[bindings removeObjectForKey:UPGRADE_TYPE];
+    [bindings removeObjectForKey:UPGRADE_TYPE];
     
     // Set the application defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -109,7 +109,7 @@
         splashPreferences.splashTemplateAppName = @"Simple Mandolin Tuner";
         //[[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
 #elif defined(TARGET_BANJO)
-        sdk.appID = @"????";
+        sdk.appID = @"206512769";
         splashPreferences.splashTemplateAppName = @"Simple Banjo Tuner";
         //[[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
 #elif defined(TARGET_VIOLIN)

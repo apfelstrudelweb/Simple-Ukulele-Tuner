@@ -45,6 +45,7 @@
 // Categories
 #import "UILabel+uvo.h"
 #import "UIView+uvo.h"
+#import "UIViewController+uvo.h"
 
 #import "HitImageView.h"
 

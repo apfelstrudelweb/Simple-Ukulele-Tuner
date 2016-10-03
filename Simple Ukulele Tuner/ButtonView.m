@@ -88,12 +88,22 @@
     AVAudioSessionRecordPermission sessionRecordPermission = [session recordPermission];
     
     if (sessionRecordPermission == AVAudioSessionRecordPermissionDenied) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Microphone disabled"
-                                                        message:@"You must first enable the microphone for this app. Go to Settings -> Simple Ukulele Tuner and turn the microphone switch on."
-                                                       delegate:nil
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
+
+        UIAlertController * alert = [UIAlertController
+                                     alertControllerWithTitle:@"Microphone disabled"
+                                     message:@"You must first enable the microphone for this app. Go to Settings -> Simple Ukulele Tuner and turn the microphone switch on."
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* okButton = [UIAlertAction
+                                   actionWithTitle:@"OK"
+                                   style:UIAlertActionStyleCancel
+                                   handler:nil];
+        
+        [alert addAction:okButton];
+        
+        UIViewController *currentTopVC = [UIViewController currentTopViewController];
+        [currentTopVC presentViewController:alert animated:YES completion:nil];
+        
         return;
     }
     
@@ -117,6 +127,7 @@
     self.settingsButton.enabled = !microphoneIsActive;
     
 }
+
 
 - (void)handleEnteredBackground:(NSNotification *) notification {
     

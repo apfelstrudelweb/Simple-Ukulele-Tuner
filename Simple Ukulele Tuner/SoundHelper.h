@@ -6,10 +6,7 @@
 //  Copyright (c) 2015 Vormbrock. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-#import <AVFoundation/AVAudioSession.h>
-#import <AVFoundation/AVAudioPlayer.h>
-
+#import <AVFoundation/AVFoundation.h>
 
 @interface SoundHelper : NSObject {
 @public

@@ -155,13 +155,29 @@
     
     if ( (440.0 - selectedFreq > 10.0) || (selectedFreq - 440.0) > 60.0 ) {
         
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Warning"
+        /*UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Warning"
                                                           message:@"The calibration frequency must be between 430 Hz and 500 Hz."
                                                          delegate:nil
                                                 cancelButtonTitle:@"OK"
                                                 otherButtonTitles:nil];
         
-        [message show];
+        [message show]; */
+        
+        
+        UIAlertController * alert = [UIAlertController
+                                     alertControllerWithTitle:@"Warning"
+                                     message:@"The calibration frequency must be between 430 Hz and 500 Hz."
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* okButton = [UIAlertAction
+                                   actionWithTitle:@"OK"
+                                   style:UIAlertActionStyleCancel
+                                   handler:nil];
+        
+        [alert addAction:okButton];
+        
+        UIViewController *currentTopVC = [UIViewController currentTopViewController];
+        [currentTopVC presentViewController:alert animated:YES completion:nil];
         
         return;
     }

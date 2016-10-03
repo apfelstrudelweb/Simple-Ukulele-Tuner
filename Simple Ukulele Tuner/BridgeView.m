@@ -221,7 +221,7 @@
                                                               attribute:NSLayoutAttributeCenterY
                                                              multiplier:1.5
                                                                constant:0.0]];
-#elif
+#elif (TARGET_GUITAR || TARGET_UKULELE)
     // Center vertically
     [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.stringButtonView
                                                               attribute:NSLayoutAttributeBaseline
@@ -268,8 +268,8 @@
     
     NSMutableArray *layoutConstraints = [NSMutableArray new];
     
-    CGFloat height = [UIScreen mainScreen].applicationFrame.size.width / 5.5;
-    CGFloat offsetX = [UIScreen mainScreen].applicationFrame.size.width / 20.0;
+    CGFloat height = [UIScreen mainScreen].bounds.size.width / 5.5;
+    CGFloat offsetX = [UIScreen mainScreen].bounds.size.width / 20.0;
     
     
     // Center vertically

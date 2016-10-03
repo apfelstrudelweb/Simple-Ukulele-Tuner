@@ -10,6 +10,7 @@
 #import <StartApp/StartApp.h>
 #import <HockeySDK/HockeySDK.h>
 
+
 @interface AppDelegate () {
     int numberOfAwakenings;
 }
@@ -28,6 +29,8 @@
     
     [iRate sharedInstance].promptForNewVersionIfUserRated = YES;
     
+    //[iRate sharedInstance].previewMode = YES;
+    
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
@@ -37,7 +40,7 @@
     [bindings setObject:version_premium forKey:UPGRADE_TYPE];
     //[bindings setObject:version_instrument forKey:UPGRADE_TYPE];
     //[bindings setObject:version_signal forKey:UPGRADE_TYPE];
-    //[bindings removeObjectForKey:UPGRADE_TYPE];
+    [bindings removeObjectForKey:UPGRADE_TYPE];
     
     // Set the application defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];

@@ -118,7 +118,7 @@
         imageStopBtn =  [self resizeImage:imageStopBtn toScale:0.5];
     }
     
-    UIEdgeInsets imageInsets = IS_IPAD ? UIEdgeInsetsMake(50, 0, 20, 0) : UIEdgeInsetsMake(30, 0, 10, 0);
+    UIEdgeInsets imageInsets = IS_IPAD ? UIEdgeInsetsMake(50, 0, 30, 0) : UIEdgeInsetsMake(30, 0, 20, 0);
     
     
     self.backBtn = [[UIBarButtonItem alloc] initWithImage:imageBackBtn style:UIBarButtonItemStylePlain target:self action:@selector(actionBack:)];

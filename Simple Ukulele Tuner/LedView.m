@@ -331,7 +331,7 @@
         
         CGFloat fact = 2.5*(num + offset)/len;
         
-        CGFloat width = [UIScreen mainScreen].applicationFrame.size.width / 15.0;
+        CGFloat width = [UIScreen mainScreen].bounds.size.width / 15.0;
         
         
         // Center horizontally

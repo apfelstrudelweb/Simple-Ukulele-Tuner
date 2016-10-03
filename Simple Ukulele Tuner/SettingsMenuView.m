@@ -516,12 +516,20 @@ typedef NSUInteger SECTION_DESCR;
     if (blockUserInteraction==YES && isShoppingCartSymbol==YES) {
         
         // Display an error here.
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No data available"
-                                                        message:@"The products could not be loaded from the App Store. Please try again later."
-                                                       delegate:self
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
+        UIAlertController * alert = [UIAlertController
+                                     alertControllerWithTitle:@"No data available"
+                                     message:@"The products could not be loaded from the App Store. Please try again later."
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* okButton = [UIAlertAction
+                                   actionWithTitle:@"OK"
+                                   style:UIAlertActionStyleCancel
+                                   handler:nil];
+        
+        [alert addAction:okButton];
+        
+        UIViewController *currentTopVC = [UIViewController currentTopViewController];
+        [currentTopVC presentViewController:alert animated:YES completion:nil];
         
         return;
     }
@@ -706,12 +714,22 @@ typedef NSUInteger SECTION_DESCR;
     NSLog(@"received restored transactions: %lu", (unsigned long)queue.transactions.count);
     
     if (queue.transactions.count == 0) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"No Restore"
-                                                        message:@"You have no available features to restore."
-                                                       delegate:self
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
+        
+        UIAlertController * alert = [UIAlertController
+                                     alertControllerWithTitle:@"No Restore"
+                                     message:@"You have no available features to restore."
+                                     preferredStyle:UIAlertControllerStyleAlert];
+        
+        UIAlertAction* okButton = [UIAlertAction
+                                   actionWithTitle:@"OK"
+                                   style:UIAlertActionStyleCancel
+                                   handler:nil];
+        
+        [alert addAction:okButton];
+        
+        UIViewController *currentTopVC = [UIViewController currentTopViewController];
+        [currentTopVC presentViewController:alert animated:YES completion:nil];
+        
         return;
     }
     
@@ -757,12 +775,20 @@ typedef NSUInteger SECTION_DESCR;
         [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateVersionNotification" object:nil];
     });
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Restore Successful"
-                                                    message:@"Your restore has been successfully completed."
-                                                   delegate:self
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"Restore Successful"
+                                 message:@"Your restore has been successfully completed."
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* okButton = [UIAlertAction
+                               actionWithTitle:@"OK"
+                               style:UIAlertActionStyleCancel
+                               handler:nil];
+    
+    [alert addAction:okButton];
+    
+    UIViewController *currentTopVC = [UIViewController currentTopViewController];
+    [currentTopVC presentViewController:alert animated:YES completion:nil];
     
 }
 
@@ -770,12 +796,20 @@ typedef NSUInteger SECTION_DESCR;
 - (void)paymentQueue:(SKPaymentQueue *)queue restoreCompletedTransactionsFailedWithError:(NSError *)error {
     [self.loadingView removeFromSuperview];
     
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Restore Unsuccessful"
-                                                    message:@"Your restore could not be completed."
-                                                   delegate:self
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
-    [alert show];
+    UIAlertController * alert = [UIAlertController
+                                 alertControllerWithTitle:@"Restore Unsuccessful"
+                                 message:@"Your restore could not be completed."
+                                 preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* okButton = [UIAlertAction
+                               actionWithTitle:@"OK"
+                               style:UIAlertActionStyleCancel
+                               handler:nil];
+    
+    [alert addAction:okButton];
+    
+    UIViewController *currentTopVC = [UIViewController currentTopViewController];
+    [currentTopVC presentViewController:alert animated:YES completion:nil];
 }
 
 - (void) addThrobber {
@@ -912,6 +946,7 @@ typedef NSUInteger SECTION_DESCR;
     [self.tableView reloadSections:[NSIndexSet indexSetWithIndex:SENSITIVITY] withRowAnimation: UITableViewRowAnimationNone];
     [self.tableView endUpdates];
 }
+
 
 -(void)dealloc {
     //NSLog(@"%s", __PRETTY_FUNCTION__);

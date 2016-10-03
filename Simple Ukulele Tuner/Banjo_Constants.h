@@ -9,7 +9,7 @@
 #ifndef Banjo_Constants_h
 #define Banjo_Constants_h
 
-#define APPSTORE_ID @"1132968868"
+#define APPSTORE_ID @"1132968868" 
 #define STANDARD_SUBTYPE             @[@5] // 5 - Standard (G4 - D3 - G3 - B3 - D4)
 
 #define KEY_BANJO_TYPE             @"banjoType"

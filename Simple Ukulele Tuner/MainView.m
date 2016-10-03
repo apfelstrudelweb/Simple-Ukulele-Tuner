@@ -220,6 +220,7 @@
     
     NSString *backgrImgName;
     
+#if defined(TARGET_BANJO)
     if (numberOfStrings == 4) {
         backgrImgName = @"banjo_background4";
     } else if (numberOfStrings == 5) {
@@ -227,6 +228,15 @@
     } else {
         backgrImgName = @"banjo_background6";
     }
+#else
+    if (numberOfStrings == 4) {
+        backgrImgName = @"background4";
+    } else if (numberOfStrings == 5) {
+        backgrImgName = @"background5";
+    } else {
+        backgrImgName = @"background6";
+    }
+#endif
 
     
     UIGraphicsBeginImageContext(self.frame.size);

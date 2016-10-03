@@ -210,7 +210,6 @@
 		1B2E12EF1D1FDDA600BD31C4 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1BE7948C1C9B3CA6001A5E72 /* StartApp.bundle */; };
 		1B2E12F01D1FDDA600BD31C4 /* linePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042031C99FD23005103EC /* linePattern.png */; };
 		1B2E12F41D1FDDA600BD31C4 /* shoppingCart.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0420C1C99FD23005103EC /* shoppingCart.png */; };
-		1B2E12F51D1FDDA600BD31C4 /* background4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E41C99FD0A005103EC /* background4.png */; };
 		1B2E12F61D1FDDA600BD31C4 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6C14401CCC026400C82B9B /* knob.png */; };
 		1B2E12F71D1FDDA600BD31C4 /* autocorr_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042251C99FD3D005103EC /* autocorr_01.png */; };
 		1B2E12F81D1FDDA600BD31C4 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041551C99F9DA005103EC /* iRate.bundle */; };
@@ -470,11 +469,9 @@
 		1B2E14481D1FDE1300BD31C4 /* ledPassive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EC1C99FD0A005103EC /* ledPassive.png */; };
 		1B2E14621D20262D00BD31C4 /* background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14601D20262D00BD31C4 /* background5.png */; };
 		1B2E14631D20262D00BD31C4 /* background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14601D20262D00BD31C4 /* background5.png */; };
-		1B2E14641D20262D00BD31C4 /* background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14601D20262D00BD31C4 /* background5.png */; };
 		1B2E14651D20262D00BD31C4 /* background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14601D20262D00BD31C4 /* background5.png */; };
 		1B2E14661D20262D00BD31C4 /* background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14601D20262D00BD31C4 /* background5.png */; };
 		1B2E146A1D2026A900BD31C4 /* background6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14671D2026A900BD31C4 /* background6.png */; };
-		1B2E146B1D2026A900BD31C4 /* background6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14671D2026A900BD31C4 /* background6.png */; };
 		1B2E146C1D2026A900BD31C4 /* background6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14671D2026A900BD31C4 /* background6.png */; };
 		1B2E146D1D2026A900BD31C4 /* background6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14671D2026A900BD31C4 /* background6.png */; };
 		1B2E146E1D204E1200BD31C4 /* background6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14671D2026A900BD31C4 /* background6.png */; };
@@ -510,6 +507,12 @@
 		1B2E14B21D22933700BD31C4 /* guit_inapppurchase_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14B11D22933700BD31C4 /* guit_inapppurchase_03.png */; };
 		1B2E14B41D23C0C400BD31C4 /* Guitar_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14B31D23C0C400BD31C4 /* Guitar_Assets.xcassets */; };
 		1B2E14B51D23C54300BD31C4 /* Ukulele_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041481C99F8C6005103EC /* Ukulele_Assets.xcassets */; };
+		1B6319981DA2A6CE005524AC /* UIViewController+uvo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6319971DA2A6CE005524AC /* UIViewController+uvo.m */; };
+		1B6319991DA2A6CE005524AC /* UIViewController+uvo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6319971DA2A6CE005524AC /* UIViewController+uvo.m */; };
+		1B63199A1DA2A6CE005524AC /* UIViewController+uvo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6319971DA2A6CE005524AC /* UIViewController+uvo.m */; };
+		1B63199B1DA2A6CE005524AC /* UIViewController+uvo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6319971DA2A6CE005524AC /* UIViewController+uvo.m */; };
+		1B63199C1DA2A6CE005524AC /* UIViewController+uvo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6319971DA2A6CE005524AC /* UIViewController+uvo.m */; };
+		1B63199D1DA2A6CE005524AC /* UIViewController+uvo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6319971DA2A6CE005524AC /* UIViewController+uvo.m */; };
 		1B67179B1D4177A2004AE1A0 /* banjo_background4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B67179A1D4177A2004AE1A0 /* banjo_background4.png */; };
 		1B67179F1D43FFF4004AE1A0 /* banjo_background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B67179E1D43FFF4004AE1A0 /* banjo_background5.png */; };
 		1B6717A11D4400CB004AE1A0 /* banjo_background6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717A01D4400CB004AE1A0 /* banjo_background6.png */; };
@@ -834,6 +837,8 @@
 		1B2E14AF1D22926F00BD31C4 /* guit_inapppurchase_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_inapppurchase_02.png; sourceTree = "<group>"; };
 		1B2E14B11D22933700BD31C4 /* guit_inapppurchase_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_inapppurchase_03.png; sourceTree = "<group>"; };
 		1B2E14B31D23C0C400BD31C4 /* Guitar_Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Guitar_Assets.xcassets; sourceTree = "<group>"; };
+		1B6319961DA2A6CE005524AC /* UIViewController+uvo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+uvo.h"; sourceTree = "<group>"; };
+		1B6319971DA2A6CE005524AC /* UIViewController+uvo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+uvo.m"; sourceTree = "<group>"; };
 		1B67179A1D4177A2004AE1A0 /* banjo_background4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_background4.png; sourceTree = "<group>"; };
 		1B67179E1D43FFF4004AE1A0 /* banjo_background5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_background5.png; sourceTree = "<group>"; };
 		1B6717A01D4400CB004AE1A0 /* banjo_background6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_background6.png; sourceTree = "<group>"; };
@@ -1785,6 +1790,8 @@
 				1BC042721C99FDFC005103EC /* UILabel+uvo.m */,
 				1BC042731C99FDFC005103EC /* UIView+uvo.h */,
 				1BC042741C99FDFC005103EC /* UIView+uvo.m */,
+				1B6319961DA2A6CE005524AC /* UIViewController+uvo.h */,
+				1B6319971DA2A6CE005524AC /* UIViewController+uvo.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -1948,7 +1955,7 @@
 		1BC041311C99F8C6005103EC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Ulrich Vormbrock";
 				TargetAttributes = {
 					1B2E11FE1D1FDD5100BD31C4 = {
@@ -2091,13 +2098,11 @@
 				1B2E12EF1D1FDDA600BD31C4 /* StartApp.bundle in Resources */,
 				1B2E12F01D1FDDA600BD31C4 /* linePattern.png in Resources */,
 				1B2E12F41D1FDDA600BD31C4 /* shoppingCart.png in Resources */,
-				1B2E12F51D1FDDA600BD31C4 /* background4.png in Resources */,
 				1B6717C51D455BB0004AE1A0 /* banjo_subtypes_tuning.png in Resources */,
 				1B2E12F61D1FDDA600BD31C4 /* knob.png in Resources */,
 				1B2E12F71D1FDDA600BD31C4 /* autocorr_01.png in Resources */,
 				1B2E12F81D1FDDA600BD31C4 /* iRate.bundle in Resources */,
 				1B2E12FA1D1FDDA600BD31C4 /* style.css in Resources */,
-				1B2E146B1D2026A900BD31C4 /* background6.png in Resources */,
 				1B2E12FB1D1FDDA600BD31C4 /* close.png in Resources */,
 				1B2E12FE1D1FDDA600BD31C4 /* settingsTop.png in Resources */,
 				1B059CA31D32CF4B00FB70B5 /* Banjo_Assets.xcassets in Resources */,
@@ -2127,7 +2132,6 @@
 				1B2E130E1D1FDDA600BD31C4 /* tabPassive.png in Resources */,
 				1B2E130F1D1FDDA600BD31C4 /* inapppurch_02.png in Resources */,
 				1B2E13121D1FDDA600BD31C4 /* restoreButton.png in Resources */,
-				1B2E14641D20262D00BD31C4 /* background5.png in Resources */,
 				1B2E13151D1FDDA600BD31C4 /* onButton.png in Resources */,
 				1B2E13171D1FDDA600BD31C4 /* arrowLeft.png in Resources */,
 				1B2E13181D1FDDA600BD31C4 /* fft_01.png in Resources */,
@@ -2445,6 +2449,7 @@
 				1B2E12101D1FDD5100BD31C4 /* Graph.m in Sources */,
 				1B2E12111D1FDD5100BD31C4 /* TabView.m in Sources */,
 				1B2E12121D1FDD5100BD31C4 /* HitImageView.m in Sources */,
+				1B63199A1DA2A6CE005524AC /* UIViewController+uvo.m in Sources */,
 				1B2E12131D1FDD5100BD31C4 /* BasicGaugeView.m in Sources */,
 				1B2E12141D1FDD5100BD31C4 /* BackgroundView.m in Sources */,
 				1B2E12151D1FDD5100BD31C4 /* GraphView.m in Sources */,
@@ -2505,6 +2510,7 @@
 				1B2E12A41D1FDDA600BD31C4 /* Graph.m in Sources */,
 				1B2E12A51D1FDDA600BD31C4 /* TabView.m in Sources */,
 				1B2E12A61D1FDDA600BD31C4 /* HitImageView.m in Sources */,
+				1B63199B1DA2A6CE005524AC /* UIViewController+uvo.m in Sources */,
 				1B2E12A71D1FDDA600BD31C4 /* BasicGaugeView.m in Sources */,
 				1B2E12A81D1FDDA600BD31C4 /* BackgroundView.m in Sources */,
 				1B2E12A91D1FDDA600BD31C4 /* GraphView.m in Sources */,
@@ -2565,6 +2571,7 @@
 				1B2E13381D1FDDD100BD31C4 /* Graph.m in Sources */,
 				1B2E13391D1FDDD100BD31C4 /* TabView.m in Sources */,
 				1B2E133A1D1FDDD100BD31C4 /* HitImageView.m in Sources */,
+				1B63199C1DA2A6CE005524AC /* UIViewController+uvo.m in Sources */,
 				1B2E133B1D1FDDD100BD31C4 /* BasicGaugeView.m in Sources */,
 				1B2E133C1D1FDDD100BD31C4 /* BackgroundView.m in Sources */,
 				1B2E133D1D1FDDD100BD31C4 /* GraphView.m in Sources */,
@@ -2625,6 +2632,7 @@
 				1B2E13CC1D1FDE1300BD31C4 /* Graph.m in Sources */,
 				1B2E13CD1D1FDE1300BD31C4 /* TabView.m in Sources */,
 				1B2E13CE1D1FDE1300BD31C4 /* HitImageView.m in Sources */,
+				1B63199D1DA2A6CE005524AC /* UIViewController+uvo.m in Sources */,
 				1B2E13CF1D1FDE1300BD31C4 /* BasicGaugeView.m in Sources */,
 				1B2E13D01D1FDE1300BD31C4 /* BackgroundView.m in Sources */,
 				1B2E13D11D1FDE1300BD31C4 /* GraphView.m in Sources */,
@@ -2685,6 +2693,7 @@
 				1BC0426D1C99FDE6005103EC /* Graph.m in Sources */,
 				1BC041B01C99FC76005103EC /* TabView.m in Sources */,
 				1BC041D81C99FCC8005103EC /* HitImageView.m in Sources */,
+				1B6319981DA2A6CE005524AC /* UIViewController+uvo.m in Sources */,
 				1BC041C31C99FC92005103EC /* BasicGaugeView.m in Sources */,
 				1BC041E01C99FCDA005103EC /* BackgroundView.m in Sources */,
 				1BC041AF1C99FC76005103EC /* GraphView.m in Sources */,
@@ -2745,6 +2754,7 @@
 				1BCCC1A71D1FD6A200AD17D0 /* Graph.m in Sources */,
 				1BCCC1A81D1FD6A200AD17D0 /* TabView.m in Sources */,
 				1BCCC1A91D1FD6A200AD17D0 /* HitImageView.m in Sources */,
+				1B6319991DA2A6CE005524AC /* UIViewController+uvo.m in Sources */,
 				1BCCC1AA1D1FD6A200AD17D0 /* BasicGaugeView.m in Sources */,
 				1BCCC1AB1D1FD6A200AD17D0 /* BackgroundView.m in Sources */,
 				1BCCC1AC1D1FD6A200AD17D0 /* GraphView.m in Sources */,
@@ -2864,13 +2874,14 @@
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = P2EQM7YAFH;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_BANJO;
 				INFOPLIST_FILE = "Simple Banjo Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
@@ -2889,13 +2900,14 @@
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = P2EQM7YAFH;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_BANJO;
 				INFOPLIST_FILE = "Simple Banjo Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
@@ -3010,6 +3022,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -3019,8 +3032,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -3054,6 +3069,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -3063,8 +3079,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -3101,7 +3119,7 @@
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_UKULELE;
 				INFOPLIST_FILE = "Simple Ukulele Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
@@ -3124,7 +3142,7 @@
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_UKULELE;
 				INFOPLIST_FILE = "Simple Ukulele Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
@@ -3142,13 +3160,14 @@
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = P2EQM7YAFH;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_GUITAR;
 				INFOPLIST_FILE = "Simple Guitar Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
@@ -3167,13 +3186,14 @@
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = P2EQM7YAFH;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_GUITAR;
 				INFOPLIST_FILE = "Simple Guitar Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";

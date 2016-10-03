@@ -105,14 +105,23 @@
     
     if (transaction.error.code != SKErrorPaymentCancelled){
         // Display an error here.
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Purchase Unsuccessful"
-                                                        message:@"Your purchase failed. Please try again."
-                                                       delegate:self
-                                              cancelButtonTitle:@"OK"
-                                              otherButtonTitles:nil];
-        [alert show];
+        UIAlertController * alert = [UIAlertController
+                                     alertControllerWithTitle:@"Purchase Unsuccessful"
+                                     message:@"Your purchase failed. Please try again."
+                                     preferredStyle:UIAlertControllerStyleAlert];
+
+        UIAlertAction* okButton = [UIAlertAction
+                                    actionWithTitle:@"OK"
+                                    style:UIAlertActionStyleCancel
+                                    handler:nil];
+
+        [alert addAction:okButton];
+
+        UIViewController *currentTopVC = [UIViewController currentTopViewController];
+        [currentTopVC presentViewController:alert animated:YES completion:nil];
     }
 }
+
 
 
 #pragma mark - UITableViewDataSource

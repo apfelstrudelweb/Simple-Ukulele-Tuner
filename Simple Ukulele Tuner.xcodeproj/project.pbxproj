@@ -3119,7 +3119,7 @@
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_UKULELE;
 				INFOPLIST_FILE = "Simple Ukulele Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
@@ -3142,7 +3142,7 @@
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_UKULELE;
 				INFOPLIST_FILE = "Simple Ukulele Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";

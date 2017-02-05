@@ -136,7 +136,7 @@
 #define TONE_DIST 1.0595
 #define REF_FREQUENCY             440.0
 
-#define NUM_SEC_PLAYTONE          1.5 * NSEC_PER_SEC
+#define NUM_SEC_PLAYTONE          3.0 * NSEC_PER_SEC
 
 // basic tones ("Grundtöne")
 #define BASIC_FREQUENCIES @[@16.35, @17.32, @18.35, @19.45, @20.60, @21.83, @23.12, @24.50, @25.96, @27.50, @29.14, @30.87]

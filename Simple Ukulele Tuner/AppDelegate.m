@@ -36,8 +36,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //    // TODO: REMOVE LATER, it's only for testing!
-    PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
-    [bindings setObject:version_premium forKey:UPGRADE_TYPE];
+    //PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
+    //[bindings setObject:version_premium forKey:UPGRADE_TYPE];
     //[bindings setObject:version_instrument forKey:UPGRADE_TYPE];
     //[bindings setObject:version_signal forKey:UPGRADE_TYPE];
     //[bindings removeObjectForKey:UPGRADE_TYPE];

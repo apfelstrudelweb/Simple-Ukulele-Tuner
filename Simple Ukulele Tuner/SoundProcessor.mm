@@ -114,10 +114,10 @@
         NSInteger numHops = 20;
         
         switch(sensitivity) {
-            case 1: numHops = 20; break;
-            case 2: numHops = 15; break;
-            case 3: numHops = 10; break;
-            case 4: numHops = 5; break;
+            case 1: numHops = 12; break;
+            case 2: numHops = 8; break;
+            case 3: numHops = 5; break;
+            case 4: numHops = 3; break;
             case 5: numHops = 1; break;
         }
         

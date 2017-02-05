@@ -36,8 +36,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //    // TODO: REMOVE LATER, it's only for testing!
-    //PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
-    //[bindings setObject:version_premium forKey:UPGRADE_TYPE];
+    PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
+    [bindings setObject:version_premium forKey:UPGRADE_TYPE];
     //[bindings setObject:version_instrument forKey:UPGRADE_TYPE];
     //[bindings setObject:version_signal forKey:UPGRADE_TYPE];
     //[bindings removeObjectForKey:UPGRADE_TYPE];
@@ -124,7 +124,7 @@
         splashPreferences.splashTemplateAppName = @"Simple Balalaika Tuner";
         //[[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
 #endif
-        [sdk showSplashAdWithPreferences:splashPreferences];
+        //[sdk showSplashAdWithPreferences:splashPreferences];
         
     } else {
         [NSThread sleepForTimeInterval:TIME_SPLASHSCREEN];

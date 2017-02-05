@@ -12,6 +12,12 @@
 		1B0721521CC3DF2000102B13 /* uke_en_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B0721511CC3DF2000102B13 /* uke_en_manual7.html */; };
 		1B0721541CC3E64100102B13 /* uke_de_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B0721531CC3E64100102B13 /* uke_de_manual7.html */; };
 		1B0D55751D32E8FC00162F59 /* banjoTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0D55741D32E8FC00162F59 /* banjoTexture.png */; };
+		1B277A0C1DA2DE6000702EF7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E145A1D1FE44B00BD31C4 /* Info.plist */; };
+		1B277A0D1DA2DE6600702EF7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14561D1FE3FA00BD31C4 /* Info.plist */; };
+		1B277A0E1DA2DE6B00702EF7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14521D1FE2C000BD31C4 /* Info.plist */; };
+		1B277A0F1DA2DE6F00702EF7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1BCCC1911D1FD5E800AD17D0 /* Info.plist */; };
+		1B277A101DA2DE7400702EF7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0414D1C99F8C6005103EC /* Info.plist */; };
+		1B277A111DA2DE8000702EF7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E145E1D1FE47800BD31C4 /* Info.plist */; };
 		1B2E12001D1FDD5100BD31C4 /* Spectrum.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC042651C99FDE6005103EC /* Spectrum.m */; };
 		1B2E12011D1FDD5100BD31C4 /* Yin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0424C1C99FD6F005103EC /* Yin.mm */; };
 		1B2E12021D1FDD5100BD31C4 /* LedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041C01C99FC92005103EC /* LedView.m */; };
@@ -2065,6 +2071,7 @@
 				1B2E12881D1FDD5100BD31C4 /* gaugePatternGreen.png in Resources */,
 				1B2E128A1D1FDD5100BD31C4 /* ledActive.png in Resources */,
 				1B2E128B1D1FDD5100BD31C4 /* info.png in Resources */,
+				1B277A0E1DA2DE6B00702EF7 /* Info.plist in Resources */,
 				1B2E128C1D1FDD5100BD31C4 /* ledPassive.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2101,6 +2108,7 @@
 				1B6717C51D455BB0004AE1A0 /* banjo_subtypes_tuning.png in Resources */,
 				1B2E12F61D1FDDA600BD31C4 /* knob.png in Resources */,
 				1B2E12F71D1FDDA600BD31C4 /* autocorr_01.png in Resources */,
+				1B277A0D1DA2DE6600702EF7 /* Info.plist in Resources */,
 				1B2E12F81D1FDDA600BD31C4 /* iRate.bundle in Resources */,
 				1B2E12FA1D1FDDA600BD31C4 /* style.css in Resources */,
 				1B2E12FB1D1FDDA600BD31C4 /* close.png in Resources */,
@@ -2203,6 +2211,7 @@
 				1B2E13B01D1FDDD100BD31C4 /* gaugePatternGreen.png in Resources */,
 				1B2E13B21D1FDDD100BD31C4 /* ledActive.png in Resources */,
 				1B2E13B31D1FDDD100BD31C4 /* info.png in Resources */,
+				1B277A0C1DA2DE6000702EF7 /* Info.plist in Resources */,
 				1B2E13B41D1FDDD100BD31C4 /* ledPassive.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2259,6 +2268,7 @@
 				1B2E14441D1FDE1300BD31C4 /* gaugePatternGreen.png in Resources */,
 				1B2E14461D1FDE1300BD31C4 /* ledActive.png in Resources */,
 				1B2E14471D1FDE1300BD31C4 /* info.png in Resources */,
+				1B277A111DA2DE8000702EF7 /* Info.plist in Resources */,
 				1B2E14481D1FDE1300BD31C4 /* ledPassive.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2288,6 +2298,7 @@
 				1B0721501CC3DE7300102B13 /* uke_overtuning.png in Resources */,
 				1BC0423F1C99FD3D005103EC /* uke_inapppurchase_01.png in Resources */,
 				1BC0417F1C99FBEB005103EC /* uke_de_manual3.html in Resources */,
+				1B277A101DA2DE7400702EF7 /* Info.plist in Resources */,
 				1BC042411C99FD3D005103EC /* inapppurch_01.png in Resources */,
 				1BE7948E1C9B3CA6001A5E72 /* StartApp.bundle in Resources */,
 				1BC0420F1C99FD23005103EC /* linePattern.png in Resources */,
@@ -2369,6 +2380,7 @@
 				1BCCC1F11D1FD6A200AD17D0 /* inapppurch_01.png in Resources */,
 				1BCCC1F21D1FD6A200AD17D0 /* StartApp.bundle in Resources */,
 				1BCCC1F31D1FD6A200AD17D0 /* linePattern.png in Resources */,
+				1B277A0F1DA2DE6F00702EF7 /* Info.plist in Resources */,
 				1B2E14921D22620800BD31C4 /* guit_en_manual2.html in Resources */,
 				1B2E14961D22620800BD31C4 /* guit_en_manual6.html in Resources */,
 				1BCCC1F71D1FD6A200AD17D0 /* shoppingCart.png in Resources */,

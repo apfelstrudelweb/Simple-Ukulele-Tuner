@@ -75,7 +75,7 @@
 #elif defined(TARGET_VIOLIN)
     
 #elif defined(TARGET_BALALAIKA)
-    
+    subtype = [defaults stringForKey:KEY_BALALAIKA_TYPE];
 #endif
     return subtype;
 }
@@ -95,7 +95,7 @@
 #elif defined(TARGET_VIOLIN)
     
 #elif defined(TARGET_BALALAIKA)
-    
+    [defaults setObject:subtype forKey:KEY_BALALAIKA_TYPE];
 #endif
     
     [defaults synchronize];

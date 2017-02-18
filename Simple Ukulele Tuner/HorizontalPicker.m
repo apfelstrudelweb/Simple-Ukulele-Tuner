@@ -82,6 +82,9 @@
     self.scrollView.layer.borderColor = BORDER_COLOR.CGColor;
     //self.scrollView.backgroundColor = [UIColor whiteColor];
     self.scrollView.layer.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:GAUGE_BG]].CGColor;
+#if defined(TARGET_BALALAIKA)
+    self.scrollView.layer.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:GAUGE_BG_BINGO]].CGColor;
+#endif
     self.scrollView.showsVerticalScrollIndicator = NO;
     self.scrollView.showsHorizontalScrollIndicator = NO;
     self.scrollView.pagingEnabled = NO;

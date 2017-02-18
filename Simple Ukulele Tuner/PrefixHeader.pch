@@ -23,7 +23,7 @@
 #elif defined(TARGET_VIOLIN)
 // TODO: implement
 #elif defined(TARGET_BALALAIKA)
-// TODO: implement
+    #import "Balalaika_Constants.h"
 #endif
 
 

@@ -49,6 +49,21 @@
         defaults = [NSUserDefaults standardUserDefaults];
         NSString* colorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
         [self.headerBackgroundView setBackgroundColor:[SHARED_MANAGER getHeaderColor:colorString]];
+  
+        // special default header for balalaika
+#if defined(TARGET_BALALAIKA)
+        if ([[SHARED_MANAGER getHeaderColor:colorString] isEqual:HEADER_BACKGROUND_COLOR_01]) {
+            UIGraphicsBeginImageContext(self.headerBackgroundView.frame.size);
+            [[UIImage imageNamed:@"header.png"] drawInRect:self.headerBackgroundView.bounds];
+            UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+            UIGraphicsEndImageContext();
+            self.headerBackgroundView.backgroundColor = [UIColor colorWithPatternImage:image];
+        }
+#endif
+        
+        
+        
+  
         
         [self addSubview:self.headerBackgroundView];
         
@@ -88,6 +103,17 @@
     
     NSString* colorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
     [self.headerBackgroundView setBackgroundColor:[SHARED_MANAGER getHeaderColor:colorString]];
+    
+    // special default header for balalaika
+#if defined(TARGET_BALALAIKA)
+    if ([[SHARED_MANAGER getHeaderColor:colorString] isEqual:HEADER_BACKGROUND_COLOR_01]) {
+        UIGraphicsBeginImageContext(self.headerBackgroundView.frame.size);
+        [[UIImage imageNamed:@"header.png"] drawInRect:self.headerBackgroundView.bounds];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        self.headerBackgroundView.backgroundColor = [UIColor colorWithPatternImage:image];
+    }
+#endif
     
     [self setBackgroundImage];
     
@@ -229,7 +255,9 @@
         backgrImgName = @"banjo_background6";
     }
 #else
-    if (numberOfStrings == 4) {
+    if (numberOfStrings == 3) {
+        backgrImgName = @"background3";
+    } else if (numberOfStrings == 4) {
         backgrImgName = @"background4";
     } else if (numberOfStrings == 5) {
         backgrImgName = @"background5";

@@ -321,7 +321,9 @@
         
         CGFloat offset;
         
-        if (numberOfStrings == 4) {
+        if (numberOfStrings == 3) {
+            offset = 1.75;
+        } else if (numberOfStrings == 4) {
             offset = 1.25;
         } else if (numberOfStrings == 5) {
             offset = 0.7;

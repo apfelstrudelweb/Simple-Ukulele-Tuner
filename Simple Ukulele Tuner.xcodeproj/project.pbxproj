@@ -11,13 +11,6 @@
 		1B0721501CC3DE7300102B13 /* uke_overtuning.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B07214F1CC3DE7300102B13 /* uke_overtuning.png */; };
 		1B0721521CC3DF2000102B13 /* uke_en_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B0721511CC3DF2000102B13 /* uke_en_manual7.html */; };
 		1B0721541CC3E64100102B13 /* uke_de_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B0721531CC3E64100102B13 /* uke_de_manual7.html */; };
-		1B0D55751D32E8FC00162F59 /* banjoTexture.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B0D55741D32E8FC00162F59 /* banjoTexture.png */; };
-		1B277A0C1DA2DE6000702EF7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E145A1D1FE44B00BD31C4 /* Info.plist */; };
-		1B277A0D1DA2DE6600702EF7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14561D1FE3FA00BD31C4 /* Info.plist */; };
-		1B277A0E1DA2DE6B00702EF7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14521D1FE2C000BD31C4 /* Info.plist */; };
-		1B277A0F1DA2DE6F00702EF7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1BCCC1911D1FD5E800AD17D0 /* Info.plist */; };
-		1B277A101DA2DE7400702EF7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0414D1C99F8C6005103EC /* Info.plist */; };
-		1B277A111DA2DE8000702EF7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E145E1D1FE47800BD31C4 /* Info.plist */; };
 		1B2E12001D1FDD5100BD31C4 /* Spectrum.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC042651C99FDE6005103EC /* Spectrum.m */; };
 		1B2E12011D1FDD5100BD31C4 /* Yin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0424C1C99FD6F005103EC /* Yin.mm */; };
 		1B2E12021D1FDD5100BD31C4 /* LedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041C01C99FC92005103EC /* LedView.m */; };
@@ -521,7 +514,6 @@
 		1B63199D1DA2A6CE005524AC /* UIViewController+uvo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6319971DA2A6CE005524AC /* UIViewController+uvo.m */; };
 		1B67179B1D4177A2004AE1A0 /* banjo_background4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B67179A1D4177A2004AE1A0 /* banjo_background4.png */; };
 		1B67179F1D43FFF4004AE1A0 /* banjo_background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B67179E1D43FFF4004AE1A0 /* banjo_background5.png */; };
-		1B6717A11D4400CB004AE1A0 /* banjo_background6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717A01D4400CB004AE1A0 /* banjo_background6.png */; };
 		1B6717AD1D454D30004AE1A0 /* banjo_en_manual1.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717A61D454D30004AE1A0 /* banjo_en_manual1.html */; };
 		1B6717AE1D454D30004AE1A0 /* banjo_en_manual2.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717A71D454D30004AE1A0 /* banjo_en_manual2.html */; };
 		1B6717AF1D454D30004AE1A0 /* banjo_en_manual3.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717A81D454D30004AE1A0 /* banjo_en_manual3.html */; };
@@ -547,6 +539,8 @@
 		1B6717D41D4A98F1004AE1A0 /* banjo_inapppurchase_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717D01D4A98F1004AE1A0 /* banjo_inapppurchase_03.png */; };
 		1B6717D51D4A98F1004AE1A0 /* banjo_types_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717D11D4A98F1004AE1A0 /* banjo_types_inactive.png */; };
 		1B6C14411CCC026400C82B9B /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6C14401CCC026400C82B9B /* knob.png */; };
+		1B8CDC651E58C35B00DD8240 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC641E58C35B00DD8240 /* header.png */; };
+		1B8CDC6B1E58CC7800DD8240 /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC6A1E58CC7800DD8240 /* background3.png */; };
 		1BC0413E1C99F8C6005103EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0413D1C99F8C6005103EC /* main.m */; };
 		1BC041411C99F8C6005103EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041401C99F8C6005103EC /* AppDelegate.m */; };
 		1BC041441C99F8C6005103EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041431C99F8C6005103EC /* ViewController.m */; };
@@ -803,7 +797,6 @@
 		1B07214F1CC3DE7300102B13 /* uke_overtuning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uke_overtuning.png; sourceTree = "<group>"; };
 		1B0721511CC3DF2000102B13 /* uke_en_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = uke_en_manual7.html; sourceTree = "<group>"; };
 		1B0721531CC3E64100102B13 /* uke_de_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = uke_de_manual7.html; sourceTree = "<group>"; };
-		1B0D55741D32E8FC00162F59 /* banjoTexture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjoTexture.png; sourceTree = "<group>"; };
 		1B2E12901D1FDD5100BD31C4 /* Simple Mandolin Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Mandolin Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2E13241D1FDDA600BD31C4 /* Simple Banjo Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Banjo Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2E13B81D1FDDD100BD31C4 /* Simple Violin Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Violin Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -847,7 +840,6 @@
 		1B6319971DA2A6CE005524AC /* UIViewController+uvo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+uvo.m"; sourceTree = "<group>"; };
 		1B67179A1D4177A2004AE1A0 /* banjo_background4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_background4.png; sourceTree = "<group>"; };
 		1B67179E1D43FFF4004AE1A0 /* banjo_background5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_background5.png; sourceTree = "<group>"; };
-		1B6717A01D4400CB004AE1A0 /* banjo_background6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_background6.png; sourceTree = "<group>"; };
 		1B6717A61D454D30004AE1A0 /* banjo_en_manual1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banjo_en_manual1.html; sourceTree = "<group>"; };
 		1B6717A71D454D30004AE1A0 /* banjo_en_manual2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banjo_en_manual2.html; sourceTree = "<group>"; };
 		1B6717A81D454D30004AE1A0 /* banjo_en_manual3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = banjo_en_manual3.html; sourceTree = "<group>"; };
@@ -873,6 +865,9 @@
 		1B6717D01D4A98F1004AE1A0 /* banjo_inapppurchase_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_inapppurchase_03.png; sourceTree = "<group>"; };
 		1B6717D11D4A98F1004AE1A0 /* banjo_types_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_types_inactive.png; sourceTree = "<group>"; };
 		1B6C14401CCC026400C82B9B /* knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knob.png; sourceTree = "<group>"; };
+		1B8CDC4B1E5894B700DD8240 /* Balalaika_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Balalaika_Constants.h; sourceTree = "<group>"; };
+		1B8CDC641E58C35B00DD8240 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
+		1B8CDC6A1E58CC7800DD8240 /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background3.png; sourceTree = "<group>"; };
 		1BC041391C99F8C6005103EC /* Simple Ukulele Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Ukulele Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC0413D1C99F8C6005103EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BC0413F1C99F8C6005103EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1286,6 +1281,7 @@
 				1B059CA01D32B13C00FB70B5 /* Banjo_Constants.h */,
 				1B2E14701D211D2D00BD31C4 /* Uke_Constants.h */,
 				1B2E14711D211E0B00BD31C4 /* Guitar_Constants.h */,
+				1B8CDC4B1E5894B700DD8240 /* Balalaika_Constants.h */,
 			);
 			name = Constants;
 			sourceTree = "<group>";
@@ -1688,8 +1684,7 @@
 				1BC041E31C99FD0A005103EC /* arrowUp.png */,
 				1B67179A1D4177A2004AE1A0 /* banjo_background4.png */,
 				1B67179E1D43FFF4004AE1A0 /* banjo_background5.png */,
-				1B6717A01D4400CB004AE1A0 /* banjo_background6.png */,
-				1B0D55741D32E8FC00162F59 /* banjoTexture.png */,
+				1B8CDC6A1E58CC7800DD8240 /* background3.png */,
 				1BC041E41C99FD0A005103EC /* background4.png */,
 				1B2E14601D20262D00BD31C4 /* background5.png */,
 				1B2E14671D2026A900BD31C4 /* background6.png */,
@@ -1698,6 +1693,7 @@
 				1BC041E71C99FD0A005103EC /* gaugeBackground.png */,
 				1BC041E81C99FD0A005103EC /* gaugePattern.png */,
 				1BC041E91C99FD0A005103EC /* gaugePatternGreen.png */,
+				1B8CDC641E58C35B00DD8240 /* header.png */,
 				1BC041EA1C99FD0A005103EC /* info.png */,
 				1BC041EB1C99FD0A005103EC /* ledActive.png */,
 				1BC041EC1C99FD0A005103EC /* ledPassive.png */,
@@ -1961,7 +1957,7 @@
 		1BC041311C99F8C6005103EC /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Ulrich Vormbrock";
 				TargetAttributes = {
 					1B2E11FE1D1FDD5100BD31C4 = {
@@ -2071,7 +2067,6 @@
 				1B2E12881D1FDD5100BD31C4 /* gaugePatternGreen.png in Resources */,
 				1B2E128A1D1FDD5100BD31C4 /* ledActive.png in Resources */,
 				1B2E128B1D1FDD5100BD31C4 /* info.png in Resources */,
-				1B277A0E1DA2DE6B00702EF7 /* Info.plist in Resources */,
 				1B2E128C1D1FDD5100BD31C4 /* ledPassive.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2097,7 +2092,6 @@
 				1B6717AE1D454D30004AE1A0 /* banjo_en_manual2.html in Resources */,
 				1B2E12E61D1FDDA600BD31C4 /* settingsMiddle.png in Resources */,
 				1B2E12E71D1FDDA600BD31C4 /* tabActive.png in Resources */,
-				1B6717A11D4400CB004AE1A0 /* banjo_background6.png in Resources */,
 				1B2E12E81D1FDDA600BD31C4 /* arrowDown.png in Resources */,
 				1B2E12E91D1FDDA600BD31C4 /* calibration_02.png in Resources */,
 				1B2E12EA1D1FDDA600BD31C4 /* autocorr_03.png in Resources */,
@@ -2108,7 +2102,6 @@
 				1B6717C51D455BB0004AE1A0 /* banjo_subtypes_tuning.png in Resources */,
 				1B2E12F61D1FDDA600BD31C4 /* knob.png in Resources */,
 				1B2E12F71D1FDDA600BD31C4 /* autocorr_01.png in Resources */,
-				1B277A0D1DA2DE6600702EF7 /* Info.plist in Resources */,
 				1B2E12F81D1FDDA600BD31C4 /* iRate.bundle in Resources */,
 				1B2E12FA1D1FDDA600BD31C4 /* style.css in Resources */,
 				1B2E12FB1D1FDDA600BD31C4 /* close.png in Resources */,
@@ -2149,7 +2142,6 @@
 				1B67179B1D4177A2004AE1A0 /* banjo_background4.png in Resources */,
 				1B2E131B1D1FDDA600BD31C4 /* autocorr_02.png in Resources */,
 				1B6717BC1D454D46004AE1A0 /* banjo_de_manual2.html in Resources */,
-				1B0D55751D32E8FC00162F59 /* banjoTexture.png in Resources */,
 				1B6717CD1D456472004AE1A0 /* banjo_calibrated_tuning.png in Resources */,
 				1B2E131C1D1FDDA600BD31C4 /* gaugePatternGreen.png in Resources */,
 				1B6717C71D455D6B004AE1A0 /* banjo_types_active.png in Resources */,
@@ -2211,7 +2203,6 @@
 				1B2E13B01D1FDDD100BD31C4 /* gaugePatternGreen.png in Resources */,
 				1B2E13B21D1FDDD100BD31C4 /* ledActive.png in Resources */,
 				1B2E13B31D1FDDD100BD31C4 /* info.png in Resources */,
-				1B277A0C1DA2DE6000702EF7 /* Info.plist in Resources */,
 				1B2E13B41D1FDDD100BD31C4 /* ledPassive.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2245,6 +2236,7 @@
 				1B2E146D1D2026A900BD31C4 /* background6.png in Resources */,
 				1B2E14231D1FDE1300BD31C4 /* close.png in Resources */,
 				1B2E14261D1FDE1300BD31C4 /* settingsTop.png in Resources */,
+				1B8CDC6B1E58CC7800DD8240 /* background3.png in Resources */,
 				1B2E14281D1FDE1300BD31C4 /* calibrationButton.png in Resources */,
 				1B2E142A1D1FDE1300BD31C4 /* stringPassive.png in Resources */,
 				1B2E142B1D1FDE1300BD31C4 /* arrowUp.png in Resources */,
@@ -2255,6 +2247,7 @@
 				1B2E14301D1FDE1300BD31C4 /* settings.png in Resources */,
 				1B2E14321D1FDE1300BD31C4 /* microphoneOn.png in Resources */,
 				1B2E14331D1FDE1300BD31C4 /* autocorr_animated.gif in Resources */,
+				1B8CDC651E58C35B00DD8240 /* header.png in Resources */,
 				1B2E14341D1FDE1300BD31C4 /* stringActive.png in Resources */,
 				1B2E14361D1FDE1300BD31C4 /* tabPassive.png in Resources */,
 				1B2E14371D1FDE1300BD31C4 /* inapppurch_02.png in Resources */,
@@ -2268,7 +2261,6 @@
 				1B2E14441D1FDE1300BD31C4 /* gaugePatternGreen.png in Resources */,
 				1B2E14461D1FDE1300BD31C4 /* ledActive.png in Resources */,
 				1B2E14471D1FDE1300BD31C4 /* info.png in Resources */,
-				1B277A111DA2DE8000702EF7 /* Info.plist in Resources */,
 				1B2E14481D1FDE1300BD31C4 /* ledPassive.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2298,7 +2290,6 @@
 				1B0721501CC3DE7300102B13 /* uke_overtuning.png in Resources */,
 				1BC0423F1C99FD3D005103EC /* uke_inapppurchase_01.png in Resources */,
 				1BC0417F1C99FBEB005103EC /* uke_de_manual3.html in Resources */,
-				1B277A101DA2DE7400702EF7 /* Info.plist in Resources */,
 				1BC042411C99FD3D005103EC /* inapppurch_01.png in Resources */,
 				1BE7948E1C9B3CA6001A5E72 /* StartApp.bundle in Resources */,
 				1BC0420F1C99FD23005103EC /* linePattern.png in Resources */,
@@ -2380,7 +2371,6 @@
 				1BCCC1F11D1FD6A200AD17D0 /* inapppurch_01.png in Resources */,
 				1BCCC1F21D1FD6A200AD17D0 /* StartApp.bundle in Resources */,
 				1BCCC1F31D1FD6A200AD17D0 /* linePattern.png in Resources */,
-				1B277A0F1DA2DE6F00702EF7 /* Info.plist in Resources */,
 				1B2E14921D22620800BD31C4 /* guit_en_manual2.html in Resources */,
 				1B2E14961D22620800BD31C4 /* guit_en_manual6.html in Resources */,
 				1BCCC1F71D1FD6A200AD17D0 /* shoppingCart.png in Resources */,
@@ -2893,7 +2883,7 @@
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_BANJO;
 				INFOPLIST_FILE = "Simple Banjo Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
@@ -2919,7 +2909,7 @@
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_BANJO;
 				INFOPLIST_FILE = "Simple Banjo Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
@@ -2994,7 +2984,7 @@
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_BALALAIKA;
 				INFOPLIST_FILE = "Simple Balalaika Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
@@ -3019,7 +3009,7 @@
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_BALALAIKA;
 				INFOPLIST_FILE = "Simple Balalaika Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
@@ -3069,7 +3059,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -3110,7 +3100,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

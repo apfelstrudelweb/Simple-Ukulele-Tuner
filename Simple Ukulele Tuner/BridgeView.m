@@ -221,7 +221,7 @@
                                                               attribute:NSLayoutAttributeCenterY
                                                              multiplier:1.5
                                                                constant:0.0]];
-#elif (TARGET_GUITAR || TARGET_UKULELE)
+#elif (TARGET_GUITAR || TARGET_UKULELE || TARGET_BALALAIKA)
     // Center vertically
     [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.stringButtonView
                                                               attribute:NSLayoutAttributeBaseline

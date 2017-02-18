@@ -752,7 +752,9 @@ typedef NSUInteger SECTION_DESCR;
 #elif defined(TARGET_VIOLIN)
     
 #elif defined(TARGET_BALALAIKA)
-    
+    upgradeOptionPremium = balalaika_inAppPurchasePremium;
+    upgradeOptionInstrument = balalaika_inAppPurchaseBalalaika;
+    upgradeOptionSignal = balalaika_inAppPurchaseSignal;
 #endif
     
     for (SKPaymentTransaction *transaction in queue.transactions) {

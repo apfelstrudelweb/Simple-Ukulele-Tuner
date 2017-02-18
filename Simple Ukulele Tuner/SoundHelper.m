@@ -26,7 +26,7 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     CGFloat frequencyOffset = [[defaults stringForKey:KEY_CALIBRATED_FREQUENCY] floatValue] - REF_FREQUENCY;
     frequency += frequencyOffset;
     
-    CGFloat factor = 1.0f;//[SHARED_CONTEXT getFrequencyShiftFactor];
+    CGFloat factor = [SHARED_CONTEXT getFrequencyShiftFactor];
     
     frequency *= factor;
     

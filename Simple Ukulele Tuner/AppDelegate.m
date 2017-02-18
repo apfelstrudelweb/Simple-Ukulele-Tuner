@@ -36,8 +36,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //    // TODO: REMOVE LATER, it's only for testing!
-    //PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
-    //[bindings setObject:version_premium forKey:UPGRADE_TYPE];
+    PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
+    [bindings setObject:version_premium forKey:UPGRADE_TYPE];
     //[bindings setObject:version_instrument forKey:UPGRADE_TYPE];
     //[bindings setObject:version_signal forKey:UPGRADE_TYPE];
     //[bindings removeObjectForKey:UPGRADE_TYPE];
@@ -61,7 +61,8 @@
 #elif defined(TARGET_VIOLIN)
     
 #elif defined(TARGET_BALALAIKA)
-    
+    instrumentDefaults = [NSDictionary dictionaryWithObject:@"3 - Prima (E4 - E4 - A4)"
+                                                     forKey:@"balalaikaType"];
 #endif
     
     

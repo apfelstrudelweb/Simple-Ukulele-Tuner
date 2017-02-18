@@ -268,10 +268,12 @@
     [self addSubview:self.imageViewBg_3];
     [imageViewsArray addObject:self.imageViewBg_3];
     
-    self.imageViewBg_4 = [[HitImageView alloc] initWithImage:_ledBg];
-    [self.imageViewBg_4 setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self addSubview:self.imageViewBg_4];
-    [imageViewsArray addObject:self.imageViewBg_4];
+    if (numberOfStrings > 3) {
+        self.imageViewBg_4 = [[HitImageView alloc] initWithImage:_ledBg];
+        [self.imageViewBg_4 setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [self addSubview:self.imageViewBg_4];
+        [imageViewsArray addObject:self.imageViewBg_4];
+    }
     
     if (numberOfStrings > 4) {
         self.imageViewBg_5 = [[HitImageView alloc] initWithImage:_ledBg];
@@ -307,10 +309,12 @@
     [self addSubview:self.imageView_3];
     [imageViewsArray addObject:self.imageView_3];
     
-    self.imageView_4 = [[HitImageView alloc] initWithImage:_led];
-    [self.imageView_4 setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self addSubview:self.imageView_4];
-    [imageViewsArray addObject:self.imageView_4];
+    if (numberOfStrings > 3) {
+        self.imageView_4 = [[HitImageView alloc] initWithImage:_led];
+        [self.imageView_4 setTranslatesAutoresizingMaskIntoConstraints:NO];
+        [self addSubview:self.imageView_4];
+        [imageViewsArray addObject:self.imageView_4];
+    }
     
     if (numberOfStrings > 4) {
         self.imageView_5 = [[HitImageView alloc] initWithImage:_led];
@@ -378,7 +382,9 @@
         CGFloat len = 9.3;
         CGFloat offset;
         
-        if (numberOfStrings == 4) {
+        if (numberOfStrings == 3) {
+            offset = 1.75;
+        } else if (numberOfStrings == 4) {
             offset = 1.25;
         } else if (numberOfStrings == 5) {
             offset = 0.7;

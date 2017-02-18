@@ -176,7 +176,16 @@
 #elif defined(TARGET_VIOLIN)
     // TODO: implement
 #elif defined(TARGET_BALALAIKA)
-    // TODO: implement
+    instrumentDictionary = @{ BALALAIKA_TYPE_01     : @[ @1,   @[@"E",@"E",@"A"],               @[@659.3,@659.3,@880.0],                 @1.0], // Descant
+                              BALALAIKA_TYPE_02     : @[ @2,   @[@"H",@"E",@"A"],               @[@493.9,@659.3,@880.0],                 @1.0], // Piccolo
+                              BALALAIKA_TYPE_03     : @[ @3,   @[@"E",@"E",@"A"],               @[@329.6,@329.6,@440.0],                 @1.0], // Prima
+                              BALALAIKA_TYPE_04     : @[ @4,   @[@"G",@"H",@"D"],               @[@196.0,@246.9,@293.7],                 @1.0], // Guitar Style
+                              BALALAIKA_TYPE_05     : @[ @5,   @[@"A",@"A",@"D"],               @[@220.0,@220.0,@293.7],                 @1.0], // Secunda
+                              BALALAIKA_TYPE_06     : @[ @6,   @[@"E",@"E",@"A"],               @[@164.8,@164.8,@220.0],                 @1.0], // Alto
+                              BALALAIKA_TYPE_07     : @[ @7,   @[@"E",@"A",@"E"],               @[@164.8,@220.0,@329.6],                 @1.0], // Tenor
+                              BALALAIKA_TYPE_08     : @[ @8,   @[@"E",@"A",@"D"],               @[@82.4,@110.0,@146.8],                  @2.0], // Bass
+                              BALALAIKA_TYPE_09     : @[ @9,   @[@"E",@"A",@"D"],               @[@41.2,@55.0,@73.4],                    @3.0] // Contrabass
+                              };
 #endif
 
     return instrumentDictionary;

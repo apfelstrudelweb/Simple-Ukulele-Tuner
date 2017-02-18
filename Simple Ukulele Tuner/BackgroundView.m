@@ -224,7 +224,7 @@
                                                              multiplier:1.0
                                                                constant:0.0]];
 
-#if !defined(TARGET_BANJO)
+#if !defined(TARGET_BANJO) && !defined(TARGET_BALALAIKA)
     // CIRCLE VIEW
     
     // Center vertically

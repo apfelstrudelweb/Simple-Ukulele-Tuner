@@ -57,7 +57,7 @@
 #elif defined(TARGET_VIOLIN)
     
 #elif defined(TARGET_BALALAIKA)
-    
+    instrumentPrefix = @"bala";
 #endif
     
     

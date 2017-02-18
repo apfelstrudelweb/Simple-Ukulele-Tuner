@@ -242,7 +242,13 @@
 #elif defined(TARGET_VIOLIN)
     
 #elif defined(TARGET_BALALAIKA)
-    
+    if ([productID isEqualToString:balalaika_inAppPurchasePremium]) {
+        [SHARED_VERSION_MANAGER setCurrentVersion:version_premium];
+    } else if ([productID isEqualToString:balalaika_inAppPurchaseBalalaika]) {
+        [SHARED_VERSION_MANAGER setCurrentVersion:version_instrument];
+    } else if ([productID isEqualToString:balalaika_inAppPurchaseSignal]) {
+        [SHARED_VERSION_MANAGER setCurrentVersion:version_signal];
+    }
 #endif
 
    

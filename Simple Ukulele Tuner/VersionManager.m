@@ -47,7 +47,7 @@
 #elif defined(TARGET_VIOLIN)
         
 #elif defined(TARGET_BALALAIKA)
-        
+        inAppPurchaseArray = BALALAIKA_INAPP_PURCHASE_ARRAY;
 #endif
         
         self.availableProducts = [NSMutableArray new];
@@ -140,7 +140,9 @@
 #elif defined(TARGET_VIOLIN)
     
 #elif defined(TARGET_BALALAIKA)
-    
+    upgradeOptionPremium = balalaika_inAppPurchasePremium;
+    upgradeOptionInstrument = balalaika_inAppPurchaseBalalaika;
+    upgradeOptionSignal = balalaika_inAppPurchaseSignal;
 #endif
     
     for (SKProduct* product in self.availableProducts) {

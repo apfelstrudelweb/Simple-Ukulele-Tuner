@@ -9,7 +9,7 @@
 #ifndef Balalaika_Constants_h
 #define Balalaika_Constants_h
 
-#define APPSTORE_ID              @"1128226635"
+#define APPSTORE_ID              @"1135724767"
 #define STANDARD_SUBTYPE         @[@2] // Standard Prima (E - E - A)
 
 
@@ -26,9 +26,16 @@
 #define BALALAIKA_TYPE_09           @"3 - Contrabass (E1 - A1 - D2)"
 
 
+// Version
+#define version_lite                @"lite"
+#define version_instrument          @"instrument"
+#define version_signal              @"signal"
+#define version_premium             @"premium"
+
+
 #define balalaika_inAppPurchaseBalalaika       @"ch.vormbrock.simplebalalaikatuner.allbalalaika"
 #define balalaika_inAppPurchaseSignal          @"ch.vormbrock.simplebalalaikatuner.signalplus"
 #define balalaika_inAppPurchasePremium         @"ch.vormbrock.simplebalalaikatuner.premium"
-#define BALALAIKA_INAPP_PURCHASE_ARRAY         @[balalaika_inAppPurchasePremium, balalaika_inAppPurchaseGuitar, balalaika_inAppPurchaseSignal]
+#define BALALAIKA_INAPP_PURCHASE_ARRAY         @[balalaika_inAppPurchasePremium, balalaika_inAppPurchaseBalalaika, balalaika_inAppPurchaseSignal]
 
 #endif /* Balalaika_Constants_h */

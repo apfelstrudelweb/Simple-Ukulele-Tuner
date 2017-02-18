@@ -2988,7 +2988,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.vormbrock.simplebalalaikatuner2;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.vormbrock.simplebalalaikatuner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -3013,7 +3013,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = ch.vormbrock.simplebalalaikatuner2;
+				PRODUCT_BUNDLE_IDENTIFIER = ch.vormbrock.simplebalalaikatuner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";

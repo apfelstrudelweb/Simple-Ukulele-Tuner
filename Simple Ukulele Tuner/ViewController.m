@@ -8,47 +8,96 @@
 
 #import "ViewController.h"
 
+// Import header files from the SDK
+#import "VpadnBanner.h"
+#import "VpadnInterstitial.h"
+@import VpadnSDKAdKit;
 
-@interface ViewController () {
-    STABannerView* bannerView;
+
+@interface ViewController ()<VpadnBannerDelegate, VpadnInterstitialDelegate> {
+    UIView* bannerView;
+    VpadnBanner*    vpadnAd; // Declare the instance of Vpadn's banner Ads
+    VpadnInterstitial*    vpadnInterstitial; // Declare the instance of Vpadn's interstitial Ads
 }
 
 @property (nonatomic, strong) UIWebView *webView;
+
+// Addition SDK
+@property (nonatomic, strong) VpadnBanner *bannerAd;
+@property (nonatomic, strong) VpadnInterstitial *interstitialAd;
+//@property (weak, nonatomic) UIView *bannerView;
 
 @end
 
 @implementation ViewController
 
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//    // Do any additional setup after loading the view, typically from a nib.
+//    
+////    startAppNativeAd = [[STAStartAppNativeAd alloc] init];
+////    [startAppNativeAd loadAd];
+//    
+//    
+//}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
-    startAppNativeAd = [[STAStartAppNativeAd alloc] init];
-    [startAppNativeAd loadAd];
-    
-    
-}
-
-- (void) viewDidAppear:(BOOL)animated {
-    [super viewDidAppear:animated];
 
     NSString* currentVersion = [SHARED_VERSION_MANAGER getVersion];
     
-    if ([version_lite isEqualToString:currentVersion]) {
-        CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
-        CGFloat headerHeight = [SUBVIEW_PROPORTIONS[0] floatValue] + 0.05;
-        CGFloat bannerOffset = screenHeight * headerHeight / 100.0;
+    //if ([version_lite isEqualToString:currentVersion]) {
+    
+    
+    CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
+    CGFloat headerHeight = [SUBVIEW_PROPORTIONS[0] floatValue] + 0.05;
+    CGFloat bannerOffset = screenHeight * headerHeight / 100.0;
+    
+    if (bannerView == nil) {
         
-        if (bannerView == nil) {
-            
-            bannerView = [[STABannerView alloc] initWithSize:STA_AutoAdSize
-                                                      origin:CGPointMake(0, bannerOffset)
-                                                    withView:self.view
-                                                withDelegate:nil];
-            [self.view addSubview:bannerView];
-        }
+        bannerView = [[UIView alloc] initWithFrame:CGRectMake(0, bannerOffset, VpadnAdSizeSmartBannerPortrait.size.width, VpadnAdSizeBanner.size.height)];
+        [self.view addSubview:bannerView];
     }
+    
+
+    // Set up bannerAd
+    _bannerAd = [[VpadnBanner alloc] initWithAdSize:VpadnAdSizeSmartBannerPortrait origin:bannerView.frame.origin];
+
+#if defined(TARGET_UKULELE)
+    _bannerAd.strBannerId = @"8a8081825d545237015d6ef74ad51a43";
+#elif defined(TARGET_GUITAR)
+    _bannerAd.strBannerId = @"8a8081825d545237015d6f541cd21a51"; 
+#endif
+    
+    _bannerAd.platform = @"TW"; // registered in Taiwan website
+    _bannerAd.delegate = self;
+    [_bannerAd setAdAutoRefresh:YES];
+    [_bannerAd setRootViewController:self];
+
+    [_bannerAd startGetAd:[self getTestIdentifiers]];
+    [bannerView addSubview:[_bannerAd getVpadnAdView]];
+    //}
 }
+
+- (NSArray *)getTestIdentifiers {
+    
+    NSString* uniqueIdentifier = [[[UIDevice currentDevice] identifierForVendor] UUIDString]; // IOS 6+
+    NSLog(@"UDID:: %@", uniqueIdentifier);
+    
+    return [NSArray arrayWithObjects:
+            uniqueIdentifier,
+            nil];
+}
+
+#pragma mark VpadAdDelegate method. Add this when use banner Ads
+- (void)onVpadnAdReceived:(UIView *)bannerView{
+    NSLog(@"VpadnAdReceived");
+}
+
+- (void)onVpadnAdFailed:(UIView *)bannerView didFailToReceiveAdWithError:(NSError *)error{
+    NSLog(@"VpadnAdFailed");
+}
+
 
 - (void)loadView {
     

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 48;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -64,7 +64,6 @@
 		1B2E12321D1FDD5100BD31C4 /* UpgradeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041941C99FC52005103EC /* UpgradeView.m */; };
 		1B2E12331D1FDD5100BD31C4 /* DeviationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A91C99FC76005103EC /* DeviationView.m */; };
 		1B2E12351D1FDD5100BD31C4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEBF3CE1C9D477500F2ED4D /* libz.tbd */; };
-		1B2E12361D1FDD5100BD31C4 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEF1CE81CA735C8008DE3CC /* HockeySDK.framework */; };
 		1B2E12371D1FDD5100BD31C4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE794981C9B3D0E001A5E72 /* CoreTelephony.framework */; };
 		1B2E12381D1FDD5100BD31C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEBF3CC1C9D469500F2ED4D /* CoreGraphics.framework */; };
 		1B2E12391D1FDD5100BD31C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE7949C1C9B3D25001A5E72 /* Foundation.framework */; };
@@ -76,7 +75,6 @@
 		1B2E123F1D1FDD5100BD31C4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC0415C1C99FA19005103EC /* AudioToolbox.framework */; };
 		1B2E12401D1FDD5100BD31C4 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC0415E1C99FA1F005103EC /* CoreAudio.framework */; };
 		1B2E12411D1FDD5100BD31C4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC041601C99FA24005103EC /* Accelerate.framework */; };
-		1B2E12421D1FDD5100BD31C4 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE7948D1C9B3CA6001A5E72 /* StartApp.framework */; };
 		1B2E12431D1FDD5100BD31C4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC041621C99FA2F005103EC /* StoreKit.framework */; };
 		1B2E12461D1FDD5100BD31C4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0427D1C9A0198005103EC /* Localizable.strings */; };
 		1B2E12471D1FDD5100BD31C4 /* fft_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042291C99FD3D005103EC /* fft_02.png */; };
@@ -92,7 +90,6 @@
 		1B2E12551D1FDD5100BD31C4 /* calibration_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BF634F31CB1A2DE0060ECEE /* calibration_02.png */; };
 		1B2E12561D1FDD5100BD31C4 /* autocorr_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042271C99FD3D005103EC /* autocorr_03.png */; };
 		1B2E125A1D1FDD5100BD31C4 /* inapppurch_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0422C1C99FD3D005103EC /* inapppurch_01.png */; };
-		1B2E125B1D1FDD5100BD31C4 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1BE7948C1C9B3CA6001A5E72 /* StartApp.bundle */; };
 		1B2E125C1D1FDD5100BD31C4 /* linePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042031C99FD23005103EC /* linePattern.png */; };
 		1B2E12601D1FDD5100BD31C4 /* shoppingCart.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0420C1C99FD23005103EC /* shoppingCart.png */; };
 		1B2E12611D1FDD5100BD31C4 /* background4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E41C99FD0A005103EC /* background4.png */; };
@@ -178,7 +175,6 @@
 		1B2E12C61D1FDDA600BD31C4 /* UpgradeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041941C99FC52005103EC /* UpgradeView.m */; };
 		1B2E12C71D1FDDA600BD31C4 /* DeviationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A91C99FC76005103EC /* DeviationView.m */; };
 		1B2E12C91D1FDDA600BD31C4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEBF3CE1C9D477500F2ED4D /* libz.tbd */; };
-		1B2E12CA1D1FDDA600BD31C4 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEF1CE81CA735C8008DE3CC /* HockeySDK.framework */; };
 		1B2E12CB1D1FDDA600BD31C4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE794981C9B3D0E001A5E72 /* CoreTelephony.framework */; };
 		1B2E12CC1D1FDDA600BD31C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEBF3CC1C9D469500F2ED4D /* CoreGraphics.framework */; };
 		1B2E12CD1D1FDDA600BD31C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE7949C1C9B3D25001A5E72 /* Foundation.framework */; };
@@ -190,7 +186,6 @@
 		1B2E12D31D1FDDA600BD31C4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC0415C1C99FA19005103EC /* AudioToolbox.framework */; };
 		1B2E12D41D1FDDA600BD31C4 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC0415E1C99FA1F005103EC /* CoreAudio.framework */; };
 		1B2E12D51D1FDDA600BD31C4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC041601C99FA24005103EC /* Accelerate.framework */; };
-		1B2E12D61D1FDDA600BD31C4 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE7948D1C9B3CA6001A5E72 /* StartApp.framework */; };
 		1B2E12D71D1FDDA600BD31C4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC041621C99FA2F005103EC /* StoreKit.framework */; };
 		1B2E12DA1D1FDDA600BD31C4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0427D1C9A0198005103EC /* Localizable.strings */; };
 		1B2E12DB1D1FDDA600BD31C4 /* fft_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042291C99FD3D005103EC /* fft_02.png */; };
@@ -206,7 +201,6 @@
 		1B2E12E91D1FDDA600BD31C4 /* calibration_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BF634F31CB1A2DE0060ECEE /* calibration_02.png */; };
 		1B2E12EA1D1FDDA600BD31C4 /* autocorr_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042271C99FD3D005103EC /* autocorr_03.png */; };
 		1B2E12EE1D1FDDA600BD31C4 /* inapppurch_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0422C1C99FD3D005103EC /* inapppurch_01.png */; };
-		1B2E12EF1D1FDDA600BD31C4 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1BE7948C1C9B3CA6001A5E72 /* StartApp.bundle */; };
 		1B2E12F01D1FDDA600BD31C4 /* linePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042031C99FD23005103EC /* linePattern.png */; };
 		1B2E12F41D1FDDA600BD31C4 /* shoppingCart.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0420C1C99FD23005103EC /* shoppingCart.png */; };
 		1B2E12F61D1FDDA600BD31C4 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6C14401CCC026400C82B9B /* knob.png */; };
@@ -291,7 +285,6 @@
 		1B2E135A1D1FDDD100BD31C4 /* UpgradeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041941C99FC52005103EC /* UpgradeView.m */; };
 		1B2E135B1D1FDDD100BD31C4 /* DeviationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A91C99FC76005103EC /* DeviationView.m */; };
 		1B2E135D1D1FDDD100BD31C4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEBF3CE1C9D477500F2ED4D /* libz.tbd */; };
-		1B2E135E1D1FDDD100BD31C4 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEF1CE81CA735C8008DE3CC /* HockeySDK.framework */; };
 		1B2E135F1D1FDDD100BD31C4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE794981C9B3D0E001A5E72 /* CoreTelephony.framework */; };
 		1B2E13601D1FDDD100BD31C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEBF3CC1C9D469500F2ED4D /* CoreGraphics.framework */; };
 		1B2E13611D1FDDD100BD31C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE7949C1C9B3D25001A5E72 /* Foundation.framework */; };
@@ -303,7 +296,6 @@
 		1B2E13671D1FDDD100BD31C4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC0415C1C99FA19005103EC /* AudioToolbox.framework */; };
 		1B2E13681D1FDDD100BD31C4 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC0415E1C99FA1F005103EC /* CoreAudio.framework */; };
 		1B2E13691D1FDDD100BD31C4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC041601C99FA24005103EC /* Accelerate.framework */; };
-		1B2E136A1D1FDDD100BD31C4 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE7948D1C9B3CA6001A5E72 /* StartApp.framework */; };
 		1B2E136B1D1FDDD100BD31C4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC041621C99FA2F005103EC /* StoreKit.framework */; };
 		1B2E136E1D1FDDD100BD31C4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0427D1C9A0198005103EC /* Localizable.strings */; };
 		1B2E136F1D1FDDD100BD31C4 /* fft_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042291C99FD3D005103EC /* fft_02.png */; };
@@ -319,7 +311,6 @@
 		1B2E137D1D1FDDD100BD31C4 /* calibration_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BF634F31CB1A2DE0060ECEE /* calibration_02.png */; };
 		1B2E137E1D1FDDD100BD31C4 /* autocorr_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042271C99FD3D005103EC /* autocorr_03.png */; };
 		1B2E13821D1FDDD100BD31C4 /* inapppurch_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0422C1C99FD3D005103EC /* inapppurch_01.png */; };
-		1B2E13831D1FDDD100BD31C4 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1BE7948C1C9B3CA6001A5E72 /* StartApp.bundle */; };
 		1B2E13841D1FDDD100BD31C4 /* linePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042031C99FD23005103EC /* linePattern.png */; };
 		1B2E13881D1FDDD100BD31C4 /* shoppingCart.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0420C1C99FD23005103EC /* shoppingCart.png */; };
 		1B2E13891D1FDDD100BD31C4 /* background4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E41C99FD0A005103EC /* background4.png */; };
@@ -405,7 +396,6 @@
 		1B2E13EE1D1FDE1300BD31C4 /* UpgradeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041941C99FC52005103EC /* UpgradeView.m */; };
 		1B2E13EF1D1FDE1300BD31C4 /* DeviationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A91C99FC76005103EC /* DeviationView.m */; };
 		1B2E13F11D1FDE1300BD31C4 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEBF3CE1C9D477500F2ED4D /* libz.tbd */; };
-		1B2E13F21D1FDE1300BD31C4 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEF1CE81CA735C8008DE3CC /* HockeySDK.framework */; };
 		1B2E13F31D1FDE1300BD31C4 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE794981C9B3D0E001A5E72 /* CoreTelephony.framework */; };
 		1B2E13F41D1FDE1300BD31C4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEBF3CC1C9D469500F2ED4D /* CoreGraphics.framework */; };
 		1B2E13F51D1FDE1300BD31C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE7949C1C9B3D25001A5E72 /* Foundation.framework */; };
@@ -417,7 +407,6 @@
 		1B2E13FB1D1FDE1300BD31C4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC0415C1C99FA19005103EC /* AudioToolbox.framework */; };
 		1B2E13FC1D1FDE1300BD31C4 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC0415E1C99FA1F005103EC /* CoreAudio.framework */; };
 		1B2E13FD1D1FDE1300BD31C4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC041601C99FA24005103EC /* Accelerate.framework */; };
-		1B2E13FE1D1FDE1300BD31C4 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE7948D1C9B3CA6001A5E72 /* StartApp.framework */; };
 		1B2E13FF1D1FDE1300BD31C4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC041621C99FA2F005103EC /* StoreKit.framework */; };
 		1B2E14021D1FDE1300BD31C4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0427D1C9A0198005103EC /* Localizable.strings */; };
 		1B2E14031D1FDE1300BD31C4 /* fft_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042291C99FD3D005103EC /* fft_02.png */; };
@@ -433,7 +422,6 @@
 		1B2E14111D1FDE1300BD31C4 /* calibration_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BF634F31CB1A2DE0060ECEE /* calibration_02.png */; };
 		1B2E14121D1FDE1300BD31C4 /* autocorr_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042271C99FD3D005103EC /* autocorr_03.png */; };
 		1B2E14161D1FDE1300BD31C4 /* inapppurch_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0422C1C99FD3D005103EC /* inapppurch_01.png */; };
-		1B2E14171D1FDE1300BD31C4 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1BE7948C1C9B3CA6001A5E72 /* StartApp.bundle */; };
 		1B2E14181D1FDE1300BD31C4 /* linePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042031C99FD23005103EC /* linePattern.png */; };
 		1B2E141C1D1FDE1300BD31C4 /* shoppingCart.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0420C1C99FD23005103EC /* shoppingCart.png */; };
 		1B2E141D1D1FDE1300BD31C4 /* background4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E41C99FD0A005103EC /* background4.png */; };
@@ -480,20 +468,6 @@
 		1B2E14771D21218E00BD31C4 /* InstrumentContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E14731D21218E00BD31C4 /* InstrumentContext.m */; };
 		1B2E14781D21218E00BD31C4 /* InstrumentContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E14731D21218E00BD31C4 /* InstrumentContext.m */; };
 		1B2E14791D21218E00BD31C4 /* InstrumentContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E14731D21218E00BD31C4 /* InstrumentContext.m */; };
-		1B2E148A1D22620800BD31C4 /* guit_de_manual1.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E147C1D22620800BD31C4 /* guit_de_manual1.html */; };
-		1B2E148B1D22620800BD31C4 /* guit_de_manual2.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E147D1D22620800BD31C4 /* guit_de_manual2.html */; };
-		1B2E148C1D22620800BD31C4 /* guit_de_manual3.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E147E1D22620800BD31C4 /* guit_de_manual3.html */; };
-		1B2E148D1D22620800BD31C4 /* guit_de_manual4.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E147F1D22620800BD31C4 /* guit_de_manual4.html */; };
-		1B2E148E1D22620800BD31C4 /* guit_de_manual5.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14801D22620800BD31C4 /* guit_de_manual5.html */; };
-		1B2E148F1D22620800BD31C4 /* guit_de_manual6.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14811D22620800BD31C4 /* guit_de_manual6.html */; };
-		1B2E14901D22620800BD31C4 /* guit_de_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14821D22620800BD31C4 /* guit_de_manual7.html */; };
-		1B2E14911D22620800BD31C4 /* guit_en_manual1.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14831D22620800BD31C4 /* guit_en_manual1.html */; };
-		1B2E14921D22620800BD31C4 /* guit_en_manual2.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14841D22620800BD31C4 /* guit_en_manual2.html */; };
-		1B2E14931D22620800BD31C4 /* guit_en_manual3.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14851D22620800BD31C4 /* guit_en_manual3.html */; };
-		1B2E14941D22620800BD31C4 /* guit_en_manual4.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14861D22620800BD31C4 /* guit_en_manual4.html */; };
-		1B2E14951D22620800BD31C4 /* guit_en_manual5.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14871D22620800BD31C4 /* guit_en_manual5.html */; };
-		1B2E14961D22620800BD31C4 /* guit_en_manual6.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14881D22620800BD31C4 /* guit_en_manual6.html */; };
-		1B2E14971D22620800BD31C4 /* guit_en_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14891D22620800BD31C4 /* guit_en_manual7.html */; };
 		1B2E14A01D2288CB00BD31C4 /* guit_tuning_options.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E149F1D2288CB00BD31C4 /* guit_tuning_options.png */; };
 		1B2E14A21D228B7700BD31C4 /* guit_subtypes_tuning.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14A11D228B7700BD31C4 /* guit_subtypes_tuning.png */; };
 		1B2E14A41D228CA300BD31C4 /* guit_calibrated_tuning.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14A31D228CA300BD31C4 /* guit_calibrated_tuning.png */; };
@@ -711,7 +685,6 @@
 		1BCCC1C91D1FD6A200AD17D0 /* UpgradeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041941C99FC52005103EC /* UpgradeView.m */; };
 		1BCCC1CA1D1FD6A200AD17D0 /* DeviationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A91C99FC76005103EC /* DeviationView.m */; };
 		1BCCC1CC1D1FD6A200AD17D0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEBF3CE1C9D477500F2ED4D /* libz.tbd */; };
-		1BCCC1CD1D1FD6A200AD17D0 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEF1CE81CA735C8008DE3CC /* HockeySDK.framework */; };
 		1BCCC1CE1D1FD6A200AD17D0 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE794981C9B3D0E001A5E72 /* CoreTelephony.framework */; };
 		1BCCC1CF1D1FD6A200AD17D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEBF3CC1C9D469500F2ED4D /* CoreGraphics.framework */; };
 		1BCCC1D01D1FD6A200AD17D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE7949C1C9B3D25001A5E72 /* Foundation.framework */; };
@@ -723,7 +696,6 @@
 		1BCCC1D61D1FD6A200AD17D0 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC0415C1C99FA19005103EC /* AudioToolbox.framework */; };
 		1BCCC1D71D1FD6A200AD17D0 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC0415E1C99FA1F005103EC /* CoreAudio.framework */; };
 		1BCCC1D81D1FD6A200AD17D0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC041601C99FA24005103EC /* Accelerate.framework */; };
-		1BCCC1D91D1FD6A200AD17D0 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE7948D1C9B3CA6001A5E72 /* StartApp.framework */; };
 		1BCCC1DA1D1FD6A200AD17D0 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC041621C99FA2F005103EC /* StoreKit.framework */; };
 		1BCCC1DD1D1FD6A200AD17D0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0427D1C9A0198005103EC /* Localizable.strings */; };
 		1BCCC1DE1D1FD6A200AD17D0 /* fft_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042291C99FD3D005103EC /* fft_02.png */; };
@@ -739,7 +711,6 @@
 		1BCCC1EC1D1FD6A200AD17D0 /* calibration_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BF634F31CB1A2DE0060ECEE /* calibration_02.png */; };
 		1BCCC1ED1D1FD6A200AD17D0 /* autocorr_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042271C99FD3D005103EC /* autocorr_03.png */; };
 		1BCCC1F11D1FD6A200AD17D0 /* inapppurch_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0422C1C99FD3D005103EC /* inapppurch_01.png */; };
-		1BCCC1F21D1FD6A200AD17D0 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1BE7948C1C9B3CA6001A5E72 /* StartApp.bundle */; };
 		1BCCC1F31D1FD6A200AD17D0 /* linePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042031C99FD23005103EC /* linePattern.png */; };
 		1BCCC1F71D1FD6A200AD17D0 /* shoppingCart.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0420C1C99FD23005103EC /* shoppingCart.png */; };
 		1BCCC1F81D1FD6A200AD17D0 /* background4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E41C99FD0A005103EC /* background4.png */; };
@@ -772,8 +743,28 @@
 		1BCCC2211D1FD6A200AD17D0 /* ledActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EB1C99FD0A005103EC /* ledActive.png */; };
 		1BCCC2221D1FD6A200AD17D0 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EA1C99FD0A005103EC /* info.png */; };
 		1BCCC2231D1FD6A200AD17D0 /* ledPassive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EC1C99FD0A005103EC /* ledPassive.png */; };
-		1BE7948E1C9B3CA6001A5E72 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1BE7948C1C9B3CA6001A5E72 /* StartApp.bundle */; };
-		1BE7948F1C9B3CA6001A5E72 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE7948D1C9B3CA6001A5E72 /* StartApp.framework */; };
+		1BDE3B8D1F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3B8C1F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 */; };
+		1BDE3B8E1F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3B8C1F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 */; };
+		1BDE3B8F1F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3B8C1F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 */; };
+		1BDE3B901F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3B8C1F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 */; };
+		1BDE3B911F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3B8C1F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 */; };
+		1BDE3B921F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3B8C1F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 */; };
+		1BDE3B941F24AD87008BFF63 /* VpadnSDKAdKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE3B931F24AD87008BFF63 /* VpadnSDKAdKit.framework */; };
+		1BDE3B9A1F24C858008BFF63 /* VpadnSDKAdKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BDE3B931F24AD87008BFF63 /* VpadnSDKAdKit.framework */; };
+		1BDE3BA21F24CB35008BFF63 /* guit_de_manual1.html in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3B9B1F24CB35008BFF63 /* guit_de_manual1.html */; };
+		1BDE3BA31F24CB35008BFF63 /* guit_de_manual2.html in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3B9C1F24CB35008BFF63 /* guit_de_manual2.html */; };
+		1BDE3BA41F24CB35008BFF63 /* guit_de_manual3.html in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3B9D1F24CB35008BFF63 /* guit_de_manual3.html */; };
+		1BDE3BA51F24CB35008BFF63 /* guit_de_manual4.html in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3B9E1F24CB35008BFF63 /* guit_de_manual4.html */; };
+		1BDE3BA61F24CB35008BFF63 /* guit_de_manual5.html in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3B9F1F24CB35008BFF63 /* guit_de_manual5.html */; };
+		1BDE3BA71F24CB35008BFF63 /* guit_de_manual6.html in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3BA01F24CB35008BFF63 /* guit_de_manual6.html */; };
+		1BDE3BA81F24CB35008BFF63 /* guit_de_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3BA11F24CB35008BFF63 /* guit_de_manual7.html */; };
+		1BDE3BB01F24CB47008BFF63 /* guit_en_manual1.html in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3BA91F24CB47008BFF63 /* guit_en_manual1.html */; };
+		1BDE3BB11F24CB47008BFF63 /* guit_en_manual2.html in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3BAA1F24CB47008BFF63 /* guit_en_manual2.html */; };
+		1BDE3BB21F24CB47008BFF63 /* guit_en_manual3.html in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3BAB1F24CB47008BFF63 /* guit_en_manual3.html */; };
+		1BDE3BB31F24CB47008BFF63 /* guit_en_manual4.html in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3BAC1F24CB47008BFF63 /* guit_en_manual4.html */; };
+		1BDE3BB41F24CB47008BFF63 /* guit_en_manual5.html in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3BAD1F24CB47008BFF63 /* guit_en_manual5.html */; };
+		1BDE3BB51F24CB47008BFF63 /* guit_en_manual6.html in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3BAE1F24CB47008BFF63 /* guit_en_manual6.html */; };
+		1BDE3BB61F24CB47008BFF63 /* guit_en_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1BDE3BAF1F24CB47008BFF63 /* guit_en_manual7.html */; };
 		1BE794911C9B3CC4001A5E72 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE794901C9B3CC4001A5E72 /* CoreMedia.framework */; };
 		1BE794931C9B3CDD001A5E72 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE794921C9B3CDD001A5E72 /* AVFoundation.framework */; };
 		1BE794951C9B3CF0001A5E72 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE794941C9B3CF0001A5E72 /* AdSupport.framework */; };
@@ -783,7 +774,6 @@
 		1BE7949D1C9B3D25001A5E72 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BE7949C1C9B3D25001A5E72 /* Foundation.framework */; };
 		1BEBF3CD1C9D469500F2ED4D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEBF3CC1C9D469500F2ED4D /* CoreGraphics.framework */; };
 		1BEBF3CF1C9D477500F2ED4D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEBF3CE1C9D477500F2ED4D /* libz.tbd */; };
-		1BF634EE1CB199E90060ECEE /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BEF1CE81CA735C8008DE3CC /* HockeySDK.framework */; };
 		1BF634F01CB1A0FB0060ECEE /* uke_en_manual4.html in Resources */ = {isa = PBXBuildFile; fileRef = 1BF634EF1CB1A0FB0060ECEE /* uke_en_manual4.html */; };
 		1BF634F21CB1A2D10060ECEE /* calibration_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BF634F11CB1A2D10060ECEE /* calibration_01.png */; };
 		1BF634F41CB1A2DE0060ECEE /* calibration_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BF634F31CB1A2DE0060ECEE /* calibration_02.png */; };
@@ -811,20 +801,6 @@
 		1B2E14711D211E0B00BD31C4 /* Guitar_Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Guitar_Constants.h; sourceTree = "<group>"; };
 		1B2E14721D21218E00BD31C4 /* InstrumentContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstrumentContext.h; sourceTree = "<group>"; };
 		1B2E14731D21218E00BD31C4 /* InstrumentContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstrumentContext.m; sourceTree = "<group>"; };
-		1B2E147C1D22620800BD31C4 /* guit_de_manual1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_de_manual1.html; sourceTree = "<group>"; };
-		1B2E147D1D22620800BD31C4 /* guit_de_manual2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_de_manual2.html; sourceTree = "<group>"; };
-		1B2E147E1D22620800BD31C4 /* guit_de_manual3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_de_manual3.html; sourceTree = "<group>"; };
-		1B2E147F1D22620800BD31C4 /* guit_de_manual4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_de_manual4.html; sourceTree = "<group>"; };
-		1B2E14801D22620800BD31C4 /* guit_de_manual5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_de_manual5.html; sourceTree = "<group>"; };
-		1B2E14811D22620800BD31C4 /* guit_de_manual6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_de_manual6.html; sourceTree = "<group>"; };
-		1B2E14821D22620800BD31C4 /* guit_de_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_de_manual7.html; sourceTree = "<group>"; };
-		1B2E14831D22620800BD31C4 /* guit_en_manual1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_en_manual1.html; sourceTree = "<group>"; };
-		1B2E14841D22620800BD31C4 /* guit_en_manual2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_en_manual2.html; sourceTree = "<group>"; };
-		1B2E14851D22620800BD31C4 /* guit_en_manual3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_en_manual3.html; sourceTree = "<group>"; };
-		1B2E14861D22620800BD31C4 /* guit_en_manual4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_en_manual4.html; sourceTree = "<group>"; };
-		1B2E14871D22620800BD31C4 /* guit_en_manual5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_en_manual5.html; sourceTree = "<group>"; };
-		1B2E14881D22620800BD31C4 /* guit_en_manual6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_en_manual6.html; sourceTree = "<group>"; };
-		1B2E14891D22620800BD31C4 /* guit_en_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_en_manual7.html; sourceTree = "<group>"; };
 		1B2E149F1D2288CB00BD31C4 /* guit_tuning_options.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_tuning_options.png; sourceTree = "<group>"; };
 		1B2E14A11D228B7700BD31C4 /* guit_subtypes_tuning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_subtypes_tuning.png; sourceTree = "<group>"; };
 		1B2E14A31D228CA300BD31C4 /* guit_calibrated_tuning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_calibrated_tuning.png; sourceTree = "<group>"; };
@@ -1055,8 +1031,27 @@
 		1BCCC1811D1FD5E800AD17D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BCCC1911D1FD5E800AD17D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1BCCC2271D1FD6A200AD17D0 /* Simple Guitar Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Guitar Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1BE7948C1C9B3CA6001A5E72 /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
-		1BE7948D1C9B3CA6001A5E72 /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
+		1BDE3B8C1F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "VpadnSDKiOS-4.6.5"; sourceTree = "<group>"; };
+		1BDE3B931F24AD87008BFF63 /* VpadnSDKAdKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VpadnSDKAdKit.framework; path = "VpadnSDKiOS-4.6.5/VpadnSDKAdKit.framework"; sourceTree = "<group>"; };
+		1BDE3B951F24B447008BFF63 /* VpadnBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnBanner.h; sourceTree = "<group>"; };
+		1BDE3B961F24B447008BFF63 /* VpadnInterstitial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnInterstitial.h; sourceTree = "<group>"; };
+		1BDE3B971F24B447008BFF63 /* VpadnNativeAd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnNativeAd.h; sourceTree = "<group>"; };
+		1BDE3B981F24B447008BFF63 /* VpadnNativeAdsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnNativeAdsManager.h; sourceTree = "<group>"; };
+		1BDE3B991F24B447008BFF63 /* VpadnNativeAdTableViewAdProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpadnNativeAdTableViewAdProvider.h; sourceTree = "<group>"; };
+		1BDE3B9B1F24CB35008BFF63 /* guit_de_manual1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_de_manual1.html; sourceTree = "<group>"; };
+		1BDE3B9C1F24CB35008BFF63 /* guit_de_manual2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_de_manual2.html; sourceTree = "<group>"; };
+		1BDE3B9D1F24CB35008BFF63 /* guit_de_manual3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_de_manual3.html; sourceTree = "<group>"; };
+		1BDE3B9E1F24CB35008BFF63 /* guit_de_manual4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_de_manual4.html; sourceTree = "<group>"; };
+		1BDE3B9F1F24CB35008BFF63 /* guit_de_manual5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_de_manual5.html; sourceTree = "<group>"; };
+		1BDE3BA01F24CB35008BFF63 /* guit_de_manual6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_de_manual6.html; sourceTree = "<group>"; };
+		1BDE3BA11F24CB35008BFF63 /* guit_de_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_de_manual7.html; sourceTree = "<group>"; };
+		1BDE3BA91F24CB47008BFF63 /* guit_en_manual1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_en_manual1.html; sourceTree = "<group>"; };
+		1BDE3BAA1F24CB47008BFF63 /* guit_en_manual2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_en_manual2.html; sourceTree = "<group>"; };
+		1BDE3BAB1F24CB47008BFF63 /* guit_en_manual3.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_en_manual3.html; sourceTree = "<group>"; };
+		1BDE3BAC1F24CB47008BFF63 /* guit_en_manual4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_en_manual4.html; sourceTree = "<group>"; };
+		1BDE3BAD1F24CB47008BFF63 /* guit_en_manual5.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_en_manual5.html; sourceTree = "<group>"; };
+		1BDE3BAE1F24CB47008BFF63 /* guit_en_manual6.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_en_manual6.html; sourceTree = "<group>"; };
+		1BDE3BAF1F24CB47008BFF63 /* guit_en_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = guit_en_manual7.html; sourceTree = "<group>"; };
 		1BE794901C9B3CC4001A5E72 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		1BE794921C9B3CDD001A5E72 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1BE794941C9B3CF0001A5E72 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
@@ -1066,7 +1061,6 @@
 		1BE7949C1C9B3D25001A5E72 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1BEBF3CC1C9D469500F2ED4D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1BEBF3CE1C9D477500F2ED4D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		1BEF1CE81CA735C8008DE3CC /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HockeySDK.framework; path = "Simple Ukulele Tuner/Vendor/HockeySDK.framework"; sourceTree = "<group>"; };
 		1BF634EF1CB1A0FB0060ECEE /* uke_en_manual4.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = uke_en_manual4.html; sourceTree = "<group>"; };
 		1BF634F11CB1A2D10060ECEE /* calibration_01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calibration_01.png; sourceTree = "<group>"; };
 		1BF634F31CB1A2DE0060ECEE /* calibration_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calibration_02.png; sourceTree = "<group>"; };
@@ -1080,7 +1074,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B2E12351D1FDD5100BD31C4 /* libz.tbd in Frameworks */,
-				1B2E12361D1FDD5100BD31C4 /* HockeySDK.framework in Frameworks */,
 				1B2E12371D1FDD5100BD31C4 /* CoreTelephony.framework in Frameworks */,
 				1B2E12381D1FDD5100BD31C4 /* CoreGraphics.framework in Frameworks */,
 				1B2E12391D1FDD5100BD31C4 /* Foundation.framework in Frameworks */,
@@ -1092,7 +1085,6 @@
 				1B2E123F1D1FDD5100BD31C4 /* AudioToolbox.framework in Frameworks */,
 				1B2E12401D1FDD5100BD31C4 /* CoreAudio.framework in Frameworks */,
 				1B2E12411D1FDD5100BD31C4 /* Accelerate.framework in Frameworks */,
-				1B2E12421D1FDD5100BD31C4 /* StartApp.framework in Frameworks */,
 				1B2E12431D1FDD5100BD31C4 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1102,7 +1094,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B2E12C91D1FDDA600BD31C4 /* libz.tbd in Frameworks */,
-				1B2E12CA1D1FDDA600BD31C4 /* HockeySDK.framework in Frameworks */,
 				1B2E12CB1D1FDDA600BD31C4 /* CoreTelephony.framework in Frameworks */,
 				1B2E12CC1D1FDDA600BD31C4 /* CoreGraphics.framework in Frameworks */,
 				1B2E12CD1D1FDDA600BD31C4 /* Foundation.framework in Frameworks */,
@@ -1114,7 +1105,6 @@
 				1B2E12D31D1FDDA600BD31C4 /* AudioToolbox.framework in Frameworks */,
 				1B2E12D41D1FDDA600BD31C4 /* CoreAudio.framework in Frameworks */,
 				1B2E12D51D1FDDA600BD31C4 /* Accelerate.framework in Frameworks */,
-				1B2E12D61D1FDDA600BD31C4 /* StartApp.framework in Frameworks */,
 				1B2E12D71D1FDDA600BD31C4 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1124,7 +1114,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B2E135D1D1FDDD100BD31C4 /* libz.tbd in Frameworks */,
-				1B2E135E1D1FDDD100BD31C4 /* HockeySDK.framework in Frameworks */,
 				1B2E135F1D1FDDD100BD31C4 /* CoreTelephony.framework in Frameworks */,
 				1B2E13601D1FDDD100BD31C4 /* CoreGraphics.framework in Frameworks */,
 				1B2E13611D1FDDD100BD31C4 /* Foundation.framework in Frameworks */,
@@ -1136,7 +1125,6 @@
 				1B2E13671D1FDDD100BD31C4 /* AudioToolbox.framework in Frameworks */,
 				1B2E13681D1FDDD100BD31C4 /* CoreAudio.framework in Frameworks */,
 				1B2E13691D1FDDD100BD31C4 /* Accelerate.framework in Frameworks */,
-				1B2E136A1D1FDDD100BD31C4 /* StartApp.framework in Frameworks */,
 				1B2E136B1D1FDDD100BD31C4 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1146,7 +1134,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B2E13F11D1FDE1300BD31C4 /* libz.tbd in Frameworks */,
-				1B2E13F21D1FDE1300BD31C4 /* HockeySDK.framework in Frameworks */,
 				1B2E13F31D1FDE1300BD31C4 /* CoreTelephony.framework in Frameworks */,
 				1B2E13F41D1FDE1300BD31C4 /* CoreGraphics.framework in Frameworks */,
 				1B2E13F51D1FDE1300BD31C4 /* Foundation.framework in Frameworks */,
@@ -1158,7 +1145,6 @@
 				1B2E13FB1D1FDE1300BD31C4 /* AudioToolbox.framework in Frameworks */,
 				1B2E13FC1D1FDE1300BD31C4 /* CoreAudio.framework in Frameworks */,
 				1B2E13FD1D1FDE1300BD31C4 /* Accelerate.framework in Frameworks */,
-				1B2E13FE1D1FDE1300BD31C4 /* StartApp.framework in Frameworks */,
 				1B2E13FF1D1FDE1300BD31C4 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1167,8 +1153,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BDE3B941F24AD87008BFF63 /* VpadnSDKAdKit.framework in Frameworks */,
 				1BEBF3CF1C9D477500F2ED4D /* libz.tbd in Frameworks */,
-				1BF634EE1CB199E90060ECEE /* HockeySDK.framework in Frameworks */,
 				1BE794991C9B3D0E001A5E72 /* CoreTelephony.framework in Frameworks */,
 				1BEBF3CD1C9D469500F2ED4D /* CoreGraphics.framework in Frameworks */,
 				1BE7949D1C9B3D25001A5E72 /* Foundation.framework in Frameworks */,
@@ -1180,7 +1166,6 @@
 				1BC0415D1C99FA19005103EC /* AudioToolbox.framework in Frameworks */,
 				1BC0415F1C99FA1F005103EC /* CoreAudio.framework in Frameworks */,
 				1BC041611C99FA24005103EC /* Accelerate.framework in Frameworks */,
-				1BE7948F1C9B3CA6001A5E72 /* StartApp.framework in Frameworks */,
 				1BC041631C99FA2F005103EC /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1189,8 +1174,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1BDE3B9A1F24C858008BFF63 /* VpadnSDKAdKit.framework in Frameworks */,
 				1BCCC1CC1D1FD6A200AD17D0 /* libz.tbd in Frameworks */,
-				1BCCC1CD1D1FD6A200AD17D0 /* HockeySDK.framework in Frameworks */,
 				1BCCC1CE1D1FD6A200AD17D0 /* CoreTelephony.framework in Frameworks */,
 				1BCCC1CF1D1FD6A200AD17D0 /* CoreGraphics.framework in Frameworks */,
 				1BCCC1D01D1FD6A200AD17D0 /* Foundation.framework in Frameworks */,
@@ -1202,7 +1187,6 @@
 				1BCCC1D61D1FD6A200AD17D0 /* AudioToolbox.framework in Frameworks */,
 				1BCCC1D71D1FD6A200AD17D0 /* CoreAudio.framework in Frameworks */,
 				1BCCC1D81D1FD6A200AD17D0 /* Accelerate.framework in Frameworks */,
-				1BCCC1D91D1FD6A200AD17D0 /* StartApp.framework in Frameworks */,
 				1BCCC1DA1D1FD6A200AD17D0 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1309,13 +1293,13 @@
 		1B2E14981D22631300BD31C4 /* de */ = {
 			isa = PBXGroup;
 			children = (
-				1B2E147C1D22620800BD31C4 /* guit_de_manual1.html */,
-				1B2E147D1D22620800BD31C4 /* guit_de_manual2.html */,
-				1B2E147E1D22620800BD31C4 /* guit_de_manual3.html */,
-				1B2E147F1D22620800BD31C4 /* guit_de_manual4.html */,
-				1B2E14801D22620800BD31C4 /* guit_de_manual5.html */,
-				1B2E14811D22620800BD31C4 /* guit_de_manual6.html */,
-				1B2E14821D22620800BD31C4 /* guit_de_manual7.html */,
+				1BDE3B9B1F24CB35008BFF63 /* guit_de_manual1.html */,
+				1BDE3B9C1F24CB35008BFF63 /* guit_de_manual2.html */,
+				1BDE3B9D1F24CB35008BFF63 /* guit_de_manual3.html */,
+				1BDE3B9E1F24CB35008BFF63 /* guit_de_manual4.html */,
+				1BDE3B9F1F24CB35008BFF63 /* guit_de_manual5.html */,
+				1BDE3BA01F24CB35008BFF63 /* guit_de_manual6.html */,
+				1BDE3BA11F24CB35008BFF63 /* guit_de_manual7.html */,
 			);
 			name = de;
 			sourceTree = "<group>";
@@ -1323,13 +1307,13 @@
 		1B2E14991D22632100BD31C4 /* en */ = {
 			isa = PBXGroup;
 			children = (
-				1B2E14831D22620800BD31C4 /* guit_en_manual1.html */,
-				1B2E14841D22620800BD31C4 /* guit_en_manual2.html */,
-				1B2E14851D22620800BD31C4 /* guit_en_manual3.html */,
-				1B2E14861D22620800BD31C4 /* guit_en_manual4.html */,
-				1B2E14871D22620800BD31C4 /* guit_en_manual5.html */,
-				1B2E14881D22620800BD31C4 /* guit_en_manual6.html */,
-				1B2E14891D22620800BD31C4 /* guit_en_manual7.html */,
+				1BDE3BA91F24CB47008BFF63 /* guit_en_manual1.html */,
+				1BDE3BAA1F24CB47008BFF63 /* guit_en_manual2.html */,
+				1BDE3BAB1F24CB47008BFF63 /* guit_en_manual3.html */,
+				1BDE3BAC1F24CB47008BFF63 /* guit_en_manual4.html */,
+				1BDE3BAD1F24CB47008BFF63 /* guit_en_manual5.html */,
+				1BDE3BAE1F24CB47008BFF63 /* guit_en_manual6.html */,
+				1BDE3BAF1F24CB47008BFF63 /* guit_en_manual7.html */,
 			);
 			name = en;
 			sourceTree = "<group>";
@@ -1473,7 +1457,6 @@
 			isa = PBXGroup;
 			children = (
 				1BE7949E1C9B3D35001A5E72 /* Frameworks */,
-				1BE7948B1C9B3C95001A5E72 /* StartApp SDK */,
 				1BC0428C1C9A082D005103EC /* Root.plist */,
 				1BC0427D1C9A0198005103EC /* Localizable.strings */,
 				1B2E145C1D1FE45200BD31C4 /* Simple Balalaika Tuner */,
@@ -1514,6 +1497,11 @@
 				1BC0427A1C99FE11005103EC /* VersionManager.m */,
 				1B2E14721D21218E00BD31C4 /* InstrumentContext.h */,
 				1B2E14731D21218E00BD31C4 /* InstrumentContext.m */,
+				1BDE3B951F24B447008BFF63 /* VpadnBanner.h */,
+				1BDE3B961F24B447008BFF63 /* VpadnInterstitial.h */,
+				1BDE3B971F24B447008BFF63 /* VpadnNativeAd.h */,
+				1BDE3B981F24B447008BFF63 /* VpadnNativeAdsManager.h */,
+				1BDE3B991F24B447008BFF63 /* VpadnNativeAdTableViewAdProvider.h */,
 				1BC041481C99F8C6005103EC /* Ukulele_Assets.xcassets */,
 				1BC041E11C99FCF7005103EC /* images */,
 				1BC041541C99F9C9005103EC /* iRate */,
@@ -1816,19 +1804,10 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		1BE7948B1C9B3C95001A5E72 /* StartApp SDK */ = {
-			isa = PBXGroup;
-			children = (
-				1BE7948C1C9B3CA6001A5E72 /* StartApp.bundle */,
-				1BE7948D1C9B3CA6001A5E72 /* StartApp.framework */,
-			);
-			name = "StartApp SDK";
-			sourceTree = "<group>";
-		};
 		1BE7949E1C9B3D35001A5E72 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1BEF1CE81CA735C8008DE3CC /* HockeySDK.framework */,
+				1BDE3B931F24AD87008BFF63 /* VpadnSDKAdKit.framework */,
 				1BEBF3CE1C9D477500F2ED4D /* libz.tbd */,
 				1BEBF3CC1C9D469500F2ED4D /* CoreGraphics.framework */,
 				1BC041621C99FA2F005103EC /* StoreKit.framework */,
@@ -1841,6 +1820,7 @@
 				1BE794961C9B3D01001A5E72 /* SystemConfiguration.framework */,
 				1BE794941C9B3CF0001A5E72 /* AdSupport.framework */,
 				1BE794921C9B3CDD001A5E72 /* AVFoundation.framework */,
+				1BDE3B8C1F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 */,
 				1BE794901C9B3CC4001A5E72 /* CoreMedia.framework */,
 			);
 			name = Frameworks;
@@ -1974,7 +1954,7 @@
 					};
 					1BC041381C99F8C6005103EC = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = P2EQM7YAFH;
+						ProvisioningStyle = Automatic;
 					};
 					1BCCC1951D1FD6A200AD17D0 = {
 						DevelopmentTeam = P2EQM7YAFH;
@@ -1982,7 +1962,7 @@
 				};
 			};
 			buildConfigurationList = 1BC041341C99F8C6005103EC /* Build configuration list for PBXProject "Simple Ukulele Tuner" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -2024,6 +2004,7 @@
 				1B2E12491D1FDD5100BD31C4 /* closeButton.png in Resources */,
 				1B2E124B1D1FDD5100BD31C4 /* gaugeBackground.png in Resources */,
 				1B2E124C1D1FDD5100BD31C4 /* calibration_01.png in Resources */,
+				1BDE3B8F1F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 in Resources */,
 				1B2E124D1D1FDD5100BD31C4 /* gaugePattern.png in Resources */,
 				1B2E124F1D1FDD5100BD31C4 /* Root.plist in Resources */,
 				1B2E12511D1FDD5100BD31C4 /* settingsPattern.png in Resources */,
@@ -2033,7 +2014,6 @@
 				1B2E12551D1FDD5100BD31C4 /* calibration_02.png in Resources */,
 				1B2E12561D1FDD5100BD31C4 /* autocorr_03.png in Resources */,
 				1B2E125A1D1FDD5100BD31C4 /* inapppurch_01.png in Resources */,
-				1B2E125B1D1FDD5100BD31C4 /* StartApp.bundle in Resources */,
 				1B2E125C1D1FDD5100BD31C4 /* linePattern.png in Resources */,
 				1B2E12601D1FDD5100BD31C4 /* shoppingCart.png in Resources */,
 				1B2E12611D1FDD5100BD31C4 /* background4.png in Resources */,
@@ -2096,7 +2076,6 @@
 				1B2E12E91D1FDDA600BD31C4 /* calibration_02.png in Resources */,
 				1B2E12EA1D1FDDA600BD31C4 /* autocorr_03.png in Resources */,
 				1B2E12EE1D1FDDA600BD31C4 /* inapppurch_01.png in Resources */,
-				1B2E12EF1D1FDDA600BD31C4 /* StartApp.bundle in Resources */,
 				1B2E12F01D1FDDA600BD31C4 /* linePattern.png in Resources */,
 				1B2E12F41D1FDDA600BD31C4 /* shoppingCart.png in Resources */,
 				1B6717C51D455BB0004AE1A0 /* banjo_subtypes_tuning.png in Resources */,
@@ -2120,6 +2099,7 @@
 				1B2E13031D1FDDA600BD31C4 /* arrowUp.png in Resources */,
 				1B6717CB1D45624C004AE1A0 /* banjo_overtuning.png in Resources */,
 				1B2E13041D1FDDA600BD31C4 /* offButton.png in Resources */,
+				1BDE3B901F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 in Resources */,
 				1B2E13051D1FDDA600BD31C4 /* fft_animated.gif in Resources */,
 				1B6717B31D454D30004AE1A0 /* banjo_en_manual7.html in Resources */,
 				1B2E13061D1FDDA600BD31C4 /* settingsPatternDark.png in Resources */,
@@ -2160,6 +2140,7 @@
 				1B2E13711D1FDDD100BD31C4 /* closeButton.png in Resources */,
 				1B2E13731D1FDDD100BD31C4 /* gaugeBackground.png in Resources */,
 				1B2E13741D1FDDD100BD31C4 /* calibration_01.png in Resources */,
+				1BDE3B911F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 in Resources */,
 				1B2E13751D1FDDD100BD31C4 /* gaugePattern.png in Resources */,
 				1B2E13771D1FDDD100BD31C4 /* Root.plist in Resources */,
 				1B2E13791D1FDDD100BD31C4 /* settingsPattern.png in Resources */,
@@ -2169,7 +2150,6 @@
 				1B2E137D1D1FDDD100BD31C4 /* calibration_02.png in Resources */,
 				1B2E137E1D1FDDD100BD31C4 /* autocorr_03.png in Resources */,
 				1B2E13821D1FDDD100BD31C4 /* inapppurch_01.png in Resources */,
-				1B2E13831D1FDDD100BD31C4 /* StartApp.bundle in Resources */,
 				1B2E13841D1FDDD100BD31C4 /* linePattern.png in Resources */,
 				1B2E13881D1FDDD100BD31C4 /* shoppingCart.png in Resources */,
 				1B2E13891D1FDDD100BD31C4 /* background4.png in Resources */,
@@ -2225,7 +2205,6 @@
 				1B2E14111D1FDE1300BD31C4 /* calibration_02.png in Resources */,
 				1B2E14121D1FDE1300BD31C4 /* autocorr_03.png in Resources */,
 				1B2E14161D1FDE1300BD31C4 /* inapppurch_01.png in Resources */,
-				1B2E14171D1FDE1300BD31C4 /* StartApp.bundle in Resources */,
 				1B2E14181D1FDE1300BD31C4 /* linePattern.png in Resources */,
 				1B2E141C1D1FDE1300BD31C4 /* shoppingCart.png in Resources */,
 				1B2E141D1D1FDE1300BD31C4 /* background4.png in Resources */,
@@ -2246,6 +2225,7 @@
 				1B2E142F1D1FDE1300BD31C4 /* arrowRight.png in Resources */,
 				1B2E14301D1FDE1300BD31C4 /* settings.png in Resources */,
 				1B2E14321D1FDE1300BD31C4 /* microphoneOn.png in Resources */,
+				1BDE3B921F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 in Resources */,
 				1B2E14331D1FDE1300BD31C4 /* autocorr_animated.gif in Resources */,
 				1B8CDC651E58C35B00DD8240 /* header.png in Resources */,
 				1B2E14341D1FDE1300BD31C4 /* stringActive.png in Resources */,
@@ -2291,7 +2271,6 @@
 				1BC0423F1C99FD3D005103EC /* uke_inapppurchase_01.png in Resources */,
 				1BC0417F1C99FBEB005103EC /* uke_de_manual3.html in Resources */,
 				1BC042411C99FD3D005103EC /* inapppurch_01.png in Resources */,
-				1BE7948E1C9B3CA6001A5E72 /* StartApp.bundle in Resources */,
 				1BC0420F1C99FD23005103EC /* linePattern.png in Resources */,
 				1BC042381C99FD3D005103EC /* uke_types_active.png in Resources */,
 				1BC041781C99FBEB005103EC /* uke_en_manual1.html in Resources */,
@@ -2308,6 +2287,7 @@
 				1BC042431C99FD3D005103EC /* uke_inapppurchase_03.png in Resources */,
 				1BC042141C99FD23005103EC /* settingsTop.png in Resources */,
 				1BC0417B1C99FBEB005103EC /* uke_en_manual5.html in Resources */,
+				1BDE3B8D1F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 in Resources */,
 				1BC0421A1C99FD23005103EC /* calibrationButton.png in Resources */,
 				1BC0417E1C99FBEB005103EC /* uke_de_manual2.html in Resources */,
 				1BC041FF1C99FD0A005103EC /* stringPassive.png in Resources */,
@@ -2349,36 +2329,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BCCC1DD1D1FD6A200AD17D0 /* Localizable.strings in Resources */,
-				1B2E14941D22620800BD31C4 /* guit_en_manual4.html in Resources */,
 				1BCCC1DE1D1FD6A200AD17D0 /* fft_02.png in Resources */,
-				1B2E148E1D22620800BD31C4 /* guit_de_manual5.html in Resources */,
 				1B2E14A21D228B7700BD31C4 /* guit_subtypes_tuning.png in Resources */,
 				1BCCC1E01D1FD6A200AD17D0 /* closeButton.png in Resources */,
 				1B2E14A41D228CA300BD31C4 /* guit_calibrated_tuning.png in Resources */,
 				1BCCC1E21D1FD6A200AD17D0 /* gaugeBackground.png in Resources */,
 				1BCCC1E31D1FD6A200AD17D0 /* calibration_01.png in Resources */,
 				1BCCC1E41D1FD6A200AD17D0 /* gaugePattern.png in Resources */,
+				1BDE3BB21F24CB47008BFF63 /* guit_en_manual3.html in Resources */,
 				1BCCC1E61D1FD6A200AD17D0 /* Root.plist in Resources */,
-				1B2E14931D22620800BD31C4 /* guit_en_manual3.html in Resources */,
-				1B2E14951D22620800BD31C4 /* guit_en_manual5.html in Resources */,
+				1BDE3BB61F24CB47008BFF63 /* guit_en_manual7.html in Resources */,
+				1BDE3BA71F24CB35008BFF63 /* guit_de_manual6.html in Resources */,
 				1BCCC1E81D1FD6A200AD17D0 /* settingsPattern.png in Resources */,
+				1BDE3BB41F24CB47008BFF63 /* guit_en_manual5.html in Resources */,
 				1BCCC1E91D1FD6A200AD17D0 /* settingsMiddle.png in Resources */,
 				1BCCC1EA1D1FD6A200AD17D0 /* tabActive.png in Resources */,
 				1BCCC1EB1D1FD6A200AD17D0 /* arrowDown.png in Resources */,
 				1BCCC1EC1D1FD6A200AD17D0 /* calibration_02.png in Resources */,
+				1BDE3BB51F24CB47008BFF63 /* guit_en_manual6.html in Resources */,
+				1BDE3BB31F24CB47008BFF63 /* guit_en_manual4.html in Resources */,
 				1BCCC1ED1D1FD6A200AD17D0 /* autocorr_03.png in Resources */,
-				1B2E148D1D22620800BD31C4 /* guit_de_manual4.html in Resources */,
+				1BDE3BA81F24CB35008BFF63 /* guit_de_manual7.html in Resources */,
 				1BCCC1F11D1FD6A200AD17D0 /* inapppurch_01.png in Resources */,
-				1BCCC1F21D1FD6A200AD17D0 /* StartApp.bundle in Resources */,
 				1BCCC1F31D1FD6A200AD17D0 /* linePattern.png in Resources */,
-				1B2E14921D22620800BD31C4 /* guit_en_manual2.html in Resources */,
-				1B2E14961D22620800BD31C4 /* guit_en_manual6.html in Resources */,
 				1BCCC1F71D1FD6A200AD17D0 /* shoppingCart.png in Resources */,
 				1BCCC1F81D1FD6A200AD17D0 /* background4.png in Resources */,
-				1B2E14971D22620800BD31C4 /* guit_en_manual7.html in Resources */,
-				1B2E148B1D22620800BD31C4 /* guit_de_manual2.html in Resources */,
 				1BCCC1F91D1FD6A200AD17D0 /* knob.png in Resources */,
 				1B2E14B41D23C0C400BD31C4 /* Guitar_Assets.xcassets in Resources */,
+				1BDE3BA41F24CB35008BFF63 /* guit_de_manual3.html in Resources */,
 				1BCCC1FA1D1FD6A200AD17D0 /* autocorr_01.png in Resources */,
 				1BCCC1FB1D1FD6A200AD17D0 /* iRate.bundle in Resources */,
 				1BCCC1FD1D1FD6A200AD17D0 /* style.css in Resources */,
@@ -2392,36 +2370,38 @@
 				1BCCC2081D1FD6A200AD17D0 /* fft_animated.gif in Resources */,
 				1BCCC2091D1FD6A200AD17D0 /* settingsPatternDark.png in Resources */,
 				1BCCC20A1D1FD6A200AD17D0 /* arrowRight.png in Resources */,
-				1B2E148F1D22620800BD31C4 /* guit_de_manual6.html in Resources */,
 				1BCCC20B1D1FD6A200AD17D0 /* settings.png in Resources */,
 				1B2E14A01D2288CB00BD31C4 /* guit_tuning_options.png in Resources */,
 				1B2E14B21D22933700BD31C4 /* guit_inapppurchase_03.png in Resources */,
 				1BCCC20D1D1FD6A200AD17D0 /* microphoneOn.png in Resources */,
 				1BCCC20E1D1FD6A200AD17D0 /* autocorr_animated.gif in Resources */,
 				1B2E14A81D228E9D00BD31C4 /* guit_leds.png in Resources */,
+				1BDE3BA51F24CB35008BFF63 /* guit_de_manual4.html in Resources */,
 				1BCCC20F1D1FD6A200AD17D0 /* stringActive.png in Resources */,
+				1BDE3BA31F24CB35008BFF63 /* guit_de_manual2.html in Resources */,
 				1BCCC2111D1FD6A200AD17D0 /* tabPassive.png in Resources */,
 				1BCCC2121D1FD6A200AD17D0 /* inapppurch_02.png in Resources */,
 				1BCCC2151D1FD6A200AD17D0 /* restoreButton.png in Resources */,
+				1BDE3B8E1F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 in Resources */,
 				1B2E14AC1D228FC000BD31C4 /* guit_types_inactive.png in Resources */,
 				1B2E14621D20262D00BD31C4 /* background5.png in Resources */,
-				1B2E14911D22620800BD31C4 /* guit_en_manual1.html in Resources */,
+				1BDE3BB01F24CB47008BFF63 /* guit_en_manual1.html in Resources */,
 				1BCCC2181D1FD6A200AD17D0 /* onButton.png in Resources */,
-				1B2E148A1D22620800BD31C4 /* guit_de_manual1.html in Resources */,
 				1B2E146E1D204E1200BD31C4 /* background6.png in Resources */,
 				1BCCC21A1D1FD6A200AD17D0 /* arrowLeft.png in Resources */,
+				1BDE3BA61F24CB35008BFF63 /* guit_de_manual5.html in Resources */,
 				1BCCC21B1D1FD6A200AD17D0 /* fft_01.png in Resources */,
 				1BCCC21D1D1FD6A200AD17D0 /* microphoneOff.png in Resources */,
 				1B2E14B01D22926F00BD31C4 /* guit_inapppurchase_02.png in Resources */,
+				1BDE3BB11F24CB47008BFF63 /* guit_en_manual2.html in Resources */,
 				1B2E14AE1D22914B00BD31C4 /* guit_inapppurchase_01.png in Resources */,
 				1BCCC21E1D1FD6A200AD17D0 /* autocorr_02.png in Resources */,
 				1BCCC21F1D1FD6A200AD17D0 /* gaugePatternGreen.png in Resources */,
+				1BDE3BA21F24CB35008BFF63 /* guit_de_manual1.html in Resources */,
 				1B2E14AA1D228F5500BD31C4 /* guit_types_active.png in Resources */,
-				1B2E148C1D22620800BD31C4 /* guit_de_manual3.html in Resources */,
 				1BCCC2211D1FD6A200AD17D0 /* ledActive.png in Resources */,
 				1BCCC2221D1FD6A200AD17D0 /* info.png in Resources */,
 				1BCCC2231D1FD6A200AD17D0 /* ledPassive.png in Resources */,
-				1B2E14901D22620800BD31C4 /* guit_de_manual7.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2827,7 +2807,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/VpadnSDKiOS-4.6.5",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_MANDOLIN;
@@ -2852,7 +2835,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/VpadnSDKiOS-4.6.5",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_MANDOLIN;
@@ -2878,7 +2864,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = P2EQM7YAFH;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/VpadnSDKiOS-4.6.5",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_BANJO;
@@ -2904,7 +2893,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = P2EQM7YAFH;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/VpadnSDKiOS-4.6.5",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_BANJO;
@@ -2929,7 +2921,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/VpadnSDKiOS-4.6.5",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_VIOLIN;
@@ -2954,7 +2949,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/VpadnSDKiOS-4.6.5",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_VIOLIN;
@@ -2979,7 +2977,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/VpadnSDKiOS-4.6.5",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_BALALAIKA;
@@ -3004,7 +3005,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/VpadnSDKiOS-4.6.5",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_BALALAIKA;
@@ -3115,18 +3119,26 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = P2EQM7YAFH;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/VpadnSDKiOS-4.6.5",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_UKULELE;
 				INFOPLIST_FILE = "Simple Ukulele Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.vormbrock.simpleukuleletuner2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3138,18 +3150,25 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = P2EQM7YAFH;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/VpadnSDKiOS-4.6.5",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_UKULELE;
 				INFOPLIST_FILE = "Simple Ukulele Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.vormbrock.simpleukuleletuner2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -3164,7 +3183,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = P2EQM7YAFH;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/VpadnSDKiOS-4.6.5",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_GUITAR;
@@ -3173,6 +3195,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.vormbrock.simpleguitartuner2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -3190,7 +3213,10 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = P2EQM7YAFH;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/**",
+					"$(PROJECT_DIR)/VpadnSDKiOS-4.6.5",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_GUITAR;
@@ -3199,6 +3225,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.vormbrock.simpleguitartuner2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

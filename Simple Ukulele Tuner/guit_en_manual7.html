@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="de-DE">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Benutzer-Handbuch</title>
+        <link rel="stylesheet" href="style.css">    </head>
+    <body onload="draw()" style="margin:0; padding:0; font-size:100%;background-color:#454851">
+        <div id="page" style="max-width:960px; margin:0 auto;">
+            <div id="header" style="padding:0 3.125%;">
+                <h1>User Manual</h1>
+                <h3>In-App Purchase "Signal Plus" or "All In One"</h3>
+                <h2>7. FFT (Fast Fourier Transformation) </h2>
+            </div><!-- #header -->
+            <div id="content1" style="clear:both;  padding:0 3.125%;">
+                <p>In opposition to autocorrelation, the input signal is now analyzed in the frequency domain - keyword: spectrum.</p>
+            </div><!-- #content -->
+            <div id="fft_animated" style="clear:both;  padding:0 3.125%;">
+                <p><center><img src="fft_animated.gif" alt="Screenshot Pro Version" class="img" /></center></p>
+            </div>
+            <!-- #sidebar -->
+            <div id="content2" style="clear:both;  padding:0 3.125%;">
+                <p>In the frequency domain, you can see all the frequencies that are involved in the formation of a sound (of the instrument). As mentioned in the previous chapter, there are additional overtones alongside the actual keynotes in guitar or ukulele strings, which account for the typical sound of a string instrument. For simplicity, we will display the low E string (82.4 Hz) once again - here is the spectral view of it:  </p>
+            </div>
+            <div id="fft_01" style="clear:both;  padding:0 3.125%;">
+                <p><center><img src="fft_01.png" alt="Screenshot Pro Version" class="img" /></center></p>
+            </div>
+            <div id="content3" style="clear:both;  padding:0 3.125%;">
+                <p>The relevant peak (82.4 Hz) is the first and quite wide one, followed by another peak, which represents the first overtone.</p>
+                <p>Finally, the spectral view of a pure sine wave (440 Hz, concert pitch):</p>
+            </div>
+            <div id="fft_02" style="clear:both;  padding:0 3.125%;">
+                <p><center><img src="fft_02.png" alt="Screenshot Pro Version" class="img" /></center></p>
+            </div>
+            <div id="content3" style="clear:both;  padding:0 3.125%;">
+                 <p>In opposition to guitar or ukulele strings, the FFT view now shows a unique maximum - here the frequency can be clearly attributed to the x-axis. As a general rule, however, the higher the measured frequency, the further the appropriate maximum will move to the <strong>right</strong>.</p>
+            </div>
+            <div id="footer" style="clear:both; padding:0 3.125%;">
+                <center><span class="copyright">Copyright 2016 - Ullrich Vormbrock - All Rights Reserved<br/><br/><br/></span></center>
+            </div><!-- #footer -->
+        </div><!-- #page -->
+    </body>
+</html>

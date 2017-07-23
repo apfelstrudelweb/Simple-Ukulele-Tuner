@@ -7,8 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import <StartApp/StartApp.h>
-#import <HockeySDK/HockeySDK.h>
 
 
 @interface AppDelegate () {
@@ -40,7 +38,7 @@
     [bindings setObject:version_premium forKey:UPGRADE_TYPE];
     //[bindings setObject:version_instrument forKey:UPGRADE_TYPE];
     //[bindings setObject:version_signal forKey:UPGRADE_TYPE];
-    [bindings removeObjectForKey:UPGRADE_TYPE];
+    //[bindings removeObjectForKey:UPGRADE_TYPE];
     
     // Set the application defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
@@ -94,45 +92,42 @@
     if ([version_lite isEqualToString:currentVersion]) {
         
         // initialize the SDK with your appID and devID
-        STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
-        STASplashPreferences *splashPreferences = [[STASplashPreferences alloc] init];
-        splashPreferences.splashMode = STASplashModeTemplate;
-        splashPreferences.splashTemplateTheme = STASplashTemplateThemeDeepBlue;
-        splashPreferences.splashLoadingIndicatorType = STASplashLoadingIndicatorTypeIOS;
+//        STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
+//        STASplashPreferences *splashPreferences = [[STASplashPreferences alloc] init];
+//        splashPreferences.splashMode = STASplashModeTemplate;
+//        splashPreferences.splashTemplateTheme = STASplashTemplateThemeDeepBlue;
+//        splashPreferences.splashLoadingIndicatorType = STASplashLoadingIndicatorTypeIOS;
      
-#if defined(TARGET_UKULELE)
-        sdk.appID = @"203844333";
-        splashPreferences.splashTemplateAppName = @"Simple Ukulele Tuner";
-        [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
-#elif defined(TARGET_GUITAR)
-        sdk.appID = @"205646855";
-        splashPreferences.splashTemplateAppName = @"Simple Guitar Tuner";
-        [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"160ad6c5c353453ebd3f98d8867b8c25"];
-#elif defined(TARGET_MANDOLIN)
-        sdk.appID = @"????";
-        splashPreferences.splashTemplateAppName = @"Simple Mandolin Tuner";
-        //[[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
-#elif defined(TARGET_BANJO)
-        sdk.appID = @"206512769";
-        splashPreferences.splashTemplateAppName = @"Simple Banjo Tuner";
-        //[[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
-#elif defined(TARGET_VIOLIN)
-        sdk.appID = @"????";
-        splashPreferences.splashTemplateAppName = @"Simple Violin Tuner";
-        //[[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
-#elif defined(TARGET_BALALAIKA)
-        sdk.appID = @"????";
-        splashPreferences.splashTemplateAppName = @"Simple Balalaika Tuner";
-        //[[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
-#endif
-        //[sdk showSplashAdWithPreferences:splashPreferences];
+//#if defined(TARGET_UKULELE)
+//        sdk.appID = @"203844333";
+//        splashPreferences.splashTemplateAppName = @"Simple Ukulele Tuner";
+//        [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
+//#elif defined(TARGET_GUITAR)
+//        sdk.appID = @"205646855";
+//        splashPreferences.splashTemplateAppName = @"Simple Guitar Tuner";
+//        [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"160ad6c5c353453ebd3f98d8867b8c25"];
+//#elif defined(TARGET_MANDOLIN)
+//        sdk.appID = @"????";
+//        splashPreferences.splashTemplateAppName = @"Simple Mandolin Tuner";
+//        //[[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
+//#elif defined(TARGET_BANJO)
+//        sdk.appID = @"206512769";
+//        splashPreferences.splashTemplateAppName = @"Simple Banjo Tuner";
+//        //[[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
+//#elif defined(TARGET_VIOLIN)
+//        sdk.appID = @"????";
+//        splashPreferences.splashTemplateAppName = @"Simple Violin Tuner";
+//        //[[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
+//#elif defined(TARGET_BALALAIKA)
+//        sdk.appID = @"????";
+//        splashPreferences.splashTemplateAppName = @"Simple Balalaika Tuner";
+//        //[[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
+//#endif
+//        //[sdk showSplashAdWithPreferences:splashPreferences];
         
     } else {
         [NSThread sleepForTimeInterval:TIME_SPLASHSCREEN];
     }
-    
-    [[BITHockeyManager sharedHockeyManager] startManager];
-    [[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation];
     
     [SHARED_MANAGER setCurrentSamplingRate:PREFERRED_SAMPLING_RATE];
     

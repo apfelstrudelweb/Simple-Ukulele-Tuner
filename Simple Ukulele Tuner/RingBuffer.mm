@@ -30,7 +30,7 @@ static void atomic_set(int64_t *ptr, int64_t value)
     OSAtomicAdd64(value - *ptr, ptr);
 }
 
-RingBuffer::RingBuffer(SInt64 bufferLength, SInt64 numChannels) : 
+RingBuffer::RingBuffer(SInt64 bufferLength, SInt64 numChannels) :
 mSizeOfBuffer(bufferLength)
 {
 	if (numChannels > kMaxNumChannels)

@@ -38,7 +38,7 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     const double phaseStep = (frequency / 44100.) * (M_PI * 2.);
     
     for(NSInteger i = 0; i < inNumberFrames; i++) {
-        outputBuffer[i] = (CGFloat) sin(currentPhase) + 0.2*(CGFloat) sin(2.0*currentPhase) + 0.1*(CGFloat) sin(4.0*currentPhase);// + 0.1*(CGFloat) sin(8.0*currentPhase);// + 0.2*(CGFloat) sin(16.0*currentPhase);
+        outputBuffer[i] = (CGFloat) sin(currentPhase) + 0.5*(CGFloat) sin(4.0*currentPhase) + 0.4*(CGFloat) sin(8.0*currentPhase) + 0.3*(CGFloat) sin(12.0*currentPhase) + 0.2*(CGFloat) sin(16.0*currentPhase);
         currentPhase += phaseStep;
     }
     

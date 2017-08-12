@@ -23,6 +23,11 @@
         
         self.backgroundColor = [UIColor clearColor];
         
+        // no info button for balalaika
+#if defined(TARGET_BALALAIKA)
+        return self;
+#endif
+        
         // info icon (button)
         self.infoButton = [UIButton buttonWithType:UIButtonTypeCustom];
         NSString* imageName = @"info.png"; //IS_IPAD ? @"infoIcon2x.png" : @"infoIcon.png";

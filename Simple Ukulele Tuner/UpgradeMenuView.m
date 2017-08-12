@@ -17,6 +17,8 @@
 
 #define PURCHASE [UIImage imageNamed:@"shoppingCart.png"]
 
+static BOOL hasAddObserver = NO;
+
 @interface UpgradeMenuView() <SKPaymentTransactionObserver> {
 
     CGFloat headerHeight, cellHeight;
@@ -93,7 +95,10 @@
                 NSLog(@"Transaction state -> Failed");
                 [self clearTransaction];
                 //called when the transaction does not finish
-                [self showFailedTransaction:transaction];
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self showFailedTransaction:transaction];
+                });
+                
                 [[SKPaymentQueue defaultQueue] finishTransaction:transaction];
                 break;
         }
@@ -105,7 +110,7 @@
     
     if (transaction.error.code != SKErrorPaymentCancelled){
         // Display an error here.
-        UIAlertController * alert = [UIAlertController
+        UIAlertController * alertController = [UIAlertController
                                      alertControllerWithTitle:@"Purchase Unsuccessful"
                                      message:@"Your purchase failed. Please try again."
                                      preferredStyle:UIAlertControllerStyleAlert];
@@ -115,10 +120,10 @@
                                     style:UIAlertActionStyleCancel
                                     handler:nil];
 
-        [alert addAction:okButton];
+        [alertController addAction:okButton];
 
         UIViewController *currentTopVC = [UIViewController currentTopViewController];
-        [currentTopVC presentViewController:alert animated:YES completion:nil];
+        [currentTopVC presentViewController:alertController animated:YES completion:nil];
     }
 }
 
@@ -207,7 +212,14 @@
     
     SKPayment *payment = [SKPayment paymentWithProduct:selectedProduct];
     
+    if (hasAddObserver) {
+        [[SKPaymentQueue defaultQueue] removeTransactionObserver:self];
+        hasAddObserver=NO;
+    }
+    
     [[SKPaymentQueue defaultQueue] addTransactionObserver:self];
+    hasAddObserver=YES;
+    
     [[SKPaymentQueue defaultQueue] addPayment:payment];
 }
 

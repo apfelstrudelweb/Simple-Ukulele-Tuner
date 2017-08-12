@@ -13,13 +13,13 @@
 #import "Yin.h"
 #import "AutoCorrelation.h"
 #import "FFT.h"
-#import "Bandpass.h"
 
 
 #define IS_MICROPHONE YES
 
-//#define NUM_CAPTURES_HOP 4
-#define NUM_AVRG_VALUES 20
+
+#define NUM_AVRG_VALUES 50
+#define CAPACITY 200
 
 
 
@@ -85,6 +85,8 @@
         [[Novocaine audioManager] setInputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels) {
             ringBuffer->AddNewInterleavedFloatData(data, numFrames, numChannels);
             
+            //[bandpass filterData:data numFrames:numFrames numChannels:numChannels];
+            
             if (isnan(dbVal)) {
                 dbVal = 0.0;
             }
@@ -100,40 +102,30 @@
             if (dbVal > -80) {
                 [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateVolumeNotification" object:[NSNumber numberWithFloat:dbVal]];
             }
-
         }];
     }
     
     
     [[Novocaine audioManager] setOutputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels) {
         ringBuffer->FetchInterleavedData(data, numFrames, numChannels);
-
-        CGFloat volume = 100 + dbVal;
-        spect.volume = [NSNumber numberWithFloat:volume];
         
-        NSInteger numHops = 20;
+        NSInteger numHops = 5;
         
         switch(sensitivity) {
             case 1: numHops = 12; break;
             case 2: numHops = 8; break;
-            case 3: numHops = 5; break;
             case 4: numHops = 3; break;
             case 5: numHops = 1; break;
         }
         
         
-        int windowSize = numFrames;
-        float* transferBuffer = (float*)malloc(sizeof(float)*windowSize);
-        float* window = (float*)malloc(sizeof(float)*windowSize);
-        memset(window, 0, sizeof(float)*windowSize);
-        //vDSP_hann_window(window, windowSize, vDSP_HANN_NORM);
-        vDSP_hamm_window(window, windowSize, vDSP_HANN_NORM);
-        vDSP_vmul(data, 1, window, 1, transferBuffer, 1, windowSize);
-        
-        free(transferBuffer);
-        
+        if (numCaptures++ % CAPACITY == 0) {
+            previousFrequencyArray = [NSMutableArray new];
+        }
 
-         // performance issue: wait until the nth loop until new processing restarts
+        CGFloat volume = 100 + dbVal;
+        spect.volume = [NSNumber numberWithFloat:volume];
+
          if (numCaptures % numHops == 0 && volume > 5.0) {
      
              // mostly for iPad: join the two channels to one
@@ -155,31 +147,15 @@
 
              // now perform "YIN, a fundamental frequency estimator for speech and music"
              CGFloat pitchInHertz = [yin getPitchInHertz:data withFrames:numFrames];
-             // if no frequency has been found, resume loop
+             
+             [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateDataNotification" object:spect];
+             
              if (pitchInHertz == -1) {
-                 // silence the sound in order to disable sound feedback
                  [self silence: data andSize:(int) numChannels*numFrames];
-  
-                 numOfErroneousFreqDetections++;
-                 
-                 if (numOfErroneousFreqDetections > 10) {
-                     // reset smoothing array so that new frequencies can be smoothed again
-                     [previousFrequencyArray removeAllObjects];
-                     numOfErroneousFreqDetections = 0;
-                     numOfNoFrequencyDetecion++;
-                     
-                     if (numOfNoFrequencyDetecion > 30) {
-                         spect.frequency = @(0.0);
-                         numOfNoFrequencyDetecion = 0;
-                         [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateDataNotification" object:spect];
-                     }
-                     
-                 }
                  return;
-             } else {
-                 [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateDataNotification" object:spect];
              }
              
+          
              if (previousFrequencyArray.count > 1) {
                  CGFloat avrgFreq = [self getAverageValue];
                  
@@ -188,17 +164,9 @@
                      [self silence: data andSize:(int) numChannels*numFrames];
                      return;
                  }
+                 pitchInHertz = avrgFreq;
              }
-
-             // smooth data in order to average the last values
-             [self queueObject:[NSNumber numberWithFloat:pitchInHertz]];
-             if (previousFrequencyArray.count > 10) {
-                 pitchInHertz = [self getAverageValue];
-             } else {
-                 // silence the sound in order to disable sound feedback
-                 [self silence: data andSize:(int) numChannels*numFrames];
-                 return;
-             }
+             
              
              NSNumber *frequency = [NSNumber numberWithDouble:pitchInHertz];
              spect.frequency = frequency;
@@ -217,7 +185,7 @@
          
          [[NSNotificationCenter defaultCenter] removeObserver:self];
          
-         numCaptures++;
+         //numCaptures++;
          
          // silence the sound in order to disable sound feedback
          [self silence: data andSize:(int) numChannels*numFrames];

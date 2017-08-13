@@ -527,7 +527,7 @@
 		1B6C14411CCC026400C82B9B /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6C14401CCC026400C82B9B /* knob.png */; };
 		1B8CDC651E58C35B00DD8240 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC641E58C35B00DD8240 /* header.png */; };
 		1B8CDC6B1E58CC7800DD8240 /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC6A1E58CC7800DD8240 /* background3.png */; };
-		1BB40C1C1F3F8706005451CB /* Banjo_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C1B1F3F8706005451CB /* Banjo_Assets.xcassets */; };
+		1BB40C1C1F3F8706005451CB /* Balalaika_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C1B1F3F8706005451CB /* Balalaika_Assets.xcassets */; };
 		1BC0413E1C99F8C6005103EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0413D1C99F8C6005103EC /* main.m */; };
 		1BC041411C99F8C6005103EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041401C99F8C6005103EC /* AppDelegate.m */; };
 		1BC041441C99F8C6005103EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041431C99F8C6005103EC /* ViewController.m */; };
@@ -857,7 +857,7 @@
 		1B8CDC4B1E5894B700DD8240 /* Balalaika_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Balalaika_Constants.h; sourceTree = "<group>"; };
 		1B8CDC641E58C35B00DD8240 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		1B8CDC6A1E58CC7800DD8240 /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background3.png; sourceTree = "<group>"; };
-		1BB40C1B1F3F8706005451CB /* Banjo_Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Banjo_Assets.xcassets; path = "Simple Balalaika Tuner/Banjo_Assets.xcassets"; sourceTree = "<group>"; };
+		1BB40C1B1F3F8706005451CB /* Balalaika_Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Balalaika_Assets.xcassets; path = "Simple Balalaika Tuner/Balalaika_Assets.xcassets"; sourceTree = "<group>"; };
 		1BC041391C99F8C6005103EC /* Simple Ukulele Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Ukulele Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC0413D1C99F8C6005103EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BC0413F1C99F8C6005103EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1259,7 +1259,7 @@
 		1B2E145C1D1FE45200BD31C4 /* Simple Balalaika Tuner */ = {
 			isa = PBXGroup;
 			children = (
-				1BB40C1B1F3F8706005451CB /* Banjo_Assets.xcassets */,
+				1BB40C1B1F3F8706005451CB /* Balalaika_Assets.xcassets */,
 				1B2E145D1D1FE46400BD31C4 /* Supporting Files */,
 			);
 			name = "Simple Balalaika Tuner";
@@ -2255,7 +2255,7 @@
 				1B2E14661D20262D00BD31C4 /* background5.png in Resources */,
 				1B2E143D1D1FDE1300BD31C4 /* onButton.png in Resources */,
 				1B2E143F1D1FDE1300BD31C4 /* arrowLeft.png in Resources */,
-				1BB40C1C1F3F8706005451CB /* Banjo_Assets.xcassets in Resources */,
+				1BB40C1C1F3F8706005451CB /* Balalaika_Assets.xcassets in Resources */,
 				1B2E14401D1FDE1300BD31C4 /* fft_01.png in Resources */,
 				1B2E14421D1FDE1300BD31C4 /* microphoneOff.png in Resources */,
 				1B2E14431D1FDE1300BD31C4 /* autocorr_02.png in Resources */,

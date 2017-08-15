@@ -43,6 +43,8 @@
         
 #else
         
+
+        
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         CGFloat width = screenRect.size.width;
         CGFloat height = screenRect.size.height;
@@ -61,6 +63,7 @@
         
 #endif
         
+
         
         
         [self addSubview:self.mainView];
@@ -152,6 +155,8 @@
     }
     return _mainView;
 }
+
+
 
 // draw the sound hole of the guitar (we don't use png for it)
 

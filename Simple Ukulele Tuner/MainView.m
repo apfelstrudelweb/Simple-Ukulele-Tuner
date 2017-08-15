@@ -62,7 +62,30 @@
 #endif
         
         
+#if defined(TARGET_VIOLIN)
+        [self addSubview:self.violinStringView];
         
+        
+        NSMutableArray *layoutConstraints = [NSMutableArray new];
+        // Width
+        [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.violinStringView
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:self
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                 multiplier:1.0
+                                                                   constant:0.0]];
+        
+        // Height
+        [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.violinStringView
+                                                                  attribute:NSLayoutAttributeHeight
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:self
+                                                                  attribute:NSLayoutAttributeHeight
+                                                                 multiplier:1.0
+                                                                   constant:0.0]];
+        [self addConstraints:layoutConstraints];
+#endif
   
         
         [self addSubview:self.headerBackgroundView];
@@ -76,8 +99,8 @@
         [self addSubview:self.deviationView];
         [self addSubview:self.gaugeView];
         [self addSubview:self.buttonView];
-       
-  
+        
+
         // layout constraints
         [self setupLayoutConstraintsPro];
 
@@ -150,6 +173,15 @@
 
 
 #pragma mark -view instantiations
+- (ViolinStringView*) violinStringView {
+    if (_violinStringView == nil) {
+        _violinStringView = [ViolinStringView new];
+        [_violinStringView setTranslatesAutoresizingMaskIntoConstraints:NO];
+        //_violinStringView.backgroundColor = [UIColor greenColor];
+    }
+    return _violinStringView;
+}
+
 - (HeaderView*) headerView {
     if (_headerView == nil) {
         _headerView = [HeaderView new];
@@ -246,7 +278,10 @@
     
     NSString *backgrImgName;
     
-#if defined(TARGET_BANJO)
+#if defined(TARGET_VIOLIN)
+    backgrImgName = @"violin";
+    
+#elif defined(TARGET_BANJO)
     if (numberOfStrings == 4) {
         backgrImgName = @"banjo_background4";
     } else if (numberOfStrings == 5) {

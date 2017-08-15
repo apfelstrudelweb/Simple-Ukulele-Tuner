@@ -21,7 +21,7 @@
 #elif defined(TARGET_BANJO)
     #import "Banjo_Constants.h"
 #elif defined(TARGET_VIOLIN)
-// TODO: implement
+    #import "Violin_Constants.h"
 #elif defined(TARGET_BALALAIKA)
     #import "Balalaika_Constants.h"
 #endif

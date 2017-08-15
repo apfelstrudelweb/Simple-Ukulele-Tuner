@@ -57,7 +57,8 @@
     instrumentDefaults = [NSDictionary dictionaryWithObject:@"5 - Standard (G4 - D3 - G3 - B3 - D4)"
                                                      forKey:@"banjoType"];
 #elif defined(TARGET_VIOLIN)
-    
+    instrumentDefaults = [NSDictionary dictionaryWithObject:@"4 - Standard (G4 - D4 - A4 - E4)"
+                                                     forKey:@"violinType"];
 #elif defined(TARGET_BALALAIKA)
     instrumentDefaults = [NSDictionary dictionaryWithObject:@"3 - Prima (E4 - E4 - A4)"
                                                      forKey:@"balalaikaType"];

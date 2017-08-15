@@ -73,7 +73,7 @@
 #elif defined(TARGET_BANJO)
     subtype = [defaults stringForKey:KEY_BANJO_TYPE];
 #elif defined(TARGET_VIOLIN)
-    
+    subtype = [defaults stringForKey:KEY_VIOLIN_TYPE];
 #elif defined(TARGET_BALALAIKA)
     subtype = [defaults stringForKey:KEY_BALALAIKA_TYPE];
 #endif
@@ -93,7 +93,7 @@
 #elif defined(TARGET_BANJO)
     [defaults setObject:subtype forKey:KEY_BANJO_TYPE];
 #elif defined(TARGET_VIOLIN)
-    
+    [defaults setObject:subtype forKey:KEY_VIOLIN_TYPE];
 #elif defined(TARGET_BALALAIKA)
     [defaults setObject:subtype forKey:KEY_BALALAIKA_TYPE];
 #endif

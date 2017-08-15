@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
+
 @interface BackgroundView : UIView
 
 @property (strong, nonatomic) MainView *mainView;
 @property (strong, nonatomic) CircleView *circleView;
+
+
 
 @end

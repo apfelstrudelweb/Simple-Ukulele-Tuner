@@ -13,8 +13,12 @@
 //#import "InfoView.h"
 //#import "CommandView.h"
 //#import "SoundButtonsView.h"
+#import "ViolinStringView.h"
+
 
 @interface MainView : UIView
+
+@property (strong, nonatomic) ViolinStringView *violinStringView;
 
 @property (strong, nonatomic) UIView *headerBackgroundView;
 @property (strong, nonatomic) HeaderView *headerView;

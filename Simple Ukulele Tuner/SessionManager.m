@@ -174,8 +174,8 @@
                             };
 
 #elif defined(TARGET_VIOLIN)
-    // TODO: implement
-    instrumentDictionary = @{ VIOLIN_TYPE_01     : @[ @1,   @[@"G",@"D",@"A",@"E"],              @[@146.8,@196.0,@440.0,@329.6],                @1.0] // Standard
+    // up to now only one violin type
+    instrumentDictionary = @{ VIOLIN_TYPE_01     : @[ @1,   @[@"G",@"D",@"A",@"E"],              @[@196.0,@293.7,@440.0,@659.3],               @1.0] // Standard
                               };
 #elif defined(TARGET_BALALAIKA)
     instrumentDictionary = @{ BALALAIKA_TYPE_01     : @[ @1,   @[@"E",@"E",@"A"],               @[@659.3,@659.3,@880.0],                 @1.0], // Descant

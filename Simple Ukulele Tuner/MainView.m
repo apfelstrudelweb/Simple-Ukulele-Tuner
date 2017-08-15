@@ -173,6 +173,8 @@
 
 
 #pragma mark -view instantiations
+
+#if defined(TARGET_VIOLIN)
 - (ViolinStringView*) violinStringView {
     if (_violinStringView == nil) {
         _violinStringView = [ViolinStringView new];
@@ -181,6 +183,7 @@
     }
     return _violinStringView;
 }
+#endif
 
 - (HeaderView*) headerView {
     if (_headerView == nil) {

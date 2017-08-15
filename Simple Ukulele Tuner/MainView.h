@@ -13,12 +13,15 @@
 //#import "InfoView.h"
 //#import "CommandView.h"
 //#import "SoundButtonsView.h"
-#import "ViolinStringView.h"
-
+#if defined(TARGET_VIOLIN)
+    #import "ViolinStringView.h"
+#endif
 
 @interface MainView : UIView
 
+#if defined(TARGET_VIOLIN)
 @property (strong, nonatomic) ViolinStringView *violinStringView;
+#endif
 
 @property (strong, nonatomic) UIView *headerBackgroundView;
 @property (strong, nonatomic) HeaderView *headerView;

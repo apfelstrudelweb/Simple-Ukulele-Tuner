@@ -14,7 +14,7 @@
 
 #define KEY_VIOLIN_TYPE             @"violinType"
 // 4 string
-#define VIOLIN_TYPE_01              @"4 - Standard (G4 - D4 - A4 - E4)"
+#define VIOLIN_TYPE_01              @"4 - Standard (G3 - D4 - A4 - E5)"
 
 
 

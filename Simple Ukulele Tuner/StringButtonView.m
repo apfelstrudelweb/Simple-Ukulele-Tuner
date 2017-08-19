@@ -10,7 +10,12 @@
 
 
 #define ALPHA_OFF 0.0
-#define LABEL_COLOR [UIColor colorWithRed:0.13 green:0.13 blue:0.13 alpha:1.0]
+
+#if defined(TARGET_VIOLIN)
+    #define LABEL_COLOR [UIColor colorWithRed:1.0 green:1.0 blue:1.0 alpha:1.0]
+#else 
+    #define LABEL_COLOR [UIColor colorWithRed:0.13 green:0.13 blue:0.13 alpha:1.0]
+#endif
 
 
 @interface StringButtonView() {

@@ -7,12 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <StartApp/StartApp.h>
 
-@interface ViewController : UIViewController <STADelegateProtocol> {
-    
-    /* Declaration of STAStartAppNativeAd which will load and store all the ads we intend to display */
-    STAStartAppNativeAd *startAppNativeAd;
+
+@interface ViewController : UIViewController  {
+
 }
 @end
 

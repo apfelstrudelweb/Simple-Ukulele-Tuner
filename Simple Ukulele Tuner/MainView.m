@@ -89,10 +89,13 @@
   
         
         [self addSubview:self.headerBackgroundView];
-        
+        //self.headerBackgroundView.alpha = 0.0f;
         [self addSubview:self.headerView];
+        //self.headerView.alpha = 0.0f;
         [self addSubview:self.graphView];
+        //self.graphView.alpha = 0.0f;
         [self addSubview:self.tabView];
+        //self.tabView.alpha = 0.0f;
         [self addSubview:self.bridgeView];
         [self addSubview:self.instrumentSubtypeView];
         [self addSubview:self.meterView];
@@ -278,7 +281,6 @@
 - (void) setBackgroundImage {
 
     NSInteger numberOfStrings = [SHARED_CONTEXT getNumberOfStrings];
-    
     NSString *backgrImgName;
     
 #if defined(TARGET_VIOLIN)

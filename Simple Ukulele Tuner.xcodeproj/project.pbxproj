@@ -467,18 +467,6 @@
 		1B2E14B21D22933700BD31C4 /* guit_inapppurchase_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14B11D22933700BD31C4 /* guit_inapppurchase_03.png */; };
 		1B2E14B41D23C0C400BD31C4 /* Guitar_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14B31D23C0C400BD31C4 /* Guitar_Assets.xcassets */; };
 		1B2E14B51D23C54300BD31C4 /* Ukulele_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041481C99F8C6005103EC /* Ukulele_Assets.xcassets */; };
-		1B3EC1571F3346600007B959 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3EC1551F3346600007B959 /* StartApp.framework */; };
-		1B3EC1581F3346600007B959 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3EC1551F3346600007B959 /* StartApp.framework */; };
-		1B3EC1591F3346600007B959 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3EC1551F3346600007B959 /* StartApp.framework */; };
-		1B3EC15A1F3346600007B959 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3EC1551F3346600007B959 /* StartApp.framework */; };
-		1B3EC15B1F3346600007B959 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3EC1551F3346600007B959 /* StartApp.framework */; };
-		1B3EC15C1F3346600007B959 /* StartApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B3EC1551F3346600007B959 /* StartApp.framework */; };
-		1B3EC15D1F3346600007B959 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B3EC1561F3346600007B959 /* StartApp.bundle */; };
-		1B3EC15E1F3346600007B959 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B3EC1561F3346600007B959 /* StartApp.bundle */; };
-		1B3EC15F1F3346600007B959 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B3EC1561F3346600007B959 /* StartApp.bundle */; };
-		1B3EC1601F3346600007B959 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B3EC1561F3346600007B959 /* StartApp.bundle */; };
-		1B3EC1611F3346600007B959 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B3EC1561F3346600007B959 /* StartApp.bundle */; };
-		1B3EC1621F3346600007B959 /* StartApp.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1B3EC1561F3346600007B959 /* StartApp.bundle */; };
 		1B6319981DA2A6CE005524AC /* UIViewController+uvo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6319971DA2A6CE005524AC /* UIViewController+uvo.m */; };
 		1B6319991DA2A6CE005524AC /* UIViewController+uvo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6319971DA2A6CE005524AC /* UIViewController+uvo.m */; };
 		1B63199A1DA2A6CE005524AC /* UIViewController+uvo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B6319971DA2A6CE005524AC /* UIViewController+uvo.m */; };
@@ -512,20 +500,29 @@
 		1B6717D41D4A98F1004AE1A0 /* banjo_inapppurchase_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717D01D4A98F1004AE1A0 /* banjo_inapppurchase_03.png */; };
 		1B6717D51D4A98F1004AE1A0 /* banjo_types_inactive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6717D11D4A98F1004AE1A0 /* banjo_types_inactive.png */; };
 		1B6C14411CCC026400C82B9B /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6C14401CCC026400C82B9B /* knob.png */; };
+		1B84A9E51F44E29A0055F15D /* ledActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9E31F44E29A0055F15D /* ledActive.png */; };
+		1B84A9E61F44E29A0055F15D /* ledPassive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9E41F44E29A0055F15D /* ledPassive.png */; };
+		1B84A9F21F44E2A60055F15D /* microphoneOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9E71F44E2A60055F15D /* microphoneOff.png */; };
+		1B84A9F31F44E2A60055F15D /* microphoneOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9E81F44E2A60055F15D /* microphoneOn.png */; };
+		1B84A9F41F44E2A60055F15D /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9E91F44E2A60055F15D /* settings.png */; };
+		1B84A9F51F44E2A60055F15D /* string_A.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9EA1F44E2A60055F15D /* string_A.png */; };
+		1B84A9F61F44E2A60055F15D /* string_D.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9EB1F44E2A60055F15D /* string_D.png */; };
+		1B84A9F71F44E2A60055F15D /* string_E.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9EC1F44E2A60055F15D /* string_E.png */; };
+		1B84A9F81F44E2A60055F15D /* string_G.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9ED1F44E2A60055F15D /* string_G.png */; };
+		1B84A9F91F44E2A60055F15D /* stringPassive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9EE1F44E2A60055F15D /* stringPassive.png */; };
+		1B84A9FA1F44E2A60055F15D /* tabActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9EF1F44E2A60055F15D /* tabActive.png */; };
+		1B84A9FB1F44E2A60055F15D /* tabPassive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9F01F44E2A60055F15D /* tabPassive.png */; };
+		1B84A9FC1F44E2A60055F15D /* violin.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9F11F44E2A60055F15D /* violin.png */; };
+		1B84A9FE1F44E8F40055F15D /* stringActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9FD1F44E8F40055F15D /* stringActive.png */; };
+		1B84AA001F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */; };
+		1B84AA011F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */; };
+		1B84AA021F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */; };
+		1B84AA031F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */; };
+		1B84AA041F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */; };
+		1B84AA051F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */; };
 		1B8CDC651E58C35B00DD8240 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC641E58C35B00DD8240 /* header.png */; };
 		1B8CDC6B1E58CC7800DD8240 /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC6A1E58CC7800DD8240 /* background3.png */; };
 		1BB40C1C1F3F8706005451CB /* Balalaika_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C1B1F3F8706005451CB /* Balalaika_Assets.xcassets */; };
-		1BB40C451F43637C005451CB /* violin.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C441F43637C005451CB /* violin.png */; };
-		1BB40C481F43649B005451CB /* stringPassive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C471F43649B005451CB /* stringPassive.png */; };
-		1BB40C4A1F43650B005451CB /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C491F43650B005451CB /* settings.png */; };
-		1BB40C4C1F43651D005451CB /* microphoneOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C4B1F43651D005451CB /* microphoneOn.png */; };
-		1BB40C4E1F436534005451CB /* microphoneOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C4D1F436534005451CB /* microphoneOff.png */; };
-		1BB40C511F4365B1005451CB /* tabPassive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C4F1F4365B1005451CB /* tabPassive.png */; };
-		1BB40C521F4365B1005451CB /* tabActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C501F4365B1005451CB /* tabActive.png */; };
-		1BB40C571F43660C005451CB /* string_A.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C531F43660B005451CB /* string_A.png */; };
-		1BB40C581F43660C005451CB /* string_D.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C541F43660C005451CB /* string_D.png */; };
-		1BB40C591F43660C005451CB /* string_E.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C551F43660C005451CB /* string_E.png */; };
-		1BB40C5A1F43660C005451CB /* string_G.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C561F43660C005451CB /* string_G.png */; };
 		1BB40C5D1F43671C005451CB /* ViolinStringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB40C5C1F43671C005451CB /* ViolinStringView.m */; };
 		1BB40C5E1F437325005451CB /* ledActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EB1C99FD0A005103EC /* ledActive.png */; };
 		1BB40C5F1F437328005451CB /* ledPassive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EC1C99FD0A005103EC /* ledPassive.png */; };
@@ -824,8 +821,6 @@
 		1B2E14AF1D22926F00BD31C4 /* guit_inapppurchase_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_inapppurchase_02.png; sourceTree = "<group>"; };
 		1B2E14B11D22933700BD31C4 /* guit_inapppurchase_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = guit_inapppurchase_03.png; sourceTree = "<group>"; };
 		1B2E14B31D23C0C400BD31C4 /* Guitar_Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Guitar_Assets.xcassets; sourceTree = "<group>"; };
-		1B3EC1551F3346600007B959 /* StartApp.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StartApp.framework; sourceTree = "<group>"; };
-		1B3EC1561F3346600007B959 /* StartApp.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = StartApp.bundle; sourceTree = "<group>"; };
 		1B6319961DA2A6CE005524AC /* UIViewController+uvo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+uvo.h"; sourceTree = "<group>"; };
 		1B6319971DA2A6CE005524AC /* UIViewController+uvo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+uvo.m"; sourceTree = "<group>"; };
 		1B67179A1D4177A2004AE1A0 /* banjo_background4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_background4.png; sourceTree = "<group>"; };
@@ -855,22 +850,26 @@
 		1B6717D01D4A98F1004AE1A0 /* banjo_inapppurchase_03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_inapppurchase_03.png; sourceTree = "<group>"; };
 		1B6717D11D4A98F1004AE1A0 /* banjo_types_inactive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = banjo_types_inactive.png; sourceTree = "<group>"; };
 		1B6C14401CCC026400C82B9B /* knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knob.png; sourceTree = "<group>"; };
+		1B84A9E31F44E29A0055F15D /* ledActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ledActive.png; path = "Simple Violin Tuner/ledActive.png"; sourceTree = "<group>"; };
+		1B84A9E41F44E29A0055F15D /* ledPassive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ledPassive.png; path = "Simple Violin Tuner/ledPassive.png"; sourceTree = "<group>"; };
+		1B84A9E71F44E2A60055F15D /* microphoneOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = microphoneOff.png; path = "Simple Violin Tuner/microphoneOff.png"; sourceTree = "<group>"; };
+		1B84A9E81F44E2A60055F15D /* microphoneOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = microphoneOn.png; path = "Simple Violin Tuner/microphoneOn.png"; sourceTree = "<group>"; };
+		1B84A9E91F44E2A60055F15D /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = settings.png; path = "Simple Violin Tuner/settings.png"; sourceTree = "<group>"; };
+		1B84A9EA1F44E2A60055F15D /* string_A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = string_A.png; path = "Simple Violin Tuner/string_A.png"; sourceTree = "<group>"; };
+		1B84A9EB1F44E2A60055F15D /* string_D.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = string_D.png; path = "Simple Violin Tuner/string_D.png"; sourceTree = "<group>"; };
+		1B84A9EC1F44E2A60055F15D /* string_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = string_E.png; path = "Simple Violin Tuner/string_E.png"; sourceTree = "<group>"; };
+		1B84A9ED1F44E2A60055F15D /* string_G.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = string_G.png; path = "Simple Violin Tuner/string_G.png"; sourceTree = "<group>"; };
+		1B84A9EE1F44E2A60055F15D /* stringPassive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stringPassive.png; path = "Simple Violin Tuner/stringPassive.png"; sourceTree = "<group>"; };
+		1B84A9EF1F44E2A60055F15D /* tabActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabActive.png; path = "Simple Violin Tuner/tabActive.png"; sourceTree = "<group>"; };
+		1B84A9F01F44E2A60055F15D /* tabPassive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabPassive.png; path = "Simple Violin Tuner/tabPassive.png"; sourceTree = "<group>"; };
+		1B84A9F11F44E2A60055F15D /* violin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = violin.png; path = "Simple Violin Tuner/violin.png"; sourceTree = "<group>"; };
+		1B84A9FD1F44E8F40055F15D /* stringActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stringActive.png; path = "Simple Violin Tuner/stringActive.png"; sourceTree = "<group>"; };
+		1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		1B8CDC4B1E5894B700DD8240 /* Balalaika_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Balalaika_Constants.h; sourceTree = "<group>"; };
 		1B8CDC641E58C35B00DD8240 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		1B8CDC6A1E58CC7800DD8240 /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background3.png; sourceTree = "<group>"; };
 		1BB40C1B1F3F8706005451CB /* Balalaika_Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Balalaika_Assets.xcassets; path = "Simple Balalaika Tuner/Balalaika_Assets.xcassets"; sourceTree = "<group>"; };
 		1BB40C431F435F60005451CB /* Violin_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Violin_Constants.h; sourceTree = "<group>"; };
-		1BB40C441F43637C005451CB /* violin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = violin.png; path = "Simple Ukulele Tuner/violin.png"; sourceTree = "<group>"; };
-		1BB40C471F43649B005451CB /* stringPassive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stringPassive.png; sourceTree = "<group>"; };
-		1BB40C491F43650B005451CB /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
-		1BB40C4B1F43651D005451CB /* microphoneOn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microphoneOn.png; sourceTree = "<group>"; };
-		1BB40C4D1F436534005451CB /* microphoneOff.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = microphoneOff.png; sourceTree = "<group>"; };
-		1BB40C4F1F4365B1005451CB /* tabPassive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabPassive.png; sourceTree = "<group>"; };
-		1BB40C501F4365B1005451CB /* tabActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tabActive.png; sourceTree = "<group>"; };
-		1BB40C531F43660B005451CB /* string_A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = string_A.png; sourceTree = "<group>"; };
-		1BB40C541F43660C005451CB /* string_D.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = string_D.png; sourceTree = "<group>"; };
-		1BB40C551F43660C005451CB /* string_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = string_E.png; sourceTree = "<group>"; };
-		1BB40C561F43660C005451CB /* string_G.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = string_G.png; sourceTree = "<group>"; };
 		1BB40C5B1F43671C005451CB /* ViolinStringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViolinStringView.h; sourceTree = "<group>"; };
 		1BB40C5C1F43671C005451CB /* ViolinStringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViolinStringView.m; sourceTree = "<group>"; };
 		1BC041391C99F8C6005103EC /* Simple Ukulele Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Ukulele Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1109,8 +1108,8 @@
 				1B2E123F1D1FDD5100BD31C4 /* AudioToolbox.framework in Frameworks */,
 				1B2E12401D1FDD5100BD31C4 /* CoreAudio.framework in Frameworks */,
 				1B2E12411D1FDD5100BD31C4 /* Accelerate.framework in Frameworks */,
+				1B84AA021F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */,
 				1B2E12431D1FDD5100BD31C4 /* StoreKit.framework in Frameworks */,
-				1B3EC1591F3346600007B959 /* StartApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1130,8 +1129,8 @@
 				1B2E12D31D1FDDA600BD31C4 /* AudioToolbox.framework in Frameworks */,
 				1B2E12D41D1FDDA600BD31C4 /* CoreAudio.framework in Frameworks */,
 				1B2E12D51D1FDDA600BD31C4 /* Accelerate.framework in Frameworks */,
+				1B84AA031F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */,
 				1B2E12D71D1FDDA600BD31C4 /* StoreKit.framework in Frameworks */,
-				1B3EC15A1F3346600007B959 /* StartApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1151,8 +1150,8 @@
 				1B2E13671D1FDDD100BD31C4 /* AudioToolbox.framework in Frameworks */,
 				1B2E13681D1FDDD100BD31C4 /* CoreAudio.framework in Frameworks */,
 				1B2E13691D1FDDD100BD31C4 /* Accelerate.framework in Frameworks */,
+				1B84AA041F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */,
 				1B2E136B1D1FDDD100BD31C4 /* StoreKit.framework in Frameworks */,
-				1B3EC15B1F3346600007B959 /* StartApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1172,8 +1171,8 @@
 				1B2E13FB1D1FDE1300BD31C4 /* AudioToolbox.framework in Frameworks */,
 				1B2E13FC1D1FDE1300BD31C4 /* CoreAudio.framework in Frameworks */,
 				1B2E13FD1D1FDE1300BD31C4 /* Accelerate.framework in Frameworks */,
+				1B84AA051F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */,
 				1B2E13FF1D1FDE1300BD31C4 /* StoreKit.framework in Frameworks */,
-				1B3EC15C1F3346600007B959 /* StartApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1183,7 +1182,6 @@
 			files = (
 				1BEBF3CF1C9D477500F2ED4D /* libz.tbd in Frameworks */,
 				1BE794991C9B3D0E001A5E72 /* CoreTelephony.framework in Frameworks */,
-				1B3EC1571F3346600007B959 /* StartApp.framework in Frameworks */,
 				1BEBF3CD1C9D469500F2ED4D /* CoreGraphics.framework in Frameworks */,
 				1BE7949D1C9B3D25001A5E72 /* Foundation.framework in Frameworks */,
 				1BE794971C9B3D01001A5E72 /* SystemConfiguration.framework in Frameworks */,
@@ -1194,6 +1192,7 @@
 				1BC0415D1C99FA19005103EC /* AudioToolbox.framework in Frameworks */,
 				1BC0415F1C99FA1F005103EC /* CoreAudio.framework in Frameworks */,
 				1BC041611C99FA24005103EC /* Accelerate.framework in Frameworks */,
+				1B84AA001F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */,
 				1BC041631C99FA2F005103EC /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1204,7 +1203,6 @@
 			files = (
 				1BCCC1CC1D1FD6A200AD17D0 /* libz.tbd in Frameworks */,
 				1BCCC1CE1D1FD6A200AD17D0 /* CoreTelephony.framework in Frameworks */,
-				1B3EC1581F3346600007B959 /* StartApp.framework in Frameworks */,
 				1BCCC1CF1D1FD6A200AD17D0 /* CoreGraphics.framework in Frameworks */,
 				1BCCC1D01D1FD6A200AD17D0 /* Foundation.framework in Frameworks */,
 				1BCCC1D11D1FD6A200AD17D0 /* SystemConfiguration.framework in Frameworks */,
@@ -1215,6 +1213,7 @@
 				1BCCC1D61D1FD6A200AD17D0 /* AudioToolbox.framework in Frameworks */,
 				1BCCC1D71D1FD6A200AD17D0 /* CoreAudio.framework in Frameworks */,
 				1BCCC1D81D1FD6A200AD17D0 /* Accelerate.framework in Frameworks */,
+				1B84AA011F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */,
 				1BCCC1DA1D1FD6A200AD17D0 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1487,17 +1486,20 @@
 		1BB40C461F436470005451CB /* images */ = {
 			isa = PBXGroup;
 			children = (
-				1BB40C471F43649B005451CB /* stringPassive.png */,
-				1BB40C441F43637C005451CB /* violin.png */,
-				1BB40C491F43650B005451CB /* settings.png */,
-				1BB40C4B1F43651D005451CB /* microphoneOn.png */,
-				1BB40C4D1F436534005451CB /* microphoneOff.png */,
-				1BB40C4F1F4365B1005451CB /* tabPassive.png */,
-				1BB40C501F4365B1005451CB /* tabActive.png */,
-				1BB40C561F43660C005451CB /* string_G.png */,
-				1BB40C541F43660C005451CB /* string_D.png */,
-				1BB40C531F43660B005451CB /* string_A.png */,
-				1BB40C551F43660C005451CB /* string_E.png */,
+				1B84A9E71F44E2A60055F15D /* microphoneOff.png */,
+				1B84A9E81F44E2A60055F15D /* microphoneOn.png */,
+				1B84A9E91F44E2A60055F15D /* settings.png */,
+				1B84A9EA1F44E2A60055F15D /* string_A.png */,
+				1B84A9EB1F44E2A60055F15D /* string_D.png */,
+				1B84A9EC1F44E2A60055F15D /* string_E.png */,
+				1B84A9ED1F44E2A60055F15D /* string_G.png */,
+				1B84A9FD1F44E8F40055F15D /* stringActive.png */,
+				1B84A9EE1F44E2A60055F15D /* stringPassive.png */,
+				1B84A9EF1F44E2A60055F15D /* tabActive.png */,
+				1B84A9F01F44E2A60055F15D /* tabPassive.png */,
+				1B84A9F11F44E2A60055F15D /* violin.png */,
+				1B84A9E31F44E29A0055F15D /* ledActive.png */,
+				1B84A9E41F44E29A0055F15D /* ledPassive.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -1854,9 +1856,8 @@
 		1BE7949E1C9B3D35001A5E72 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1B3EC1551F3346600007B959 /* StartApp.framework */,
-				1B3EC1561F3346600007B959 /* StartApp.bundle */,
 				1BEBF3CE1C9D477500F2ED4D /* libz.tbd */,
+				1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */,
 				1BEBF3CC1C9D469500F2ED4D /* CoreGraphics.framework */,
 				1BC041621C99FA2F005103EC /* StoreKit.framework */,
 				1BC041601C99FA24005103EC /* Accelerate.framework */,
@@ -2070,7 +2071,6 @@
 				1B2E125C1D1FDD5100BD31C4 /* linePattern.png in Resources */,
 				1B2E12601D1FDD5100BD31C4 /* shoppingCart.png in Resources */,
 				1B2E12611D1FDD5100BD31C4 /* background4.png in Resources */,
-				1B3EC15F1F3346600007B959 /* StartApp.bundle in Resources */,
 				1B2E12621D1FDD5100BD31C4 /* knob.png in Resources */,
 				1B2E12631D1FDD5100BD31C4 /* autocorr_01.png in Resources */,
 				1B2E12641D1FDD5100BD31C4 /* iRate.bundle in Resources */,
@@ -2139,7 +2139,6 @@
 				1B2E12FA1D1FDDA600BD31C4 /* style.css in Resources */,
 				1B2E12FB1D1FDDA600BD31C4 /* close.png in Resources */,
 				1B2E12FE1D1FDDA600BD31C4 /* settingsTop.png in Resources */,
-				1B3EC1601F3346600007B959 /* StartApp.bundle in Resources */,
 				1B059CA31D32CF4B00FB70B5 /* Banjo_Assets.xcassets in Resources */,
 				1B6717AD1D454D30004AE1A0 /* banjo_en_manual1.html in Resources */,
 				1B2E13001D1FDDA600BD31C4 /* calibrationButton.png in Resources */,
@@ -2192,54 +2191,56 @@
 			files = (
 				1BB40C5E1F437325005451CB /* ledActive.png in Resources */,
 				1B2E136E1D1FDDD100BD31C4 /* Localizable.strings in Resources */,
-				1BB40C591F43660C005451CB /* string_E.png in Resources */,
 				1B2E136F1D1FDDD100BD31C4 /* fft_02.png in Resources */,
 				1B2E13711D1FDDD100BD31C4 /* closeButton.png in Resources */,
 				1B2E13731D1FDDD100BD31C4 /* gaugeBackground.png in Resources */,
 				1B2E13741D1FDDD100BD31C4 /* calibration_01.png in Resources */,
-				1BB40C481F43649B005451CB /* stringPassive.png in Resources */,
 				1BDE3B911F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 in Resources */,
+				1B84A9FE1F44E8F40055F15D /* stringActive.png in Resources */,
 				1B2E13751D1FDDD100BD31C4 /* gaugePattern.png in Resources */,
 				1B2E13771D1FDDD100BD31C4 /* Root.plist in Resources */,
+				1B84A9F71F44E2A60055F15D /* string_E.png in Resources */,
 				1B2E13791D1FDDD100BD31C4 /* settingsPattern.png in Resources */,
 				1B2E137A1D1FDDD100BD31C4 /* settingsMiddle.png in Resources */,
 				1B2E137C1D1FDDD100BD31C4 /* arrowDown.png in Resources */,
+				1B84A9E61F44E29A0055F15D /* ledPassive.png in Resources */,
 				1B2E137D1D1FDDD100BD31C4 /* calibration_02.png in Resources */,
+				1B84A9FA1F44E2A60055F15D /* tabActive.png in Resources */,
 				1B2E137E1D1FDDD100BD31C4 /* autocorr_03.png in Resources */,
 				1B2E13821D1FDDD100BD31C4 /* inapppurch_01.png in Resources */,
 				1B2E13841D1FDDD100BD31C4 /* linePattern.png in Resources */,
+				1B84A9F51F44E2A60055F15D /* string_A.png in Resources */,
 				1B2E13881D1FDDD100BD31C4 /* shoppingCart.png in Resources */,
-				1BB40C4E1F436534005451CB /* microphoneOff.png in Resources */,
-				1B3EC1611F3346600007B959 /* StartApp.bundle in Resources */,
+				1B84A9FC1F44E2A60055F15D /* violin.png in Resources */,
+				1B84A9F21F44E2A60055F15D /* microphoneOff.png in Resources */,
 				1BB40C5F1F437328005451CB /* ledPassive.png in Resources */,
 				1B2E138A1D1FDDD100BD31C4 /* knob.png in Resources */,
-				1BB40C4A1F43650B005451CB /* settings.png in Resources */,
 				1B2E138B1D1FDDD100BD31C4 /* autocorr_01.png in Resources */,
+				1B84A9F91F44E2A60055F15D /* stringPassive.png in Resources */,
+				1B84A9F31F44E2A60055F15D /* microphoneOn.png in Resources */,
 				1B2E138C1D1FDDD100BD31C4 /* iRate.bundle in Resources */,
 				1B2E138E1D1FDDD100BD31C4 /* style.css in Resources */,
-				1BB40C511F4365B1005451CB /* tabPassive.png in Resources */,
 				1B2E138F1D1FDDD100BD31C4 /* close.png in Resources */,
 				1B2E13921D1FDDD100BD31C4 /* settingsTop.png in Resources */,
-				1BB40C571F43660C005451CB /* string_A.png in Resources */,
 				1B2E13941D1FDDD100BD31C4 /* calibrationButton.png in Resources */,
-				1BB40C4C1F43651D005451CB /* microphoneOn.png in Resources */,
 				1B2E13971D1FDDD100BD31C4 /* arrowUp.png in Resources */,
 				1B2E13981D1FDDD100BD31C4 /* offButton.png in Resources */,
+				1B84A9FB1F44E2A60055F15D /* tabPassive.png in Resources */,
 				1B2E13991D1FDDD100BD31C4 /* fft_animated.gif in Resources */,
 				1B2E139A1D1FDDD100BD31C4 /* settingsPatternDark.png in Resources */,
 				1B2E139B1D1FDDD100BD31C4 /* arrowRight.png in Resources */,
 				1B2E139F1D1FDDD100BD31C4 /* autocorr_animated.gif in Resources */,
-				1BB40C581F43660C005451CB /* string_D.png in Resources */,
 				1B2E13A31D1FDDD100BD31C4 /* inapppurch_02.png in Resources */,
+				1B84A9F41F44E2A60055F15D /* settings.png in Resources */,
+				1B84A9E51F44E29A0055F15D /* ledActive.png in Resources */,
+				1B84A9F61F44E2A60055F15D /* string_D.png in Resources */,
 				1B2E13A61D1FDDD100BD31C4 /* restoreButton.png in Resources */,
 				1B2E13A91D1FDDD100BD31C4 /* onButton.png in Resources */,
 				1B2E13AB1D1FDDD100BD31C4 /* arrowLeft.png in Resources */,
+				1B84A9F81F44E2A60055F15D /* string_G.png in Resources */,
 				1B2E13AC1D1FDDD100BD31C4 /* fft_01.png in Resources */,
 				1B2E13AF1D1FDDD100BD31C4 /* autocorr_02.png in Resources */,
 				1B2E13B01D1FDDD100BD31C4 /* gaugePatternGreen.png in Resources */,
-				1BB40C451F43637C005451CB /* violin.png in Resources */,
-				1BB40C521F4365B1005451CB /* tabActive.png in Resources */,
-				1BB40C5A1F43660C005451CB /* string_G.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2265,7 +2266,6 @@
 				1B2E141C1D1FDE1300BD31C4 /* shoppingCart.png in Resources */,
 				1B2E141D1D1FDE1300BD31C4 /* background4.png in Resources */,
 				1B2E141E1D1FDE1300BD31C4 /* knob.png in Resources */,
-				1B3EC1621F3346600007B959 /* StartApp.bundle in Resources */,
 				1B2E141F1D1FDE1300BD31C4 /* autocorr_01.png in Resources */,
 				1B2E14201D1FDE1300BD31C4 /* iRate.bundle in Resources */,
 				1B2E14221D1FDE1300BD31C4 /* style.css in Resources */,
@@ -2356,7 +2356,6 @@
 				1BC042341C99FD3D005103EC /* arrowRight.png in Resources */,
 				1BC041FD1C99FD0A005103EC /* settings.png in Resources */,
 				1BC041F51C99FD0A005103EC /* microphoneOn.png in Resources */,
-				1B3EC15D1F3346600007B959 /* StartApp.bundle in Resources */,
 				1BC042351C99FD3D005103EC /* autocorr_animated.gif in Resources */,
 				1BC041FE1C99FD0A005103EC /* stringActive.png in Resources */,
 				1BC0417A1C99FBEB005103EC /* uke_en_manual3.html in Resources */,
@@ -2455,7 +2454,6 @@
 				1BDE3BB11F24CB47008BFF63 /* guit_en_manual2.html in Resources */,
 				1B2E14AE1D22914B00BD31C4 /* guit_inapppurchase_01.png in Resources */,
 				1BCCC21E1D1FD6A200AD17D0 /* autocorr_02.png in Resources */,
-				1B3EC15E1F3346600007B959 /* StartApp.bundle in Resources */,
 				1BCCC21F1D1FD6A200AD17D0 /* gaugePatternGreen.png in Resources */,
 				1BDE3BA21F24CB35008BFF63 /* guit_de_manual1.html in Resources */,
 				1B2E14AA1D228F5500BD31C4 /* guit_types_active.png in Resources */,

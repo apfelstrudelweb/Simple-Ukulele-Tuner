@@ -7,13 +7,15 @@
 //
 
 #import "ViewController.h"
+@import GoogleMobileAds;
 
 
-@interface ViewController () {
-    STABannerView* bannerView;
+@interface ViewController ()<GADBannerViewDelegate> {
+    
 }
 
 @property (nonatomic, strong) UIWebView *webView;
+@property(nonatomic) GADBannerView *bannerView;
 
 @end
 
@@ -21,11 +23,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
-    startAppNativeAd = [[STAStartAppNativeAd alloc] init];
-    [startAppNativeAd loadAd];
-    
     
 }
 
@@ -33,21 +30,42 @@
     [super viewDidAppear:animated];
     
     NSString* currentVersion = [SHARED_VERSION_MANAGER getVersion];
-    
+
     if ([version_lite isEqualToString:currentVersion]) {
         CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
         CGFloat headerHeight = [SUBVIEW_PROPORTIONS[0] floatValue] + 0.05;
         CGFloat bannerOffset = screenHeight * headerHeight / 100.0;
         
-        if (bannerView == nil) {
+     
+        if (_bannerView == nil) {
             
-            bannerView = [[STABannerView alloc] initWithSize:STA_AutoAdSize
-                                                      origin:CGPointMake(0, bannerOffset)
-                                                    withView:self.view
-                                                withDelegate:nil];
-            [self.view addSubview:bannerView];
+            _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner origin:CGPointMake(0.0f, bannerOffset)];
+            _bannerView.rootViewController = self;
+            _bannerView.delegate = self;
+            
+            GADRequest *request = [GADRequest request];
+#if defined(TARGET_UKULELE)
+            _bannerView.adUnitID = @"ca-app-pub-1849205192643985/8684225641";
+#elif defined(TARGET_GUITAR)
+            
+#elif defined(TARGET_MANDOLIN)
+            
+#elif defined(TARGET_BANJO)
+            _bannerView.adUnitID = @"ca-app-pub-1849205192643985/5176403083";
+#elif defined(TARGET_VIOLIN)
+            
+#elif defined(TARGET_BALALAIKA)
+            
+#endif
+            request.testDevices = @[@"374cad9f371b2fbc6d624bd254eda28b"];  // Rookie's iPhone
+            [_bannerView loadRequest:request];
+            [self.view addSubview:_bannerView];
         }
     }
+}
+
+- (void)adViewDidReceiveAd:(GADBannerView *)bannerView {
+    NSLog(@"did successfully receive AD");
 }
 
 - (void)loadView {
@@ -73,20 +91,13 @@
     NSString* currentVersion = [SHARED_VERSION_MANAGER getVersion];
     
     if (![version_lite isEqualToString:currentVersion]) {
-        [bannerView removeFromSuperview];
+        [_bannerView removeFromSuperview];
     }
     
 }
 
 
-// Delegate method to know when the ad finished loading
-- (void)didLoadAd:(STAAbstractAd *)ad {
-    //NSLog(@"didLoadAd");
-}
 
-- (void)failedLoadAd:(STAAbstractAd *)ad withError:(NSError *)error {
-    // Failed loading the ad, do something else.
-}
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

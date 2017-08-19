@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+@import GoogleMobileAds;
 
 @interface AppDelegate () {
     int numberOfAwakenings;
@@ -92,33 +92,22 @@
     
     if ([version_lite isEqualToString:currentVersion]) {
         
-        // initialize the SDK with your appID and devID
-        STAStartAppSDK* sdk = [STAStartAppSDK sharedInstance];
-        STASplashPreferences *splashPreferences = [[STASplashPreferences alloc] init];
-        splashPreferences.splashMode = STASplashModeTemplate;
-        splashPreferences.splashTemplateTheme = STASplashTemplateThemeDeepBlue;
-        splashPreferences.splashLoadingIndicatorType = STASplashLoadingIndicatorTypeIOS;
+
         
 #if defined(TARGET_UKULELE)
-        sdk.appID = @"203844333";
-        splashPreferences.splashTemplateAppName = @"Simple Ukulele Tuner";
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-1849205192643985~9210661648"];
 #elif defined(TARGET_GUITAR)
-        sdk.appID = @"205646855";
-        splashPreferences.splashTemplateAppName = @"Simple Guitar Tuner";
+   
 #elif defined(TARGET_MANDOLIN)
-        sdk.appID = @"????";
-        splashPreferences.splashTemplateAppName = @"Simple Mandolin Tuner";
+       
 #elif defined(TARGET_BANJO)
-        sdk.appID = @"206512769";
-        splashPreferences.splashTemplateAppName = @"Simple Banjo Tuner";
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-1849205192643985~7994138115"];
 #elif defined(TARGET_VIOLIN)
-        sdk.appID = @"????";
-        splashPreferences.splashTemplateAppName = @"Simple Violin Tuner";
+      
 #elif defined(TARGET_BALALAIKA)
-        sdk.appID = @"207668986";
-        splashPreferences.splashTemplateAppName = @"Simple Balalaika Tuner";
+ 
 #endif
-        [sdk showSplashAdWithPreferences:splashPreferences];
+
         
         
     } else {

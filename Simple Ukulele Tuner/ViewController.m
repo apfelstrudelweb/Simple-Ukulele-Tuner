@@ -31,6 +31,7 @@
     
     NSString* currentVersion = [SHARED_VERSION_MANAGER getVersion];
 
+    //if (YES) {
     if ([version_lite isEqualToString:currentVersion]) {
         CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
         CGFloat headerHeight = [SUBVIEW_PROPORTIONS[0] floatValue] + 0.05;
@@ -47,7 +48,7 @@
 #if defined(TARGET_UKULELE)
             _bannerView.adUnitID = @"ca-app-pub-1849205192643985/8684225641";
 #elif defined(TARGET_GUITAR)
-            
+            _bannerView.adUnitID = @"ca-app-pub-1849205192643985/4161514944";
 #elif defined(TARGET_MANDOLIN)
             
 #elif defined(TARGET_BANJO)
@@ -55,7 +56,7 @@
 #elif defined(TARGET_VIOLIN)
             
 #elif defined(TARGET_BALALAIKA)
-            
+            _bannerView.adUnitID = @"ca-app-pub-1849205192643985/7512235465";
 #endif
             request.testDevices = @[@"374cad9f371b2fbc6d624bd254eda28b"];  // Rookie's iPhone
             [_bannerView loadRequest:request];

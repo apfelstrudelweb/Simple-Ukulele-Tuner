@@ -34,8 +34,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     //    // TODO: REMOVE LATER, it's only for testing!
-    PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
-    [bindings setObject:version_premium forKey:UPGRADE_TYPE];
+//    PDKeychainBindings *bindings = [PDKeychainBindings sharedKeychainBindings];
+//    [bindings setObject:version_premium forKey:UPGRADE_TYPE];
     //[bindings setObject:version_instrument forKey:UPGRADE_TYPE];
     //[bindings setObject:version_signal forKey:UPGRADE_TYPE];
     //[bindings removeObjectForKey:UPGRADE_TYPE];
@@ -97,7 +97,7 @@
 #if defined(TARGET_UKULELE)
     [GADMobileAds configureWithApplicationID:@"ca-app-pub-1849205192643985~9210661648"];
 #elif defined(TARGET_GUITAR)
-   
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-1849205192643985~2845575608"];
 #elif defined(TARGET_MANDOLIN)
        
 #elif defined(TARGET_BANJO)
@@ -105,7 +105,7 @@
 #elif defined(TARGET_VIOLIN)
       
 #elif defined(TARGET_BALALAIKA)
- 
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-1849205192643985~7073251764"];
 #endif
 
         

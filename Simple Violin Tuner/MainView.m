@@ -7,6 +7,7 @@
 //
 
 #import "MainView.h"
+#import "PremiumView.h"
 
 #define ALPHA_INACTIVE 0.2
 
@@ -17,6 +18,7 @@
     NSUserDefaults *defaults;
 }
 @property NSDictionary *viewsDictionary;
+@property (strong, nonatomic) PremiumView *premiumView;
 @end
 
 @implementation MainView
@@ -28,16 +30,15 @@
     
     self = [super initWithFrame:frame];
     
-    _viewsDictionary = @{ @"header"      : self.headerView,
-                          @"graph"       : self.graphView,
-                          @"tab"         : self.tabView,
+    _viewsDictionary = @{
+                          @"premium"     : self.premiumView,
                           @"bridge"      : self.bridgeView,
                           @"type"        : self.instrumentSubtypeView,
                           @"meter"       : self.meterView,
-                          @"deviation"      : self.deviationView,
+                          @"deviation"   : self.deviationView,
                           @"gauge"       : self.gaugeView,
                           @"button"      : self.buttonView};
-
+    
     
     if (self) {
         
@@ -49,20 +50,8 @@
         defaults = [NSUserDefaults standardUserDefaults];
         NSString* colorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
         [self.headerBackgroundView setBackgroundColor:[SHARED_MANAGER getHeaderColor:colorString]];
-  
-        // special default header for balalaika
-#if defined(TARGET_BALALAIKA)
-        if ([[SHARED_MANAGER getHeaderColor:colorString] isEqual:HEADER_BACKGROUND_COLOR_01]) {
-            UIGraphicsBeginImageContext(self.headerBackgroundView.frame.size);
-            [[UIImage imageNamed:@"header.png"] drawInRect:self.headerBackgroundView.bounds];
-            UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-            UIGraphicsEndImageContext();
-            self.headerBackgroundView.backgroundColor = [UIColor colorWithPatternImage:image];
-        }
-#endif
         
         
-#if defined(TARGET_VIOLIN)
         [self addSubview:self.violinStringView];
         
         
@@ -85,13 +74,9 @@
                                                                  multiplier:1.0
                                                                    constant:0.0]];
         [self addConstraints:layoutConstraints];
-#endif
-  
         
-        [self addSubview:self.headerBackgroundView];
-        [self addSubview:self.headerView];
-        [self addSubview:self.graphView];
-        [self addSubview:self.tabView];
+        
+        [self addSubview:self.premiumView];
         [self addSubview:self.bridgeView];
         [self addSubview:self.instrumentSubtypeView];
         [self addSubview:self.meterView];
@@ -99,10 +84,10 @@
         [self addSubview:self.gaugeView];
         [self addSubview:self.buttonView];
         
-
+        
         // layout constraints
         [self setupLayoutConstraintsPro];
-
+        
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(statusBarFrameWillChange:) name:UIApplicationWillChangeStatusBarFrameNotification object:nil];
         
@@ -115,7 +100,7 @@
                                                  selector:@selector(updateVersion:)
                                                      name:@"UpdateVersionNotification"
                                                    object:nil];
-
+        
         
     }
     return self;
@@ -126,16 +111,6 @@
     NSString* colorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
     [self.headerBackgroundView setBackgroundColor:[SHARED_MANAGER getHeaderColor:colorString]];
     
-    // special default header for balalaika
-#if defined(TARGET_BALALAIKA)
-    if ([[SHARED_MANAGER getHeaderColor:colorString] isEqual:HEADER_BACKGROUND_COLOR_01]) {
-        UIGraphicsBeginImageContext(self.headerBackgroundView.frame.size);
-        [[UIImage imageNamed:@"header.png"] drawInRect:self.headerBackgroundView.bounds];
-        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        self.headerBackgroundView.backgroundColor = [UIColor colorWithPatternImage:image];
-    }
-#endif
     
     [self setBackgroundImage];
     
@@ -146,8 +121,8 @@
     
     [self checkVersion];
     
-    _graphView.alpha = isGraphEnabled ? 1.0 : ALPHA_INACTIVE;
-    _tabView.alpha = isGraphEnabled ? 1.0 : ALPHA_INACTIVE;
+    _premiumView.alpha = isGraphEnabled ? 1.0 : ALPHA_INACTIVE;
+    _premiumView.alpha = isGraphEnabled ? 1.0 : ALPHA_INACTIVE;
     
     [self setNeedsDisplay];
 }
@@ -166,14 +141,13 @@
     for (CALayer *layer in self.graphView.layers) {
         [layer removeFromSuperlayer];
     }
-
+    
 }
 
 
 
 #pragma mark -view instantiations
 
-#if defined(TARGET_VIOLIN)
 - (ViolinStringView*) violinStringView {
     if (_violinStringView == nil) {
         _violinStringView = [ViolinStringView new];
@@ -182,36 +156,18 @@
     }
     return _violinStringView;
 }
-#endif
 
-- (HeaderView*) headerView {
-    if (_headerView == nil) {
-        _headerView = [HeaderView new];
-        _headerView.layer.borderColor = [UIColor whiteColor].CGColor;
-        [_headerView setTranslatesAutoresizingMaskIntoConstraints:NO];
+
+- (PremiumView*) premiumView {
+    if (_premiumView == nil) {
+        _premiumView = [PremiumView new];
+        _premiumView.layer.borderColor = [UIColor whiteColor].CGColor;
+        [_premiumView setTranslatesAutoresizingMaskIntoConstraints:NO];
+        //_premiumView.backgroundColor = [UIColor greenColor];
     }
-    return _headerView;
+    return _premiumView;
 }
 
-- (GraphView*) graphView {
-    if (_graphView == nil) {
-        _graphView = [GraphView new];
-        _graphView.layer.borderColor = [UIColor whiteColor].CGColor;
-        _graphView.alpha = isGraphEnabled ? 1.0 : ALPHA_INACTIVE;
-        [_graphView setTranslatesAutoresizingMaskIntoConstraints:NO];
-    }
-    return _graphView;
-}
-
-- (TabView*) tabView {
-    if (_tabView == nil) {
-        _tabView = [TabView new];
-        _tabView.layer.borderColor = [UIColor whiteColor].CGColor;
-        _tabView.alpha = isGraphEnabled ? 1.0 : ALPHA_INACTIVE;
-        [_tabView setTranslatesAutoresizingMaskIntoConstraints:NO];
-    }
-    return _tabView;
-}
 
 - (BridgeView*) bridgeView {
     if (_bridgeView == nil) {
@@ -275,37 +231,14 @@
 }
 
 - (void) setBackgroundImage {
+    
 
-#if !defined(TARGET_VIOLIN)
-    NSInteger numberOfStrings = [SHARED_CONTEXT getNumberOfStrings];
-#endif
     
     NSString *backgrImgName;
     
-#if defined(TARGET_VIOLIN)
-    backgrImgName = @"violin";
-    
-#elif defined(TARGET_BANJO)
-    if (numberOfStrings == 4) {
-        backgrImgName = @"banjo_background4";
-    } else if (numberOfStrings == 5) {
-        backgrImgName = @"banjo_background5";
-    } else {
-        backgrImgName = @"banjo_background6";
-    }
-#else
-    if (numberOfStrings == 3) {
-        backgrImgName = @"background3";
-    } else if (numberOfStrings == 4) {
-        backgrImgName = @"background4";
-    } else if (numberOfStrings == 5) {
-        backgrImgName = @"background5";
-    } else {
-        backgrImgName = @"background6";
-    }
-#endif
 
-    
+    backgrImgName = @"violin";
+        
     UIGraphicsBeginImageContext(self.frame.size);
     [[UIImage imageNamed:backgrImgName] drawInRect:self.bounds];
     UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
@@ -323,14 +256,14 @@
     CGFloat effectiveScreenHeight = screenHeight;// - 2*MARGIN;
     CGFloat minFactor = effectiveScreenHeight/screenHeight;
     
-    NSString* verticalVisualFormatText = [NSString stringWithFormat:@"V:|-%d-[header]-%d-[graph]-%d-[tab]-%d-[bridge]-%d-[type]-%d-[meter]-%d-[deviation]-%d-[gauge]-%d-[button]", 0, 0, 0, 0, 0, 0, 0, 0, 0];
+    NSString* verticalVisualFormatText = [NSString stringWithFormat:@"V:|-%d-[premium]-%d-[bridge]-%d-[type]-%d-[meter]-%d-[deviation]-%d-[gauge]-%d-[button]", 0, 0, 0, 0, 0, 0, 0];
     
     NSArray *verticalPositionConstraints = [NSLayoutConstraint constraintsWithVisualFormat:verticalVisualFormatText
                                                                                    options:0
                                                                                    metrics:nil
                                                                                      views:_viewsDictionary];
     
-    NSArray* viewsArray = @[self.headerView, self.graphView, self.tabView, self.bridgeView, self.instrumentSubtypeView, self.meterView, self.deviationView, self.gaugeView, self.buttonView];
+    NSArray* viewsArray = @[self.premiumView, self.bridgeView, self.instrumentSubtypeView, self.meterView, self.deviationView, self.gaugeView, self.buttonView];
     
     
     for (NSInteger i=0; i<SUBVIEW_PROPORTIONS.count;i++) {
@@ -367,7 +300,7 @@
         [self addConstraint:centerConstraint];
         [self addConstraint:heightConstraint];
     }
-
+    
     
     for (NSInteger i = 0; i<verticalPositionConstraints.count; i++) {
         [self addConstraint:verticalPositionConstraints[i]];

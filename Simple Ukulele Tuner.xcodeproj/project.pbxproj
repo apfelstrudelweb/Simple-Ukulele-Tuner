@@ -277,7 +277,6 @@
 		1B2E13521D1FDDD100BD31C4 /* HorizontalPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041CA1C99FCC8005103EC /* HorizontalPicker.m */; };
 		1B2E13531D1FDDD100BD31C4 /* InstrumentSubtypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A41C99FC76005103EC /* InstrumentSubtypeView.m */; };
 		1B2E13541D1FDDD100BD31C4 /* ButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041AD1C99FC76005103EC /* ButtonView.m */; };
-		1B2E13551D1FDDD100BD31C4 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041DC1C99FCDA005103EC /* MainView.m */; };
 		1B2E13561D1FDDD100BD31C4 /* SettingsMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041881C99FC46005103EC /* SettingsMenuView.m */; };
 		1B2E13571D1FDDD100BD31C4 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041571C99F9DA005103EC /* iRate.m */; };
 		1B2E13581D1FDDD100BD31C4 /* UIView+uvo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC042741C99FDFC005103EC /* UIView+uvo.m */; };
@@ -525,6 +524,8 @@
 		1B84AA0D1F489BAF0055F15D /* e-string.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA0A1F489BAF0055F15D /* e-string.aiff */; };
 		1B84AA0E1F489BAF0055F15D /* g-string.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA0B1F489BAF0055F15D /* g-string.aiff */; };
 		1B84AA101F48B2200055F15D /* Violin_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA0F1F48B2200055F15D /* Violin_Assets.xcassets */; };
+		1B84AA161F48C6CB0055F15D /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84AA151F48C6CB0055F15D /* MainView.m */; };
+		1B84AA191F48C8D40055F15D /* PremiumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84AA181F48C8D40055F15D /* PremiumView.m */; };
 		1B8CDC651E58C35B00DD8240 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC641E58C35B00DD8240 /* header.png */; };
 		1B8CDC6B1E58CC7800DD8240 /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC6A1E58CC7800DD8240 /* background3.png */; };
 		1BB40C1C1F3F8706005451CB /* Balalaika_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C1B1F3F8706005451CB /* Balalaika_Assets.xcassets */; };
@@ -873,6 +874,9 @@
 		1B84AA0A1F489BAF0055F15D /* e-string.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = "e-string.aiff"; path = "Simple Violin Tuner/e-string.aiff"; sourceTree = "<group>"; };
 		1B84AA0B1F489BAF0055F15D /* g-string.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = "g-string.aiff"; path = "Simple Violin Tuner/g-string.aiff"; sourceTree = "<group>"; };
 		1B84AA0F1F48B2200055F15D /* Violin_Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Violin_Assets.xcassets; path = "Simple Violin Tuner/Violin_Assets.xcassets"; sourceTree = "<group>"; };
+		1B84AA151F48C6CB0055F15D /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainView.m; path = "Simple Violin Tuner/MainView.m"; sourceTree = "<group>"; };
+		1B84AA171F48C8D40055F15D /* PremiumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PremiumView.h; path = "Simple Violin Tuner/PremiumView.h"; sourceTree = "<group>"; };
+		1B84AA181F48C8D40055F15D /* PremiumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PremiumView.m; path = "Simple Violin Tuner/PremiumView.m"; sourceTree = "<group>"; };
 		1B8CDC4B1E5894B700DD8240 /* Balalaika_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Balalaika_Constants.h; sourceTree = "<group>"; };
 		1B8CDC641E58C35B00DD8240 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		1B8CDC6A1E58CC7800DD8240 /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background3.png; sourceTree = "<group>"; };
@@ -1265,6 +1269,7 @@
 		1B2E14581D1FE41B00BD31C4 /* Simple Violin Tuner */ = {
 			isa = PBXGroup;
 			children = (
+				1B84AA111F48C5C50055F15D /* views */,
 				1B84AA0F1F48B2200055F15D /* Violin_Assets.xcassets */,
 				1B84AA061F4898790055F15D /* sound */,
 				1BB40C461F436470005451CB /* images */,
@@ -1502,6 +1507,16 @@
 				1B84AA0B1F489BAF0055F15D /* g-string.aiff */,
 			);
 			name = sound;
+			sourceTree = "<group>";
+		};
+		1B84AA111F48C5C50055F15D /* views */ = {
+			isa = PBXGroup;
+			children = (
+				1B84AA151F48C6CB0055F15D /* MainView.m */,
+				1B84AA171F48C8D40055F15D /* PremiumView.h */,
+				1B84AA181F48C8D40055F15D /* PremiumView.m */,
+			);
+			name = views;
 			sourceTree = "<group>";
 		};
 		1BB40C461F436470005451CB /* images */ = {
@@ -2626,6 +2641,7 @@
 				1B2E132F1D1FDDD100BD31C4 /* SoundProcessor.mm in Sources */,
 				1B2E13301D1FDDD100BD31C4 /* ViewController.m in Sources */,
 				1B2E13311D1FDDD100BD31C4 /* GaugeView.m in Sources */,
+				1B84AA191F48C8D40055F15D /* PremiumView.m in Sources */,
 				1B2E13321D1FDDD100BD31C4 /* SessionManager.m in Sources */,
 				1B2E13331D1FDDD100BD31C4 /* PDKeychainBindingsController.m in Sources */,
 				1B2E13341D1FDDD100BD31C4 /* AppDelegate.m in Sources */,
@@ -2641,6 +2657,7 @@
 				1B2E133C1D1FDDD100BD31C4 /* BackgroundView.m in Sources */,
 				1B2E133D1D1FDDD100BD31C4 /* GraphView.m in Sources */,
 				1B2E133E1D1FDDD100BD31C4 /* SettingsView.m in Sources */,
+				1B84AA161F48C6CB0055F15D /* MainView.m in Sources */,
 				1B2E133F1D1FDDD100BD31C4 /* HeaderView.m in Sources */,
 				1B2E13401D1FDDD100BD31C4 /* CircleView.m in Sources */,
 				1B2E13411D1FDDD100BD31C4 /* PDKeychainBindings.m in Sources */,
@@ -2664,7 +2681,6 @@
 				1B2E13521D1FDDD100BD31C4 /* HorizontalPicker.m in Sources */,
 				1B2E13531D1FDDD100BD31C4 /* InstrumentSubtypeView.m in Sources */,
 				1B2E13541D1FDDD100BD31C4 /* ButtonView.m in Sources */,
-				1B2E13551D1FDDD100BD31C4 /* MainView.m in Sources */,
 				1B2E13561D1FDDD100BD31C4 /* SettingsMenuView.m in Sources */,
 				1B2E13571D1FDDD100BD31C4 /* iRate.m in Sources */,
 				1B2E13581D1FDDD100BD31C4 /* UIView+uvo.m in Sources */,

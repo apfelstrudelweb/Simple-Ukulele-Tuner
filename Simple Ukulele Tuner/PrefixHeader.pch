@@ -103,7 +103,11 @@
 // 7. DeviationView
 // 8. GaugeView
 // 9. ButtonView
-#define SUBVIEW_PROPORTIONS @[@11.86, @24.08, @6.4, @24.22, @4.6, @3.6, @4.50, @7.84, @12.9]
+#if defined(TARGET_VIOLIN)
+    #define SUBVIEW_PROPORTIONS @[@43.34, @24.22, @4.6, @3.6, @4.50, @7.84, @12.9]
+#else
+    #define SUBVIEW_PROPORTIONS @[@11.86, @24.08, @6.4, @24.22, @4.6, @3.6, @4.50, @7.84, @12.9]
+#endif
 
 
 #define HTML_PAGES [[NSMutableArray alloc] initWithObjects:@"manual1", @"manual2", @"manual3", @"manual4",@"manual5",@"manual6", @"manual7", nil];

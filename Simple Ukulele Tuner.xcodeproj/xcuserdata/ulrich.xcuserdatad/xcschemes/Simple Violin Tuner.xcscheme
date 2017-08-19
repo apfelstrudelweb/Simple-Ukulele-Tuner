@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1B2E13261D1FDDD100BD31C4"
-               BuildableName = "Simple Violin Tuner.app"
-               BlueprintName = "Simple Violin Tuner"
+               BuildableName = "Fine Violin Tuner.app"
+               BlueprintName = "Fine Violin Tuner"
                ReferencedContainer = "container:Simple Ukulele Tuner.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1B2E13261D1FDDD100BD31C4"
-            BuildableName = "Simple Violin Tuner.app"
-            BlueprintName = "Simple Violin Tuner"
+            BuildableName = "Fine Violin Tuner.app"
+            BlueprintName = "Fine Violin Tuner"
             ReferencedContainer = "container:Simple Ukulele Tuner.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1B2E13261D1FDDD100BD31C4"
-            BuildableName = "Simple Violin Tuner.app"
-            BlueprintName = "Simple Violin Tuner"
+            BuildableName = "Fine Violin Tuner.app"
+            BlueprintName = "Fine Violin Tuner"
             ReferencedContainer = "container:Simple Ukulele Tuner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1B2E13261D1FDDD100BD31C4"
-            BuildableName = "Simple Violin Tuner.app"
-            BlueprintName = "Simple Violin Tuner"
+            BuildableName = "Fine Violin Tuner.app"
+            BlueprintName = "Fine Violin Tuner"
             ReferencedContainer = "container:Simple Ukulele Tuner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

@@ -529,8 +529,6 @@
 		1B8CDC6B1E58CC7800DD8240 /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC6A1E58CC7800DD8240 /* background3.png */; };
 		1BB40C1C1F3F8706005451CB /* Balalaika_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C1B1F3F8706005451CB /* Balalaika_Assets.xcassets */; };
 		1BB40C5D1F43671C005451CB /* ViolinStringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB40C5C1F43671C005451CB /* ViolinStringView.m */; };
-		1BB40C5E1F437325005451CB /* ledActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EB1C99FD0A005103EC /* ledActive.png */; };
-		1BB40C5F1F437328005451CB /* ledPassive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EC1C99FD0A005103EC /* ledPassive.png */; };
 		1BC0413E1C99F8C6005103EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0413D1C99F8C6005103EC /* main.m */; };
 		1BC041411C99F8C6005103EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041401C99F8C6005103EC /* AppDelegate.m */; };
 		1BC041441C99F8C6005103EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041431C99F8C6005103EC /* ViewController.m */; };
@@ -803,7 +801,7 @@
 		1B0721531CC3E64100102B13 /* uke_de_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = uke_de_manual7.html; sourceTree = "<group>"; };
 		1B2E12901D1FDD5100BD31C4 /* Simple Mandolin Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Mandolin Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2E13241D1FDDA600BD31C4 /* Simple Banjo Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Banjo Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1B2E13B81D1FDDD100BD31C4 /* Simple Violin Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Violin Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B2E13B81D1FDDD100BD31C4 /* Fine Violin Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fine Violin Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2E144C1D1FDE1300BD31C4 /* Simple Balalaika Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Balalaika Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2E14521D1FE2C000BD31C4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Simple Mandolin Tuner/Info.plist"; sourceTree = "<group>"; };
 		1B2E14561D1FE3FA00BD31C4 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Simple Banjo Tuner/Info.plist"; sourceTree = "<group>"; };
@@ -1550,7 +1548,7 @@
 				1BCCC2271D1FD6A200AD17D0 /* Simple Guitar Tuner.app */,
 				1B2E12901D1FDD5100BD31C4 /* Simple Mandolin Tuner.app */,
 				1B2E13241D1FDDA600BD31C4 /* Simple Banjo Tuner.app */,
-				1B2E13B81D1FDDD100BD31C4 /* Simple Violin Tuner.app */,
+				1B2E13B81D1FDDD100BD31C4 /* Fine Violin Tuner.app */,
 				1B2E144C1D1FDE1300BD31C4 /* Simple Balalaika Tuner.app */,
 			);
 			name = Products;
@@ -1935,9 +1933,9 @@
 			productReference = 1B2E13241D1FDDA600BD31C4 /* Simple Banjo Tuner.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1B2E13261D1FDDD100BD31C4 /* Simple Violin Tuner */ = {
+		1B2E13261D1FDDD100BD31C4 /* Fine Violin Tuner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1B2E13B51D1FDDD100BD31C4 /* Build configuration list for PBXNativeTarget "Simple Violin Tuner" */;
+			buildConfigurationList = 1B2E13B51D1FDDD100BD31C4 /* Build configuration list for PBXNativeTarget "Fine Violin Tuner" */;
 			buildPhases = (
 				1B2E13271D1FDDD100BD31C4 /* Sources */,
 				1B2E135C1D1FDDD100BD31C4 /* Frameworks */,
@@ -1947,9 +1945,9 @@
 			);
 			dependencies = (
 			);
-			name = "Simple Violin Tuner";
+			name = "Fine Violin Tuner";
 			productName = "Simple Ukulele Tuner";
-			productReference = 1B2E13B81D1FDDD100BD31C4 /* Simple Violin Tuner.app */;
+			productReference = 1B2E13B81D1FDDD100BD31C4 /* Fine Violin Tuner.app */;
 			productType = "com.apple.product-type.application";
 		};
 		1B2E13BA1D1FDE1300BD31C4 /* Simple Balalaika Tuner */ = {
@@ -2065,7 +2063,7 @@
 				1BCCC1951D1FD6A200AD17D0 /* Simple Guitar Tuner */,
 				1B2E11FE1D1FDD5100BD31C4 /* Simple Mandolin Tuner */,
 				1B2E12921D1FDDA600BD31C4 /* Simple Banjo Tuner */,
-				1B2E13261D1FDDD100BD31C4 /* Simple Violin Tuner */,
+				1B2E13261D1FDDD100BD31C4 /* Fine Violin Tuner */,
 				1B2E13BA1D1FDE1300BD31C4 /* Simple Balalaika Tuner */,
 			);
 		};
@@ -2212,7 +2210,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BB40C5E1F437325005451CB /* ledActive.png in Resources */,
 				1B2E136E1D1FDDD100BD31C4 /* Localizable.strings in Resources */,
 				1B2E136F1D1FDDD100BD31C4 /* fft_02.png in Resources */,
 				1B2E13711D1FDDD100BD31C4 /* closeButton.png in Resources */,
@@ -2239,7 +2236,6 @@
 				1B2E13881D1FDDD100BD31C4 /* shoppingCart.png in Resources */,
 				1B84A9FC1F44E2A60055F15D /* violin.png in Resources */,
 				1B84A9F21F44E2A60055F15D /* microphoneOff.png in Resources */,
-				1BB40C5F1F437328005451CB /* ledPassive.png in Resources */,
 				1B2E138A1D1FDDD100BD31C4 /* knob.png in Resources */,
 				1B2E138B1D1FDDD100BD31C4 /* autocorr_01.png in Resources */,
 				1B84A9F91F44E2A60055F15D /* stringPassive.png in Resources */,
@@ -3353,7 +3349,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1B2E13B51D1FDDD100BD31C4 /* Build configuration list for PBXNativeTarget "Simple Violin Tuner" */ = {
+		1B2E13B51D1FDDD100BD31C4 /* Build configuration list for PBXNativeTarget "Fine Violin Tuner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1B2E13B61D1FDDD100BD31C4 /* Debug */,

@@ -280,7 +280,10 @@
 
 - (void) setBackgroundImage {
 
+#if !defined(TARGET_VIOLIN)
     NSInteger numberOfStrings = [SHARED_CONTEXT getNumberOfStrings];
+#endif
+    
     NSString *backgrImgName;
     
 #if defined(TARGET_VIOLIN)

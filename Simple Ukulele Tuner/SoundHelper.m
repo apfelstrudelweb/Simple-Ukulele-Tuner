@@ -65,6 +65,7 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     NSError *setCategoryError;
     
     AVAudioSession *session;
+    AVAudioPlayer *audioPlayer;
     
     
 }
@@ -113,16 +114,26 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     sf.toneNumber = [NSNumber numberWithInteger:number];
     
     [SHARED_MANAGER setStringToneFrequency:[frequenciesArray[number] floatValue]];
+
+#if defined(TARGET_VIOLIN)
+    NSArray *soundFilesArray = @[@"g-string.aiff", @"d-string.aiff", @"a-string.aiff", @"e-string.aiff"];
+    [audioPlayer stop];
+    if (number > soundFilesArray.count-1) return;
+    [self playSoundFXnamed:soundFilesArray[number] Loop: YES];
+#else
     [self playSineWave];
-    
+#endif
     [[NSNotificationCenter defaultCenter] postNotificationName:@"PlayToneNotification" object:sf];
 
     if ([version_lite isEqualToString:[SHARED_VERSION_MANAGER getVersion]] || [version_instrument isEqualToString:[SHARED_VERSION_MANAGER getVersion]]) {
         // stop the tone for the lite version (after 3 sec)
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, NUM_SEC_PLAYTONE);
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-            
+#if defined(TARGET_VIOLIN)
+            [audioPlayer stop];
+#else
             [self stopTone];
+#endif
         });
     }
 }
@@ -199,8 +210,12 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
 
 
 - (void) stopTone {
-    
+
+#if defined(TARGET_VIOLIN)
+    [audioPlayer stop];
+#else
     AudioOutputUnitStop(outputUnit);
+#endif
     
     // use "autorelease" due to the flag "-fno-objc-arc" !!!
     SoundFile* sf = [[[SoundFile alloc] init] autorelease];
@@ -212,7 +227,10 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     [SHARED_MANAGER setSoundPlaying:NO];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"PlayToneNotification" object:sf];
     
+#if !defined(TARGET_VIOLIN)
     [session overrideOutputAudioPort:AVAudioSessionPortOverrideNone error:nil];
+#endif
+    
 }
 
 // Helper method
@@ -246,5 +264,35 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
         if (breakOuterLoop == YES) break;
     }
     return [NSNumber numberWithInteger:octave];
+}
+
+-(BOOL) playSoundFXnamed: (NSString*) vSFXName Loop: (BOOL) vLoop
+{
+    NSError *error;
+    
+    NSBundle* bundle = [NSBundle mainBundle];
+    
+    NSString* bundleDirectory = (NSString*)[bundle bundlePath];
+    
+    NSURL *url = [NSURL fileURLWithPath:[bundleDirectory stringByAppendingPathComponent:vSFXName]];
+    
+    audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
+    
+    if(vLoop)
+        audioPlayer.numberOfLoops = -1;
+    else
+        audioPlayer.numberOfLoops = 0;
+    
+    BOOL success = YES;
+    
+    if (audioPlayer == nil)
+    {
+        success = NO;
+    }
+    else
+    {
+        success = [audioPlayer play];
+    }
+    return success;
 }
 @end

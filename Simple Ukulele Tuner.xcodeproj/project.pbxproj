@@ -520,6 +520,10 @@
 		1B84AA031F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */; };
 		1B84AA041F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */; };
 		1B84AA051F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */; };
+		1B84AA081F4898960055F15D /* a-string.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA071F4898960055F15D /* a-string.aiff */; };
+		1B84AA0C1F489BAF0055F15D /* d-string.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA091F489BAF0055F15D /* d-string.aiff */; };
+		1B84AA0D1F489BAF0055F15D /* e-string.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA0A1F489BAF0055F15D /* e-string.aiff */; };
+		1B84AA0E1F489BAF0055F15D /* g-string.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA0B1F489BAF0055F15D /* g-string.aiff */; };
 		1B8CDC651E58C35B00DD8240 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC641E58C35B00DD8240 /* header.png */; };
 		1B8CDC6B1E58CC7800DD8240 /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC6A1E58CC7800DD8240 /* background3.png */; };
 		1BB40C1C1F3F8706005451CB /* Balalaika_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C1B1F3F8706005451CB /* Balalaika_Assets.xcassets */; };
@@ -865,6 +869,10 @@
 		1B84A9F11F44E2A60055F15D /* violin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = violin.png; path = "Simple Violin Tuner/violin.png"; sourceTree = "<group>"; };
 		1B84A9FD1F44E8F40055F15D /* stringActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stringActive.png; path = "Simple Violin Tuner/stringActive.png"; sourceTree = "<group>"; };
 		1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
+		1B84AA071F4898960055F15D /* a-string.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = "a-string.aiff"; path = "Simple Violin Tuner/a-string.aiff"; sourceTree = "<group>"; };
+		1B84AA091F489BAF0055F15D /* d-string.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = "d-string.aiff"; path = "Simple Violin Tuner/d-string.aiff"; sourceTree = "<group>"; };
+		1B84AA0A1F489BAF0055F15D /* e-string.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = "e-string.aiff"; path = "Simple Violin Tuner/e-string.aiff"; sourceTree = "<group>"; };
+		1B84AA0B1F489BAF0055F15D /* g-string.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = "g-string.aiff"; path = "Simple Violin Tuner/g-string.aiff"; sourceTree = "<group>"; };
 		1B8CDC4B1E5894B700DD8240 /* Balalaika_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Balalaika_Constants.h; sourceTree = "<group>"; };
 		1B8CDC641E58C35B00DD8240 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		1B8CDC6A1E58CC7800DD8240 /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background3.png; sourceTree = "<group>"; };
@@ -1257,6 +1265,7 @@
 		1B2E14581D1FE41B00BD31C4 /* Simple Violin Tuner */ = {
 			isa = PBXGroup;
 			children = (
+				1B84AA061F4898790055F15D /* sound */,
 				1BB40C461F436470005451CB /* images */,
 				1B2E14591D1FE43600BD31C4 /* Supporting Files */,
 			);
@@ -1481,6 +1490,17 @@
 				1B6717BA1D454D46004AE1A0 /* banjo_de_manual7.html */,
 			);
 			name = de;
+			sourceTree = "<group>";
+		};
+		1B84AA061F4898790055F15D /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				1B84AA071F4898960055F15D /* a-string.aiff */,
+				1B84AA091F489BAF0055F15D /* d-string.aiff */,
+				1B84AA0A1F489BAF0055F15D /* e-string.aiff */,
+				1B84AA0B1F489BAF0055F15D /* g-string.aiff */,
+			);
+			name = sound;
 			sourceTree = "<group>";
 		};
 		1BB40C461F436470005451CB /* images */ = {
@@ -2205,11 +2225,14 @@
 				1B2E137C1D1FDDD100BD31C4 /* arrowDown.png in Resources */,
 				1B84A9E61F44E29A0055F15D /* ledPassive.png in Resources */,
 				1B2E137D1D1FDDD100BD31C4 /* calibration_02.png in Resources */,
+				1B84AA0D1F489BAF0055F15D /* e-string.aiff in Resources */,
 				1B84A9FA1F44E2A60055F15D /* tabActive.png in Resources */,
 				1B2E137E1D1FDDD100BD31C4 /* autocorr_03.png in Resources */,
 				1B2E13821D1FDDD100BD31C4 /* inapppurch_01.png in Resources */,
+				1B84AA0E1F489BAF0055F15D /* g-string.aiff in Resources */,
 				1B2E13841D1FDDD100BD31C4 /* linePattern.png in Resources */,
 				1B84A9F51F44E2A60055F15D /* string_A.png in Resources */,
+				1B84AA0C1F489BAF0055F15D /* d-string.aiff in Resources */,
 				1B2E13881D1FDDD100BD31C4 /* shoppingCart.png in Resources */,
 				1B84A9FC1F44E2A60055F15D /* violin.png in Resources */,
 				1B84A9F21F44E2A60055F15D /* microphoneOff.png in Resources */,
@@ -2219,6 +2242,7 @@
 				1B84A9F91F44E2A60055F15D /* stringPassive.png in Resources */,
 				1B84A9F31F44E2A60055F15D /* microphoneOn.png in Resources */,
 				1B2E138C1D1FDDD100BD31C4 /* iRate.bundle in Resources */,
+				1B84AA081F4898960055F15D /* a-string.aiff in Resources */,
 				1B2E138E1D1FDDD100BD31C4 /* style.css in Resources */,
 				1B2E138F1D1FDDD100BD31C4 /* close.png in Resources */,
 				1B2E13921D1FDDD100BD31C4 /* settingsTop.png in Resources */,

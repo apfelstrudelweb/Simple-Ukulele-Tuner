@@ -524,6 +524,7 @@
 		1B84AA0C1F489BAF0055F15D /* d-string.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA091F489BAF0055F15D /* d-string.aiff */; };
 		1B84AA0D1F489BAF0055F15D /* e-string.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA0A1F489BAF0055F15D /* e-string.aiff */; };
 		1B84AA0E1F489BAF0055F15D /* g-string.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA0B1F489BAF0055F15D /* g-string.aiff */; };
+		1B84AA101F48B2200055F15D /* Violin_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA0F1F48B2200055F15D /* Violin_Assets.xcassets */; };
 		1B8CDC651E58C35B00DD8240 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC641E58C35B00DD8240 /* header.png */; };
 		1B8CDC6B1E58CC7800DD8240 /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC6A1E58CC7800DD8240 /* background3.png */; };
 		1BB40C1C1F3F8706005451CB /* Balalaika_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C1B1F3F8706005451CB /* Balalaika_Assets.xcassets */; };
@@ -873,6 +874,7 @@
 		1B84AA091F489BAF0055F15D /* d-string.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = "d-string.aiff"; path = "Simple Violin Tuner/d-string.aiff"; sourceTree = "<group>"; };
 		1B84AA0A1F489BAF0055F15D /* e-string.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = "e-string.aiff"; path = "Simple Violin Tuner/e-string.aiff"; sourceTree = "<group>"; };
 		1B84AA0B1F489BAF0055F15D /* g-string.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = "g-string.aiff"; path = "Simple Violin Tuner/g-string.aiff"; sourceTree = "<group>"; };
+		1B84AA0F1F48B2200055F15D /* Violin_Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Violin_Assets.xcassets; path = "Simple Violin Tuner/Violin_Assets.xcassets"; sourceTree = "<group>"; };
 		1B8CDC4B1E5894B700DD8240 /* Balalaika_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Balalaika_Constants.h; sourceTree = "<group>"; };
 		1B8CDC641E58C35B00DD8240 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		1B8CDC6A1E58CC7800DD8240 /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background3.png; sourceTree = "<group>"; };
@@ -1265,6 +1267,7 @@
 		1B2E14581D1FE41B00BD31C4 /* Simple Violin Tuner */ = {
 			isa = PBXGroup;
 			children = (
+				1B84AA0F1F48B2200055F15D /* Violin_Assets.xcassets */,
 				1B84AA061F4898790055F15D /* sound */,
 				1BB40C461F436470005451CB /* images */,
 				1B2E14591D1FE43600BD31C4 /* Supporting Files */,
@@ -2253,6 +2256,7 @@
 				1B2E13991D1FDDD100BD31C4 /* fft_animated.gif in Resources */,
 				1B2E139A1D1FDDD100BD31C4 /* settingsPatternDark.png in Resources */,
 				1B2E139B1D1FDDD100BD31C4 /* arrowRight.png in Resources */,
+				1B84AA101F48B2200055F15D /* Violin_Assets.xcassets in Resources */,
 				1B2E139F1D1FDDD100BD31C4 /* autocorr_animated.gif in Resources */,
 				1B2E13A31D1FDDD100BD31C4 /* inapppurch_02.png in Resources */,
 				1B84A9F41F44E2A60055F15D /* settings.png in Resources */,

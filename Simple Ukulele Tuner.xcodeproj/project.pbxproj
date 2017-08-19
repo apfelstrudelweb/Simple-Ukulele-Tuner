@@ -301,7 +301,6 @@
 		1B2E13711D1FDDD100BD31C4 /* closeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042091C99FD23005103EC /* closeButton.png */; };
 		1B2E13731D1FDDD100BD31C4 /* gaugeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E71C99FD0A005103EC /* gaugeBackground.png */; };
 		1B2E13741D1FDDD100BD31C4 /* calibration_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BF634F11CB1A2D10060ECEE /* calibration_01.png */; };
-		1B2E13751D1FDDD100BD31C4 /* gaugePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E81C99FD0A005103EC /* gaugePattern.png */; };
 		1B2E13771D1FDDD100BD31C4 /* Root.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0428C1C9A082D005103EC /* Root.plist */; };
 		1B2E13791D1FDDD100BD31C4 /* settingsPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042071C99FD23005103EC /* settingsPattern.png */; };
 		1B2E137A1D1FDDD100BD31C4 /* settingsMiddle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042061C99FD23005103EC /* settingsMiddle.png */; };
@@ -526,6 +525,10 @@
 		1B84AA101F48B2200055F15D /* Violin_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA0F1F48B2200055F15D /* Violin_Assets.xcassets */; };
 		1B84AA161F48C6CB0055F15D /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84AA151F48C6CB0055F15D /* MainView.m */; };
 		1B84AA191F48C8D40055F15D /* PremiumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84AA181F48C8D40055F15D /* PremiumView.m */; };
+		1B84AA1B1F48CDC20055F15D /* gaugePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA1A1F48CDC20055F15D /* gaugePattern.png */; };
+		1B84AA1D1F48D43C0055F15D /* slider.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA1C1F48D43C0055F15D /* slider.png */; };
+		1B84AA201F48D9770055F15D /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84AA1F1F48D9770055F15D /* DetailView.m */; };
+		1B84AA221F48E6990055F15D /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA211F48E6990055F15D /* close.png */; };
 		1B8CDC651E58C35B00DD8240 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC641E58C35B00DD8240 /* header.png */; };
 		1B8CDC6B1E58CC7800DD8240 /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC6A1E58CC7800DD8240 /* background3.png */; };
 		1BB40C1C1F3F8706005451CB /* Balalaika_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C1B1F3F8706005451CB /* Balalaika_Assets.xcassets */; };
@@ -877,6 +880,11 @@
 		1B84AA151F48C6CB0055F15D /* MainView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MainView.m; path = "Simple Violin Tuner/MainView.m"; sourceTree = "<group>"; };
 		1B84AA171F48C8D40055F15D /* PremiumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PremiumView.h; path = "Simple Violin Tuner/PremiumView.h"; sourceTree = "<group>"; };
 		1B84AA181F48C8D40055F15D /* PremiumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PremiumView.m; path = "Simple Violin Tuner/PremiumView.m"; sourceTree = "<group>"; };
+		1B84AA1A1F48CDC20055F15D /* gaugePattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = gaugePattern.png; path = "Simple Violin Tuner/gaugePattern.png"; sourceTree = "<group>"; };
+		1B84AA1C1F48D43C0055F15D /* slider.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = slider.png; path = "Simple Violin Tuner/slider.png"; sourceTree = "<group>"; };
+		1B84AA1E1F48D9770055F15D /* DetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailView.h; path = "Simple Violin Tuner/DetailView.h"; sourceTree = "<group>"; };
+		1B84AA1F1F48D9770055F15D /* DetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailView.m; path = "Simple Violin Tuner/DetailView.m"; sourceTree = "<group>"; };
+		1B84AA211F48E6990055F15D /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close.png; path = "Simple Violin Tuner/close.png"; sourceTree = "<group>"; };
 		1B8CDC4B1E5894B700DD8240 /* Balalaika_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Balalaika_Constants.h; sourceTree = "<group>"; };
 		1B8CDC641E58C35B00DD8240 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		1B8CDC6A1E58CC7800DD8240 /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background3.png; sourceTree = "<group>"; };
@@ -1515,6 +1523,8 @@
 				1B84AA151F48C6CB0055F15D /* MainView.m */,
 				1B84AA171F48C8D40055F15D /* PremiumView.h */,
 				1B84AA181F48C8D40055F15D /* PremiumView.m */,
+				1B84AA1E1F48D9770055F15D /* DetailView.h */,
+				1B84AA1F1F48D9770055F15D /* DetailView.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -1522,6 +1532,7 @@
 		1BB40C461F436470005451CB /* images */ = {
 			isa = PBXGroup;
 			children = (
+				1B84AA1A1F48CDC20055F15D /* gaugePattern.png */,
 				1B84A9E71F44E2A60055F15D /* microphoneOff.png */,
 				1B84A9E81F44E2A60055F15D /* microphoneOn.png */,
 				1B84A9E91F44E2A60055F15D /* settings.png */,
@@ -1536,6 +1547,8 @@
 				1B84A9F11F44E2A60055F15D /* violin.png */,
 				1B84A9E31F44E29A0055F15D /* ledActive.png */,
 				1B84A9E41F44E29A0055F15D /* ledPassive.png */,
+				1B84AA1C1F48D43C0055F15D /* slider.png */,
+				1B84AA211F48E6990055F15D /* close.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -2232,7 +2245,6 @@
 				1B2E13741D1FDDD100BD31C4 /* calibration_01.png in Resources */,
 				1BDE3B911F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 in Resources */,
 				1B84A9FE1F44E8F40055F15D /* stringActive.png in Resources */,
-				1B2E13751D1FDDD100BD31C4 /* gaugePattern.png in Resources */,
 				1B2E13771D1FDDD100BD31C4 /* Root.plist in Resources */,
 				1B84A9F71F44E2A60055F15D /* string_E.png in Resources */,
 				1B2E13791D1FDDD100BD31C4 /* settingsPattern.png in Resources */,
@@ -2258,6 +2270,7 @@
 				1B2E138C1D1FDDD100BD31C4 /* iRate.bundle in Resources */,
 				1B84AA081F4898960055F15D /* a-string.aiff in Resources */,
 				1B2E138E1D1FDDD100BD31C4 /* style.css in Resources */,
+				1B84AA1D1F48D43C0055F15D /* slider.png in Resources */,
 				1B2E138F1D1FDDD100BD31C4 /* close.png in Resources */,
 				1B2E13921D1FDDD100BD31C4 /* settingsTop.png in Resources */,
 				1B2E13941D1FDDD100BD31C4 /* calibrationButton.png in Resources */,
@@ -2273,8 +2286,10 @@
 				1B84A9F41F44E2A60055F15D /* settings.png in Resources */,
 				1B84A9E51F44E29A0055F15D /* ledActive.png in Resources */,
 				1B84A9F61F44E2A60055F15D /* string_D.png in Resources */,
+				1B84AA221F48E6990055F15D /* close.png in Resources */,
 				1B2E13A61D1FDDD100BD31C4 /* restoreButton.png in Resources */,
 				1B2E13A91D1FDDD100BD31C4 /* onButton.png in Resources */,
+				1B84AA1B1F48CDC20055F15D /* gaugePattern.png in Resources */,
 				1B2E13AB1D1FDDD100BD31C4 /* arrowLeft.png in Resources */,
 				1B84A9F81F44E2A60055F15D /* string_G.png in Resources */,
 				1B2E13AC1D1FDDD100BD31C4 /* fft_01.png in Resources */,
@@ -2648,6 +2663,7 @@
 				1B2E13351D1FDDD100BD31C4 /* BridgeView.m in Sources */,
 				1B2E13361D1FDDD100BD31C4 /* main.m in Sources */,
 				1B2E13371D1FDDD100BD31C4 /* PopupView.m in Sources */,
+				1B84AA201F48D9770055F15D /* DetailView.m in Sources */,
 				1BB40C5D1F43671C005451CB /* ViolinStringView.m in Sources */,
 				1B2E13381D1FDDD100BD31C4 /* Graph.m in Sources */,
 				1B2E13391D1FDDD100BD31C4 /* TabView.m in Sources */,

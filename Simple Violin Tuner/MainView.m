@@ -270,7 +270,7 @@
         
         CGFloat factor = [SUBVIEW_PROPORTIONS[i] floatValue];
         UIView* view = viewsArray[i];
-        CGFloat width = CONTENT_WIDTH;
+        CGFloat width = i==0 ? 1.0 : CONTENT_WIDTH;
         
         NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:view
                                                                            attribute:NSLayoutAttributeWidth

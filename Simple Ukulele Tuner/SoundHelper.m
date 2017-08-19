@@ -130,7 +130,7 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, NUM_SEC_PLAYTONE);
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
 #if defined(TARGET_VIOLIN)
-            [audioPlayer stop];
+            //[audioPlayer stop];
 #else
             [self stopTone];
 #endif

@@ -35,13 +35,13 @@
         
         CGRect screenRect = [[UIScreen mainScreen] bounds];
         self.screenWidth = screenRect.size.width;
-        CGFloat screenHeight = screenRect.size.width;
+        CGFloat screenHeight = screenRect.size.height;
         
         CGFloat buttonWidth = self.screenWidth / 10.0f;
         CGFloat buttonHeight = (443.0f/107.0f) * buttonWidth;
 
         self.btnSlider = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.btnSlider.frame = CGRectMake(0, 40, buttonWidth, buttonHeight);
+        self.btnSlider.frame = CGRectMake(0, 0.09*screenHeight, buttonWidth, buttonHeight);
         [self.btnSlider setImage:[UIImage imageNamed:@"slider"] forState:UIControlStateNormal];
         
         [self.btnSlider addTarget:self
@@ -119,7 +119,7 @@
     if (_detailView == nil) {
         _detailView = [DetailView new];
         [_detailView setTranslatesAutoresizingMaskIntoConstraints:NO];
-        _detailView.backgroundColor = [UIColor blueColor];
+        //_detailView.backgroundColor = [UIColor blueColor];
     }
     return _detailView;
 }

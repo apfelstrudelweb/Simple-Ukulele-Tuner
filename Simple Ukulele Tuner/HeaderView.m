@@ -68,13 +68,17 @@
         //self.diffLabel.text = [NSString stringWithFormat:@"%.01f %@", 0.0, strHz];
         self.diffLabel.font = [UIFont fontWithName:FONT size:[UILabel getFontSizeForSubHeadline]];
         
-        self.frequencyLabel.alpha = isFrequencyEnabled==YES ? 1.0 : ALPHA_OFF;
+        //self.frequencyLabel.alpha = isFrequencyEnabled==YES ? 1.0 : ALPHA_OFF;
         self.diffLabel.alpha = isFrequencyEnabled==YES ? 1.0 : ALPHA_OFF;
+        
+        
+#if !defined(TARGET_VIOLIN)
         
         [self addSubview:self.diffLabel];
         
         // info icon (button)
         [self addSubview:self.infoIconView];
+
         
         calibrationFrequency = [[defaults stringForKey:KEY_CALIBRATED_FREQUENCY] floatValue];
         self.calibrationLabel = [[UILabel alloc] initWithFrame:frame];
@@ -88,7 +92,7 @@
         self.calibrationLabel.text = [NSString stringWithFormat:@"%.1f %@ (%@%.01f)", calibrationFrequency, strHz, plus, calibrationFrequency-440.0];
         
         [self addSubview:self.calibrationLabel];
-        
+#endif        
         [self setupLabelConstraints];
         
         
@@ -108,9 +112,26 @@
                                                      name:@"UpdateCalibratedFrequencyNotification"
                                                    object:nil];
         
-
+        //self.layer.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"headerPattern"]].CGColor;
+        
+        
     }
     return self;
+}
+
+- (void)layoutSubviews {
+    [super layoutSubviews];
+#if defined(TARGET_VIOLIN)
+ 
+    CAGradientLayer *gradient = [CAGradientLayer layer];
+    gradient.frame = self.bounds;
+    gradient.colors = [NSArray arrayWithObjects:
+                       (id)[[UIColor colorWithRed:0.73 green:0.31 blue:0.00 alpha:1.0] CGColor],
+                       //(id)[[UIColor colorWithRed:1.00 green:0.72 blue:0.00 alpha:1.0] CGColor],
+                       (id)[[UIColor colorWithRed:0.91 green:0.76 blue:0.36 alpha:1.0] CGColor], nil];
+    [self.layer insertSublayer:gradient atIndex:0];
+    //[self.layer insertSublayer:gradient below:self.frequencyLabel.layer];
+#endif
 }
 
 - (void)checkVersion {
@@ -214,6 +235,8 @@
     [self removeConstraints:[self constraints]];
     
     NSMutableArray *layoutConstraints = [NSMutableArray new];
+    
+#if !defined(TARGET_VIOLIN)
     // 1. DIFFERENCE LABEL
     // Center horizontally
     [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.diffLabel
@@ -240,7 +263,7 @@
                                                              multiplier:0.4
                                                                constant:0.0]];
     
-    
+#endif
     
     // 2. FREQUENCY LABEL
     // Center horizontally
@@ -259,7 +282,7 @@
                                                               attribute:NSLayoutAttributeBaseline
                                                              multiplier:0.8
                                                                constant:0.0]];
-
+#if !defined(TARGET_VIOLIN)
     // 3. INFO ICON
     // Center vertically
     [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.infoIconView
@@ -325,7 +348,7 @@
                                                              multiplier:0.5
                                                                constant:0.0]];
 
-
+#endif
     
     // add all constraints at once
     [self addConstraints:layoutConstraints];

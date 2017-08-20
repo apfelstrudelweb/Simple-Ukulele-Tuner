@@ -10,7 +10,7 @@
 #import "DetailView.h"
 
 @interface PremiumView()<DetailViewDelegate> {
-    
+ 
 }
 
 @property (strong, nonatomic) DetailView *detailView;
@@ -37,11 +37,11 @@
         self.screenWidth = screenRect.size.width;
         CGFloat screenHeight = screenRect.size.width;
         
-        CGFloat buttonWidth = self.screenWidth / 8.0f;
+        CGFloat buttonWidth = self.screenWidth / 10.0f;
         CGFloat buttonHeight = (443.0f/107.0f) * buttonWidth;
 
         self.btnSlider = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.btnSlider.frame = CGRectMake(0, buttonWidth, buttonWidth, buttonHeight);
+        self.btnSlider.frame = CGRectMake(0, 40, buttonWidth, buttonHeight);
         [self.btnSlider setImage:[UIImage imageNamed:@"slider"] forState:UIControlStateNormal];
         
         [self.btnSlider addTarget:self
@@ -50,23 +50,55 @@
         
         [self addSubview:self.btnSlider];
         
+        
         self.borderX = screenRect.size.width / 15.0f;
-        self.borderY = screenRect.size.height / 20.0f;
-        self.mainFrame = CGRectMake(-self.screenWidth, self.borderY, self.screenWidth - self.borderX, screenHeight - 2*self.borderY);
-        self.detailView.frame  =  self.mainFrame;
+        self.borderY = 0.0f;//screenRect.size.height / 20.0f;
+       
+        //self.detailView.frame  =  self.mainFrame;
         self.detailView.delegate = self;
+        
+        [self addSubview:self.detailView];
+        
+        NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:self.detailView
+                                                                           attribute:NSLayoutAttributeWidth
+                                                                           relatedBy:NSLayoutRelationEqual
+                                                                              toItem:self
+                                                                           attribute:NSLayoutAttributeWidth
+                                                                          multiplier:1.0
+                                                                            constant:0];
+        NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:self.detailView
+                                                                           attribute:NSLayoutAttributeHeight
+                                                                           relatedBy:NSLayoutRelationEqual
+                                                                              toItem:self
+                                                                           attribute:NSLayoutAttributeHeight
+                                                                          multiplier:1.0
+                                                                            constant:0];
+        
+        NSLayoutConstraint *leftConstraint = [NSLayoutConstraint constraintWithItem:self.detailView
+                                                                            attribute:NSLayoutAttributeLeft
+                                                                            relatedBy:NSLayoutRelationEqual
+                                                                               toItem:self
+                                                                            attribute:NSLayoutAttributeLeft
+                                                                           multiplier:1.0
+                                                                             constant:-self.screenWidth];
+        
+        [self addConstraint:widthConstraint];
+        [self addConstraint:heightConstraint];
+        [self addConstraint:leftConstraint];
     }
     return self;
 }
 
+
+
 -(void)showDetailView:(id)sender{
     
-    [self addSubview:self.detailView];
+    self.mainFrame = CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height);
     
     [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
 
-        self.detailView.frame  =  CGRectOffset(self.mainFrame, self.screenWidth + self.borderX, 0.0);
-        
+        self.detailView.frame  =  self.mainFrame; //CGRectOffset(self.mainFrame, self.screenWidth + self.borderX, 0.0);
+
     } completion:^(BOOL finished) {
         
         self.btnSlider.alpha = 0.0f;
@@ -76,7 +108,7 @@
 
 #pragma -mark DetailViewDelegate
 - (void)closeDetailView {
-    [self.detailView removeFromSuperview];
+    //[self.detailView removeFromSuperview];
     self.btnSlider.alpha = 1.0f;
     self.btnSlider.userInteractionEnabled = YES;
 }
@@ -86,6 +118,7 @@
 - (DetailView*) detailView {
     if (_detailView == nil) {
         _detailView = [DetailView new];
+        [_detailView setTranslatesAutoresizingMaskIntoConstraints:NO];
         _detailView.backgroundColor = [UIColor blueColor];
     }
     return _detailView;

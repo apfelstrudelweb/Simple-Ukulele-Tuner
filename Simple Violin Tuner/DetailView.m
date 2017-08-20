@@ -32,10 +32,10 @@
         //CGFloat screenHeight = screenRect.size.width;
         
         CGFloat buttonWidth = screenWidth / 16.0f;
-        CGFloat buttonHeight = (856.0f/83.0f) * buttonWidth;
+        CGFloat buttonHeight = 6.0f * buttonWidth;
         
         self.btnSlider = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.btnSlider.frame = CGRectMake(screenWidth-2*buttonWidth, buttonWidth, buttonWidth, buttonHeight);
+        self.btnSlider.frame = CGRectMake(screenWidth-buttonWidth, 40, buttonWidth, buttonHeight);
         [self.btnSlider setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
         
         [self.btnSlider addTarget:self

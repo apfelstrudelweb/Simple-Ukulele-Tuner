@@ -8,7 +8,7 @@
 
 #import "DetailView.h"
 
-#define SUBVIEW_PROPORTIONS_DEATILVIEW @[@20.0, @60.0, @20.0]
+#define SUBVIEW_PROPORTIONS_DETAILVIEW @[@20.0, @60.0, @20.0]
 
 @interface DetailView() {
     
@@ -29,30 +29,10 @@
 
 - (id)initWithFrame:(CGRect)frame {
     
-    
     self = [super initWithFrame:frame];
     
-    
     if (self) {
-        
-        CGRect screenRect = [[UIScreen mainScreen] bounds];
-        CGFloat screenWidth = screenRect.size.width;
-        CGFloat screenHeight = screenRect.size.width;
-        
-        CGFloat buttonWidth = screenWidth / 16.0f;
-        CGFloat buttonHeight = 6.0f * buttonWidth;
-        
-        self.btnSlider = [UIButton buttonWithType:UIButtonTypeCustom];
-        self.btnSlider.frame = CGRectMake(screenWidth-buttonWidth, 0.15*screenHeight, buttonWidth, buttonHeight);
-        [self.btnSlider setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
-        
-        [self.btnSlider addTarget:self
-                           action:@selector(hideDetailView:)
-                 forControlEvents:UIControlEventTouchUpInside];
-        
-        [self addSubview:self.btnSlider];
-        
-        
+  
         _viewsDictionary = @{ @"header"      : self.headerView,
                               @"graph"       : self.graphView,
                               @"tab"         : self.tabView};
@@ -62,22 +42,39 @@
         [self addSubview:self.tabView];
         
         [self setupLayoutConstraints];
-        
-        //_headerView.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"headerPattern.png"]];
-        
-  
- 
+    
     }
     return self;
 }
 
--(void)hideDetailView:(id)sender{
+
+- (void)layoutSubviews {
+
+    CGFloat screenWidth = self.frame.size.width;
+    CGFloat screenHeight = self.frame.size.height;
+    
+    CGFloat buttonWidth = screenWidth / 16.0f;
+    CGFloat buttonHeight = 0.00854f * [SUBVIEW_PROPORTIONS_DETAILVIEW[1] floatValue] * screenHeight;
+    CGFloat buttonTop = 0.01f * [SUBVIEW_PROPORTIONS_DETAILVIEW[0] floatValue] * screenHeight;
+    
+    
+    self.btnSlider = [UIButton buttonWithType:UIButtonTypeCustom];
+    self.btnSlider.frame = CGRectMake(screenWidth-buttonWidth, buttonTop, buttonWidth, buttonHeight);
+    [self.btnSlider setImage:[UIImage imageNamed:@"close"] forState:UIControlStateNormal];
+    
+    [self.btnSlider addTarget:self
+                       action:@selector(hideDetailView:)
+             forControlEvents:UIControlEventTouchUpInside];
+    
+    [self addSubview:self.btnSlider];
+}
+
+- (void)hideDetailView:(id)sender{
     
     
     [UIView animateWithDuration:2.0 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        CGRect screenRect = [[UIScreen mainScreen] bounds];
-        CGFloat screenWidth = screenRect.size.width;
-        //CGFloat borderX = screenRect.size.width / 15.0f;
+
+        CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
         self.frame  =  CGRectOffset(self.frame, -screenWidth, 0.0);
         
     } completion:^(BOOL finished) {
@@ -94,7 +91,6 @@
     if (_headerView == nil) {
         _headerView = [HeaderView new];
         _headerView.layer.borderColor = [UIColor whiteColor].CGColor;
-        //_headerView.layer.backgroundColor = [[UIColor alloc] initWithPatternImage:[UIImage imageNamed:@"headerPattern"]].CGColor;
         [_headerView setTranslatesAutoresizingMaskIntoConstraints:NO];
     }
     return _headerView;
@@ -119,13 +115,7 @@
 }
 
 - (void)setupLayoutConstraints {
-    
-    CGSize size = [[UIScreen mainScreen] bounds].size;
-    CGFloat screenHeight = size.height;
-    // let a space on top and bottom of the display
-    CGFloat effectiveScreenHeight = screenHeight;// - 2*MARGIN;
-    CGFloat minFactor = effectiveScreenHeight/screenHeight;
-    
+      
     NSString* verticalVisualFormatText = [NSString stringWithFormat:@"V:|-%d-[header]-%d-[graph]-%d-[tab]", 0, 0, 0];
     
     NSArray *verticalPositionConstraints = [NSLayoutConstraint constraintsWithVisualFormat:verticalVisualFormatText
@@ -136,9 +126,9 @@
     NSArray* viewsArray = @[self.headerView, self.graphView, self.tabView];
     
     
-    for (NSInteger i=0; i<SUBVIEW_PROPORTIONS_DEATILVIEW.count;i++) {
+    for (NSInteger i=0; i<SUBVIEW_PROPORTIONS_DETAILVIEW.count;i++) {
         
-        CGFloat factor = [SUBVIEW_PROPORTIONS_DEATILVIEW[i] floatValue];
+        CGFloat factor = [SUBVIEW_PROPORTIONS_DETAILVIEW[i] floatValue];
         UIView* view = viewsArray[i];
         CGFloat width = CONTENT_WIDTH;
         
@@ -163,7 +153,7 @@
                                                                             relatedBy:NSLayoutRelationEqual
                                                                                toItem:self
                                                                             attribute:NSLayoutAttributeHeight
-                                                                           multiplier:minFactor*factor/100.0
+                                                                           multiplier:factor/100.0
                                                                              constant:0];
         
         [self addConstraint:widthConstraint];
@@ -176,8 +166,5 @@
         [self addConstraint:verticalPositionConstraints[i]];
     }
 }
-
-
-
 
 @end

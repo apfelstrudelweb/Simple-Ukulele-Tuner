@@ -232,13 +232,8 @@
 }
 
 - (void) setBackgroundImage {
-    
 
-    
-    NSString *backgrImgName;
-    
-
-    backgrImgName = @"violin";
+    NSString *backgrImgName = IS_IPAD ?  @"violin_ipad" : @"violin_iphone";
         
     UIGraphicsBeginImageContext(self.frame.size);
     [[UIImage imageNamed:backgrImgName] drawInRect:self.bounds];

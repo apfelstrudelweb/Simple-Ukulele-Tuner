@@ -276,16 +276,11 @@
 
 - (void) setBackgroundImage {
 
-#if !defined(TARGET_VIOLIN)
+
     NSInteger numberOfStrings = [SHARED_CONTEXT getNumberOfStrings];
-#endif
-    
     NSString *backgrImgName;
     
-#if defined(TARGET_VIOLIN)
-    backgrImgName = @"violin";
-    
-#elif defined(TARGET_BANJO)
+if defined(TARGET_BANJO)
     if (numberOfStrings == 4) {
         backgrImgName = @"banjo_background4";
     } else if (numberOfStrings == 5) {

@@ -8,9 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface SoundProcessor : NSObject
 
 - (void) captureSound;
 - (void) stopCapture;
+
 
 @end

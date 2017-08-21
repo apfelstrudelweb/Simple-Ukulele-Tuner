@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Spectrum.h"
 
 @interface SessionManager : NSObject
 
@@ -22,6 +23,8 @@
 @property CGFloat toneFrequency;
 @property NSInteger numberOfInstrumentType;
 @property (strong, nonatomic) NSArray *edgeFrequencyArray;
+@property (strong, nonatomic) Spectrum *spectrum;
+@property BOOL isMinVolumeReached;
 
 
 @property NSInteger currentSamplingRate;

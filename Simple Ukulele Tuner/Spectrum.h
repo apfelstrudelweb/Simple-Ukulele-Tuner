@@ -8,6 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol OutOfRangeDelegate <NSObject>
+
+- (void)showArrowUp;
+- (void)showArrowDown;
+- (void)clearArrow;
+
+@end
+
 @interface Spectrum : NSObject <UIAlertViewDelegate>
 
 //@property bool isFFT;
@@ -24,6 +32,8 @@
 @property BOOL isNegativeDeviation;
 
 @property BOOL isOutOfRange;
+
+@property (nonatomic, weak) id<OutOfRangeDelegate> delegate;
 
 @property (strong, retain) NSNumber* volume;
 

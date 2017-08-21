@@ -8,7 +8,7 @@
 
 #import "BridgeView.h"
 
-@interface BridgeView()
+@interface BridgeView()<OutOfRangeDelegate>
 
 @property (nonatomic) BOOL isWarningUp;
 @property (nonatomic) BOOL isWarningDown;
@@ -67,21 +67,21 @@
         
         [self checkVersion];
         
-        if (self.areArrowsEnabled == YES) {
-            [[NSNotificationCenter defaultCenter] addObserver:self
-                                                     selector:@selector(blinkArrowUp:)
-                                                         name:@"TuneUpNotification"
-                                                       object:nil];
-            
-            [[NSNotificationCenter defaultCenter] addObserver:self
-                                                     selector:@selector(blinkArrowDown:)
-                                                         name:@"TuneDownNotification"
-                                                       object:nil];
-        }
+    
+        Spectrum *spect = [Spectrum new];
+        [SHARED_MANAGER setSpectrum:spect];
+        spect.delegate = self;
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self
+                                                 selector:@selector(clearAll:)
+                                                     name:@"SilenceNotification"
+                                                   object:nil];
 
     }
     return self;
 }
+
+
 
 - (void)checkVersion {
     NSString* currentVersion = [SHARED_VERSION_MANAGER getVersion];
@@ -91,74 +91,103 @@
     }
 }
 
-- (void) blinkArrowUp: (NSNotification *) notification {
-    
-    NSDictionary* userInfo = notification.userInfo;
-    BOOL blink = ((NSNumber*)userInfo[@"blink"]).boolValue;
-    
-    dispatch_async(dispatch_get_main_queue(), ^{
-        
-        if (blink == NO) {
-            self.arrowUpView.alpha = 0.0;
-            self.isWarningUp = NO;
-            return;
-        }
-        
-        if (self.isWarningUp == YES) return;
-        self.isWarningUp = YES;
+//- (void) blinkArrowUp: (NSNotification *) notification {
+//    
+//    NSDictionary* userInfo = notification.userInfo;
+//    BOOL blink = ((NSNumber*)userInfo[@"blink"]).boolValue;
+//    
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        
+//        if (blink == NO) {
+//            self.arrowUpView.alpha = 0.0;
+//            self.isWarningUp = NO;
+//            return;
+//        }
+//        
+//        if (self.isWarningUp == YES) return;
+//        self.isWarningUp = YES;
+//
+//        __weak typeof(self) weakSelf = self;
+//        
+//        [UIView animateWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
+//            
+//            [UIView setAnimationRepeatCount:20];
+//            
+//            __strong typeof(weakSelf) strongSelf = weakSelf;
+//            if (strongSelf) {
+//                strongSelf.arrowUpView.alpha = 1.0;
+//            }
+//        } completion:^(BOOL finished){
+//            weakSelf.arrowUpView.alpha = 0.0;
+//            weakSelf.isWarningUp = NO;
+//        }];
+//        
+//    });
+//    
+//}
+//
+//- (void) blinkArrowDown: (NSNotification *) notification {
+//    
+//    NSDictionary* userInfo = notification.userInfo;
+//    BOOL blink = ((NSNumber*)userInfo[@"blink"]).boolValue;
+//    
+//    dispatch_async(dispatch_get_main_queue(), ^{
+//        
+//        if (blink == NO) {
+//            self.arrowDownView.alpha = 0.0;
+//            self.isWarningDown = NO;
+//            return;
+//        }
+//        
+//        if (self.isWarningDown == YES) return;
+//        self.isWarningDown = YES;
+//        
+//        __weak typeof(self) weakSelf = self;
+//        
+//        [UIView animateWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
+//            
+//            [UIView setAnimationRepeatCount:20];
+//            
+//            __strong typeof(weakSelf) strongSelf = weakSelf;
+//            if (strongSelf) {
+//                strongSelf.arrowDownView.alpha = 1.0;
+//            }
+//        } completion:^(BOOL finished){
+//            weakSelf.arrowDownView.alpha = 0.0;
+//            weakSelf.isWarningDown = NO;
+//        }];
+//        
+//    });
+//
+//}
 
-        __weak typeof(self) weakSelf = self;
-        
-        [UIView animateWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
-            
-            [UIView setAnimationRepeatCount:20];
-            
-            __strong typeof(weakSelf) strongSelf = weakSelf;
-            if (strongSelf) {
-                strongSelf.arrowUpView.alpha = 1.0;
-            }
-        } completion:^(BOOL finished){
-            weakSelf.arrowUpView.alpha = 0.0;
-            weakSelf.isWarningUp = NO;
-        }];
-        
-    });
-    
+-(void)clearAll:(NSNotification *) notification {
+    [self clearArrow];
 }
 
-- (void) blinkArrowDown: (NSNotification *) notification {
-    
-    NSDictionary* userInfo = notification.userInfo;
-    BOOL blink = ((NSNumber*)userInfo[@"blink"]).boolValue;
-    
+- (void)clearArrow {
     dispatch_async(dispatch_get_main_queue(), ^{
-        
-        if (blink == NO) {
-            self.arrowDownView.alpha = 0.0;
-            self.isWarningDown = NO;
-            return;
-        }
-        
-        if (self.isWarningDown == YES) return;
-        self.isWarningDown = YES;
-        
-        __weak typeof(self) weakSelf = self;
-        
-        [UIView animateWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionAutoreverse|UIViewAnimationOptionRepeat animations:^{
-            
-            [UIView setAnimationRepeatCount:20];
-            
-            __strong typeof(weakSelf) strongSelf = weakSelf;
-            if (strongSelf) {
-                strongSelf.arrowDownView.alpha = 1.0;
-            }
-        } completion:^(BOOL finished){
-            weakSelf.arrowDownView.alpha = 0.0;
-            weakSelf.isWarningDown = NO;
-        }];
-        
+        self.arrowUpView.alpha = 0.0;
+        self.arrowDownView.alpha = 0.0;
     });
+}
 
+- (void) showArrowUp {
+    if (self.areArrowsEnabled == YES && [SHARED_MANAGER isMinVolumeReached]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _arrowUpView.alpha = 1.0;
+            _arrowDownView.alpha = 0.0;
+        });
+    }
+}
+
+- (void)showArrowDown {
+    if (self.areArrowsEnabled == YES && [SHARED_MANAGER isMinVolumeReached]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            _arrowUpView.alpha = 0.0;
+            _arrowDownView.alpha = 1.0;
+        });
+    }
 }
 
 

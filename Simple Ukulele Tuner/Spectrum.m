@@ -11,6 +11,11 @@
 @interface Spectrum() {
     NSUserDefaults *defaults;
     CGFloat frequencyOffset;
+    
+    CGFloat minFrequency;
+    CGFloat maxFrequency;
+    
+    NSUInteger count;
 }
 @end
 
@@ -22,6 +27,15 @@
         defaults = [NSUserDefaults standardUserDefaults];
         frequencyOffset = [[defaults stringForKey:KEY_CALIBRATED_FREQUENCY] floatValue] - REF_FREQUENCY;
         self.isOutOfRange = NO;
+        
+        NSString* subtype = [SHARED_CONTEXT getInstrumentSubtype];
+        NSArray *nominalFrequencies =  [[SHARED_MANAGER getInstrumentSubtypesDictionary] objectForKey:subtype][2];
+        
+        nominalFrequencies = [nominalFrequencies sortedArrayUsingSelector:@selector(compare:)];
+        
+        minFrequency = [nominalFrequencies[0] floatValue];
+        maxFrequency = [[nominalFrequencies lastObject] floatValue];
+        
         return self;
     }
     return self;
@@ -35,18 +49,10 @@
 }
 
 - (void) calculateDeviation {
-    
-    
-    
+ 
     CGFloat frequency = [self.frequency floatValue] - frequencyOffset;
     self.toneName = @"";
     self.deviation = [NSNumber numberWithInt:-1];
-    
-//    if (self.isOutOfRange == YES) {
-//        [[NSNotificationCenter defaultCenter] postNotificationName:@"TuneDownNotification" object:nil userInfo:@{@"blink": @(NO)}];
-//        [[NSNotificationCenter defaultCenter] postNotificationName:@"TuneUpNotification" object:nil userInfo:@{@"blink": @(NO)}];
-//        self.isOutOfRange = NO;
-//    }
     
     
     NSInteger octave = (NSInteger) floorf((log(frequency) - log(16)) / log(2));
@@ -99,51 +105,43 @@
         self.deviation = [NSNumber numberWithInt:0];
         self.stringFrequency = [NSNumber numberWithFloat:nominalFrequency];
         self.alpha = [NSNumber numberWithFloat:alpha];
-        [self clearUpDownArrows];
     } else if (fabs(frequency - nominalFrequency) < 2*greenAreaLimit) {
         self.deviation = [NSNumber numberWithInt:1];
         self.stringFrequency = [NSNumber numberWithFloat:nominalFrequency];
         self.alpha = [NSNumber numberWithFloat:alpha];
-        [self clearUpDownArrows];
     } else if (fabs(frequency - nominalFrequency) < 3*greenAreaLimit) {
         self.deviation = [NSNumber numberWithInt:2];
         self.stringFrequency = [NSNumber numberWithFloat:nominalFrequency];
         self.alpha = [NSNumber numberWithFloat:alpha];
-        [self clearUpDownArrows];
     } else if (fabs(frequency - nominalFrequency) < upperLimit || fabs(nominalFrequency - frequency) < lowerLimit) {
         self.deviation = [NSNumber numberWithInt:3];
         self.stringFrequency = [NSNumber numberWithFloat:nominalFrequency];
         self.alpha = [NSNumber numberWithFloat:alpha];
-        [self clearUpDownArrows];
     } else {
         self.deviation = [NSNumber numberWithInt:4];
         self.toneName = @"";
         self.alpha = [NSNumber numberWithFloat:0.0];
-        
-        [self showUpDownArrows: frequency nominalFrequency: nominalFrequency];
+
+    }
+    
+    id<OutOfRangeDelegate> delegate = self.delegate;
+    
+    if (count++ % 10 == 0) {
+        if ([delegate respondsToSelector:@selector(clearArrow)]) {
+            [delegate clearArrow];
+        }
     }
 
-}
-
-- (void) showUpDownArrows: (CGFloat) frequency nominalFrequency:(CGFloat) nominalFrequency {
-    
-    self.isOutOfRange = YES;
-    
-    if (frequency > nominalFrequency) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"TuneDownNotification" object:nil userInfo:@{@"blink": @(YES)}];
-    } else {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"TuneUpNotification" object:nil userInfo:@{@"blink": @(YES)}];
+    if (frequency < 0.9*minFrequency) {
+        if ([delegate respondsToSelector:@selector(showArrowUp)]) {
+            [delegate showArrowUp];
+        }
     }
-}
-
-- (void) clearUpDownArrows {
-    
-    if (self.isOutOfRange == YES) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"TuneDownNotification" object:nil userInfo:@{@"blink": @(NO)}];
-        [[NSNotificationCenter defaultCenter] postNotificationName:@"TuneUpNotification" object:nil userInfo:@{@"blink": @(NO)}];
-        self.isOutOfRange = NO;
+    if (frequency > 1.05*maxFrequency) {
+        if ([delegate respondsToSelector:@selector(showArrowDown)]) {
+            [delegate showArrowDown];
+        }
     }
-
 }
 
 @end

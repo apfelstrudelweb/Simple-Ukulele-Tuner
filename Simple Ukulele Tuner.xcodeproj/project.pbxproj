@@ -887,6 +887,7 @@
 		1B84AA211F48E6990055F15D /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = close.png; path = "Simple Violin Tuner/close.png"; sourceTree = "<group>"; };
 		1B84AA251F4B42450055F15D /* violin_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = violin_ipad.png; path = "Simple Violin Tuner/violin_ipad.png"; sourceTree = "<group>"; };
 		1B84AA261F4B42450055F15D /* violin_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = violin_iphone.png; path = "Simple Violin Tuner/violin_iphone.png"; sourceTree = "<group>"; };
+		1B84AA291F4B8B470055F15D /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		1B8CDC4B1E5894B700DD8240 /* Balalaika_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Balalaika_Constants.h; sourceTree = "<group>"; };
 		1B8CDC641E58C35B00DD8240 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		1B8CDC6A1E58CC7800DD8240 /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background3.png; sourceTree = "<group>"; };
@@ -1908,6 +1909,7 @@
 		1BE7949E1C9B3D35001A5E72 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1B84AA291F4B8B470055F15D /* SpriteKit.framework */,
 				1BEBF3CE1C9D477500F2ED4D /* libz.tbd */,
 				1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */,
 				1BEBF3CC1C9D469500F2ED4D /* CoreGraphics.framework */,
@@ -3160,6 +3162,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
@@ -3207,6 +3210,7 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;

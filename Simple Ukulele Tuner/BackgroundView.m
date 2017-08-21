@@ -74,8 +74,7 @@
                                                  selector:@selector(updateBackground:)
                                                      name:@"UpdateDefaultsNotification"
                                                    object:nil];
-        
-        
+            
     }
     return self;
 }

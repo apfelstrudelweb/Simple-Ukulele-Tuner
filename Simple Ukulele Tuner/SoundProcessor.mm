@@ -41,6 +41,8 @@
     
     NSUserDefaults *defaults;
     NSInteger sensitivity;
+  
+    
 }
 
 @end
@@ -59,6 +61,7 @@
         numOfNoFrequencyDetecion = 0;
         
         defaults = [NSUserDefaults standardUserDefaults];
+
     }
     return self;
 }
@@ -73,12 +76,12 @@
     __block CGFloat dbVal = 0.0;
     
     __block NSInteger numCaptures = 0;
-    __block Spectrum *spect = [Spectrum new];
+    __block Spectrum *spect = [SHARED_MANAGER spectrum];
     __block AutoCorrelation* correlation = [AutoCorrelation new];
     __block FFT* fft = [FFT new];
     __block Yin* yin = [Yin new];
     __block NSMutableArray* result;
-    
+
 
     if (IS_MICROPHONE==YES) {
         
@@ -94,7 +97,7 @@
             vDSP_vsq(data, 1, data, 1, numFrames*numChannels);
             float meanVal = 0.0;
             vDSP_meanv(data, 1, &meanVal, numFrames*numChannels);
-
+            
             float one = 1.0;
             vDSP_vdbcon(&meanVal, 1, &one, &meanVal, 1, 1, 0);
             dbVal = dbVal + 0.2*(meanVal - dbVal);
@@ -122,75 +125,83 @@
         if (numCaptures++ % CAPACITY == 0) {
             previousFrequencyArray = [NSMutableArray new];
         }
-
+        
         CGFloat volume = 100 + dbVal;
         spect.volume = [NSNumber numberWithFloat:volume];
-
-         if (numCaptures % numHops == 0 && volume > 5.0) {
-     
-             // mostly for iPad: join the two channels to one
-             if (numChannels==2) {
-                 for(int i = 0; i < numFrames; i++) {
-                     data[i] = data[2*i];
-                 }
-             }
-             
-             
-             if (![SHARED_MANAGER isFFT]) {
-                 result = [correlation performAutocorrelation:data withFrames:numFrames];
-             } else {
-                 result = [fft performFFT:data withFrames:numFrames];
-             }
-             
-             
-             spect.data = result;
-
-             // now perform "YIN, a fundamental frequency estimator for speech and music"
-             CGFloat pitchInHertz = [yin getPitchInHertz:data withFrames:numFrames];
-             
-             [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateDataNotification" object:spect];
-             
-             if (pitchInHertz == -1) {
-                 [self silence: data andSize:(int) numChannels*numFrames];
-                 return;
-             }
-             
-          
-             if (previousFrequencyArray.count > 1) {
-                 CGFloat avrgFreq = [self getAverageValue];
-                 
-                 if (std::abs(avrgFreq - pitchInHertz) > 0.05*avrgFreq) {
-                     // silence the sound in order to disable sound feedback
-                     [self silence: data andSize:(int) numChannels*numFrames];
-                     return;
-                 }
-                 pitchInHertz = avrgFreq;
-             }
-             
-             
-             NSNumber *frequency = [NSNumber numberWithDouble:pitchInHertz];
-             spect.frequency = frequency;
-
-             if ([SHARED_MANAGER isFFT]) {
-                 NSInteger bin = pitchInHertz;
-                 spect.bin = [NSNumber numberWithInteger:bin];
-             } else {
-                 spect.bin = [NSNumber numberWithInt:PREFERRED_SAMPLING_RATE / pitchInHertz];
-             }
-             
-             [spect calculateDeviation];
-             
-         }
-         
-         
-         [[NSNotificationCenter defaultCenter] removeObserver:self];
-         
-         //numCaptures++;
-         
-         // silence the sound in order to disable sound feedback
-         [self silence: data andSize:(int) numChannels*numFrames];
-         
-     }];
+        
+        
+        [SHARED_MANAGER setIsMinVolumeReached:volume > 5.0];
+        
+        if (volume < 35) {
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"SilenceNotification" object:spect];
+        }
+        
+        
+        if (numCaptures % numHops == 0 && volume > 5.0) {
+            
+            // mostly for iPad: join the two channels to one
+            if (numChannels==2) {
+                for(int i = 0; i < numFrames; i++) {
+                    data[i] = data[2*i];
+                }
+            }
+            
+            
+            if (![SHARED_MANAGER isFFT]) {
+                result = [correlation performAutocorrelation:data withFrames:numFrames];
+            } else {
+                result = [fft performFFT:data withFrames:numFrames];
+            }
+            
+            
+            spect.data = result;
+            
+            // now perform "YIN, a fundamental frequency estimator for speech and music"
+            CGFloat pitchInHertz = [yin getPitchInHertz:data withFrames:numFrames];
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"UpdateDataNotification" object:spect];
+            
+            if (pitchInHertz == -1) {
+                [self silence: data andSize:(int) numChannels*numFrames];
+                return;
+            }
+            
+            
+            if (previousFrequencyArray.count > 1) {
+                CGFloat avrgFreq = [self getAverageValue];
+                
+                if (std::abs(avrgFreq - pitchInHertz) > 0.05*avrgFreq) {
+                    // silence the sound in order to disable sound feedback
+                    [self silence: data andSize:(int) numChannels*numFrames];
+                    return;
+                }
+                pitchInHertz = avrgFreq;
+            }
+            
+            
+            NSNumber *frequency = [NSNumber numberWithDouble:pitchInHertz];
+            spect.frequency = frequency;
+            
+            if ([SHARED_MANAGER isFFT]) {
+                NSInteger bin = pitchInHertz;
+                spect.bin = [NSNumber numberWithInteger:bin];
+            } else {
+                spect.bin = [NSNumber numberWithInt:PREFERRED_SAMPLING_RATE / pitchInHertz];
+            }
+            
+            [spect calculateDeviation];
+            
+        }
+        
+        
+        [[NSNotificationCenter defaultCenter] removeObserver:self];
+        
+        //numCaptures++;
+        
+        // silence the sound in order to disable sound feedback
+        [self silence: data andSize:(int) numChannels*numFrames];
+        
+    }];
     
     [audioManager play];
     

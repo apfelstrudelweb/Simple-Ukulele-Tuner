@@ -11,6 +11,8 @@
 @implementation SessionManager
 
 @synthesize  currentSamplingRate;
+@synthesize spectrum;
+@synthesize isMinVolumeReached;
 
 
 #pragma mark Singleton Methods
@@ -270,6 +272,14 @@
     }
     return self.currentSamplingRate;
 }
+
+//-(void)setUniqueSpectrum:(Spectrum *)spectrum {
+//    self.spectrum = spectrum;
+//}
+//
+//-(Spectrum*)getSpectrum {
+//    return self.spectrum;
+//}
 
 
 @end

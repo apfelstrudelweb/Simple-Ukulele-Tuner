@@ -192,6 +192,7 @@
         _meterView = [MeterView new];
         _meterView.layer.borderColor = [UIColor whiteColor].CGColor;
         [_meterView setTranslatesAutoresizingMaskIntoConstraints:NO];
+        //_meterView.backgroundColor = [UIColor blueColor];
     }
     return _meterView;
 }

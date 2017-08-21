@@ -8,8 +8,14 @@
 
 #import "Yin.h"
 
-#define DEFAULT_THRESHOLD 0.15f
-#define MINIMAL_PROBABILITY 0.96f
+#if defined(TARGET_VIOLIN)
+    #define DEFAULT_THRESHOLD 0.2f
+    #define MINIMAL_PROBABILITY 0.93f
+#else
+    #define DEFAULT_THRESHOLD 0.15f
+    #define MINIMAL_PROBABILITY 0.96f
+#endif
+
 
 
 @implementation Yin

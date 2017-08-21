@@ -8,7 +8,13 @@
 
 #import "CurveSubView.h"
 
-#define CURVE_COLOR  {0.0/255.0, 238.0/255.0, 114.0/255.0, 1.0} // same color as green gauge
+
+#if defined(TARGET_VIOLIN)
+    #define CURVE_COLOR  {0.0, 0.64, 0.95, 1.0} // magic blue
+#else
+    #define CURVE_COLOR  {0.0/255.0, 238.0/255.0, 114.0/255.0, 1.0} // same color as green gauge
+#endif
+
 #define CURVE_WIDTH  IS_IPAD ? 4.0 : 2.0
 
 #define START_BIN 1   // start frequency at ca. 10 Hz

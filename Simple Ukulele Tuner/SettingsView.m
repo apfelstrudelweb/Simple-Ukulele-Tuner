@@ -34,15 +34,33 @@
         
         CGSize size = [[UIScreen mainScreen] bounds].size;
         
-        headerHeight = 0.01*[SUBVIEW_PROPORTIONS[0] floatValue]*size.height;
+        defaults = [NSUserDefaults standardUserDefaults];
         
+        
+#if defined(TARGET_VIOLIN)
+        headerHeight = 0.01*11.86*size.height;
+        // make header's background color red -> entire width
+        self.headerBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, size.width, headerHeight)];
+        CAGradientLayer *gradient = [CAGradientLayer layer];
+        gradient.frame = self.headerBackgroundView.bounds;
+        gradient.colors = [NSArray arrayWithObjects:
+                           (id)[[UIColor colorWithRed:0.73 green:0.31 blue:0.00 alpha:1.0] CGColor],
+                           (id)[[UIColor colorWithRed:0.91 green:0.76 blue:0.36 alpha:1.0] CGColor], nil];
+        [self.headerBackgroundView.layer insertSublayer:gradient atIndex:0];
+#else
+        headerHeight = 0.01*[SUBVIEW_PROPORTIONS[0] floatValue]*size.height;
         // make header's background color red -> entire width
         self.headerBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, size.width, 0.01*[SUBVIEW_PROPORTIONS[0] floatValue]*size.height)];
-        //[self.headerBackgroundView setBackgroundColor:HEADER_BACKGROUND_COLOR_02];
-        
-        defaults = [NSUserDefaults standardUserDefaults];
         NSString* colorString = [defaults stringForKey:KEY_INSTRUMENT_COLOR];
         [self.headerBackgroundView setBackgroundColor:[SHARED_MANAGER getHeaderColor:colorString]];
+#endif
+        
+        
+        
+
+        //[self.headerBackgroundView setBackgroundColor:HEADER_BACKGROUND_COLOR_02];
+        
+ 
         
         
         [self addSubview:self.headerBackgroundView];

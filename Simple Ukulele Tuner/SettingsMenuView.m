@@ -92,7 +92,11 @@ typedef NSUInteger SECTION_DESCR;
         
         subtypesArray = [SHARED_MANAGER getOrderedSubtypesArray];
         colorsArray = [SHARED_MANAGER getColorsArray];
+        
+#if !defined(TARGET_VIOLIN)
         colorsDict = [SHARED_MANAGER getColorsDict];
+#endif
+        
         
         NSArray* availableProducts = [SHARED_VERSION_MANAGER getAvailableProducts];
         if (!availableProducts) {
@@ -462,7 +466,7 @@ typedef NSUInteger SECTION_DESCR;
         case SIGNAL: labelText = @"Signal Info"; break;          // for FFT and autocorrelation
         case CALIBRATION:  labelText = @"Calibration"; break;    // for calibration
         case SENSITIVITY:  labelText = [NSString stringWithFormat:@"Sensitivity: %ld (%@)", (long)sensitivity, sensitivityText]; break;    // for sensitivity
-        case THEME:  labelText = @"Instrument Color"; break;    // for background colors
+        case THEME:  labelText = colorsDict.count>0 ? @"Instrument Color" : @""; break;    // for background colors
         default: labelText = @"Purchase already done?";  // for restore button
     }
     

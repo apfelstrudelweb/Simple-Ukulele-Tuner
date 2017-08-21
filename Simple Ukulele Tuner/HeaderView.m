@@ -73,26 +73,31 @@
         
         
 #if !defined(TARGET_VIOLIN)
-        
         [self addSubview:self.diffLabel];
         
         // info icon (button)
         [self addSubview:self.infoIconView];
-
+#endif
         
         calibrationFrequency = [[defaults stringForKey:KEY_CALIBRATED_FREQUENCY] floatValue];
         self.calibrationLabel = [[UILabel alloc] initWithFrame:frame];
-        self.calibrationLabel.textAlignment = NSTextAlignmentCenter;
-        self.calibrationLabel.textColor = (calibrationFrequency == 440.0) ? COLOR_440 : COLOR_NOT_440;
         [self.calibrationLabel setTranslatesAutoresizingMaskIntoConstraints:NO];
         NSString *fontName = (calibrationFrequency == 440.0) ? FONT : FONT_BOLD;
         self.calibrationLabel.font = [UIFont fontWithName:fontName size:[UILabel getFontSizeForSubHeadline]];
         
+#if defined(TARGET_VIOLIN)
+        self.calibrationLabel.text = [NSString stringWithFormat:@"%.1f %@", calibrationFrequency, strHz];
+        self.calibrationLabel.textColor = (calibrationFrequency == 440.0) ? [UIColor whiteColor] : COLOR_NOT_440;
+        self.calibrationLabel.textAlignment = NSTextAlignmentRight;
+#else
         NSString *plus = (calibrationFrequency > 440.0) ? @"+" : @"";
         self.calibrationLabel.text = [NSString stringWithFormat:@"%.1f %@ (%@%.01f)", calibrationFrequency, strHz, plus, calibrationFrequency-440.0];
+        self.calibrationLabel.textColor = (calibrationFrequency == 440.0) ? COLOR_440 : COLOR_NOT_440;
+        self.calibrationLabel.textAlignment = NSTextAlignmentCenter;
+#endif
         
         [self addSubview:self.calibrationLabel];
-#endif        
+       
         [self setupLabelConstraints];
         
         
@@ -168,10 +173,15 @@
     if ([notification.object isKindOfClass:[NSNumber class]]) {
         calibrationFrequency = [((NSNumber*)[notification object]) floatValue];
         
+#if defined(TARGET_VIOLIN)
+        self.calibrationLabel.text = [NSString stringWithFormat:@"%.1f %@", calibrationFrequency, strHz];
+        self.calibrationLabel.textColor = (calibrationFrequency == 440.0) ? [UIColor whiteColor] : COLOR_NOT_440;
+#else
         NSString *plus = (calibrationFrequency > 440.0) ? @"+" : @"";
         self.calibrationLabel.text = [NSString stringWithFormat:@"%.1f %@ (%@%.01f)", calibrationFrequency, strHz, plus, calibrationFrequency-440.0];
-        
         self.calibrationLabel.textColor = (calibrationFrequency == 440.0) ? COLOR_440 : COLOR_NOT_440;
+#endif
+        
         NSString *fontName = (calibrationFrequency == 440.0) ? FONT : FONT_BOLD;
         self.calibrationLabel.font = [UIFont fontWithName:fontName size:[UILabel getFontSizeForSubHeadline]];
         
@@ -319,7 +329,37 @@
                                                               attribute:NSLayoutAttributeHeight
                                                              multiplier:0.4
                                                                constant:0.0]];
+#endif
     
+#if defined(TARGET_VIOLIN)
+    // CALIBRATION LABEL
+    // Center vertically
+    [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.calibrationLabel
+                                                              attribute:NSLayoutAttributeBaseline
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self.frequencyLabel
+                                                              attribute:NSLayoutAttributeBaseline
+                                                             multiplier:1.0
+                                                               constant:0.0]];
+    
+    // Center horizontally
+    [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.calibrationLabel
+                                                              attribute:NSLayoutAttributeRightMargin
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self
+                                                              attribute:NSLayoutAttributeRightMargin
+                                                             multiplier:0.94
+                                                               constant:0.0]];
+    
+    // Width
+    [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.calibrationLabel
+                                                              attribute:NSLayoutAttributeWidth
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self
+                                                              attribute:NSLayoutAttributeWidth
+                                                             multiplier:0.3
+                                                               constant:0.0]];
+#else
     // CALIBRATION LABEL
     // Center vertically
     [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.calibrationLabel
@@ -347,7 +387,6 @@
                                                               attribute:NSLayoutAttributeWidth
                                                              multiplier:0.5
                                                                constant:0.0]];
-
 #endif
     
     // add all constraints at once

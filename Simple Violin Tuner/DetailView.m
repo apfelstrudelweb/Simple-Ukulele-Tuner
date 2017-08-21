@@ -99,6 +99,7 @@
 - (GraphView*) graphView {
     if (_graphView == nil) {
         _graphView = [GraphView new];
+        _graphView.alpha = 0.9;
         _graphView.layer.borderColor = [UIColor whiteColor].CGColor;
         [_graphView setTranslatesAutoresizingMaskIntoConstraints:NO];
     }

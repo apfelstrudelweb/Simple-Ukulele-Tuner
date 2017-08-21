@@ -125,17 +125,41 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
 #endif
     [[NSNotificationCenter defaultCenter] postNotificationName:@"PlayToneNotification" object:sf];
 
-    if ([version_lite isEqualToString:[SHARED_VERSION_MANAGER getVersion]] || [version_instrument isEqualToString:[SHARED_VERSION_MANAGER getVersion]]) {
-        // stop the tone for the lite version (after 3 sec)
-        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, NUM_SEC_PLAYTONE);
-        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+//    if ([version_lite isEqualToString:[SHARED_VERSION_MANAGER getVersion]] || [version_instrument isEqualToString:[SHARED_VERSION_MANAGER getVersion]]) {
+//        // stop the tone for the lite version (after 3 sec)
+//        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, NUM_SEC_PLAYTONE);
+//        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+//#if defined(TARGET_VIOLIN)
+//            //[audioPlayer stop];
+//#else
+//            [self stopTone];
+//#endif
+//        });
+//    }
+}
+
+- (void) stopTone {
+    
 #if defined(TARGET_VIOLIN)
-            //[audioPlayer stop];
+    [audioPlayer stop];
 #else
-            [self stopTone];
+    AudioOutputUnitStop(outputUnit);
 #endif
-        });
-    }
+    
+    // use "autorelease" due to the flag "-fno-objc-arc" !!!
+    SoundFile* sf = [[[SoundFile alloc] init] autorelease];
+    
+    sf.isActive = NO;
+    sf.toneNumber = [NSNumber numberWithInt:0];
+    sf.frequency = [NSNumber numberWithFloat:0.0];
+    
+    [SHARED_MANAGER setSoundPlaying:NO];
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"PlayToneNotification" object:sf];
+    
+#if !defined(TARGET_VIOLIN)
+    [session overrideOutputAudioPort:AVAudioSessionPortOverrideNone error:nil];
+#endif
+    
 }
 
 - (void) playSineWave {
@@ -208,30 +232,6 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
 }
 
 
-
-- (void) stopTone {
-
-#if defined(TARGET_VIOLIN)
-    [audioPlayer stop];
-#else
-    AudioOutputUnitStop(outputUnit);
-#endif
-    
-    // use "autorelease" due to the flag "-fno-objc-arc" !!!
-    SoundFile* sf = [[[SoundFile alloc] init] autorelease];
-    
-    sf.isActive = NO;
-    sf.toneNumber = [NSNumber numberWithInt:0];
-    sf.frequency = [NSNumber numberWithFloat:0.0];
-    
-    [SHARED_MANAGER setSoundPlaying:NO];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"PlayToneNotification" object:sf];
-    
-#if !defined(TARGET_VIOLIN)
-    [session overrideOutputAudioPort:AVAudioSessionPortOverrideNone error:nil];
-#endif
-    
-}
 
 // Helper method
 - (NSNumber*) getOctave: (CGFloat) frequency {

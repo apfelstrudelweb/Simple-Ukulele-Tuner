@@ -21,6 +21,8 @@
     
     NSUserDefaults *defaults;
     CGFloat frequencyOffset;
+    
+    NSTimer *soundTimer;
 }
 @end
 
@@ -124,17 +126,24 @@
         activeTag = -1;
     }
     
+    [soundTimer invalidate];
+
     if ([version_lite isEqualToString:[SHARED_VERSION_MANAGER getVersion]] || [version_instrument isEqualToString:[SHARED_VERSION_MANAGER getVersion]]) {
         // LITE version: tone is played only once (3s) - after that time elapsed, clear LED and enable microphone again
-        dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, NUM_SEC_PLAYTONE);
-        dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-            UIView* selectedView = imageViewsArray[view.tag];
-            selectedView.alpha = ALPHA_OFF;
-            activeTag = -1;
-            [SHARED_SOUND_HELPER stopTone];
-            return;
-        });
-    }
+        soundTimer = [NSTimer scheduledTimerWithTimeInterval:NUM_SEC_PLAYTONE
+                                         target:self
+                                       selector:@selector(resetToneAndLed:)
+                                       userInfo:view
+                                        repeats:NO];
+   }
+}
+
+- (void)resetToneAndLed:(NSTimer *)timer {
+    UIView *view = (UIView *)[timer userInfo];
+    UIView *selectedView = imageViewsArray[view.tag];
+    selectedView.alpha = ALPHA_OFF;
+    activeTag = -1;
+    [SHARED_SOUND_HELPER stopTone];
 }
 
 

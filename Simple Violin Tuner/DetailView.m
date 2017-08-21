@@ -8,7 +8,7 @@
 
 #import "DetailView.h"
 
-#define SUBVIEW_PROPORTIONS_DETAILVIEW @[@20.0, @60.0, @20.0]
+#define SUBVIEW_PROPORTIONS_DETAILVIEW @[@24.0, @64.0, @12.0]
 
 @interface DetailView() {
     

@@ -27,7 +27,7 @@
         
         buttonWidth = 0.48;
         buttonHeight = 0.8;
-        
+          
         shadowRadius = IS_IPAD ? 0.4 : 0.2;
         shadowOffset = IS_IPAD ? 0.7 : 0.5;
        
@@ -95,7 +95,13 @@
     
     //customLabel.backgroundColor = [UIColor greenColor];
     
+#if defined(TARGET_VIOLIN)
+    [customLabel setTextColor:[UIColor whiteColor]];
+    customLabel.layer.shadowColor = [UIColor grayColor].CGColor;
+#else
     customLabel.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+#endif
+    
     customLabel.layer.shadowRadius = shadowRadius;
     customLabel.layer.shadowOpacity = 1;
     customLabel.layer.shadowOffset = CGSizeMake(shadowOffset, shadowOffset);
@@ -115,7 +121,13 @@
     [customLabel setTextColor:LABEL_COLOR];
     customLabel.textAlignment = NSTextAlignmentCenter;
     
+#if defined(TARGET_VIOLIN)
+    [customLabel setTextColor:[UIColor whiteColor]];
+    customLabel.layer.shadowColor = [UIColor grayColor].CGColor;
+#else
     customLabel.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+#endif
+    
     customLabel.layer.shadowRadius = shadowRadius;
     customLabel.layer.shadowOpacity = 1;
     customLabel.layer.shadowOffset = CGSizeMake(shadowOffset, shadowOffset);

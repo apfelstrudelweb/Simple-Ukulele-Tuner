@@ -110,7 +110,13 @@
 -(NSArray*) getAvailableProducts {
     
     // if products could not be completly loaded from the AppStore, don't continue - but disable the shopping carts
-    if (self.availableProducts.count < 3) {
+    
+    NSUInteger numProducts = 3;
+#if defined(TARGET_VIOLIN)
+    numProducts = 1;
+#endif
+
+    if (self.availableProducts.count < numProducts) {
         return nil;
     }
     
@@ -154,12 +160,16 @@
             product3 = product;
         }
     }
-    
-    
+
+#if defined(TARGET_VIOLIN)
+    if ([version_lite isEqualToString:self.version] && product1) {
+        [orderedProducts insertObject:product1 atIndex:0];
+#else
     if ([version_lite isEqualToString:self.version] && product1 && product2 && product3) {
         [orderedProducts insertObject:product1 atIndex:0];
         [orderedProducts insertObject:product2 atIndex:1];
         [orderedProducts insertObject:product3 atIndex:2];
+#endif
     } else if ([version_instrument isEqualToString:self.version] && product3) {
         //[orderedProducts insertObject:product1 atIndex:0];
         [orderedProducts insertObject:product3 atIndex:0];

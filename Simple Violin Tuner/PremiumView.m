@@ -97,15 +97,8 @@
     
     if ([version_lite isEqualToString:currentVersion] || [version_instrument isEqualToString:currentVersion]) {
         
-        CGRect screenRect = [[UIScreen mainScreen] bounds];
-        CGFloat screenWidth = screenRect.size.width;
-        CGFloat screenHeight = screenRect.size.height;
-        
-        UIView *upgradeView = [[UpgradeView alloc] initWithFrame: CGRectMake ( 0, 0, screenWidth, screenHeight)];
-        UIWindow* window = [UIApplication sharedApplication].keyWindow;
-        [window addSubview:upgradeView];
+        [self showSettings];
         return;
-        
     }
     
     self.mainFrame = CGRectMake(0.0, 0.0, self.frame.size.width, self.frame.size.height);
@@ -119,6 +112,19 @@
         self.btnSlider.alpha = 0.0f;
         self.btnSlider.userInteractionEnabled = NO;
     }];
+}
+
+// make modal window for user defined settings
+- (void) showSettings {
+    UIWindow* window = [UIApplication sharedApplication].keyWindow;
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat screenWidth = screenRect.size.width;
+    CGFloat screenHeight = screenRect.size.height;
+    
+    SettingsView *settingsView = [[SettingsView alloc] initWithFrame: CGRectMake ( 0, 0, screenWidth, screenHeight)];
+    
+    [window addSubview:settingsView];
 }
 
 #pragma -mark DetailViewDelegate

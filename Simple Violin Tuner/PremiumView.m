@@ -95,7 +95,7 @@
     
     NSString* currentVersion = [SHARED_VERSION_MANAGER getVersion];
     
-    if ([version_lite isEqualToString:currentVersion] || [version_instrument isEqualToString:currentVersion]) {
+    if (![version_premium isEqualToString:currentVersion]) {
         
         [self showSettings];
         return;

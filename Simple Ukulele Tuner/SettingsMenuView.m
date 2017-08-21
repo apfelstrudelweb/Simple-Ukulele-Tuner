@@ -260,14 +260,14 @@ typedef NSUInteger SECTION_DESCR;
         
     } else if (section == SIGNAL) {
         cell.textLabel.text = @"All about the Input Signal";
-        cell.detailTextLabel.text = @"- Frequency (in Hz) and deviation\n- String Protection (\"stay in range\")\n- Spectrum, Autocorrelation";
+        cell.detailTextLabel.text = @"- Removal of banner ad\n- Frequency (in Hz) and deviation\n- String Protection (\"stay in range\")\n- Spectrum, Autocorrelation";
         
         UIFont* font1 = [UIFont fontWithName:FONT_BOLD size:[UILabel getFontSizeForSubHeadline]];
         UIFont* font2 = [UIFont fontWithName:FONT_BOLD size:[UILabel getFontSizeForPicker]];
         
         cell.textLabel.font = font1;
         cell.detailTextLabel.font = font2;
-        cell.detailTextLabel.numberOfLines = 3;
+        cell.detailTextLabel.numberOfLines = 4;
         
     } else if (section == CALIBRATION) {
         // calibration (440 Hz)
@@ -485,7 +485,7 @@ typedef NSUInteger SECTION_DESCR;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     if ([indexPath section] == SIGNAL) {
-        return 1.8*cellHeight;
+        return 2.0*cellHeight;
     }
     return cellHeight;
 }
@@ -754,7 +754,7 @@ typedef NSUInteger SECTION_DESCR;
 #elif defined(TARGET_BANJO)
     
 #elif defined(TARGET_VIOLIN)
-    
+    upgradeOptionPremium = violin_inAppPurchasePremium;
 #elif defined(TARGET_BALALAIKA)
     upgradeOptionPremium = balalaika_inAppPurchasePremium;
     upgradeOptionInstrument = balalaika_inAppPurchaseBalalaika;

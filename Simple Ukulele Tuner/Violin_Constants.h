@@ -10,7 +10,7 @@
 #define Violin_Constants_h
 
 #define APPSTORE_ID @"1146255721" 
-#define STANDARD_SUBTYPE             @[@0] // 5 - Standard (G4 - D3 - G3 - B3 - D4)
+#define STANDARD_SUBTYPE             @[@0]
 
 #define KEY_VIOLIN_TYPE             @"violinType"
 // 4 string
@@ -24,12 +24,11 @@
 #define version_signal              @"signal"
 #define version_premium             @"premium"
 
-#define violin_inAppPurchaseBanjo      @"ch.vormbrock.simplebanjotuner.allbanjo"
-#define violin_inAppPurchaseSignal     @"ch.vormbrock.simplebanjotuner.signalplus"
-#define violin_inAppPurchasePremium    @"ch.vormbrock.simplebanjotuner.premium"
-#define VIOLIN_INAPP_PURCHASE_ARRAY    @[banjo_inAppPurchasePremium, banjo_inAppPurchaseBanjo, banjo_inAppPurchaseSignal]
+
+#define violin_inAppPurchasePremium    @"ch.vormbrock.violintuner.premium"
+#define VIOLIN_INAPP_PURCHASE_ARRAY    @[violin_inAppPurchasePremium]
 
 
 
 
-#endif /* Uke_Constants_h */
+#endif /* Violin_Constants_h */

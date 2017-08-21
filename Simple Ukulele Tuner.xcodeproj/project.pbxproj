@@ -892,8 +892,8 @@
 		1B8CDC6A1E58CC7800DD8240 /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background3.png; sourceTree = "<group>"; };
 		1BB40C1B1F3F8706005451CB /* Balalaika_Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Balalaika_Assets.xcassets; path = "Simple Balalaika Tuner/Balalaika_Assets.xcassets"; sourceTree = "<group>"; };
 		1BB40C431F435F60005451CB /* Violin_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Violin_Constants.h; sourceTree = "<group>"; };
-		1BB40C5B1F43671C005451CB /* ViolinStringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViolinStringView.h; sourceTree = "<group>"; };
-		1BB40C5C1F43671C005451CB /* ViolinStringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViolinStringView.m; sourceTree = "<group>"; };
+		1BB40C5B1F43671C005451CB /* ViolinStringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViolinStringView.h; path = "Simple Ukulele Tuner/ViolinStringView.h"; sourceTree = "<group>"; };
+		1BB40C5C1F43671C005451CB /* ViolinStringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViolinStringView.m; path = "Simple Ukulele Tuner/ViolinStringView.m"; sourceTree = "<group>"; };
 		1BC041391C99F8C6005103EC /* Simple Ukulele Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Ukulele Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BC0413D1C99F8C6005103EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1BC0413F1C99F8C6005103EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -1527,6 +1527,8 @@
 				1B84AA181F48C8D40055F15D /* PremiumView.m */,
 				1B84AA1E1F48D9770055F15D /* DetailView.h */,
 				1B84AA1F1F48D9770055F15D /* DetailView.m */,
+				1BB40C5B1F43671C005451CB /* ViolinStringView.h */,
+				1BB40C5C1F43671C005451CB /* ViolinStringView.m */,
 			);
 			name = views;
 			sourceTree = "<group>";
@@ -1666,8 +1668,6 @@
 				1BC041C81C99FCAA005103EC /* Components */,
 				1BC0419A1C99FC62005103EC /* Subviews */,
 				1BC041831C99FC1B005103EC /* Popup */,
-				1BB40C5B1F43671C005451CB /* ViolinStringView.h */,
-				1BB40C5C1F43671C005451CB /* ViolinStringView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";

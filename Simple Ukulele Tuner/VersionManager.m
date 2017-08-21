@@ -45,7 +45,7 @@
 #elif defined(TARGET_BANJO)
         inAppPurchaseArray = BANJO_INAPP_PURCHASE_ARRAY;
 #elif defined(TARGET_VIOLIN)
-        
+        inAppPurchaseArray = VIOLIN_INAPP_PURCHASE_ARRAY;
 #elif defined(TARGET_BALALAIKA)
         inAppPurchaseArray = BALALAIKA_INAPP_PURCHASE_ARRAY;
 #endif
@@ -138,7 +138,7 @@
     upgradeOptionInstrument = banjo_inAppPurchaseBanjo;
     upgradeOptionSignal = banjo_inAppPurchaseSignal;
 #elif defined(TARGET_VIOLIN)
-    
+    upgradeOptionPremium = violin_inAppPurchasePremium;
 #elif defined(TARGET_BALALAIKA)
     upgradeOptionPremium = balalaika_inAppPurchasePremium;
     upgradeOptionInstrument = balalaika_inAppPurchaseBalalaika;

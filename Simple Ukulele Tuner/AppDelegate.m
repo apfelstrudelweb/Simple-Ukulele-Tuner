@@ -103,7 +103,7 @@
 #elif defined(TARGET_BANJO)
     [GADMobileAds configureWithApplicationID:@"ca-app-pub-1849205192643985~7994138115"];
 #elif defined(TARGET_VIOLIN)
-      
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-1849205192643985~9125921220"];
 #elif defined(TARGET_BALALAIKA)
     [GADMobileAds configureWithApplicationID:@"ca-app-pub-1849205192643985~7073251764"];
 #endif

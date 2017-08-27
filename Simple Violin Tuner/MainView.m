@@ -235,11 +235,14 @@
 
     NSString *backgrImgName = IS_IPAD ?  @"violin_ipad" : @"violin_iphone";
         
-    UIGraphicsBeginImageContext(self.frame.size);
-    [[UIImage imageNamed:backgrImgName] drawInRect:self.bounds];
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIImage *bgImage = [UIImage imageNamed:backgrImgName];
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
+    UIGraphicsBeginImageContextWithOptions(screenSize, NO, 0.f);
+    [bgImage drawInRect:CGRectMake(0.f, 0.f, screenSize.width, screenSize.height)];
+    UIImage * resultImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    self.backgroundColor = [UIColor colorWithPatternImage:image];
+    UIColor *backgroundColor = [UIColor colorWithPatternImage:resultImage];
+    self.backgroundColor = backgroundColor;
 }
 
 

@@ -156,7 +156,7 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     [SHARED_MANAGER setSoundPlaying:NO];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"PlayToneNotification" object:sf];
     
-#if !defined(TARGET_VIOLIN) || !defined(TARGET_MANDOLIN)
+#if !(defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN))
     [session overrideOutputAudioPort:AVAudioSessionPortOverrideNone error:nil];
 #endif
     

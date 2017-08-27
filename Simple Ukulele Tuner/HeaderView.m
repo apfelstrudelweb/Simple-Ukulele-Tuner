@@ -72,7 +72,7 @@
         self.diffLabel.alpha = isFrequencyEnabled==YES ? 1.0 : ALPHA_OFF;
         
         
-#if !defined(TARGET_VIOLIN) || !defined(TARGET_MANDOLIN)
+#if !(defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN))
         [self addSubview:self.diffLabel];
         
         // info icon (button)
@@ -246,7 +246,7 @@
     
     NSMutableArray *layoutConstraints = [NSMutableArray new];
     
-#if !defined(TARGET_VIOLIN) || !defined(TARGET_MANDOLIN)
+#if !(defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN))
     // 1. DIFFERENCE LABEL
     // Center horizontally
     [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.diffLabel
@@ -292,8 +292,7 @@
                                                               attribute:NSLayoutAttributeBaseline
                                                              multiplier:0.8
                                                                constant:0.0]];
-#if !defined(TARGET_VIOLIN) || !defined(TARGET_MANDOLIN)
-    // 3. INFO ICON
+#if !(defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN))    // 3. INFO ICON
     // Center vertically
     [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.infoIconView
                                                               attribute:NSLayoutAttributeBaseline

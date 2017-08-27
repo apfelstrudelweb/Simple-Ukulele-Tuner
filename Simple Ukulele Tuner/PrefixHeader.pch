@@ -17,7 +17,7 @@
 #elif defined(TARGET_GUITAR)
     #import "Guitar_Constants.h"
 #elif defined(TARGET_MANDOLIN)
-// TODO: implement
+    #import "Mandolin_Constants.h"
 #elif defined(TARGET_BANJO)
     #import "Banjo_Constants.h"
 #elif defined(TARGET_VIOLIN)
@@ -103,7 +103,7 @@
 // 7. DeviationView
 // 8. GaugeView
 // 9. ButtonView
-#if defined(TARGET_VIOLIN)
+#if defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN)
     #define SUBVIEW_PROPORTIONS @[@42.34, @24.22, @4.6, @3.6, @4.50, @7.84, @12.9]
 #else
     #define SUBVIEW_PROPORTIONS @[@11.86, @24.08, @6.4, @24.22, @4.6, @3.6, @4.50, @7.84, @12.9]

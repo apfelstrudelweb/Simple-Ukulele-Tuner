@@ -115,7 +115,7 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     
     [SHARED_MANAGER setStringToneFrequency:[frequenciesArray[number] floatValue]];
 
-#if defined(TARGET_VIOLIN)
+#if defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN)
     NSArray *soundFilesArray = @[@"g-string.aiff", @"d-string.aiff", @"a-string.aiff", @"e-string.aiff"];
     [audioPlayer stop];
     if (number > soundFilesArray.count-1) return;
@@ -140,7 +140,7 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
 
 - (void) stopTone {
     
-#if defined(TARGET_VIOLIN)
+#if defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN)
     [audioPlayer stop];
 #else
     AudioOutputUnitStop(outputUnit);
@@ -156,7 +156,7 @@ OSStatus SineWaveRenderCallback(void * inRefCon,
     [SHARED_MANAGER setSoundPlaying:NO];
     [[NSNotificationCenter defaultCenter] postNotificationName:@"PlayToneNotification" object:sf];
     
-#if !defined(TARGET_VIOLIN)
+#if !defined(TARGET_VIOLIN) || !defined(TARGET_MANDOLIN)
     [session overrideOutputAudioPort:AVAudioSessionPortOverrideNone error:nil];
 #endif
     

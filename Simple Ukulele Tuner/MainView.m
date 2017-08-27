@@ -280,7 +280,7 @@
     NSInteger numberOfStrings = [SHARED_CONTEXT getNumberOfStrings];
     NSString *backgrImgName;
     
-if defined(TARGET_BANJO)
+#if defined(TARGET_BANJO)
     if (numberOfStrings == 4) {
         backgrImgName = @"banjo_background4";
     } else if (numberOfStrings == 5) {

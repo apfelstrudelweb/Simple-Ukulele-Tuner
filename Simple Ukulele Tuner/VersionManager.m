@@ -41,7 +41,7 @@
 #elif defined(TARGET_GUITAR)
         inAppPurchaseArray = GUITAR_INAPP_PURCHASE_ARRAY;
 #elif defined(TARGET_MANDOLIN)
-        
+        inAppPurchaseArray = MANDOLIN_INAPP_PURCHASE_ARRAY;
 #elif defined(TARGET_BANJO)
         inAppPurchaseArray = BANJO_INAPP_PURCHASE_ARRAY;
 #elif defined(TARGET_VIOLIN)
@@ -112,7 +112,7 @@
     // if products could not be completly loaded from the AppStore, don't continue - but disable the shopping carts
     
     NSUInteger numProducts = 3;
-#if defined(TARGET_VIOLIN)
+#if defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN)
     numProducts = 1;
 #endif
 

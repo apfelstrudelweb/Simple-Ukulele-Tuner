@@ -69,7 +69,7 @@
 #elif defined(TARGET_GUITAR)
     subtype = [defaults stringForKey:KEY_GUITAR_TYPE];
 #elif defined(TARGET_MANDOLIN)
-    
+    subtype = [defaults stringForKey:KEY_MANDOLIN_TYPE];
 #elif defined(TARGET_BANJO)
     subtype = [defaults stringForKey:KEY_BANJO_TYPE];
 #elif defined(TARGET_VIOLIN)
@@ -89,7 +89,7 @@
 #elif defined(TARGET_GUITAR)
     [defaults setObject:subtype forKey:KEY_GUITAR_TYPE];
 #elif defined(TARGET_MANDOLIN)
-    
+    [defaults setObject:subtype forKey:KEY_MANDOLIN_TYPE];
 #elif defined(TARGET_BANJO)
     [defaults setObject:subtype forKey:KEY_BANJO_TYPE];
 #elif defined(TARGET_VIOLIN)

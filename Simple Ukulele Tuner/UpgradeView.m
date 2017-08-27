@@ -29,7 +29,7 @@
         CGSize size = [[UIScreen mainScreen] bounds].size;
         
         
-#if defined(TARGET_VIOLIN)
+#if defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN)
         headerHeight = 0.01*11.86*size.height;
         // make header's background color red -> entire width
         self.headerBackgroundView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, size.width, headerHeight)];

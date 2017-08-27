@@ -72,7 +72,7 @@
         self.diffLabel.alpha = isFrequencyEnabled==YES ? 1.0 : ALPHA_OFF;
         
         
-#if !defined(TARGET_VIOLIN)
+#if !defined(TARGET_VIOLIN) || !defined(TARGET_MANDOLIN)
         [self addSubview:self.diffLabel];
         
         // info icon (button)
@@ -85,7 +85,7 @@
         NSString *fontName = (calibrationFrequency == 440.0) ? FONT : FONT_BOLD;
         self.calibrationLabel.font = [UIFont fontWithName:fontName size:[UILabel getFontSizeForSubHeadline]];
         
-#if defined(TARGET_VIOLIN)
+#if defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN)
         self.calibrationLabel.text = [NSString stringWithFormat:@"%.1f %@", calibrationFrequency, strHz];
         self.calibrationLabel.textColor = (calibrationFrequency == 440.0) ? [UIColor whiteColor] : COLOR_NOT_440;
         self.calibrationLabel.textAlignment = NSTextAlignmentRight;
@@ -126,7 +126,7 @@
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-#if defined(TARGET_VIOLIN)
+#if defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN)
  
     CAGradientLayer *gradient = [CAGradientLayer layer];
     gradient.frame = self.bounds;
@@ -173,7 +173,7 @@
     if ([notification.object isKindOfClass:[NSNumber class]]) {
         calibrationFrequency = [((NSNumber*)[notification object]) floatValue];
         
-#if defined(TARGET_VIOLIN)
+#if defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN)
         self.calibrationLabel.text = [NSString stringWithFormat:@"%.1f %@", calibrationFrequency, strHz];
         self.calibrationLabel.textColor = (calibrationFrequency == 440.0) ? [UIColor whiteColor] : COLOR_NOT_440;
 #else
@@ -246,7 +246,7 @@
     
     NSMutableArray *layoutConstraints = [NSMutableArray new];
     
-#if !defined(TARGET_VIOLIN)
+#if !defined(TARGET_VIOLIN) || !defined(TARGET_MANDOLIN)
     // 1. DIFFERENCE LABEL
     // Center horizontally
     [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.diffLabel
@@ -292,7 +292,7 @@
                                                               attribute:NSLayoutAttributeBaseline
                                                              multiplier:0.8
                                                                constant:0.0]];
-#if !defined(TARGET_VIOLIN)
+#if !defined(TARGET_VIOLIN) || !defined(TARGET_MANDOLIN)
     // 3. INFO ICON
     // Center vertically
     [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.infoIconView
@@ -331,7 +331,7 @@
                                                                constant:0.0]];
 #endif
     
-#if defined(TARGET_VIOLIN)
+#if defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN)
     // CALIBRATION LABEL
     // Center vertically
     [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.calibrationLabel

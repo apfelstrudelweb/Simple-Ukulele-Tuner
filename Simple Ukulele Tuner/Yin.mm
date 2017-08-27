@@ -8,7 +8,7 @@
 
 #import "Yin.h"
 
-#if defined(TARGET_VIOLIN)
+#if defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN)
     #define DEFAULT_THRESHOLD 0.2f
     #define MINIMAL_PROBABILITY 0.93f
 #else

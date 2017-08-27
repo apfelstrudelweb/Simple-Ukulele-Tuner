@@ -52,7 +52,8 @@
     instrumentDefaults = [NSDictionary dictionaryWithObject:@"6 - Classical / Acoustic (E - A - D - G - B - E)"
                                                      forKey:@"guitarType"];
 #elif defined(TARGET_MANDOLIN)
-    
+    instrumentDefaults = [NSDictionary dictionaryWithObject:@"4 - Standard (G3 - D4 - A4 - E5)"
+                                                     forKey:@"mandolinType"];
 #elif defined(TARGET_BANJO)
     instrumentDefaults = [NSDictionary dictionaryWithObject:@"5 - Standard (G4 - D3 - G3 - B3 - D4)"
                                                      forKey:@"banjoType"];
@@ -99,7 +100,7 @@
 #elif defined(TARGET_GUITAR)
     [GADMobileAds configureWithApplicationID:@"ca-app-pub-1849205192643985~2845575608"];
 #elif defined(TARGET_MANDOLIN)
-       
+    [GADMobileAds configureWithApplicationID:@"ca-app-pub-1849205192643985~2107929183"];
 #elif defined(TARGET_BANJO)
     [GADMobileAds configureWithApplicationID:@"ca-app-pub-1849205192643985~7994138115"];
 #elif defined(TARGET_VIOLIN)

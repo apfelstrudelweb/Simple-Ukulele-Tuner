@@ -50,7 +50,7 @@
 
 #if defined(TARGET_BANJO)
     meterWidth = 0.495;
-#elif (TARGET_GUITAR || TARGET_UKULELE || TARGET_BALALAIKA || TARGET_VIOLIN)
+#elif (TARGET_GUITAR || TARGET_UKULELE || TARGET_BALALAIKA || TARGET_VIOLIN || TARGET_MANDOLIN)
     NSInteger numberOfStrings = [SHARED_CONTEXT getNumberOfStrings];
     
     if (numberOfStrings < 6) {

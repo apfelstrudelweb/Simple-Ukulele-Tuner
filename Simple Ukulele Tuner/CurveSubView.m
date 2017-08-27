@@ -9,7 +9,7 @@
 #import "CurveSubView.h"
 
 
-#if defined(TARGET_VIOLIN)
+#if defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN)
     #define CURVE_COLOR  {0.0, 0.64, 0.95, 1.0} // magic blue
 #else
     #define CURVE_COLOR  {0.0/255.0, 238.0/255.0, 114.0/255.0, 1.0} // same color as green gauge

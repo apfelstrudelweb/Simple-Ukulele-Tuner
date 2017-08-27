@@ -11,7 +11,7 @@
 #if defined(TARGET_BANJO)
     #define BACKGROUND_COLOR_DARK [UIColor colorWithRed:0.118 green:0.129 blue:0.157 alpha:0.9]
     #define BACKGROUND_COLOR_LIGHT [UIColor colorWithRed:0.118 green:0.129 blue:0.157 alpha:0.85]
-#elif (TARGET_GUITAR || TARGET_UKULELE || TARGET_BALALAIKA || TARGET_VIOLIN)
+#elif (TARGET_GUITAR || TARGET_UKULELE || TARGET_BALALAIKA || TARGET_VIOLIN || TARGET_MANDOLIN)
     #define BACKGROUND_COLOR_DARK [UIColor colorWithRed:0.118 green:0.129 blue:0.157 alpha:1.0]
     #define BACKGROUND_COLOR_LIGHT [UIColor colorWithRed:0.118 green:0.129 blue:0.157 alpha:0.9]
 #endif

@@ -34,7 +34,7 @@
     //if (YES) {
     if ([version_lite isEqualToString:currentVersion]) {
         CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
-#if defined(TARGET_VIOLIN)
+#if defined(TARGET_VIOLIN)  ||  defined(TARGET_MANDOLIN)
         CGFloat headerHeight = 4.0;
 #else
         CGFloat headerHeight = [SUBVIEW_PROPORTIONS[0] floatValue] + 0.05;
@@ -54,7 +54,7 @@
 #elif defined(TARGET_GUITAR)
             _bannerView.adUnitID = @"ca-app-pub-1849205192643985/4161514944";
 #elif defined(TARGET_MANDOLIN)
-            
+            _bannerView.adUnitID = @"ca-app-pub-1849205192643985/6462107166";
 #elif defined(TARGET_BANJO)
             _bannerView.adUnitID = @"ca-app-pub-1849205192643985/5176403083";
 #elif defined(TARGET_VIOLIN)

@@ -95,7 +95,7 @@
     
     //customLabel.backgroundColor = [UIColor greenColor];
     
-#if defined(TARGET_VIOLIN)
+#if defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN)
     [customLabel setTextColor:[UIColor whiteColor]];
     customLabel.layer.shadowColor = [UIColor grayColor].CGColor;
 #else
@@ -121,7 +121,7 @@
     [customLabel setTextColor:LABEL_COLOR];
     customLabel.textAlignment = NSTextAlignmentCenter;
     
-#if defined(TARGET_VIOLIN)
+#if defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN)
     [customLabel setTextColor:[UIColor whiteColor]];
     customLabel.layer.shadowColor = [UIColor grayColor].CGColor;
 #else

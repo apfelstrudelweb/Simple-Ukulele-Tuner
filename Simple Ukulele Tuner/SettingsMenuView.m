@@ -93,7 +93,7 @@ typedef NSUInteger SECTION_DESCR;
         subtypesArray = [SHARED_MANAGER getOrderedSubtypesArray];
         colorsArray = [SHARED_MANAGER getColorsArray];
         
-#if !defined(TARGET_VIOLIN)
+#if !defined(TARGET_VIOLIN) || !defined(TARGET_MANDOLIN)
         colorsDict = [SHARED_MANAGER getColorsDict];
 #endif
         
@@ -750,7 +750,7 @@ typedef NSUInteger SECTION_DESCR;
     upgradeOptionInstrument = guitar_inAppPurchaseGuitar;
     upgradeOptionSignal = guitar_inAppPurchaseSignal;
 #elif defined(TARGET_MANDOLIN)
-    
+    upgradeOptionPremium = mandolin_inAppPurchasePremium;
 #elif defined(TARGET_BANJO)
     
 #elif defined(TARGET_VIOLIN)

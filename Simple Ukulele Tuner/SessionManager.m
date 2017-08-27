@@ -155,7 +155,9 @@
                             };
     
 #elif defined(TARGET_MANDOLIN)
-    // TODO: implement
+    // up to now only one violin type
+    instrumentDictionary = @{ MANDOLIN_TYPE_01     : @[ @1,   @[@"G",@"D",@"A",@"E"],            @[@196.0,@293.7,@440.0,@659.3],               @1.0] // Standard
+                              };
 #elif defined(TARGET_BANJO)
     instrumentDictionary = @{ BANJO_TYPE_01     : @[ @1,   @[@"D",@"G",@"B",@"E"],              @[@146.8,@196.0,@246.9,@329.6],                @1.0], // Chicago
                               BANJO_TYPE_02     : @[ @2,   @[@"C",@"G",@"B",@"D"],              @[@130.8,@196.0,@246.9,@293.7],                @1.0], // C

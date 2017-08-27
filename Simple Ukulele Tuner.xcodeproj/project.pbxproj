@@ -56,7 +56,6 @@
 		1B2E122A1D1FDD5100BD31C4 /* HorizontalPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041CA1C99FCC8005103EC /* HorizontalPicker.m */; };
 		1B2E122B1D1FDD5100BD31C4 /* InstrumentSubtypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041A41C99FC76005103EC /* InstrumentSubtypeView.m */; };
 		1B2E122C1D1FDD5100BD31C4 /* ButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041AD1C99FC76005103EC /* ButtonView.m */; };
-		1B2E122D1D1FDD5100BD31C4 /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041DC1C99FCDA005103EC /* MainView.m */; };
 		1B2E122E1D1FDD5100BD31C4 /* SettingsMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041881C99FC46005103EC /* SettingsMenuView.m */; };
 		1B2E122F1D1FDD5100BD31C4 /* iRate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041571C99F9DA005103EC /* iRate.m */; };
 		1B2E12301D1FDD5100BD31C4 /* UIView+uvo.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC042741C99FDFC005103EC /* UIView+uvo.m */; };
@@ -81,18 +80,15 @@
 		1B2E12491D1FDD5100BD31C4 /* closeButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042091C99FD23005103EC /* closeButton.png */; };
 		1B2E124B1D1FDD5100BD31C4 /* gaugeBackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E71C99FD0A005103EC /* gaugeBackground.png */; };
 		1B2E124C1D1FDD5100BD31C4 /* calibration_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BF634F11CB1A2D10060ECEE /* calibration_01.png */; };
-		1B2E124D1D1FDD5100BD31C4 /* gaugePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E81C99FD0A005103EC /* gaugePattern.png */; };
 		1B2E124F1D1FDD5100BD31C4 /* Root.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0428C1C9A082D005103EC /* Root.plist */; };
 		1B2E12511D1FDD5100BD31C4 /* settingsPattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042071C99FD23005103EC /* settingsPattern.png */; };
 		1B2E12521D1FDD5100BD31C4 /* settingsMiddle.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042061C99FD23005103EC /* settingsMiddle.png */; };
-		1B2E12531D1FDD5100BD31C4 /* tabActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041F01C99FD0A005103EC /* tabActive.png */; };
 		1B2E12541D1FDD5100BD31C4 /* arrowDown.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E21C99FD0A005103EC /* arrowDown.png */; };
 		1B2E12551D1FDD5100BD31C4 /* calibration_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BF634F31CB1A2DE0060ECEE /* calibration_02.png */; };
 		1B2E12561D1FDD5100BD31C4 /* autocorr_03.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042271C99FD3D005103EC /* autocorr_03.png */; };
 		1B2E125A1D1FDD5100BD31C4 /* inapppurch_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0422C1C99FD3D005103EC /* inapppurch_01.png */; };
 		1B2E125C1D1FDD5100BD31C4 /* linePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042031C99FD23005103EC /* linePattern.png */; };
 		1B2E12601D1FDD5100BD31C4 /* shoppingCart.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0420C1C99FD23005103EC /* shoppingCart.png */; };
-		1B2E12611D1FDD5100BD31C4 /* background4.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E41C99FD0A005103EC /* background4.png */; };
 		1B2E12621D1FDD5100BD31C4 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B6C14401CCC026400C82B9B /* knob.png */; };
 		1B2E12631D1FDD5100BD31C4 /* autocorr_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042251C99FD3D005103EC /* autocorr_01.png */; };
 		1B2E12641D1FDD5100BD31C4 /* iRate.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041551C99F9DA005103EC /* iRate.bundle */; };
@@ -100,28 +96,18 @@
 		1B2E12671D1FDD5100BD31C4 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0421D1C99FD3D005103EC /* close.png */; };
 		1B2E126A1D1FDD5100BD31C4 /* settingsTop.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042081C99FD23005103EC /* settingsTop.png */; };
 		1B2E126C1D1FDD5100BD31C4 /* calibrationButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0420E1C99FD23005103EC /* calibrationButton.png */; };
-		1B2E126E1D1FDD5100BD31C4 /* stringPassive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EF1C99FD0A005103EC /* stringPassive.png */; };
 		1B2E126F1D1FDD5100BD31C4 /* arrowUp.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E31C99FD0A005103EC /* arrowUp.png */; };
 		1B2E12701D1FDD5100BD31C4 /* offButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0420B1C99FD23005103EC /* offButton.png */; };
 		1B2E12711D1FDD5100BD31C4 /* fft_animated.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042211C99FD3D005103EC /* fft_animated.gif */; };
 		1B2E12721D1FDD5100BD31C4 /* settingsPatternDark.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042051C99FD23005103EC /* settingsPatternDark.png */; };
 		1B2E12731D1FDD5100BD31C4 /* arrowRight.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0421F1C99FD3D005103EC /* arrowRight.png */; };
-		1B2E12741D1FDD5100BD31C4 /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041ED1C99FD0A005103EC /* settings.png */; };
-		1B2E12761D1FDD5100BD31C4 /* microphoneOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E51C99FD0A005103EC /* microphoneOn.png */; };
 		1B2E12771D1FDD5100BD31C4 /* autocorr_animated.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042201C99FD3D005103EC /* autocorr_animated.gif */; };
-		1B2E12781D1FDD5100BD31C4 /* stringActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EE1C99FD0A005103EC /* stringActive.png */; };
-		1B2E127A1D1FDD5100BD31C4 /* tabPassive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041F11C99FD0A005103EC /* tabPassive.png */; };
 		1B2E127B1D1FDD5100BD31C4 /* inapppurch_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0422D1C99FD3D005103EC /* inapppurch_02.png */; };
 		1B2E127E1D1FDD5100BD31C4 /* restoreButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0420D1C99FD23005103EC /* restoreButton.png */; };
 		1B2E12811D1FDD5100BD31C4 /* onButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0420A1C99FD23005103EC /* onButton.png */; };
 		1B2E12831D1FDD5100BD31C4 /* arrowLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0421E1C99FD3D005103EC /* arrowLeft.png */; };
 		1B2E12841D1FDD5100BD31C4 /* fft_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042281C99FD3D005103EC /* fft_01.png */; };
-		1B2E12861D1FDD5100BD31C4 /* microphoneOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E61C99FD0A005103EC /* microphoneOff.png */; };
 		1B2E12871D1FDD5100BD31C4 /* autocorr_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042261C99FD3D005103EC /* autocorr_02.png */; };
-		1B2E12881D1FDD5100BD31C4 /* gaugePatternGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E91C99FD0A005103EC /* gaugePatternGreen.png */; };
-		1B2E128A1D1FDD5100BD31C4 /* ledActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EB1C99FD0A005103EC /* ledActive.png */; };
-		1B2E128B1D1FDD5100BD31C4 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EA1C99FD0A005103EC /* info.png */; };
-		1B2E128C1D1FDD5100BD31C4 /* ledPassive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EC1C99FD0A005103EC /* ledPassive.png */; };
 		1B2E12941D1FDDA600BD31C4 /* Spectrum.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC042651C99FDE6005103EC /* Spectrum.m */; };
 		1B2E12951D1FDDA600BD31C4 /* Yin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0424C1C99FD6F005103EC /* Yin.mm */; };
 		1B2E12961D1FDDA600BD31C4 /* LedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041C01C99FC92005103EC /* LedView.m */; };
@@ -329,7 +315,6 @@
 		1B2E13AB1D1FDDD100BD31C4 /* arrowLeft.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC0421E1C99FD3D005103EC /* arrowLeft.png */; };
 		1B2E13AC1D1FDDD100BD31C4 /* fft_01.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042281C99FD3D005103EC /* fft_01.png */; };
 		1B2E13AF1D1FDDD100BD31C4 /* autocorr_02.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC042261C99FD3D005103EC /* autocorr_02.png */; };
-		1B2E13B01D1FDDD100BD31C4 /* gaugePatternGreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041E91C99FD0A005103EC /* gaugePatternGreen.png */; };
 		1B2E13BC1D1FDE1300BD31C4 /* Spectrum.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC042651C99FDE6005103EC /* Spectrum.m */; };
 		1B2E13BD1D1FDE1300BD31C4 /* Yin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0424C1C99FD6F005103EC /* Yin.mm */; };
 		1B2E13BE1D1FDE1300BD31C4 /* LedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041C01C99FC92005103EC /* LedView.m */; };
@@ -442,9 +427,7 @@
 		1B2E14471D1FDE1300BD31C4 /* info.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EA1C99FD0A005103EC /* info.png */; };
 		1B2E14481D1FDE1300BD31C4 /* ledPassive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1BC041EC1C99FD0A005103EC /* ledPassive.png */; };
 		1B2E14621D20262D00BD31C4 /* background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14601D20262D00BD31C4 /* background5.png */; };
-		1B2E14631D20262D00BD31C4 /* background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14601D20262D00BD31C4 /* background5.png */; };
 		1B2E14661D20262D00BD31C4 /* background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14601D20262D00BD31C4 /* background5.png */; };
-		1B2E146A1D2026A900BD31C4 /* background6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14671D2026A900BD31C4 /* background6.png */; };
 		1B2E146D1D2026A900BD31C4 /* background6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14671D2026A900BD31C4 /* background6.png */; };
 		1B2E146E1D204E1200BD31C4 /* background6.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B2E14671D2026A900BD31C4 /* background6.png */; };
 		1B2E14741D21218E00BD31C4 /* InstrumentContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B2E14731D21218E00BD31C4 /* InstrumentContext.m */; };
@@ -530,6 +513,33 @@
 		1B84AA221F48E6990055F15D /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA211F48E6990055F15D /* close.png */; };
 		1B84AA271F4B42450055F15D /* violin_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA251F4B42450055F15D /* violin_ipad.png */; };
 		1B84AA281F4B42450055F15D /* violin_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA261F4B42450055F15D /* violin_iphone.png */; };
+		1B84AA2C1F52B32F0055F15D /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84AA151F48C6CB0055F15D /* MainView.m */; };
+		1B84AA2D1F52B3360055F15D /* PremiumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84AA181F48C8D40055F15D /* PremiumView.m */; };
+		1B84AA2E1F52B33B0055F15D /* DetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84AA1F1F48D9770055F15D /* DetailView.m */; };
+		1B84AA2F1F52B33F0055F15D /* ViolinStringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BB40C5C1F43671C005451CB /* ViolinStringView.m */; };
+		1B84AA301F52B39C0055F15D /* gaugePattern.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA1A1F48CDC20055F15D /* gaugePattern.png */; };
+		1B84AA311F52B39C0055F15D /* microphoneOff.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9E71F44E2A60055F15D /* microphoneOff.png */; };
+		1B84AA321F52B39C0055F15D /* microphoneOn.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9E81F44E2A60055F15D /* microphoneOn.png */; };
+		1B84AA331F52B39C0055F15D /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9E91F44E2A60055F15D /* settings.png */; };
+		1B84AA381F52B39C0055F15D /* stringActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9FD1F44E8F40055F15D /* stringActive.png */; };
+		1B84AA391F52B39C0055F15D /* stringPassive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9EE1F44E2A60055F15D /* stringPassive.png */; };
+		1B84AA3A1F52B39C0055F15D /* tabActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9EF1F44E2A60055F15D /* tabActive.png */; };
+		1B84AA3B1F52B39C0055F15D /* tabPassive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9F01F44E2A60055F15D /* tabPassive.png */; };
+		1B84AA3C1F52B39C0055F15D /* ledActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9E31F44E29A0055F15D /* ledActive.png */; };
+		1B84AA3D1F52B39C0055F15D /* ledPassive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9E41F44E29A0055F15D /* ledPassive.png */; };
+		1B84AA3E1F52B39C0055F15D /* slider.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA1C1F48D43C0055F15D /* slider.png */; };
+		1B84AA3F1F52B39C0055F15D /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA211F48E6990055F15D /* close.png */; };
+		1B84AA461F52B41C0055F15D /* violin_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA441F52B41C0055F15D /* violin_ipad.png */; };
+		1B84AA471F52B41C0055F15D /* violin_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA451F52B41C0055F15D /* violin_iphone.png */; };
+		1B84AA541F52B4860055F15D /* string_A.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA501F52B4860055F15D /* string_A.png */; };
+		1B84AA551F52B4860055F15D /* string_D.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA511F52B4860055F15D /* string_D.png */; };
+		1B84AA561F52B4860055F15D /* string_E.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA521F52B4860055F15D /* string_E.png */; };
+		1B84AA571F52B4860055F15D /* string_G.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA531F52B4860055F15D /* string_G.png */; };
+		1B84AA5C1F52BED70055F15D /* a-string.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA581F52BED70055F15D /* a-string.aiff */; };
+		1B84AA5D1F52BED70055F15D /* d-string.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA591F52BED70055F15D /* d-string.aiff */; };
+		1B84AA5E1F52BED70055F15D /* e-string.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA5A1F52BED70055F15D /* e-string.aiff */; };
+		1B84AA5F1F52BED70055F15D /* g-string.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA5B1F52BED70055F15D /* g-string.aiff */; };
+		1B84AA611F52C10B0055F15D /* Mandolin_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA601F52C10B0055F15D /* Mandolin_Assets.xcassets */; };
 		1B8CDC651E58C35B00DD8240 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC641E58C35B00DD8240 /* header.png */; };
 		1B8CDC6B1E58CC7800DD8240 /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC6A1E58CC7800DD8240 /* background3.png */; };
 		1BB40C1C1F3F8706005451CB /* Balalaika_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C1B1F3F8706005451CB /* Balalaika_Assets.xcassets */; };
@@ -888,6 +898,18 @@
 		1B84AA251F4B42450055F15D /* violin_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = violin_ipad.png; path = "Simple Violin Tuner/violin_ipad.png"; sourceTree = "<group>"; };
 		1B84AA261F4B42450055F15D /* violin_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = violin_iphone.png; path = "Simple Violin Tuner/violin_iphone.png"; sourceTree = "<group>"; };
 		1B84AA291F4B8B470055F15D /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		1B84AA2B1F5151700055F15D /* Mandolin_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mandolin_Constants.h; sourceTree = "<group>"; };
+		1B84AA441F52B41C0055F15D /* violin_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = violin_ipad.png; path = "Simple Mandolin Tuner/violin_ipad.png"; sourceTree = "<group>"; };
+		1B84AA451F52B41C0055F15D /* violin_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = violin_iphone.png; path = "Simple Mandolin Tuner/violin_iphone.png"; sourceTree = "<group>"; };
+		1B84AA501F52B4860055F15D /* string_A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = string_A.png; path = "Simple Mandolin Tuner/string_A.png"; sourceTree = "<group>"; };
+		1B84AA511F52B4860055F15D /* string_D.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = string_D.png; path = "Simple Mandolin Tuner/string_D.png"; sourceTree = "<group>"; };
+		1B84AA521F52B4860055F15D /* string_E.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = string_E.png; path = "Simple Mandolin Tuner/string_E.png"; sourceTree = "<group>"; };
+		1B84AA531F52B4860055F15D /* string_G.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = string_G.png; path = "Simple Mandolin Tuner/string_G.png"; sourceTree = "<group>"; };
+		1B84AA581F52BED70055F15D /* a-string.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = "a-string.aiff"; path = "Simple Mandolin Tuner/a-string.aiff"; sourceTree = "<group>"; };
+		1B84AA591F52BED70055F15D /* d-string.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = "d-string.aiff"; path = "Simple Mandolin Tuner/d-string.aiff"; sourceTree = "<group>"; };
+		1B84AA5A1F52BED70055F15D /* e-string.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = "e-string.aiff"; path = "Simple Mandolin Tuner/e-string.aiff"; sourceTree = "<group>"; };
+		1B84AA5B1F52BED70055F15D /* g-string.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = "g-string.aiff"; path = "Simple Mandolin Tuner/g-string.aiff"; sourceTree = "<group>"; };
+		1B84AA601F52C10B0055F15D /* Mandolin_Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Mandolin_Assets.xcassets; path = "Simple Mandolin Tuner/Mandolin_Assets.xcassets"; sourceTree = "<group>"; };
 		1B8CDC4B1E5894B700DD8240 /* Balalaika_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Balalaika_Constants.h; sourceTree = "<group>"; };
 		1B8CDC641E58C35B00DD8240 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		1B8CDC6A1E58CC7800DD8240 /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background3.png; sourceTree = "<group>"; };
@@ -1247,6 +1269,9 @@
 		1B2E14501D1FE1DA00BD31C4 /* Simple Mandolin Tuner */ = {
 			isa = PBXGroup;
 			children = (
+				1B84AA601F52C10B0055F15D /* Mandolin_Assets.xcassets */,
+				1B84AA431F52B3DC0055F15D /* images */,
+				1B84AA421F52B3C50055F15D /* sound */,
 				1B2E14511D1FE26400BD31C4 /* Supporting Files */,
 			);
 			name = "Simple Mandolin Tuner";
@@ -1280,8 +1305,8 @@
 		1B2E14581D1FE41B00BD31C4 /* Simple Violin Tuner */ = {
 			isa = PBXGroup;
 			children = (
-				1B84AA111F48C5C50055F15D /* views */,
 				1B84AA0F1F48B2200055F15D /* Violin_Assets.xcassets */,
+				1B84AA111F48C5C50055F15D /* views */,
 				1B84AA061F4898790055F15D /* sound */,
 				1BB40C461F436470005451CB /* images */,
 				1B2E14591D1FE43600BD31C4 /* Supporting Files */,
@@ -1320,6 +1345,7 @@
 				1B8CDC4B1E5894B700DD8240 /* Balalaika_Constants.h */,
 				1B059CA01D32B13C00FB70B5 /* Banjo_Constants.h */,
 				1B2E14711D211E0B00BD31C4 /* Guitar_Constants.h */,
+				1B84AA2B1F5151700055F15D /* Mandolin_Constants.h */,
 				1B2E14701D211D2D00BD31C4 /* Uke_Constants.h */,
 				1BB40C431F435F60005451CB /* Violin_Constants.h */,
 			);
@@ -1532,6 +1558,30 @@
 				1BB40C5C1F43671C005451CB /* ViolinStringView.m */,
 			);
 			name = views;
+			sourceTree = "<group>";
+		};
+		1B84AA421F52B3C50055F15D /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				1B84AA581F52BED70055F15D /* a-string.aiff */,
+				1B84AA591F52BED70055F15D /* d-string.aiff */,
+				1B84AA5A1F52BED70055F15D /* e-string.aiff */,
+				1B84AA5B1F52BED70055F15D /* g-string.aiff */,
+			);
+			name = sound;
+			sourceTree = "<group>";
+		};
+		1B84AA431F52B3DC0055F15D /* images */ = {
+			isa = PBXGroup;
+			children = (
+				1B84AA501F52B4860055F15D /* string_A.png */,
+				1B84AA511F52B4860055F15D /* string_D.png */,
+				1B84AA521F52B4860055F15D /* string_E.png */,
+				1B84AA531F52B4860055F15D /* string_G.png */,
+				1B84AA441F52B41C0055F15D /* violin_ipad.png */,
+				1B84AA451F52B41C0055F15D /* violin_iphone.png */,
+			);
+			name = images;
 			sourceTree = "<group>";
 		};
 		1BB40C461F436470005451CB /* images */ = {
@@ -2107,55 +2157,63 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B84AA3E1F52B39C0055F15D /* slider.png in Resources */,
 				1B2E12461D1FDD5100BD31C4 /* Localizable.strings in Resources */,
+				1B84AA311F52B39C0055F15D /* microphoneOff.png in Resources */,
+				1B84AA3C1F52B39C0055F15D /* ledActive.png in Resources */,
 				1B2E12471D1FDD5100BD31C4 /* fft_02.png in Resources */,
 				1B2E12491D1FDD5100BD31C4 /* closeButton.png in Resources */,
 				1B2E124B1D1FDD5100BD31C4 /* gaugeBackground.png in Resources */,
 				1B2E124C1D1FDD5100BD31C4 /* calibration_01.png in Resources */,
+				1B84AA561F52B4860055F15D /* string_E.png in Resources */,
 				1BDE3B8F1F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 in Resources */,
-				1B2E124D1D1FDD5100BD31C4 /* gaugePattern.png in Resources */,
 				1B2E124F1D1FDD5100BD31C4 /* Root.plist in Resources */,
 				1B2E12511D1FDD5100BD31C4 /* settingsPattern.png in Resources */,
 				1B2E12521D1FDD5100BD31C4 /* settingsMiddle.png in Resources */,
-				1B2E12531D1FDD5100BD31C4 /* tabActive.png in Resources */,
+				1B84AA611F52C10B0055F15D /* Mandolin_Assets.xcassets in Resources */,
+				1B84AA461F52B41C0055F15D /* violin_ipad.png in Resources */,
 				1B2E12541D1FDD5100BD31C4 /* arrowDown.png in Resources */,
 				1B2E12551D1FDD5100BD31C4 /* calibration_02.png in Resources */,
+				1B84AA5E1F52BED70055F15D /* e-string.aiff in Resources */,
 				1B2E12561D1FDD5100BD31C4 /* autocorr_03.png in Resources */,
+				1B84AA471F52B41C0055F15D /* violin_iphone.png in Resources */,
+				1B84AA301F52B39C0055F15D /* gaugePattern.png in Resources */,
+				1B84AA5F1F52BED70055F15D /* g-string.aiff in Resources */,
 				1B2E125A1D1FDD5100BD31C4 /* inapppurch_01.png in Resources */,
 				1B2E125C1D1FDD5100BD31C4 /* linePattern.png in Resources */,
+				1B84AA5D1F52BED70055F15D /* d-string.aiff in Resources */,
 				1B2E12601D1FDD5100BD31C4 /* shoppingCart.png in Resources */,
-				1B2E12611D1FDD5100BD31C4 /* background4.png in Resources */,
 				1B2E12621D1FDD5100BD31C4 /* knob.png in Resources */,
+				1B84AA391F52B39C0055F15D /* stringPassive.png in Resources */,
+				1B84AA3B1F52B39C0055F15D /* tabPassive.png in Resources */,
 				1B2E12631D1FDD5100BD31C4 /* autocorr_01.png in Resources */,
 				1B2E12641D1FDD5100BD31C4 /* iRate.bundle in Resources */,
 				1B2E12661D1FDD5100BD31C4 /* style.css in Resources */,
-				1B2E146A1D2026A900BD31C4 /* background6.png in Resources */,
 				1B2E12671D1FDD5100BD31C4 /* close.png in Resources */,
+				1B84AA3F1F52B39C0055F15D /* close.png in Resources */,
+				1B84AA5C1F52BED70055F15D /* a-string.aiff in Resources */,
 				1B2E126A1D1FDD5100BD31C4 /* settingsTop.png in Resources */,
 				1B2E126C1D1FDD5100BD31C4 /* calibrationButton.png in Resources */,
-				1B2E126E1D1FDD5100BD31C4 /* stringPassive.png in Resources */,
+				1B84AA3D1F52B39C0055F15D /* ledPassive.png in Resources */,
 				1B2E126F1D1FDD5100BD31C4 /* arrowUp.png in Resources */,
+				1B84AA3A1F52B39C0055F15D /* tabActive.png in Resources */,
 				1B2E12701D1FDD5100BD31C4 /* offButton.png in Resources */,
 				1B2E12711D1FDD5100BD31C4 /* fft_animated.gif in Resources */,
+				1B84AA571F52B4860055F15D /* string_G.png in Resources */,
 				1B2E12721D1FDD5100BD31C4 /* settingsPatternDark.png in Resources */,
 				1B2E12731D1FDD5100BD31C4 /* arrowRight.png in Resources */,
-				1B2E12741D1FDD5100BD31C4 /* settings.png in Resources */,
-				1B2E12761D1FDD5100BD31C4 /* microphoneOn.png in Resources */,
 				1B2E12771D1FDD5100BD31C4 /* autocorr_animated.gif in Resources */,
-				1B2E12781D1FDD5100BD31C4 /* stringActive.png in Resources */,
-				1B2E127A1D1FDD5100BD31C4 /* tabPassive.png in Resources */,
 				1B2E127B1D1FDD5100BD31C4 /* inapppurch_02.png in Resources */,
 				1B2E127E1D1FDD5100BD31C4 /* restoreButton.png in Resources */,
-				1B2E14631D20262D00BD31C4 /* background5.png in Resources */,
 				1B2E12811D1FDD5100BD31C4 /* onButton.png in Resources */,
 				1B2E12831D1FDD5100BD31C4 /* arrowLeft.png in Resources */,
+				1B84AA381F52B39C0055F15D /* stringActive.png in Resources */,
+				1B84AA541F52B4860055F15D /* string_A.png in Resources */,
+				1B84AA321F52B39C0055F15D /* microphoneOn.png in Resources */,
 				1B2E12841D1FDD5100BD31C4 /* fft_01.png in Resources */,
-				1B2E12861D1FDD5100BD31C4 /* microphoneOff.png in Resources */,
+				1B84AA551F52B4860055F15D /* string_D.png in Resources */,
 				1B2E12871D1FDD5100BD31C4 /* autocorr_02.png in Resources */,
-				1B2E12881D1FDD5100BD31C4 /* gaugePatternGreen.png in Resources */,
-				1B2E128A1D1FDD5100BD31C4 /* ledActive.png in Resources */,
-				1B2E128B1D1FDD5100BD31C4 /* info.png in Resources */,
-				1B2E128C1D1FDD5100BD31C4 /* ledPassive.png in Resources */,
+				1B84AA331F52B39C0055F15D /* settings.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2300,7 +2358,6 @@
 				1B84A9F81F44E2A60055F15D /* string_G.png in Resources */,
 				1B2E13AC1D1FDDD100BD31C4 /* fft_01.png in Resources */,
 				1B2E13AF1D1FDDD100BD31C4 /* autocorr_02.png in Resources */,
-				1B2E13B01D1FDDD100BD31C4 /* gaugePatternGreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2532,6 +2589,7 @@
 			files = (
 				1B2E12001D1FDD5100BD31C4 /* Spectrum.m in Sources */,
 				1B2E12011D1FDD5100BD31C4 /* Yin.mm in Sources */,
+				1B84AA2D1F52B3360055F15D /* PremiumView.m in Sources */,
 				1B2E12021D1FDD5100BD31C4 /* LedView.m in Sources */,
 				1B2E12031D1FDD5100BD31C4 /* SettingsHeaderView.m in Sources */,
 				1B2E12041D1FDD5100BD31C4 /* CurveSubView.m in Sources */,
@@ -2545,7 +2603,9 @@
 				1B2E120C1D1FDD5100BD31C4 /* AppDelegate.m in Sources */,
 				1B2E120D1D1FDD5100BD31C4 /* BridgeView.m in Sources */,
 				1B2E120E1D1FDD5100BD31C4 /* main.m in Sources */,
+				1B84AA2F1F52B33F0055F15D /* ViolinStringView.m in Sources */,
 				1B2E120F1D1FDD5100BD31C4 /* PopupView.m in Sources */,
+				1B84AA2E1F52B33B0055F15D /* DetailView.m in Sources */,
 				1B2E12101D1FDD5100BD31C4 /* Graph.m in Sources */,
 				1B2E12111D1FDD5100BD31C4 /* TabView.m in Sources */,
 				1B2E12121D1FDD5100BD31C4 /* HitImageView.m in Sources */,
@@ -2555,6 +2615,7 @@
 				1B2E12151D1FDD5100BD31C4 /* GraphView.m in Sources */,
 				1B2E12161D1FDD5100BD31C4 /* SettingsView.m in Sources */,
 				1B2E12171D1FDD5100BD31C4 /* HeaderView.m in Sources */,
+				1B84AA2C1F52B32F0055F15D /* MainView.m in Sources */,
 				1B2E12181D1FDD5100BD31C4 /* CircleView.m in Sources */,
 				1B2E12191D1FDD5100BD31C4 /* PDKeychainBindings.m in Sources */,
 				1B2E14761D21218E00BD31C4 /* InstrumentContext.m in Sources */,
@@ -2577,7 +2638,6 @@
 				1B2E122A1D1FDD5100BD31C4 /* HorizontalPicker.m in Sources */,
 				1B2E122B1D1FDD5100BD31C4 /* InstrumentSubtypeView.m in Sources */,
 				1B2E122C1D1FDD5100BD31C4 /* ButtonView.m in Sources */,
-				1B2E122D1D1FDD5100BD31C4 /* MainView.m in Sources */,
 				1B2E122E1D1FDD5100BD31C4 /* SettingsMenuView.m in Sources */,
 				1B2E122F1D1FDD5100BD31C4 /* iRate.m in Sources */,
 				1B2E12301D1FDD5100BD31C4 /* UIView+uvo.m in Sources */,

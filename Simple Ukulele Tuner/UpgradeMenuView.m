@@ -242,7 +242,9 @@ static BOOL hasAddObserver = NO;
         [SHARED_VERSION_MANAGER setCurrentVersion:version_signal];
     }
 #elif defined(TARGET_MANDOLIN)
-    
+    if ([productID isEqualToString:mandolin_inAppPurchasePremium]) {
+        [SHARED_VERSION_MANAGER setCurrentVersion:version_premium];
+    }
 #elif defined(TARGET_BANJO)
     if ([productID isEqualToString:banjo_inAppPurchasePremium]) {
         [SHARED_VERSION_MANAGER setCurrentVersion:version_premium];

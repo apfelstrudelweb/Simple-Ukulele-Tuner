@@ -540,6 +540,10 @@
 		1B84AA5E1F52BED70055F15D /* e-string.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA5A1F52BED70055F15D /* e-string.aiff */; };
 		1B84AA5F1F52BED70055F15D /* g-string.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA5B1F52BED70055F15D /* g-string.aiff */; };
 		1B84AA611F52C10B0055F15D /* Mandolin_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA601F52C10B0055F15D /* Mandolin_Assets.xcassets */; };
+		1B84AA661F542E850055F15D /* string_A_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA621F542E850055F15D /* string_A_ipad.png */; };
+		1B84AA671F542E850055F15D /* string_D_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA631F542E850055F15D /* string_D_ipad.png */; };
+		1B84AA681F542E850055F15D /* string_E_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA641F542E850055F15D /* string_E_ipad.png */; };
+		1B84AA691F542E850055F15D /* string_G_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA651F542E850055F15D /* string_G_ipad.png */; };
 		1B8CDC651E58C35B00DD8240 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC641E58C35B00DD8240 /* header.png */; };
 		1B8CDC6B1E58CC7800DD8240 /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC6A1E58CC7800DD8240 /* background3.png */; };
 		1BB40C1C1F3F8706005451CB /* Balalaika_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C1B1F3F8706005451CB /* Balalaika_Assets.xcassets */; };
@@ -910,6 +914,10 @@
 		1B84AA5A1F52BED70055F15D /* e-string.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = "e-string.aiff"; path = "Simple Mandolin Tuner/e-string.aiff"; sourceTree = "<group>"; };
 		1B84AA5B1F52BED70055F15D /* g-string.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = "g-string.aiff"; path = "Simple Mandolin Tuner/g-string.aiff"; sourceTree = "<group>"; };
 		1B84AA601F52C10B0055F15D /* Mandolin_Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Mandolin_Assets.xcassets; path = "Simple Mandolin Tuner/Mandolin_Assets.xcassets"; sourceTree = "<group>"; };
+		1B84AA621F542E850055F15D /* string_A_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = string_A_ipad.png; path = "Simple Mandolin Tuner/string_A_ipad.png"; sourceTree = "<group>"; };
+		1B84AA631F542E850055F15D /* string_D_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = string_D_ipad.png; path = "Simple Mandolin Tuner/string_D_ipad.png"; sourceTree = "<group>"; };
+		1B84AA641F542E850055F15D /* string_E_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = string_E_ipad.png; path = "Simple Mandolin Tuner/string_E_ipad.png"; sourceTree = "<group>"; };
+		1B84AA651F542E850055F15D /* string_G_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = string_G_ipad.png; path = "Simple Mandolin Tuner/string_G_ipad.png"; sourceTree = "<group>"; };
 		1B8CDC4B1E5894B700DD8240 /* Balalaika_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Balalaika_Constants.h; sourceTree = "<group>"; };
 		1B8CDC641E58C35B00DD8240 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		1B8CDC6A1E58CC7800DD8240 /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background3.png; sourceTree = "<group>"; };
@@ -1578,6 +1586,10 @@
 				1B84AA511F52B4860055F15D /* string_D.png */,
 				1B84AA521F52B4860055F15D /* string_E.png */,
 				1B84AA531F52B4860055F15D /* string_G.png */,
+				1B84AA621F542E850055F15D /* string_A_ipad.png */,
+				1B84AA631F542E850055F15D /* string_D_ipad.png */,
+				1B84AA641F542E850055F15D /* string_E_ipad.png */,
+				1B84AA651F542E850055F15D /* string_G_ipad.png */,
 				1B84AA441F52B41C0055F15D /* violin_ipad.png */,
 				1B84AA451F52B41C0055F15D /* violin_iphone.png */,
 			);
@@ -2161,6 +2173,7 @@
 				1B2E12461D1FDD5100BD31C4 /* Localizable.strings in Resources */,
 				1B84AA311F52B39C0055F15D /* microphoneOff.png in Resources */,
 				1B84AA3C1F52B39C0055F15D /* ledActive.png in Resources */,
+				1B84AA681F542E850055F15D /* string_E_ipad.png in Resources */,
 				1B2E12471D1FDD5100BD31C4 /* fft_02.png in Resources */,
 				1B2E12491D1FDD5100BD31C4 /* closeButton.png in Resources */,
 				1B2E124B1D1FDD5100BD31C4 /* gaugeBackground.png in Resources */,
@@ -2170,6 +2183,7 @@
 				1B2E124F1D1FDD5100BD31C4 /* Root.plist in Resources */,
 				1B2E12511D1FDD5100BD31C4 /* settingsPattern.png in Resources */,
 				1B2E12521D1FDD5100BD31C4 /* settingsMiddle.png in Resources */,
+				1B84AA671F542E850055F15D /* string_D_ipad.png in Resources */,
 				1B84AA611F52C10B0055F15D /* Mandolin_Assets.xcassets in Resources */,
 				1B84AA461F52B41C0055F15D /* violin_ipad.png in Resources */,
 				1B2E12541D1FDD5100BD31C4 /* arrowDown.png in Resources */,
@@ -2181,6 +2195,7 @@
 				1B84AA5F1F52BED70055F15D /* g-string.aiff in Resources */,
 				1B2E125A1D1FDD5100BD31C4 /* inapppurch_01.png in Resources */,
 				1B2E125C1D1FDD5100BD31C4 /* linePattern.png in Resources */,
+				1B84AA691F542E850055F15D /* string_G_ipad.png in Resources */,
 				1B84AA5D1F52BED70055F15D /* d-string.aiff in Resources */,
 				1B2E12601D1FDD5100BD31C4 /* shoppingCart.png in Resources */,
 				1B2E12621D1FDD5100BD31C4 /* knob.png in Resources */,
@@ -2211,6 +2226,7 @@
 				1B84AA541F52B4860055F15D /* string_A.png in Resources */,
 				1B84AA321F52B39C0055F15D /* microphoneOn.png in Resources */,
 				1B2E12841D1FDD5100BD31C4 /* fft_01.png in Resources */,
+				1B84AA661F542E850055F15D /* string_A_ipad.png in Resources */,
 				1B84AA551F52B4860055F15D /* string_D.png in Resources */,
 				1B2E12871D1FDD5100BD31C4 /* autocorr_02.png in Resources */,
 				1B84AA331F52B39C0055F15D /* settings.png in Resources */,

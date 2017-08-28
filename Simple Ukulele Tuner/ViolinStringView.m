@@ -87,13 +87,22 @@
 
 - (void)lightString: (NSInteger) stringNumber {
     NSString *imageName;
-    
+ 
+#if defined(TARGET_MANDOLIN)
+    switch (stringNumber) {
+        case 0: imageName = IS_IPAD? @"string_G_ipad.png" : @"string_G.png"; break;
+        case 1: imageName = IS_IPAD? @"string_D_ipad.png" : @"string_D.png"; break;
+        case 2: imageName = IS_IPAD? @"string_A_ipad.png" : @"string_A.png"; break;
+        case 3: imageName = IS_IPAD? @"string_E_ipad.png" : @"string_E.png"; break;
+    }
+#else
     switch (stringNumber) {
         case 0: imageName = @"string_G.png"; break;
         case 1: imageName = @"string_D.png"; break;
         case 2: imageName = @"string_A.png"; break;
         case 3: imageName = @"string_E.png"; break;
     }
+#endif
     
     UIGraphicsBeginImageContext([[UIScreen mainScreen] bounds].size);
     [[UIImage imageNamed:imageName] drawInRect:[[UIScreen mainScreen] bounds]];

@@ -81,13 +81,13 @@
     [defaults registerDefaults:sensitivityDefaults];
     [defaults synchronize];
 
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    
-    ViewController *rootViewController = [ViewController new];
-    self.window.rootViewController = rootViewController;
-    
-    [self.window makeKeyAndVisible];
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    self.window.backgroundColor = [UIColor whiteColor];
+//    
+//    ViewController *rootViewController = [ViewController new];
+//    self.window.rootViewController = rootViewController;
+//    
+//    [self.window makeKeyAndVisible];
     
     NSString* currentVersion = [SHARED_VERSION_MANAGER getVersion];
     

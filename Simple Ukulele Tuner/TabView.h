@@ -12,4 +12,7 @@
 @property (strong, retain) UIButton* autocorrelationButton;
 @property (strong, retain) UIButton* fftButton;
 
+@property (strong, retain) UILabel* autocorrelationLabel;
+@property (strong, retain) UILabel* fftLabel;
+
 @end

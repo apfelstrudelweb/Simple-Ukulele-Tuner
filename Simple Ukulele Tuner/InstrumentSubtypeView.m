@@ -75,11 +75,11 @@
     NSString *expression = @"[0-9]";
     NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:expression options:NSRegularExpressionCaseInsensitive error:nil];
     NSTextCheckingResult *match = [regex firstMatchInString:subtype options:0 range:NSMakeRange(0, 1)];
-    
+
     if (match) {
         subtype = [subtype substringFromIndex:4];
     }
-    
+
     NSArray *stringSplitArray = [subtype componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"("]];
     instrumentSubtype = stringSplitArray[0];
    

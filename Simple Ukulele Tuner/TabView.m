@@ -14,6 +14,7 @@
     CGFloat buttonWidth, buttonHeight;
     CGFloat w, h;
     CGFloat shadowRadius, shadowOffset;
+    NSMutableArray *layoutConstraints;
 }
 @end
 
@@ -30,24 +31,21 @@
           
         shadowRadius = IS_IPAD ? 0.4 : 0.2;
         shadowOffset = IS_IPAD ? 0.7 : 0.5;
+        
+        [self createFFTButton];
+        [self createAutocorrelationButton];
+        
+        [self addAutocorrelationText];
+        [self addFFTText];
+
+        [self setupButtonConstraints];
+        [self setupLabelConstraints];
        
-        [self setNeedsDisplay];
+        [self setNeedsLayout];
     }
     return self;
 }
 
-- (void)layoutSubviews {
-    
-    w = self.frame.size.width;
-    h = self.frame.size.height;
-    
-    [self createFFTButton];
-    [self createAutocorrelationButton];
-    [self addAutocorrelationText];
-    [self addFFTText];
-    
-    [self setupButtonConstraints];
-}
 
 #pragma mark -creation of buttons
 - (void) createFFTButton {
@@ -86,54 +84,56 @@
 - (void) addAutocorrelationText {
 
     
-    UILabel *customLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, buttonWidth*w, 0.9*buttonHeight*h)];
+    self.autocorrelationLabel = [UILabel new];
+    self.autocorrelationLabel.translatesAutoresizingMaskIntoConstraints = NO;
     NSString* buttonTitle = [NSString stringWithFormat:NSLocalizedString(@"tab_autocorrelation", @"button for autocorrelation")];
-    [customLabel setText:buttonTitle];
-    [customLabel setFont:[UIFont fontWithName:FONT_BOLD size:[UILabel getFontSizeForTabButton]]];
-    [customLabel setTextColor:LABEL_COLOR];
-    customLabel.textAlignment = NSTextAlignmentCenter;
+    [self.autocorrelationLabel setText:buttonTitle];
+    [self.autocorrelationLabel setFont:[UIFont fontWithName:FONT_BOLD size:[UILabel getFontSizeForTabButton]]];
+    [self.autocorrelationLabel setTextColor:LABEL_COLOR];
+    self.autocorrelationLabel.textAlignment = NSTextAlignmentCenter;
     
     //customLabel.backgroundColor = [UIColor greenColor];
     
 #if defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN)
-    [customLabel setTextColor:[UIColor whiteColor]];
-    customLabel.layer.shadowColor = [UIColor grayColor].CGColor;
+    [self.autocorrelationLabel setTextColor:[UIColor whiteColor]];
+    self.autocorrelationLabel.layer.shadowColor = [UIColor grayColor].CGColor;
 #else
-    customLabel.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+    self.autocorrelationLabel.layer.shadowColor = [UIColor lightGrayColor].CGColor;
 #endif
     
-    customLabel.layer.shadowRadius = shadowRadius;
-    customLabel.layer.shadowOpacity = 1;
-    customLabel.layer.shadowOffset = CGSizeMake(shadowOffset, shadowOffset);
-    customLabel.layer.masksToBounds = NO;
+    self.autocorrelationLabel.layer.shadowRadius = shadowRadius;
+    self.autocorrelationLabel.layer.shadowOpacity = 1;
+    self.autocorrelationLabel.layer.shadowOffset = CGSizeMake(shadowOffset, shadowOffset);
+    self.autocorrelationLabel.layer.masksToBounds = NO;
     
-    [self.autocorrelationButton addSubview:customLabel];
+    [self.autocorrelationButton addSubview:self.autocorrelationLabel];
 }
 
 
 
 - (void) addFFTText {
 
-    UILabel *customLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, buttonWidth*w, 0.9*buttonHeight*h)];
+    self.fftLabel = [UILabel new]; //[[UILabel alloc] initWithFrame:CGRectMake(0, 0, buttonWidth*w, 0.9*buttonHeight*h)];
+    self.fftLabel.translatesAutoresizingMaskIntoConstraints = NO;
     NSString* buttonTitle = [NSString stringWithFormat:NSLocalizedString(@"tab_fft", @"button for fft")];
-    [customLabel setText:buttonTitle];
-    [customLabel setFont:[UIFont fontWithName:FONT_BOLD size:[UILabel getFontSizeForTabButton]]];
-    [customLabel setTextColor:LABEL_COLOR];
-    customLabel.textAlignment = NSTextAlignmentCenter;
+    [self.fftLabel setText:buttonTitle];
+    [self.fftLabel setFont:[UIFont fontWithName:FONT_BOLD size:[UILabel getFontSizeForTabButton]]];
+    [self.fftLabel setTextColor:LABEL_COLOR];
+    self.fftLabel.textAlignment = NSTextAlignmentCenter;
     
 #if defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN)
-    [customLabel setTextColor:[UIColor whiteColor]];
-    customLabel.layer.shadowColor = [UIColor grayColor].CGColor;
+    [self.fftLabel setTextColor:[UIColor whiteColor]];
+    self.fftLabel.layer.shadowColor = [UIColor grayColor].CGColor;
 #else
-    customLabel.layer.shadowColor = [UIColor lightGrayColor].CGColor;
+    self.fftLabel.layer.shadowColor = [UIColor lightGrayColor].CGColor;
 #endif
     
-    customLabel.layer.shadowRadius = shadowRadius;
-    customLabel.layer.shadowOpacity = 1;
-    customLabel.layer.shadowOffset = CGSizeMake(shadowOffset, shadowOffset);
-    customLabel.layer.masksToBounds = NO;
+    self.fftLabel.layer.shadowRadius = shadowRadius;
+    self.fftLabel.layer.shadowOpacity = 1;
+    self.fftLabel.layer.shadowOffset = CGSizeMake(shadowOffset, shadowOffset);
+    self.fftLabel.layer.masksToBounds = NO;
     
-    [self.fftButton addSubview:customLabel];
+    [self.fftButton addSubview:self.fftLabel];
 }
 
 
@@ -184,7 +184,7 @@
     
     [self removeConstraints:[self constraints]];
     
-    NSMutableArray *layoutConstraints = [NSMutableArray new];
+    layoutConstraints = [NSMutableArray new];
 
     
     // Center vertically
@@ -257,6 +257,80 @@
                                                                  toItem:self
                                                               attribute:NSLayoutAttributeHeight
                                                              multiplier:buttonHeight
+                                                               constant:0.0]];
+    
+    
+    // add all constraints at once
+    [self addConstraints:layoutConstraints];
+}
+
+#pragma mark -constraints
+- (void) setupLabelConstraints {
+    
+    // FFT
+    [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.fftLabel
+                                                              attribute:NSLayoutAttributeLeft
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self.fftButton
+                                                              attribute:NSLayoutAttributeLeft
+                                                             multiplier:1.0
+                                                               constant:0.0]];
+    
+    [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.fftLabel
+                                                              attribute:NSLayoutAttributeRight
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self.fftButton
+                                                              attribute:NSLayoutAttributeRight
+                                                             multiplier:1.0
+                                                               constant:0.0]];
+    
+    [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.fftLabel
+                                                              attribute:NSLayoutAttributeTop
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self.fftButton
+                                                              attribute:NSLayoutAttributeTop
+                                                             multiplier:1.0
+                                                               constant:0.0]];
+
+    [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.fftLabel
+                                                              attribute:NSLayoutAttributeBottom
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self.fftButton
+                                                              attribute:NSLayoutAttributeBottom
+                                                             multiplier:0.94
+                                                               constant:0.0]];
+    
+    // Autocorrelation
+    [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.autocorrelationLabel
+                                                              attribute:NSLayoutAttributeLeft
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self.autocorrelationButton
+                                                              attribute:NSLayoutAttributeLeft
+                                                             multiplier:1.0
+                                                               constant:0.0]];
+    
+    [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.autocorrelationLabel
+                                                              attribute:NSLayoutAttributeRight
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self.autocorrelationButton
+                                                              attribute:NSLayoutAttributeRight
+                                                             multiplier:1.0
+                                                               constant:0.0]];
+    
+    [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.autocorrelationLabel
+                                                              attribute:NSLayoutAttributeTop
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self.autocorrelationButton
+                                                              attribute:NSLayoutAttributeTop
+                                                             multiplier:1.0
+                                                               constant:0.0]];
+    
+    [layoutConstraints addObject:[NSLayoutConstraint constraintWithItem:self.autocorrelationLabel
+                                                              attribute:NSLayoutAttributeBottom
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self.autocorrelationButton
+                                                              attribute:NSLayoutAttributeBottom
+                                                             multiplier:0.94
                                                                constant:0.0]];
     
     

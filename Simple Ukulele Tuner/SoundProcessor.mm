@@ -41,7 +41,7 @@
     
     NSUserDefaults *defaults;
     NSInteger sensitivity;
-  
+    
     
 }
 
@@ -61,7 +61,7 @@
         numOfNoFrequencyDetecion = 0;
         
         defaults = [NSUserDefaults standardUserDefaults];
-
+        
     }
     return self;
 }
@@ -81,8 +81,8 @@
     __block FFT* fft = [FFT new];
     __block Yin* yin = [Yin new];
     __block NSMutableArray* result;
-
-
+    
+    
     if (IS_MICROPHONE==YES) {
         
         [[Novocaine audioManager] setInputBlock:^(float *data, UInt32 numFrames, UInt32 numChannels) {
@@ -251,3 +251,4 @@
 }
 
 @end
+

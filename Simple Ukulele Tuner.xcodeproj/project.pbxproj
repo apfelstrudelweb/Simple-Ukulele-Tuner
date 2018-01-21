@@ -11,6 +11,18 @@
 		1B0721501CC3DE7300102B13 /* uke_overtuning.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B07214F1CC3DE7300102B13 /* uke_overtuning.png */; };
 		1B0721521CC3DF2000102B13 /* uke_en_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B0721511CC3DF2000102B13 /* uke_en_manual7.html */; };
 		1B0721541CC3E64100102B13 /* uke_de_manual7.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B0721531CC3E64100102B13 /* uke_de_manual7.html */; };
+		1B18AE0B2014ACD80049A78B /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B18AE0A2014ACD80049A78B /* main.storyboard */; };
+		1B18AE0C2014ACD80049A78B /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B18AE0A2014ACD80049A78B /* main.storyboard */; };
+		1B18AE0D2014ACD80049A78B /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B18AE0A2014ACD80049A78B /* main.storyboard */; };
+		1B18AE0E2014ACD80049A78B /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B18AE0A2014ACD80049A78B /* main.storyboard */; };
+		1B18AE0F2014ACD80049A78B /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B18AE0A2014ACD80049A78B /* main.storyboard */; };
+		1B18AE102014ACD80049A78B /* main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B18AE0A2014ACD80049A78B /* main.storyboard */; };
+		1B18AE342014AF8F0049A78B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B18AE332014AF8F0049A78B /* LaunchScreen.storyboard */; };
+		1B18AE352014AF8F0049A78B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B18AE332014AF8F0049A78B /* LaunchScreen.storyboard */; };
+		1B18AE362014AF8F0049A78B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B18AE332014AF8F0049A78B /* LaunchScreen.storyboard */; };
+		1B18AE372014AF8F0049A78B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B18AE332014AF8F0049A78B /* LaunchScreen.storyboard */; };
+		1B18AE382014AF8F0049A78B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B18AE332014AF8F0049A78B /* LaunchScreen.storyboard */; };
+		1B18AE392014AF8F0049A78B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B18AE332014AF8F0049A78B /* LaunchScreen.storyboard */; };
 		1B2E12001D1FDD5100BD31C4 /* Spectrum.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC042651C99FDE6005103EC /* Spectrum.m */; };
 		1B2E12011D1FDD5100BD31C4 /* Yin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0424C1C99FD6F005103EC /* Yin.mm */; };
 		1B2E12021D1FDD5100BD31C4 /* LedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041C01C99FC92005103EC /* LedView.m */; };
@@ -544,6 +556,7 @@
 		1B84AA671F542E850055F15D /* string_D_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA631F542E850055F15D /* string_D_ipad.png */; };
 		1B84AA681F542E850055F15D /* string_E_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA641F542E850055F15D /* string_E_ipad.png */; };
 		1B84AA691F542E850055F15D /* string_G_ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA651F542E850055F15D /* string_G_ipad.png */; };
+		1B84AA6D1F59FC130055F15D /* testtone.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA6C1F59FC130055F15D /* testtone.wav */; };
 		1B8CDC651E58C35B00DD8240 /* header.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC641E58C35B00DD8240 /* header.png */; };
 		1B8CDC6B1E58CC7800DD8240 /* background3.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B8CDC6A1E58CC7800DD8240 /* background3.png */; };
 		1BB40C1C1F3F8706005451CB /* Balalaika_Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BB40C1B1F3F8706005451CB /* Balalaika_Assets.xcassets */; };
@@ -818,6 +831,8 @@
 		1B07214F1CC3DE7300102B13 /* uke_overtuning.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = uke_overtuning.png; sourceTree = "<group>"; };
 		1B0721511CC3DF2000102B13 /* uke_en_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = uke_en_manual7.html; sourceTree = "<group>"; };
 		1B0721531CC3E64100102B13 /* uke_de_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = uke_de_manual7.html; sourceTree = "<group>"; };
+		1B18AE0A2014ACD80049A78B /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
+		1B18AE332014AF8F0049A78B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B2E12901D1FDD5100BD31C4 /* Simple Mandolin Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Mandolin Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2E13241D1FDDA600BD31C4 /* Simple Banjo Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Banjo Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2E13B81D1FDDD100BD31C4 /* Fine Violin Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fine Violin Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -918,6 +933,7 @@
 		1B84AA631F542E850055F15D /* string_D_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = string_D_ipad.png; path = "Simple Mandolin Tuner/string_D_ipad.png"; sourceTree = "<group>"; };
 		1B84AA641F542E850055F15D /* string_E_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = string_E_ipad.png; path = "Simple Mandolin Tuner/string_E_ipad.png"; sourceTree = "<group>"; };
 		1B84AA651F542E850055F15D /* string_G_ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = string_G_ipad.png; path = "Simple Mandolin Tuner/string_G_ipad.png"; sourceTree = "<group>"; };
+		1B84AA6C1F59FC130055F15D /* testtone.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = testtone.wav; path = "Simple Mandolin Tuner/testtone.wav"; sourceTree = "<group>"; };
 		1B8CDC4B1E5894B700DD8240 /* Balalaika_Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Balalaika_Constants.h; sourceTree = "<group>"; };
 		1B8CDC641E58C35B00DD8240 /* header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = header.png; sourceTree = "<group>"; };
 		1B8CDC6A1E58CC7800DD8240 /* background3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background3.png; sourceTree = "<group>"; };
@@ -1550,6 +1566,7 @@
 				1B84AA091F489BAF0055F15D /* d-string.aiff */,
 				1B84AA0A1F489BAF0055F15D /* e-string.aiff */,
 				1B84AA0B1F489BAF0055F15D /* g-string.aiff */,
+				1B84AA6C1F59FC130055F15D /* testtone.wav */,
 			);
 			name = sound;
 			sourceTree = "<group>";
@@ -1724,6 +1741,8 @@
 		1BC041821C99FBF7005103EC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1B18AE0A2014ACD80049A78B /* main.storyboard */,
+				1B18AE332014AF8F0049A78B /* LaunchScreen.storyboard */,
 				1BC041DB1C99FCDA005103EC /* MainView.h */,
 				1BC041DC1C99FCDA005103EC /* MainView.m */,
 				1BC041DD1C99FCDA005103EC /* BackgroundView.h */,
@@ -2187,7 +2206,9 @@
 				1B84AA611F52C10B0055F15D /* Mandolin_Assets.xcassets in Resources */,
 				1B84AA461F52B41C0055F15D /* violin_ipad.png in Resources */,
 				1B2E12541D1FDD5100BD31C4 /* arrowDown.png in Resources */,
+				1B18AE362014AF8F0049A78B /* LaunchScreen.storyboard in Resources */,
 				1B2E12551D1FDD5100BD31C4 /* calibration_02.png in Resources */,
+				1B18AE0D2014ACD80049A78B /* main.storyboard in Resources */,
 				1B84AA5E1F52BED70055F15D /* e-string.aiff in Resources */,
 				1B2E12561D1FDD5100BD31C4 /* autocorr_03.png in Resources */,
 				1B84AA471F52B41C0055F15D /* violin_iphone.png in Resources */,
@@ -2270,6 +2291,7 @@
 				1B059CA31D32CF4B00FB70B5 /* Banjo_Assets.xcassets in Resources */,
 				1B6717AD1D454D30004AE1A0 /* banjo_en_manual1.html in Resources */,
 				1B2E13001D1FDDA600BD31C4 /* calibrationButton.png in Resources */,
+				1B18AE372014AF8F0049A78B /* LaunchScreen.storyboard in Resources */,
 				1B6717D41D4A98F1004AE1A0 /* banjo_inapppurchase_03.png in Resources */,
 				1B6717B01D454D30004AE1A0 /* banjo_en_manual4.html in Resources */,
 				1B6717BB1D454D46004AE1A0 /* banjo_de_manual1.html in Resources */,
@@ -2288,6 +2310,7 @@
 				1B6717BD1D454D46004AE1A0 /* banjo_de_manual3.html in Resources */,
 				1B2E13071D1FDDA600BD31C4 /* arrowRight.png in Resources */,
 				1B2E13081D1FDDA600BD31C4 /* settings.png in Resources */,
+				1B18AE0E2014ACD80049A78B /* main.storyboard in Resources */,
 				1B2E130A1D1FDDA600BD31C4 /* microphoneOn.png in Resources */,
 				1B2E130B1D1FDDA600BD31C4 /* autocorr_animated.gif in Resources */,
 				1B2E130C1D1FDDA600BD31C4 /* stringActive.png in Resources */,
@@ -2328,6 +2351,7 @@
 				1B84A9F71F44E2A60055F15D /* string_E.png in Resources */,
 				1B2E13791D1FDDD100BD31C4 /* settingsPattern.png in Resources */,
 				1B2E137A1D1FDDD100BD31C4 /* settingsMiddle.png in Resources */,
+				1B84AA6D1F59FC130055F15D /* testtone.wav in Resources */,
 				1B2E137C1D1FDDD100BD31C4 /* arrowDown.png in Resources */,
 				1B84A9E61F44E29A0055F15D /* ledPassive.png in Resources */,
 				1B2E137D1D1FDDD100BD31C4 /* calibration_02.png in Resources */,
@@ -2347,7 +2371,9 @@
 				1B2E138B1D1FDDD100BD31C4 /* autocorr_01.png in Resources */,
 				1B84A9F91F44E2A60055F15D /* stringPassive.png in Resources */,
 				1B84A9F31F44E2A60055F15D /* microphoneOn.png in Resources */,
+				1B18AE0F2014ACD80049A78B /* main.storyboard in Resources */,
 				1B2E138C1D1FDDD100BD31C4 /* iRate.bundle in Resources */,
+				1B18AE382014AF8F0049A78B /* LaunchScreen.storyboard in Resources */,
 				1B84AA081F4898960055F15D /* a-string.aiff in Resources */,
 				1B2E138E1D1FDDD100BD31C4 /* style.css in Resources */,
 				1B84AA1D1F48D43C0055F15D /* slider.png in Resources */,
@@ -2408,8 +2434,10 @@
 				1B8CDC6B1E58CC7800DD8240 /* background3.png in Resources */,
 				1B2E14281D1FDE1300BD31C4 /* calibrationButton.png in Resources */,
 				1B2E142A1D1FDE1300BD31C4 /* stringPassive.png in Resources */,
+				1B18AE392014AF8F0049A78B /* LaunchScreen.storyboard in Resources */,
 				1B2E142B1D1FDE1300BD31C4 /* arrowUp.png in Resources */,
 				1B2E142C1D1FDE1300BD31C4 /* offButton.png in Resources */,
+				1B18AE102014ACD80049A78B /* main.storyboard in Resources */,
 				1B2E142D1D1FDE1300BD31C4 /* fft_animated.gif in Resources */,
 				1B2E142E1D1FDE1300BD31C4 /* settingsPatternDark.png in Resources */,
 				1B2E142F1D1FDE1300BD31C4 /* arrowRight.png in Resources */,
@@ -2471,6 +2499,7 @@
 				1B6C14411CCC026400C82B9B /* knob.png in Resources */,
 				1BC0423A1C99FD3D005103EC /* autocorr_01.png in Resources */,
 				1BC041581C99F9DA005103EC /* iRate.bundle in Resources */,
+				1B18AE342014AF8F0049A78B /* LaunchScreen.storyboard in Resources */,
 				1BC042441C99FD3D005103EC /* uke_types_inactive.png in Resources */,
 				1BC041771C99FBEB005103EC /* style.css in Resources */,
 				1BC042321C99FD3D005103EC /* close.png in Resources */,
@@ -2480,6 +2509,7 @@
 				1BC0417B1C99FBEB005103EC /* uke_en_manual5.html in Resources */,
 				1BDE3B8D1F24A8F8008BFF63 /* VpadnSDKiOS-4.6.5 in Resources */,
 				1BC0421A1C99FD23005103EC /* calibrationButton.png in Resources */,
+				1B18AE0B2014ACD80049A78B /* main.storyboard in Resources */,
 				1BC0417E1C99FBEB005103EC /* uke_de_manual2.html in Resources */,
 				1BC041FF1C99FD0A005103EC /* stringPassive.png in Resources */,
 				1BC041F31C99FD0A005103EC /* arrowUp.png in Resources */,
@@ -2544,6 +2574,7 @@
 				1BCCC1F11D1FD6A200AD17D0 /* inapppurch_01.png in Resources */,
 				1BCCC1F31D1FD6A200AD17D0 /* linePattern.png in Resources */,
 				1BCCC1F71D1FD6A200AD17D0 /* shoppingCart.png in Resources */,
+				1B18AE352014AF8F0049A78B /* LaunchScreen.storyboard in Resources */,
 				1BCCC1F81D1FD6A200AD17D0 /* background4.png in Resources */,
 				1BCCC1F91D1FD6A200AD17D0 /* knob.png in Resources */,
 				1B2E14B41D23C0C400BD31C4 /* Guitar_Assets.xcassets in Resources */,
@@ -2559,6 +2590,7 @@
 				1BCCC2061D1FD6A200AD17D0 /* arrowUp.png in Resources */,
 				1BCCC2071D1FD6A200AD17D0 /* offButton.png in Resources */,
 				1BCCC2081D1FD6A200AD17D0 /* fft_animated.gif in Resources */,
+				1B18AE0C2014ACD80049A78B /* main.storyboard in Resources */,
 				1BCCC2091D1FD6A200AD17D0 /* settingsPatternDark.png in Resources */,
 				1BCCC20A1D1FD6A200AD17D0 /* arrowRight.png in Resources */,
 				1BCCC20B1D1FD6A200AD17D0 /* settings.png in Resources */,
@@ -3338,7 +3370,7 @@
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_UKULELE;
 				INFOPLIST_FILE = "Simple Ukulele Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
@@ -3370,7 +3402,7 @@
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_UKULELE;
 				INFOPLIST_FILE = "Simple Ukulele Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";

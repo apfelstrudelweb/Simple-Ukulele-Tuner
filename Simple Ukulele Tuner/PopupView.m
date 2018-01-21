@@ -33,8 +33,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    CGFloat topPadding = 0.0f;
+    CGFloat bottomPadding = 0.0f;
+    
+    if (@available(iOS 11.0, *)) {
+        UIWindow *window = UIApplication.sharedApplication.keyWindow;
+        topPadding = window.safeAreaInsets.top;
+        bottomPadding = window.safeAreaInsets.bottom;
+    }
 
     toolbarHeight = IS_IPAD ? 120 : 60;
+    toolbarHeight += topPadding;
     
     // make distinction between locals
     
@@ -69,9 +79,8 @@
     activePage = 0; // start page
     
     mainFrame = [[UIScreen mainScreen] bounds];
-    NSInteger fact = 1;
     CGFloat w = mainFrame.size.width;
-    CGFloat h = mainFrame.size.height - fact*toolbarHeight;
+    CGFloat h = mainFrame.size.height - toolbarHeight - bottomPadding;
     CGFloat x = mainFrame.origin.x;
     CGFloat y = mainFrame.origin.y + toolbarHeight;
     
@@ -87,9 +96,8 @@
     
     [self loadHTML:webFrame];
     
-    [self createTopBarButtons];
     [self createTopToolbar];
-
+    [self createTopBarButtons];
 }
 
 -(void) createTopToolbar {
@@ -99,10 +107,7 @@
 
     self.topToolbar.translucent = NO;
     self.topToolbar.barTintColor = HEADER_BACKGROUND_COLOR_01;
-    
-    [self.topToolbar setItems:[[NSArray alloc] initWithObjects:self.backBtn,flexibleSpace,self.closeBtn,flexibleSpace,self.forwardBtn, nil]];
-    
-    
+
     [self.view addSubview:self.topToolbar];
 }
 
@@ -118,7 +123,7 @@
         imageStopBtn =  [self resizeImage:imageStopBtn toScale:0.5];
     }
     
-    UIEdgeInsets imageInsets = IS_IPAD ? UIEdgeInsetsMake(50, 0, 30, 0) : UIEdgeInsetsMake(30, 0, 20, 0);
+    UIEdgeInsets imageInsets = UIEdgeInsetsMake(0.2*self.topToolbar.frame.size.height, 0, 0, 0); 
     
     
     self.backBtn = [[UIBarButtonItem alloc] initWithImage:imageBackBtn style:UIBarButtonItemStylePlain target:self action:@selector(actionBack:)];
@@ -134,6 +139,8 @@
     self.forwardBtn = [[UIBarButtonItem alloc] initWithImage:imageStopBtn style:UIBarButtonItemStylePlain target:self action:@selector(actionForward:)];
     self.forwardBtn.imageInsets = imageInsets;
     self.forwardBtn.tintColor = [UIColor whiteColor];
+    
+    [self.topToolbar setItems:[[NSArray alloc] initWithObjects:self.backBtn, flexibleSpace, self.closeBtn, flexibleSpace, self.forwardBtn, nil]];
     
 }
 

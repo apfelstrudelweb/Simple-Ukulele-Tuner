@@ -138,7 +138,7 @@
     upgradeOptionInstrument = guitar_inAppPurchaseGuitar;
     upgradeOptionSignal = guitar_inAppPurchaseSignal;
 #elif defined(TARGET_MANDOLIN)
-    
+    upgradeOptionPremium = mandolin_inAppPurchasePremium;
 #elif defined(TARGET_BANJO)
     upgradeOptionPremium = banjo_inAppPurchasePremium;
     upgradeOptionInstrument = banjo_inAppPurchaseBanjo;

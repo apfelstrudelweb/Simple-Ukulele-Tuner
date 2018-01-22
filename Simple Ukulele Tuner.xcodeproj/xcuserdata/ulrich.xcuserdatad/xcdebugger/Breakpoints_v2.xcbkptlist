@@ -46,7 +46,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simple Ukulele Tuner/SettingsMenuView.m"
-            timestampString = "525005662.447144"
+            timestampString = "538334126.568965"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "557"
@@ -206,7 +206,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simple Ukulele Tuner/SettingsMenuView.m"
-            timestampString = "525005662.447144"
+            timestampString = "538334126.569199"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "580"
@@ -222,7 +222,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simple Ukulele Tuner/SettingsMenuView.m"
-            timestampString = "525005662.447144"
+            timestampString = "538334126.569302"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "576"
@@ -364,7 +364,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simple Ukulele Tuner/UpgradeMenuView.m"
-            timestampString = "523457247.894935"
+            timestampString = "538332516.059043"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
@@ -395,24 +395,8 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Simple Ukulele Tuner/VersionManager.m"
-            timestampString = "509139978.875378"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "-productsRequest:didReceiveResponse:"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "Simple Ukulele Tuner/UpgradeMenuView.m"
-            timestampString = "523456233.250822"
+            timestampString = "538332516.059983"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "75"
@@ -428,7 +412,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simple Ukulele Tuner/ViewController.m"
-            timestampString = "538331406.34562"
+            timestampString = "538334126.5695699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
@@ -444,7 +428,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simple Ukulele Tuner/SettingsMenuView.m"
-            timestampString = "525005662.447144"
+            timestampString = "538334126.570013"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "247"
@@ -572,12 +556,44 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simple Violin Tuner/PremiumView.m"
-            timestampString = "538331406.346224"
+            timestampString = "538334126.570207"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "113"
             endingLineNumber = "113"
             landmarkName = "-showDetailView:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Simple Ukulele Tuner/VersionManager.m"
+            timestampString = "538334126.570601"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "-productsRequest:didReceiveResponse:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Simple Ukulele Tuner/VersionManager.m"
+            timestampString = "538334126.5709209"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "-productsRequest:didReceiveResponse:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

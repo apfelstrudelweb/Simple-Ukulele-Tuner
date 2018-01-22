@@ -428,7 +428,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simple Ukulele Tuner/ViewController.m"
-            timestampString = "538326869.576025"
+            timestampString = "538331406.34562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "73"
@@ -572,11 +572,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Simple Violin Tuner/PremiumView.m"
-            timestampString = "538326869.577058"
+            timestampString = "538331406.346224"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "109"
-            endingLineNumber = "109"
+            startingLineNumber = "113"
+            endingLineNumber = "113"
             landmarkName = "-showDetailView:"
             landmarkType = "7">
          </BreakpointContent>

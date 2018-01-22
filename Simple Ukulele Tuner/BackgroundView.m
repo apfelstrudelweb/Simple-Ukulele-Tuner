@@ -63,9 +63,7 @@
         
 #endif
         
-
-        
-        
+        self.backgroundColor = [UIColor blackColor];
         [self addSubview:self.mainView];
         
         [self setupLayoutConstraints];

@@ -37,6 +37,10 @@
         self.screenWidth = screenRect.size.width;
         CGFloat screenHeight = screenRect.size.height;
         
+        UIView *blackView = [[UIView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.screenWidth, 0.1*screenHeight)];
+        blackView.backgroundColor = [UIColor blackColor];
+        [self addSubview:blackView];
+        
         CGFloat buttonWidth = self.screenWidth / 10.0f;
         CGFloat buttonHeight = (443.0f/107.0f) * buttonWidth;
 

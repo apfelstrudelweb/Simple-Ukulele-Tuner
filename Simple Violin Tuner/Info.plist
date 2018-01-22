@@ -15,7 +15,7 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>1.0</string>
+	<string>1.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
@@ -31,6 +31,8 @@
 	<string>You need the microphone enabled in order to capture the sounds of your instrument</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Simple Violin Tuner requires access to the photo library</string>
+	<key>UIMainStoryboardFile</key>
+	<string>main</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

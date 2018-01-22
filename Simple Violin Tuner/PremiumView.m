@@ -58,6 +58,7 @@
         self.detailView.delegate = self;
         
         [self addSubview:self.detailView];
+
         
         NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:self.detailView
                                                                            attribute:NSLayoutAttributeWidth
@@ -129,7 +130,6 @@
 
 #pragma -mark DetailViewDelegate
 - (void)closeDetailView {
-    //[self.detailView removeFromSuperview];
     self.btnSlider.alpha = 1.0f;
     self.btnSlider.userInteractionEnabled = YES;
 }

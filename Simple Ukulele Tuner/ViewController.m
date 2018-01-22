@@ -76,27 +76,7 @@
 - (void)loadView {
     
     [super loadView];
-    
-//    self.view.backgroundColor = [UIColor redColor];
-//    
-//    if (@available(iOS 11.0, *)) {
-//        UILayoutGuide *safe = self.view.safeAreaLayoutGuide;
-//        self.view.translatesAutoresizingMaskIntoConstraints = NO;
-//        [NSLayoutConstraint activateConstraints:@[
-//                                                  [safe.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor],
-//                                                  [self.view.leadingAnchor constraintEqualToAnchor:safe.leadingAnchor],
-//                                                  [self.view.topAnchor constraintEqualToAnchor:safe.topAnchor],
-//                                                  [safe.bottomAnchor constraintEqualToAnchor:self.view.bottomAnchor]
-//                                                  ]];
-//    } else {
-//        // Fallback on earlier versions
-//    }
-//
-//    
-//    return;
-    
     [SHARED_MANAGER setFFT:YES];
-    
     self.view = [BackgroundView new];
     
     

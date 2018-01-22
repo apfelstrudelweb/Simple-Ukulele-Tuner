@@ -62,7 +62,7 @@
 #elif defined(TARGET_BALALAIKA)
             _bannerView.adUnitID = @"ca-app-pub-1849205192643985/7512235465";
 #endif
-            request.testDevices = @[@"374cad9f371b2fbc6d624bd254eda28b"];  // Rookie's iPhone
+            //request.testDevices = @[@"374cad9f371b2fbc6d624bd254eda28b"];  // Rookie's iPhone
             [_bannerView loadRequest:request];
             [self.view addSubview:_bannerView];
         }

@@ -23,6 +23,12 @@
 		1B18AE372014AF8F0049A78B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B18AE332014AF8F0049A78B /* LaunchScreen.storyboard */; };
 		1B18AE382014AF8F0049A78B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B18AE332014AF8F0049A78B /* LaunchScreen.storyboard */; };
 		1B18AE392014AF8F0049A78B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B18AE332014AF8F0049A78B /* LaunchScreen.storyboard */; };
+		1B18AE4B2015FECF0049A78B /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B18AE4A2015FECF0049A78B /* GoogleMobileAds.framework */; };
+		1B18AE4C2015FECF0049A78B /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B18AE4A2015FECF0049A78B /* GoogleMobileAds.framework */; };
+		1B18AE4D2015FECF0049A78B /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B18AE4A2015FECF0049A78B /* GoogleMobileAds.framework */; };
+		1B18AE4E2015FECF0049A78B /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B18AE4A2015FECF0049A78B /* GoogleMobileAds.framework */; };
+		1B18AE4F2015FECF0049A78B /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B18AE4A2015FECF0049A78B /* GoogleMobileAds.framework */; };
+		1B18AE502015FED00049A78B /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B18AE4A2015FECF0049A78B /* GoogleMobileAds.framework */; };
 		1B2E12001D1FDD5100BD31C4 /* Spectrum.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC042651C99FDE6005103EC /* Spectrum.m */; };
 		1B2E12011D1FDD5100BD31C4 /* Yin.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1BC0424C1C99FD6F005103EC /* Yin.mm */; };
 		1B2E12021D1FDD5100BD31C4 /* LedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BC041C01C99FC92005103EC /* LedView.m */; };
@@ -506,12 +512,6 @@
 		1B84A9FA1F44E2A60055F15D /* tabActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9EF1F44E2A60055F15D /* tabActive.png */; };
 		1B84A9FB1F44E2A60055F15D /* tabPassive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9F01F44E2A60055F15D /* tabPassive.png */; };
 		1B84A9FE1F44E8F40055F15D /* stringActive.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B84A9FD1F44E8F40055F15D /* stringActive.png */; };
-		1B84AA001F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */; };
-		1B84AA011F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */; };
-		1B84AA021F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */; };
-		1B84AA031F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */; };
-		1B84AA041F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */; };
-		1B84AA051F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */; };
 		1B84AA081F4898960055F15D /* a-string.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA071F4898960055F15D /* a-string.aiff */; };
 		1B84AA0C1F489BAF0055F15D /* d-string.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA091F489BAF0055F15D /* d-string.aiff */; };
 		1B84AA0D1F489BAF0055F15D /* e-string.aiff in Resources */ = {isa = PBXBuildFile; fileRef = 1B84AA0A1F489BAF0055F15D /* e-string.aiff */; };
@@ -833,6 +833,7 @@
 		1B0721531CC3E64100102B13 /* uke_de_manual7.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = uke_de_manual7.html; sourceTree = "<group>"; };
 		1B18AE0A2014ACD80049A78B /* main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = main.storyboard; sourceTree = "<group>"; };
 		1B18AE332014AF8F0049A78B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1B18AE4A2015FECF0049A78B /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		1B2E12901D1FDD5100BD31C4 /* Simple Mandolin Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Mandolin Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2E13241D1FDDA600BD31C4 /* Simple Banjo Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Simple Banjo Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B2E13B81D1FDDD100BD31C4 /* Fine Violin Tuner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fine Violin Tuner.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -900,7 +901,6 @@
 		1B84A9EF1F44E2A60055F15D /* tabActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabActive.png; path = "Simple Violin Tuner/tabActive.png"; sourceTree = "<group>"; };
 		1B84A9F01F44E2A60055F15D /* tabPassive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = tabPassive.png; path = "Simple Violin Tuner/tabPassive.png"; sourceTree = "<group>"; };
 		1B84A9FD1F44E8F40055F15D /* stringActive.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stringActive.png; path = "Simple Violin Tuner/stringActive.png"; sourceTree = "<group>"; };
-		1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMobileAds.framework; sourceTree = "<group>"; };
 		1B84AA071F4898960055F15D /* a-string.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = "a-string.aiff"; path = "Simple Violin Tuner/a-string.aiff"; sourceTree = "<group>"; };
 		1B84AA091F489BAF0055F15D /* d-string.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = "d-string.aiff"; path = "Simple Violin Tuner/d-string.aiff"; sourceTree = "<group>"; };
 		1B84AA0A1F489BAF0055F15D /* e-string.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; name = "e-string.aiff"; path = "Simple Violin Tuner/e-string.aiff"; sourceTree = "<group>"; };
@@ -1177,7 +1177,7 @@
 				1B2E123F1D1FDD5100BD31C4 /* AudioToolbox.framework in Frameworks */,
 				1B2E12401D1FDD5100BD31C4 /* CoreAudio.framework in Frameworks */,
 				1B2E12411D1FDD5100BD31C4 /* Accelerate.framework in Frameworks */,
-				1B84AA021F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */,
+				1B18AE4D2015FECF0049A78B /* GoogleMobileAds.framework in Frameworks */,
 				1B2E12431D1FDD5100BD31C4 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1198,7 +1198,7 @@
 				1B2E12D31D1FDDA600BD31C4 /* AudioToolbox.framework in Frameworks */,
 				1B2E12D41D1FDDA600BD31C4 /* CoreAudio.framework in Frameworks */,
 				1B2E12D51D1FDDA600BD31C4 /* Accelerate.framework in Frameworks */,
-				1B84AA031F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */,
+				1B18AE4E2015FECF0049A78B /* GoogleMobileAds.framework in Frameworks */,
 				1B2E12D71D1FDDA600BD31C4 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1219,7 +1219,7 @@
 				1B2E13671D1FDDD100BD31C4 /* AudioToolbox.framework in Frameworks */,
 				1B2E13681D1FDDD100BD31C4 /* CoreAudio.framework in Frameworks */,
 				1B2E13691D1FDDD100BD31C4 /* Accelerate.framework in Frameworks */,
-				1B84AA041F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */,
+				1B18AE4F2015FECF0049A78B /* GoogleMobileAds.framework in Frameworks */,
 				1B2E136B1D1FDDD100BD31C4 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1240,7 +1240,7 @@
 				1B2E13FB1D1FDE1300BD31C4 /* AudioToolbox.framework in Frameworks */,
 				1B2E13FC1D1FDE1300BD31C4 /* CoreAudio.framework in Frameworks */,
 				1B2E13FD1D1FDE1300BD31C4 /* Accelerate.framework in Frameworks */,
-				1B84AA051F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */,
+				1B18AE502015FED00049A78B /* GoogleMobileAds.framework in Frameworks */,
 				1B2E13FF1D1FDE1300BD31C4 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1261,7 +1261,7 @@
 				1BC0415D1C99FA19005103EC /* AudioToolbox.framework in Frameworks */,
 				1BC0415F1C99FA1F005103EC /* CoreAudio.framework in Frameworks */,
 				1BC041611C99FA24005103EC /* Accelerate.framework in Frameworks */,
-				1B84AA001F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */,
+				1B18AE4B2015FECF0049A78B /* GoogleMobileAds.framework in Frameworks */,
 				1BC041631C99FA2F005103EC /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1282,7 +1282,7 @@
 				1BCCC1D61D1FD6A200AD17D0 /* AudioToolbox.framework in Frameworks */,
 				1BCCC1D71D1FD6A200AD17D0 /* CoreAudio.framework in Frameworks */,
 				1BCCC1D81D1FD6A200AD17D0 /* Accelerate.framework in Frameworks */,
-				1B84AA011F4827E50055F15D /* GoogleMobileAds.framework in Frameworks */,
+				1B18AE4C2015FECF0049A78B /* GoogleMobileAds.framework in Frameworks */,
 				1BCCC1DA1D1FD6A200AD17D0 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1992,7 +1992,7 @@
 			children = (
 				1B84AA291F4B8B470055F15D /* SpriteKit.framework */,
 				1BEBF3CE1C9D477500F2ED4D /* libz.tbd */,
-				1B84A9FF1F4827E50055F15D /* GoogleMobileAds.framework */,
+				1B18AE4A2015FECF0049A78B /* GoogleMobileAds.framework */,
 				1BEBF3CC1C9D469500F2ED4D /* CoreGraphics.framework */,
 				1BC041621C99FA2F005103EC /* StoreKit.framework */,
 				1BC041601C99FA24005103EC /* Accelerate.framework */,

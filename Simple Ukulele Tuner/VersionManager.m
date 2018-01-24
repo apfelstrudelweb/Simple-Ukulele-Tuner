@@ -161,7 +161,7 @@
         }
     }
 
-#if defined(TARGET_VIOLIN)
+#if defined(TARGET_VIOLIN) || defined(TARGET_MANDOLIN)
     if ([version_lite isEqualToString:self.version] && product1) {
         [orderedProducts insertObject:product1 atIndex:0];
 #else

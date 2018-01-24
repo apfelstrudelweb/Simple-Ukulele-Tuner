@@ -34,17 +34,20 @@
     //if (YES) {
     if ([version_lite isEqualToString:currentVersion]) {
         CGFloat screenHeight = [[UIScreen mainScreen] bounds].size.height;
+        CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
 #if defined(TARGET_VIOLIN)  ||  defined(TARGET_MANDOLIN)
         CGFloat headerHeight = 4.0;
 #else
         CGFloat headerHeight = [SUBVIEW_PROPORTIONS[0] floatValue] + 0.05;
 #endif
-        CGFloat bannerOffset = screenHeight * headerHeight / 100.0;
+        CGFloat offsetY = screenHeight * headerHeight / 100.0;
+        
+        CGFloat offsetX = 0.5f * (screenWidth - kGADAdSizeBanner.size.width);
         
      
         if (_bannerView == nil) {
             
-            _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner origin:CGPointMake(0.0f, bannerOffset)];
+            _bannerView = [[GADBannerView alloc] initWithAdSize:kGADAdSizeBanner origin:CGPointMake(offsetX, offsetY)];
             _bannerView.rootViewController = self;
             _bannerView.delegate = self;
             

@@ -42,7 +42,8 @@
     NSUserDefaults *defaults;
     NSInteger sensitivity;
     
-    
+    __block FFT* fft;
+
 }
 
 @end
@@ -78,8 +79,8 @@
     __block NSInteger numCaptures = 0;
     __block Spectrum *spect = [SHARED_MANAGER spectrum];
     __block AutoCorrelation* correlation = [AutoCorrelation new];
-    __block FFT* fft = [FFT new];
     __block Yin* yin = [Yin new];
+    fft = [FFT new];
     __block NSMutableArray* result;
     
     
@@ -218,6 +219,7 @@
 - (void) stopCapture {
     [audioManager pause];
     [previousFrequencyArray removeAllObjects];
+    [fft stopRecording];
 }
 
 - (void) queueObject: (NSNumber*) number {

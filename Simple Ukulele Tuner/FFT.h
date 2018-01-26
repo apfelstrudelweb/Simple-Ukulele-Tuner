@@ -12,7 +12,6 @@
 @interface FFT : NSObject
 
 - (NSMutableArray*) performFFT: (float*) data  withFrames: (NSInteger) numberOfFrames;
-- (void) clearMemory;
-
+- (void) stopRecording;
 
 @end

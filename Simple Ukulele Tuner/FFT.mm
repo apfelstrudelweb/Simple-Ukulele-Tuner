@@ -24,13 +24,22 @@
 
 @implementation FFT
 
+- (void) stopRecording {
+    vDSP_destroy_fftsetup(fftSetup);
+}
+
 
 - (NSMutableArray*) performFFT: (float*) data  withFrames: (NSInteger) numSamples {
     
     result = [NSMutableArray new];
     
     vDSP_Length log2n = log2f(numSamples);
-    fftSetup = vDSP_create_fftsetup(log2n, FFT_RADIX2);
+    
+    if (fftSetup == nil) {
+        
+        fftSetup = vDSP_create_fftsetup(log2n, FFT_RADIX2);
+    }
+    
     NSInteger nOver2 = numSamples/2;
     complexA.realp = (Float32*) malloc(nOver2*sizeof(Float32) );
     complexA.imagp = (Float32*) malloc(nOver2*sizeof(Float32) );
@@ -65,7 +74,7 @@
     }
     
     [self clearMemory];
-    
+
     return result;
 }
 
@@ -76,7 +85,6 @@
     free(complexA.imagp);
     free(outFFTData);
     free(invertedCheckData);
-    vDSP_destroy_fftsetup(fftSetup);
 }
 
 @end

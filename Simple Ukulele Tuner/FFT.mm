@@ -24,10 +24,6 @@
 
 @implementation FFT
 
-- (void) stopRecording {
-    vDSP_destroy_fftsetup(fftSetup);
-}
-
 
 - (NSMutableArray*) performFFT: (float*) data  withFrames: (NSInteger) numSamples {
     
@@ -35,8 +31,7 @@
     
     vDSP_Length log2n = log2f(numSamples);
     
-    if (fftSetup == nil) {
-        
+    if (!fftSetup) {
         fftSetup = vDSP_create_fftsetup(log2n, FFT_RADIX2);
     }
     
@@ -85,6 +80,7 @@
     free(complexA.imagp);
     free(outFFTData);
     free(invertedCheckData);
+    
 }
 
 @end

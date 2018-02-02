@@ -3053,7 +3053,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = P2EQM7YAFH;
 				ENABLE_BITCODE = NO;
@@ -3072,8 +3072,8 @@
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.vormbrock.simplemandolintuner2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fc77a7c3-e4ea-417f-91db-90b47fdb7537";
-				PROVISIONING_PROFILE_SPECIFIER = Profile_Mandoline2;
+				PROVISIONING_PROFILE = "5270e842-a0f0-494f-b65d-70615e4ad9b5";
+				PROVISIONING_PROFILE_SPECIFIER = Mandoline_AppStore;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3085,7 +3085,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = P2EQM7YAFH;
 				ENABLE_BITCODE = NO;
@@ -3104,8 +3104,8 @@
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = ch.vormbrock.simplemandolintuner2;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "fc77a7c3-e4ea-417f-91db-90b47fdb7537";
-				PROVISIONING_PROFILE_SPECIFIER = Profile_Mandoline2;
+				PROVISIONING_PROFILE = "5270e842-a0f0-494f-b65d-70615e4ad9b5";
+				PROVISIONING_PROFILE_SPECIFIER = Mandoline_AppStore;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

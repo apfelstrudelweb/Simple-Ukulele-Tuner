@@ -219,7 +219,7 @@
 - (void) stopCapture {
     [audioManager pause];
     [previousFrequencyArray removeAllObjects];
-    [fft stopRecording];
+    //[fft stopRecording];
 }
 
 - (void) queueObject: (NSNumber*) number {

@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 @import GoogleMobileAds;
-@import HockeySDK;
 
 @interface AppDelegate () {
     int numberOfAwakenings;
@@ -41,11 +40,7 @@
 //    //[bindings setObject:version_signal forKey:UPGRADE_TYPE];
 //    [bindings removeObjectForKey:UPGRADE_TYPE];
     
-    [[BITHockeyManager sharedHockeyManager] configureWithIdentifier:@"bb70efab0ba040dca1f36838915d24f2"];
-    [[BITHockeyManager sharedHockeyManager] startManager];
-    //[[BITHockeyManager sharedHockeyManager].authenticator authenticateInstallation]; // This line is obsolete in the crash only builds
-    
-    
+
     // Set the application defaults
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSDictionary *instrumentDefaults;

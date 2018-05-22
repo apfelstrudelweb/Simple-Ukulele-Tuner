@@ -817,12 +817,6 @@
 		1BFA0BDF20164375005AD12F /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B84AA151F48C6CB0055F15D /* MainView.m */; };
 		1BFA0BE4201644E5005AD12F /* PremiumView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA0BE02016443C005AD12F /* PremiumView.m */; };
 		1BFA0BE820164621005AD12F /* MainView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BFA0BE720164621005AD12F /* MainView.m */; };
-		1BFA0BF2201C8206005AD12F /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFA0BF1201C8178005AD12F /* HockeySDK.framework */; };
-		1BFA0BF3201C829E005AD12F /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFA0BF1201C8178005AD12F /* HockeySDK.framework */; };
-		1BFA0BF4201C830A005AD12F /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFA0BF1201C8178005AD12F /* HockeySDK.framework */; };
-		1BFA0BF5201C8316005AD12F /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFA0BF1201C8178005AD12F /* HockeySDK.framework */; };
-		1BFA0BF6201C8322005AD12F /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFA0BF1201C8178005AD12F /* HockeySDK.framework */; };
-		1BFA0BF7201C832D005AD12F /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFA0BF1201C8178005AD12F /* HockeySDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -1160,7 +1154,6 @@
 		1BFA0BE02016443C005AD12F /* PremiumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PremiumView.m; path = "Simple Violin Tuner/PremiumView.m"; sourceTree = "<group>"; };
 		1BFA0BE12016443D005AD12F /* PremiumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PremiumView.h; path = "Simple Violin Tuner/PremiumView.h"; sourceTree = "<group>"; };
 		1BFA0BE720164621005AD12F /* MainView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MainView.m; path = "Simple Mandolin Tuner/MainView.m"; sourceTree = "<group>"; };
-		1BFA0BF1201C8178005AD12F /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HockeySDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1168,7 +1161,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BFA0BF3201C829E005AD12F /* HockeySDK.framework in Frameworks */,
 				1B2E12351D1FDD5100BD31C4 /* libz.tbd in Frameworks */,
 				1B2E12371D1FDD5100BD31C4 /* CoreTelephony.framework in Frameworks */,
 				1B2E12381D1FDD5100BD31C4 /* CoreGraphics.framework in Frameworks */,
@@ -1189,7 +1181,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BFA0BF5201C8316005AD12F /* HockeySDK.framework in Frameworks */,
 				1B2E12C91D1FDDA600BD31C4 /* libz.tbd in Frameworks */,
 				1B2E12CB1D1FDDA600BD31C4 /* CoreTelephony.framework in Frameworks */,
 				1B2E12CC1D1FDDA600BD31C4 /* CoreGraphics.framework in Frameworks */,
@@ -1210,7 +1201,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BFA0BF6201C8322005AD12F /* HockeySDK.framework in Frameworks */,
 				1B2E135D1D1FDDD100BD31C4 /* libz.tbd in Frameworks */,
 				1B2E135F1D1FDDD100BD31C4 /* CoreTelephony.framework in Frameworks */,
 				1B2E13601D1FDDD100BD31C4 /* CoreGraphics.framework in Frameworks */,
@@ -1231,7 +1221,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BFA0BF7201C832D005AD12F /* HockeySDK.framework in Frameworks */,
 				1B2E13F11D1FDE1300BD31C4 /* libz.tbd in Frameworks */,
 				1B2E13F31D1FDE1300BD31C4 /* CoreTelephony.framework in Frameworks */,
 				1B2E13F41D1FDE1300BD31C4 /* CoreGraphics.framework in Frameworks */,
@@ -1252,7 +1241,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BFA0BF2201C8206005AD12F /* HockeySDK.framework in Frameworks */,
 				1BEBF3CF1C9D477500F2ED4D /* libz.tbd in Frameworks */,
 				1BE794991C9B3D0E001A5E72 /* CoreTelephony.framework in Frameworks */,
 				1BEBF3CD1C9D469500F2ED4D /* CoreGraphics.framework in Frameworks */,
@@ -1273,7 +1261,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BFA0BF4201C830A005AD12F /* HockeySDK.framework in Frameworks */,
 				1BCCC1CC1D1FD6A200AD17D0 /* libz.tbd in Frameworks */,
 				1BCCC1CE1D1FD6A200AD17D0 /* CoreTelephony.framework in Frameworks */,
 				1BCCC1CF1D1FD6A200AD17D0 /* CoreGraphics.framework in Frameworks */,
@@ -1994,7 +1981,6 @@
 		1BE7949E1C9B3D35001A5E72 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1BFA0BF1201C8178005AD12F /* HockeySDK.framework */,
 				1B84AA291F4B8B470055F15D /* SpriteKit.framework */,
 				1BEBF3CE1C9D477500F2ED4D /* libz.tbd */,
 				1B18AE4A2015FECF0049A78B /* GoogleMobileAds.framework */,
@@ -3066,7 +3052,7 @@
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_MANDOLIN;
 				INFOPLIST_FILE = "Simple Mandolin Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
@@ -3098,7 +3084,7 @@
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_MANDOLIN;
 				INFOPLIST_FILE = "Simple Mandolin Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
@@ -3458,7 +3444,7 @@
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_GUITAR;
 				INFOPLIST_FILE = "Simple Guitar Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
@@ -3489,7 +3475,7 @@
 				GCC_PREFIX_HEADER = "Simple Ukulele Tuner/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = TARGET_GUITAR;
 				INFOPLIST_FILE = "Simple Guitar Tuner/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "";
 				OTHER_CFLAGS = "";
